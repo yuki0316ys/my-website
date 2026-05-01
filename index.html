@@ -1,15 +1,154 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <title>Yuki Shirai</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yuki official artist website. Music, visuals, profile, and social links.">
+  <title>Yuki | Official Artist Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body style="background:black; color:white; text-align:center;">
-  <h1>Yuki Shirai</h1>
-  <p>My Music</p>
+<body>
+  <div class="page-glow" aria-hidden="true"></div>
 
-  <iframe width="300" height="200"
-    src="https://www.youtube.com/embed/ここに動画ID"
-    frameborder="0" allowfullscreen>
-  </iframe>
+  <header class="header">
+    <a class="brand" href="#" aria-label="Yuki home">Yuki</a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#video">Video</a>
+      <a href="#profile">Profile</a>
+      <a href="#music">Music</a>
+      <a href="#contact">Social</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero reveal" aria-labelledby="hero-title">
+      <div class="hero__meta">
+        <span>Tokyo</span>
+        <span>Alternative R&B</span>
+        <span>Visual Sound</span>
+      </div>
+
+      <div class="hero__content">
+        <p class="eyebrow">Official artist website</p>
+        <h1 id="hero-title">Yuki</h1>
+        <p class="hero__lead">
+          静寂の奥にある熱を、洗練されたビートと映像的なメロディで描く。
+        </p>
+      </div>
+
+      <div class="hero__footer">
+        <a class="button" href="#video">Watch latest video</a>
+        <p>New visual direction / 2026</p>
+      </div>
+    </section>
+
+    <section class="video-section reveal" id="video" aria-labelledby="video-title">
+      <div class="section-heading">
+        <p class="eyebrow">Featured visual</p>
+        <h2 id="video-title">The sound has a shadow.</h2>
+      </div>
+
+      <div class="video-card">
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"
+            title="Yuki featured YouTube video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="profile reveal" id="profile" aria-labelledby="profile-title">
+      <div class="profile__intro">
+        <p class="eyebrow">Profile</p>
+        <h2 id="profile-title">夜の空気をまとった、現代的で深いポップミュージック。</h2>
+      </div>
+
+      <div class="profile__panel">
+        <p>
+          Yukiは、低く沈むビート、余白を生かしたボーカル、映画的なコードワークを軸に活動するアーティスト。
+          都市の孤独、余韻、光の残像を、ミニマルで美しいサウンドスケープへと変換する。
+        </p>
+        <p>
+          ライブでは音、照明、映像を精密に組み合わせ、楽曲を単なる再生ではなく没入型の体験として届ける。
+          静かな緊張感と強いフックを両立させた表現で、国内外のリスナーへ向けて発信している。
+        </p>
+      </div>
+    </section>
+
+    <section class="music reveal" id="music" aria-labelledby="music-title">
+      <div class="section-heading section-heading--row">
+        <div>
+          <p class="eyebrow">Discography</p>
+          <h2 id="music-title">Selected tracks</h2>
+        </div>
+        <p class="section-copy">
+          For headphones, late-night drives, and stages lit like cinema.
+        </p>
+      </div>
+
+      <div class="track-grid">
+        <article class="track-card">
+          <span class="track-card__index">01</span>
+          <div>
+            <p class="track-card__type">Single</p>
+            <h3>Midnight Signal</h3>
+            <p>Deep pop with a glassy vocal hook and sub-heavy pulse.</p>
+          </div>
+        </article>
+
+        <article class="track-card track-card--accent">
+          <span class="track-card__index">02</span>
+          <div>
+            <p class="track-card__type">EP Lead</p>
+            <h3>Glass Room</h3>
+            <p>Minimal electronic textures built around intimate melodies.</p>
+          </div>
+        </article>
+
+        <article class="track-card">
+          <span class="track-card__index">03</span>
+          <div>
+            <p class="track-card__type">Visual Track</p>
+            <h3>Afterimage</h3>
+            <p>Cinematic ambience, restrained drums, and a luminous chorus.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="social reveal" id="contact" aria-labelledby="social-title">
+      <div>
+        <p class="eyebrow">Connect</p>
+        <h2 id="social-title">Follow the signal.</h2>
+      </div>
+
+      <div class="social__links">
+        <a class="social-link" href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="Yuki on X">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18.9 2.7h3.3l-7.2 8.2 8.4 10.4h-6.6l-5.2-6.5-5.9 6.5H2.4l7.7-8.6L2.1 2.7h6.8l4.7 5.9 5.3-5.9Zm-1.2 16.8h1.8L7.9 4.4H5.9l11.8 15.1Z"/>
+          </svg>
+          <span>X</span>
+        </a>
+
+        <a class="social-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Yuki on Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7.8 2.2h8.4c3.1 0 5.6 2.5 5.6 5.6v8.4c0 3.1-2.5 5.6-5.6 5.6H7.8c-3.1 0-5.6-2.5-5.6-5.6V7.8c0-3.1 2.5-5.6 5.6-5.6Zm0 2A3.6 3.6 0 0 0 4.2 7.8v8.4a3.6 3.6 0 0 0 3.6 3.6h8.4a3.6 3.6 0 0 0 3.6-3.6V7.8a3.6 3.6 0 0 0-3.6-3.6H7.8Zm4.2 3.5a4.3 4.3 0 1 1 0 8.6 4.3 4.3 0 0 1 0-8.6Zm0 2a2.3 2.3 0 1 0 0 4.6 2.3 2.3 0 0 0 0-4.6Zm4.7-2.4a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z"/>
+          </svg>
+          <span>Instagram</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Yuki. All rights reserved.</p>
+  </footer>
 </body>
 </html>
+
