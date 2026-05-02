@@ -654,3 +654,9 @@ h2 {
   position: relative;
   z-index: 2;
 }
+.hero {
+  background-image: url("images/profile.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
