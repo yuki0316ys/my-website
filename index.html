@@ -49,5 +49,25 @@
     <section class="social reveal" id="contact"><div><p class="eyebrow">Connect</p><h2>SNS</h2></div><div class="social__links"><a class="social-link" href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a><a class="social-link" href="https://www.youtube.com/@YUKIOFFICIALSTUDIOPRO01" target="_blank" rel="noopener noreferrer">Youtube</a></div></section>
   </main>
   <footer class="footer"><p>&copy; 2026 YUKI. All rights reserved.</p></footer>
+  <script>
+const reveals = document.querySelectorAll('.reveal');
+
+function revealOnScroll() {
+  const windowHeight = window.innerHeight;
+
+  reveals.forEach(el => {
+    const elementTop = el.getBoundingClientRect().top;
+
+    if (elementTop < windowHeight - 100) {
+      el.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+
+// 初回読み込みでも実行
+revealOnScroll();
+</script>
 </body>
 </html>
