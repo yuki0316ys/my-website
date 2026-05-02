@@ -168,12 +168,10 @@ h1 {
   word-break: break-word;
   text-align: center;
   padding: 0 20px;
-}
   font-weight: 900;
   letter-spacing: 0;
   text-shadow: 0 36px 120px rgba(217, 183, 111, 0.22);
 }
-
 .hero__lead {
   max-width: 790px;
   margin: 0 auto;
