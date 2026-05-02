@@ -518,12 +518,12 @@ h2 {
 }
 
   .hero__meta {
-    justify-content: flex-start;
-  }
+  justify-content: center;
+}
 
   .hero__content {
-    text-align: left;
-  }
+  text-align: center;   /* ← これに変更 */
+}
 
   h1 {
     margin-bottom: 22px;
@@ -535,9 +535,9 @@ h2 {
   }
 
   .hero__footer {
-    align-items: flex-start;
-    flex-direction: column;
-  }
+  align-items: center;   /* ← これに変更 */
+  flex-direction: column;
+}
 
   .video-section,
   .profile,
