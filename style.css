@@ -183,9 +183,10 @@ h1 {
 
 .hero__footer {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 22px;
+  flex-direction: column;   /* ← 追加 */
+  align-items: center;      /* ← 中央 */
+  justify-content: center;  /* ← 中央 */
+  gap: 10px;
   padding-top: 28px;
   border-top: 1px solid var(--line);
 }
