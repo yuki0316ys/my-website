@@ -999,14 +999,6 @@ body::before{
 .hero__footer .button {
   margin: 0 auto;
 }
-
-/* 右側に出る謎テキスト消す */
-.hero::after {
-  display: none;
-}
-/* ===== HERO レイヤー補強 ===== */
-
-/* 背景の上に黒グラデ（映画感） */
 .hero::after {
   content: "";
   position: absolute;
