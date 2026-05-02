@@ -849,3 +849,6 @@ body.loading-active header,
 body.loading-active nav {
   opacity: 0;
 }
+.hero__content h1 {
+  display: none;
+}
