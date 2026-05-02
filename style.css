@@ -625,3 +625,23 @@ h2 {
 .hero__content h1 {
   margin-bottom: 16px;
 }
+.hero {
+  background-image: url("images/profile.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hero {
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+.hero h1 {
+  position: relative;
+  z-index: 2;
+}
