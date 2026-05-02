@@ -684,3 +684,17 @@ h2 {
 .profile { transition-delay: 0.2s; }
 .music { transition-delay: 0.3s; }
 .social { transition-delay: 0.4s; }
+/* ===== メインCTA ===== */
+.main-cta {
+  font-size: 1rem;
+  padding: 16px 28px;
+  background: linear-gradient(135deg, #d9b76f, #ff5d93);
+  color: #000;
+  font-weight: 900;
+  border: none;
+}
+
+.main-cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
