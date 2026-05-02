@@ -894,3 +894,14 @@ body.loading-active nav {
 hr {
   display: none !important;
 }
+/* ===== ナビバー透け防止（YUKIがうっすら見える問題対策） ===== */
+
+.navbar {
+  background: rgba(0, 0, 0, 0.95) !important; /* ほぼ黒にする */
+  backdrop-filter: none !important; /* ぼかし削除 */
+}
+
+/* それでも透ける場合の保険（完全ブラック） */
+.navbar {
+  background: #000 !important;
+}
