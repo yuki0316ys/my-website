@@ -91,26 +91,26 @@
 </section>
   </main>
   <footer class="footer"><p>&copy; 2026 YUKI. All rights reserved.</p></footer>
- <script>
-window.addEventListener("load", () => {
-  const loading = document.getElementById("loading");
-
-  if (!loading) return;
-
-  setTimeout(() => {
-    // フェードアウト
-    loading.style.opacity = "0";
-
-    setTimeout(() => {
-      // 完全に消す
-      loading.style.display = "none";
-      document.body.classList.remove("loading-active");
-    }, 1000);
-
-  }, 1500);
+<script>
+// マウス光
+document.addEventListener("mousemove", e=>{
+  document.body.style.setProperty("--x", e.clientX + "px");
+  document.body.style.setProperty("--y", e.clientY + "px");
 });
+
+// スクロールふわっと表示
+const els = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("active");
+    }
+  });
+});
+
+els.forEach(el=>observer.observe(el));
 </script>
-  
 </body>
 </html>
 <script>
