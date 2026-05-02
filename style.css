@@ -119,9 +119,6 @@ main {
   position: relative;
   z-index: 2;
 }
-.hero__content h1 {
-  text-shadow: 0 4px 20px rgba(0,0,0,0.6);
-}
 .hero__meta {
   display: flex;
   flex-wrap: wrap;
@@ -744,15 +741,6 @@ h2 {
   position: relative;
   z-index: 2;
 }
-
-/* ===== タイトル強化 ===== */
-.hero__content h1 {
-  font-size: 110px;
-  font-weight: 900;
-  letter-spacing: 4px;
-  text-shadow: 0 10px 40px rgba(0,0,0,0.8);
-}
-
 /* ===== 余白（超重要） ===== */
 .hero__content {
   margin-top: 120px;
@@ -847,14 +835,6 @@ body.loading-active header,
 body.loading-active nav {
   opacity: 0;
 }
-.hero__content h1 {
-  font-size: 64px;
-  font-weight: 800;
-  letter-spacing: 4px;
-  margin-bottom: 16px;
-  color: rgba(255,255,255,0.9);
-}
-
   /* ふわっと浮く感じ */
   text-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
