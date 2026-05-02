@@ -974,3 +974,8 @@ body::before{
   position: relative;
   z-index: 2;
 }
+.hero__meta,
+.hero__content,
+.hero__footer {
+  transform: translateY(80px);
+}
