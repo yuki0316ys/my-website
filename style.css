@@ -103,14 +103,15 @@ svg {
 main {
   overflow: hidden;
 }
-/* オーバーレイ */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.5);
+  background: linear-gradient(
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0.6)
+  );
 }
-
 /* 前面に出す */
 .hero__content,
 .hero__meta,
@@ -633,14 +634,4 @@ h2 {
   background-size: cover;
   background-position: center 25%;
   background-repeat: no-repeat;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    rgba(0,0,0,0.4),
-    rgba(0,0,0,0.6)
-  );
 }
