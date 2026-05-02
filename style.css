@@ -998,3 +998,47 @@ body::before{
   transform:scale(1.2);
   box-shadow:0 0 40px rgba(255,150,0,0.6);
 }
+/* ===== HERO 完全中央レイアウト修正 ===== */
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* メタ情報（TOKYOとか） */
+.hero__meta {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* メインコンテンツ */
+.hero__content {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 20px;
+}
+
+/* 下のボタンエリア */
+.hero__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  z-index: 2;
+}
+
+/* ボタン中央 */
+.hero__footer .button {
+  margin: 0 auto;
+}
+
+/* 右側に出る謎テキスト消す */
+.hero::after {
+  display: none;
+}
