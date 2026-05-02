@@ -722,8 +722,8 @@ h2 {
 }
 
 @keyframes heroZoom {
-  from { transform: scale(1.05); }
-  to { transform: scale(1.15); }
+  from { transform: scale(1.0); }
+  to { transform: scale(1.05); }
 }
 
 /* ===== オーバーレイ（空気感） ===== */
@@ -828,11 +828,6 @@ hr {
 /* ===== ナビバー透け防止（YUKIがうっすら見える問題対策） ===== */
 .navbar {
   background: #000;
-}
-
-/* それでも透ける場合の保険（完全ブラック） */
-.navbar {
-  background: #000 !important;
 }
 /* ===== FINAL PRO EFFECT PACK ===== */
 
