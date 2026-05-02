@@ -108,8 +108,8 @@ main {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    rgba(0,0,0,0.3),
-    rgba(0,0,0,0.7)
+    rgba(0,0,0,0.25),
+    rgba(0,0,0,0.55)
   );
 }
 /* 前面に出す */
@@ -119,8 +119,6 @@ main {
   position: relative;
   z-index: 2;
 }
-
-/* タイトル見やすく */
 .hero__content h1 {
   text-shadow: 0 4px 20px rgba(0,0,0,0.6);
 }
@@ -135,21 +133,18 @@ main {
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
-
 .hero__meta span {
   padding: 9px 13px;
   background: rgba(255, 255, 255, 0.055);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 999px;
 }
-
 .hero__content {
   align-self: center;
   max-width: 1040px;
   margin: 0 auto;
   text-align: center;
 }
-
 .eyebrow {
   margin: 0 0 18px;
   color: var(--gold);
@@ -634,4 +629,7 @@ h2 {
   background-size: cover;
   background-position: center 25%;
   background-repeat: no-repeat;
+}
+.video-section {
+  padding-top: 100px;
 }
