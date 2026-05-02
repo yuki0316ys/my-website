@@ -715,7 +715,7 @@ h2 {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url("images/profile.jpg") center/cover no-repeat;
+  background: url("images/profile.jpg") 40% center / cover no-repeat;
   transform: scale(1.0);
   animation: heroZoom 12s ease-in-out infinite alternate;
   filter: brightness(0.6);
