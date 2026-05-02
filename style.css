@@ -518,8 +518,8 @@ h2 {
   .hero {
   min-height: 100vh;
   gap: 38px;
-  padding: 56px 0 120px;
-  }
+  padding: 56px 0 160px;
+}
 
   .hero__meta {
     justify-content: flex-start;
