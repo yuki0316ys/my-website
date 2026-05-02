@@ -625,23 +625,27 @@ h2 {
 .hero__content h1 {
   margin-bottom: 16px;
 }
+/* ===== HERO 背景画像 ===== */
 .hero {
+  position: relative;
+
   background-image: url("images/profile.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-.hero {
-  position: relative;
-}
 
+/* ===== 黒フィルター ===== */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
 }
-.hero h1 {
+
+/* ===== 文字を前に出す ===== */
+.hero__content,
+.hero__meta {
   position: relative;
   z-index: 2;
 }
