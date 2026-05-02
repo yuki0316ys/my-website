@@ -905,3 +905,96 @@ hr {
 .navbar {
   background: #000 !important;
 }
+/* ===== FINAL PRO EFFECT PACK ===== */
+
+:root{
+  --accent:#f5c26b;
+}
+
+/* === ガラスUI === */
+.hero__content,
+.video-card,
+.profile__panel,
+.track-card,
+.social-link{
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  transition: all .4s ease;
+}
+
+.track-card:hover,
+.video-card:hover,
+.social-link:hover{
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 30px 80px rgba(245,194,107,0.25);
+}
+
+/* === ボタン光る === */
+.button{
+  position: relative;
+  overflow: hidden;
+  border-radius: 999px;
+  background: linear-gradient(90deg,#111,#222);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.button::after{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background: linear-gradient(90deg,transparent,rgba(245,194,107,0.6),transparent);
+  opacity:0;
+  transition:.4s;
+}
+
+.button:hover::after{
+  opacity:1;
+  animation: shine 1.5s linear infinite;
+}
+
+@keyframes shine{
+  0%{transform:translateX(-100%)}
+  100%{transform:translateX(100%)}
+}
+
+/* === マウスライト === */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background: radial-gradient(
+    circle at var(--x,50%) var(--y,50%),
+    rgba(245,194,107,0.15),
+    transparent 40%
+  );
+  z-index:0;
+}
+
+/* === スクロール演出 === */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all .8s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* === FANCLUB強調 === */
+.fanclub{
+  background: linear-gradient(90deg,#f5c26b,#ff8a00);
+  color:#000;
+  font-weight:700;
+  transform:scale(1.1);
+}
+
+.fanclub:hover{
+  transform:scale(1.2);
+  box-shadow:0 0 40px rgba(255,150,0,0.6);
+}
