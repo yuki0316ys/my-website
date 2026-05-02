@@ -854,13 +854,6 @@ body.loading-active nav {
 .hero {
   border: none !important;
 }
-
-.hero::before,
-.hero::after {
-  border: none !important;
-  content: none !important;
-}
-
 /* 中の要素の線も消す */
 .hero__content,
 .hero__meta,
@@ -873,10 +866,8 @@ hr {
   display: none !important;
 }
 /* ===== ナビバー透け防止（YUKIがうっすら見える問題対策） ===== */
-
 .navbar {
-  background: rgba(0, 0, 0, 0.95) !important; /* ほぼ黒にする */
-  backdrop-filter: none !important; /* ぼかし削除 */
+  background: #000;
 }
 
 /* それでも透ける場合の保険（完全ブラック） */
@@ -950,13 +941,6 @@ body::before{
     transparent 40%
   );
   z-index:0;
-}
-
-/* === スクロール演出 === */
-.reveal{
-  opacity:0;
-  transform:translateY(40px);
-  transition:all .8s ease;
 }
 
 .reveal.active{
