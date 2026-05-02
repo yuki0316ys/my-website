@@ -625,7 +625,6 @@ h2 {
 .hero__content h1 {
   margin-bottom: 16px;
 }
-/* ===== HERO 背景画像 ===== */
 .hero {
   position: relative;
 
@@ -635,7 +634,6 @@ h2 {
   background-repeat: no-repeat;
 }
 
-/* ===== 黒フィルター ===== */
 .hero::before {
   content: "";
   position: absolute;
@@ -643,7 +641,6 @@ h2 {
   background: rgba(0, 0, 0, 0.6);
 }
 
-/* ===== 文字を前に出す ===== */
 .hero__content,
 .hero__meta {
   position: relative;
