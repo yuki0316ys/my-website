@@ -625,9 +625,12 @@ h2 {
   text-shadow: 0 8px 40px rgba(0,0,0,0.8);
 }
 .hero {
-  position: relative;
-  background-size: cover;
-  background-position: center 25%;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("images/profile.jpg");
+
+  background-size: 120%;         /* ← 少し縮小（100%より大きくするとズームアウトっぽく見える） */
+  background-position: left center; /* ← 左寄せ */
   background-repeat: no-repeat;
 }
 .video-section {
