@@ -860,3 +860,13 @@ body.loading-active nav {
   /* ふわっと浮く感じ */
   text-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
+/* 🔥 YUKIロゴを復活させる */
+.hero__content h1 {
+  display: block !important;
+  font-size: 64px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  margin-bottom: 16px;
+  color: rgba(255,255,255,0.9);
+  text-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
