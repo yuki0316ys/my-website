@@ -870,3 +870,27 @@ body.loading-active nav {
   color: rgba(255,255,255,0.9);
   text-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
+/* 🔥 謎の横線を完全に消す */
+
+/* hero内の線を消す */
+.hero {
+  border: none !important;
+}
+
+.hero::before,
+.hero::after {
+  border: none !important;
+  content: none !important;
+}
+
+/* 中の要素の線も消す */
+.hero__content,
+.hero__meta,
+.hero__footer {
+  border: none !important;
+}
+
+/* 万が一hrタグなら消す */
+hr {
+  display: none !important;
+}
