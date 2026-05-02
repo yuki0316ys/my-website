@@ -94,25 +94,17 @@
 </section>
   </main>
   <footer class="footer"><p>&copy; 2026 YUKI. All rights reserved.</p></footer>
-  <script>
-const reveals = document.querySelectorAll('.reveal');
+ <script>
+window.addEventListener("load", () => {
+  const loading = document.getElementById("loading");
 
-function revealOnScroll() {
-  const windowHeight = window.innerHeight;
+  setTimeout(() => {
+    loading.classList.add("hide");
 
-  reveals.forEach(el => {
-    const elementTop = el.getBoundingClientRect().top;
-
-    if (elementTop < windowHeight - 100) {
-      el.classList.add('active');
-    }
-  });
-}
-
-window.addEventListener('scroll', revealOnScroll);
-
-// 初回読み込みでも実行
-revealOnScroll();
+    // 本体表示
+    document.body.classList.remove("loading-active");
+  }, 1500);
+});
 </script>
 </body>
 </html>
