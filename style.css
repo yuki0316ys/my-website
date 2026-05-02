@@ -103,24 +103,6 @@ svg {
 main {
   overflow: hidden;
 }
-.hero {
-  position: relative;
-
-  min-height: calc(100svh - 78px);
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  gap: 48px;
-  padding: 42px 0 78px;
-
-  background-image:
-    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-    url("images/profile.jpg");
-
-  background-size: cover;
-  background-position: center 30%;
-  background-repeat: no-repeat;
-}
-
 /* オーバーレイ */
 .hero::before {
   content: "";
@@ -644,11 +626,12 @@ h2 {
 
 .hero__content h1 {
   margin-bottom: 16px;
+  text-shadow: 0 8px 40px rgba(0,0,0,0.8);
 }
 .hero {
   position: relative;
   background-size: cover;
-  background-position: center;
+  background-position: center 20%;
   background-repeat: no-repeat;
 }
 
@@ -656,7 +639,7 @@ h2 {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.45);
 }
 
 .hero__content,
