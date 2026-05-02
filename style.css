@@ -103,16 +103,6 @@ svg {
 main {
   overflow: hidden;
 }
-
-.hero,
-.video-section,
-.profile,
-.music,
-.social {
-  width: min(100% - 40px, var(--max));
-  margin: 0 auto;
-}
-
 .hero {
   position: relative;
 
@@ -123,14 +113,34 @@ main {
   padding: 42px 0 78px;
 
   background-image:
-    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
     url("images/profile.jpg");
 
   background-size: cover;
-  background-position: center;
+  background-position: center 30%;
   background-repeat: no-repeat;
 }
 
+/* オーバーレイ */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+/* 前面に出す */
+.hero__content,
+.hero__meta,
+.hero__footer {
+  position: relative;
+  z-index: 2;
+}
+
+/* タイトル見やすく */
+.hero__content h1 {
+  text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
 .hero__meta {
   display: flex;
   flex-wrap: wrap;
@@ -653,42 +663,4 @@ h2 {
 .hero__meta {
   position: relative;
   z-index: 2;
-}
-.hero {
-  background-image: url("images/bustup.png") !important;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-}
-.hero {
-  position: relative;
-
-  min-height: calc(100svh - 78px);
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  gap: 48px;
-  padding: 42px 0 78px;
-
-  background-image:
-    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-    url("images/profile.png");
-
-  background-size: cover;
-  background-position: center 30%;
-  background-repeat: no-repeat;
-}
-.hero__content h1 {
-  text-shadow: 0 4px 20px rgba(0,0,0,0.6);
-}
-.hero {
-  backdrop-filter: blur(2px);
-}
-.hero {
-  background-image:
-    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-    url("images/profile.jpg") !important;
-
-  background-size: cover !important;
-  background-position: center 30% !important;
-  background-repeat: no-repeat !important;
 }
