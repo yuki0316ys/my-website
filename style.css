@@ -683,3 +683,12 @@ h2 {
 .hero {
   backdrop-filter: blur(2px);
 }
+.hero {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("images/profile.jpg") !important;
+
+  background-size: cover !important;
+  background-position: center 30% !important;
+  background-repeat: no-repeat !important;
+}
