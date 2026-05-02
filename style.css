@@ -698,3 +698,15 @@ h2 {
   transform: scale(1.05);
   box-shadow: 0 10px 40px rgba(0,0,0,0.5);
 }
+/* ===== FAN CLUBボタン ===== */
+.fanclub-btn {
+  background: linear-gradient(135deg, #ff0000, #ff5d93);
+  color: #fff;
+  font-weight: 900;
+  border: none;
+}
+
+.fanclub-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 40px rgba(255,0,0,0.4);
+}
