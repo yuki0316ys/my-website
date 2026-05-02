@@ -848,12 +848,12 @@ body.loading-active nav {
   opacity: 0;
 }
 .hero__content h1 {
-  font-size: 64px;          /* 小さめに */
+  font-size: 64px;
   font-weight: 800;
   letter-spacing: 4px;
   margin-bottom: 16px;
-
   color: rgba(255,255,255,0.9);
+}
 
   /* ふわっと浮く感じ */
   text-shadow: 0 10px 30px rgba(0,0,0,0.6);
