@@ -1040,3 +1040,25 @@ body::before{
 .hero::after {
   display: none;
 }
+/* ===== HERO レイヤー補強 ===== */
+
+/* 背景の上に黒グラデ（映画感） */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.2),
+    rgba(0,0,0,0.8)
+  );
+  z-index: 1;
+}
+
+/* テキストを前に出す */
+.hero__content,
+.hero__meta,
+.hero__footer {
+  position: relative;
+  z-index: 2;
+}
