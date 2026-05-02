@@ -977,5 +977,5 @@ body::before{
 .hero__meta,
 .hero__content,
 .hero__footer {
-  transform: translateY(80px);
+  transform: translateY(80px) !important;
 }
