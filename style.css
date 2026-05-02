@@ -515,9 +515,9 @@ h2 {
   }
 
   .hero {
-    min-height: auto;
-    gap: 38px;
-    padding: 56px 0 66px;
+  min-height: 100vh;
+  gap: 38px;
+  padding: 56px 0 120px;
   }
 
   .hero__meta {
