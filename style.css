@@ -660,3 +660,31 @@ h2 {
   background-position: center !important;
   background-repeat: no-repeat !important;
 }
+/* ===== HERO 最終上書き（ここだけでOK） ===== */
+.hero {
+  position: relative;
+
+  min-height: calc(100svh - 78px);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 48px;
+  padding: 42px 0 78px;
+
+  background-image:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("images/profile.png");
+
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+}
+
+/* ===== タイトルを浮かせる ===== */
+.hero__content h1 {
+  text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+/* ===== （任意）映像っぽさアップ ===== */
+.hero {
+  backdrop-filter: blur(2px);
+}
