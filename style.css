@@ -666,3 +666,21 @@ h2 {
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
+/* ===== フェードイン（初期） ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+/* ===== 表示されたとき ===== */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== 少しずつズレて出す（オシャレ） ===== */
+.video-section { transition-delay: 0.1s; }
+.profile { transition-delay: 0.2s; }
+.music { transition-delay: 0.3s; }
+.social { transition-delay: 0.4s; }
