@@ -716,7 +716,7 @@ h2 {
   position: absolute;
   inset: 0;
   background-image: url("images/profile.jpg");
-  background-position: 30% 20%;
+  background-position: 10% 50%;
   background-size: 100%;
   background-repeat: no-repeat;
   filter: brightness(0.6);
