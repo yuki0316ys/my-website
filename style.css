@@ -633,3 +633,36 @@ h2 {
 .video-section {
   padding-top: 100px;
 }
+/* ===== ボタン基本 ===== */
+.button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* ===== 光エフェクト ===== */
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.4),
+    transparent
+  );
+  transition: all 0.5s ease;
+}
+
+/* ===== ホバー時 ===== */
+.button:hover::before {
+  left: 100%;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
