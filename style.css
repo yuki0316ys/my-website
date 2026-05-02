@@ -114,11 +114,21 @@ main {
 }
 
 .hero {
+  position: relative;
+
   min-height: calc(100svh - 78px);
   display: grid;
   grid-template-rows: auto 1fr auto;
   gap: 48px;
   padding: 42px 0 78px;
+
+  background-image:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("images/profile.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero__meta {
