@@ -892,3 +892,67 @@ body::before{
   padding: 10px 20px;
   border: 1px solid white;
 }
+/* ===== STORE ===== */
+.store-page {
+  padding-top: 120px;
+}
+
+.store-hero {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.store-hero h1 {
+  font-size: 80px;
+  letter-spacing: 8px;
+}
+
+.product-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.product-card {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  transition: 0.3s;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-tag {
+  font-size: 12px;
+  color: #ff5d93;
+  margin-bottom: 8px;
+}
+
+.buy-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: 1px solid white;
+}
+
+.store-cta {
+  text-align: center;
+  margin: 80px 0;
+}
+
+.store-note {
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.6;
+}
