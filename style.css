@@ -566,11 +566,6 @@ h2 {
   box-shadow: 0 10px 40px rgba(0,0,0,0.5);
 }
 
-.fanclub-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 40px rgba(255,0,0,0.4);
-}
-
 .hero-bg {
   position: absolute;
   inset: 0;
