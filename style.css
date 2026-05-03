@@ -1219,3 +1219,49 @@ body::before{
   outline: none;
   border-color: #d9b76f;
 }
+/* ===== 歌詞（完成版） ===== */
+
+.lyrics-section {
+  max-width: 720px;
+  margin: 140px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.lyrics-title {
+  font-size: 12px;
+  letter-spacing: 0.35em;
+  margin-bottom: 50px;
+  opacity: 0.5;
+}
+
+/* 本文 */
+.lyrics {
+  font-size: 16px;
+  line-height: 2.2;
+  letter-spacing: 0.05em;
+
+  color: rgba(255,255,255,0.85);
+}
+
+/* 段落の余白（重要） */
+.lyrics p {
+  margin-bottom: 28px;
+}
+
+/* repeat表記 */
+.lyrics-repeat {
+  font-size: 12px;
+  opacity: 0.4;
+}
+
+/* グラデーション（没入感） */
+.lyrics {
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,1),
+    rgba(255,255,255,0.6)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
