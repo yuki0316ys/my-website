@@ -538,16 +538,6 @@ h2 {
     width: 100%;
   }
 }
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(0,0,0,0.9);
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 30px;
-  z-index: 1000;
-}
 
 .nav-logo {
   font-weight: bold;
@@ -686,22 +676,19 @@ h2 {
   text-shadow: 0 10px 40px rgba(0,0,0,0.8);
 }
 
-/* 中の要素の線も消す */
 .hero__content,
 .hero__meta,
 .hero__footer {
   border: none ;
 }
 
-/* 万が一hrタグなら消す */
 hr {
   display: none ;
 }
-/* ===== ナビバー透け防止（YUKIがうっすら見える問題対策） ===== */
+
 .navbar {
   background: #000;
 }
-/* ===== FINAL PRO EFFECT PACK ===== */
 
 :root{
   --accent:#f5c26b;
