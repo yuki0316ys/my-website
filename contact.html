@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | YUKI</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <a class="brand-button" href="index.html">YUKI</a>
+  <nav class="nav">
+    <a href="index.html#video">Video</a>
+    <a href="index.html#profile">Profile</a>
+    <a href="songs/index.html">Music</a>
+    <a href="news.html">News</a>
+    <a href="live.html">Live</a>
+    <a href="store.html">Store</a>
+  </nav>
+</header>
+
+<main class="contact-page">
+
+  <!-- タイトル -->
+  <section class="contact-hero">
+    <h1>Contact</h1>
+    <p class="hero-sub">
+      お仕事・出演依頼・コラボのご相談はこちら
+    </p>
+  </section>
+
+  <!-- フォーム -->
+  <section class="contact-form">
+
+    <form action="https://formspree.io/f/your-id" method="POST">
+
+      <label>会社名 / お名前</label>
+      <input type="text" name="name" required>
+
+      <label>メールアドレス</label>
+      <input type="email" name="email" required>
+
+      <label>お問い合わせ内容</label>
+      <textarea name="message" rows="6" required></textarea>
+
+      <button type="submit" class="main-cta">
+        送信する
+      </button>
+
+    </form>
+
+  </section>
+
+</main>
+
+</body>
+</html>
