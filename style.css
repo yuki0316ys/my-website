@@ -611,13 +611,6 @@ h2 {
   margin-bottom: 20px;
 }
 
-.hero__content h1 {
-  margin-bottom: 16px;
-  font-size: clamp(40px, 10vw, 110px);
-  font-weight: 900;
-  letter-spacing: 4px;
-  text-shadow: 0 10px 40px rgba(0,0,0,0.8);
-}
 .video-section {
   padding-top: 100px;
 }
@@ -782,15 +775,13 @@ h2 {
   transform: translateY(0);
 }
 
-/* 🔥 YUKIロゴを復活させる */
 .hero__content h1 {
-  display: block ;
-  font-size: 64px;
-  font-weight: 800;
+  font-size: clamp(40px, 10vw, 80px);
+  font-weight: 900;
   letter-spacing: 4px;
   margin-bottom: 16px;
   color: rgba(255,255,255,0.9);
-  text-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  text-shadow: 0 10px 40px rgba(0,0,0,0.8);
 }
 
 /* 中の要素の線も消す */
