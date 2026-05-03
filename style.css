@@ -1331,3 +1331,53 @@ body::before{
   font-size: 20px;
   text-shadow: 0 0 25px rgba(217,183,111,0.6);
 }
+/* ===== PROFILE ===== */
+
+.profile-page {
+  padding-top: 120px;
+}
+
+/* タイトル */
+.profile-hero {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.profile-hero h1 {
+  font-size: clamp(60px, 12vw, 140px);
+  font-weight: 900;
+}
+
+.profile-tag {
+  opacity: 0.6;
+  letter-spacing: 0.2em;
+}
+
+/* 本文 */
+.profile-content {
+  max-width: 720px;
+  margin: 0 auto 100px;
+  padding: 0 20px;
+  text-align: center;
+
+  line-height: 2;
+  color: rgba(255,255,255,0.85);
+}
+
+/* データ */
+.profile-data {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  text-align: center;
+}
+
+.profile-data span {
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.profile-data p {
+  font-size: 16px;
+  font-weight: 600;
+}
