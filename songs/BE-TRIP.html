@@ -20,5 +20,20 @@
     <section class="music reveal"><div class="section-heading"><p class="eyebrow">Other songs</p><h2>Keep listening.</h2></div><div class="track-grid"><a class="track-card" href="Sakayume.html"><span class="track-card__index">01</span><div><p class="track-card__type">Single</p><h3>逆夢</h3><p>A cinematic lead track about waking from a dream.</p></div></a><a class="track-card" href="afterimage.html"><span class="track-card__index">03</span><div><p class="track-card__type">Visual Track</p><h3>Afterimage</h3><p>Cinematic ambience, restrained drums, and a luminous chorus.</p></div></a></div></section>
     <section class="social reveal" id="follow"><div><p class="eyebrow">Next step</p><h2>YUKIをフォローする</h2></div><div class="social__links"><a class="social-link" href="../index.html#music">他の曲を聴く</a><a class="social-link" href="https://x.com/" target="_blank" rel="noopener noreferrer">Xでフォローする</a><a class="social-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Youtubeでフォローする</a></div></section>
   </main>
+
+  <script>
+const els = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("active");
+    }
+  });
+});
+
+els.forEach(el=>observer.observe(el));
+</script>
+  
 </body>
 </html>
