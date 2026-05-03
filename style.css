@@ -624,10 +624,6 @@ h2 {
   z-index: 2;
 }
 
-.hero__content {
-  margin-top: 120px;
-}
-
 .hero__lead {
   font-size: 16px;
   opacity: 0.7;
@@ -788,7 +784,6 @@ body::before{
   z-index: 2;
 }
 
-/* ボタン中央 */
 .hero__footer .button {
   margin: 0 auto;
 }
@@ -809,11 +804,6 @@ body::before{
 .hero__footer {
   position: relative;
   z-index: 2;
-}
-.hero__meta,
-.hero__content,
-.hero__footer {
-  transform: translateY(80px) ;
 }
 
 .button {
