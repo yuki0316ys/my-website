@@ -103,16 +103,7 @@ svg {
 main {
   overflow: hidden;
 }
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    rgba(0,0,0,0.2),
-    rgba(0,0,0,0.6)
-  );
-}
-/* 前面に出す */
+
 .hero__content,
 .hero__meta,
 .hero__footer {
@@ -434,12 +425,6 @@ h2 {
   animation-delay: 420ms;
 }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -597,19 +582,6 @@ h2 {
   padding-top: 100px;
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
-}
-
-/* ===== 表示されたとき ===== */
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ===== 少しずつズレて出す（オシャレ） ===== */
 .video-section { transition-delay: 0.1s; }
 .profile { transition-delay: 0.2s; }
 .music { transition-delay: 0.3s; }
@@ -821,14 +793,6 @@ body::before{
   margin-bottom: 20px;
 }
 
-/* メインコンテンツ */
-.hero__content {
-  position: relative;
-  z-index: 2;
-  margin-bottom: 20px;
-}
-
-/* 下のボタンエリア */
 .hero__footer {
   display: flex;
   flex-direction: column;
@@ -864,9 +828,7 @@ body::before{
 .hero__footer {
   transform: translateY(80px) ;
 }
-.hero__content {
-  margin-top: 120px;
-}
+
 .button {
   display: flex;
   align-items: center;
@@ -912,4 +874,8 @@ body::before{
 
 .button:hover::before {
   left: 100%;
+}
+.hero__content {
+  margin-top: 120px;
+  margin-bottom: 20px;
 }
