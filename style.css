@@ -1171,3 +1171,51 @@ body::before{
 .header.scrolled .brand-button {
   transform: scale(0.85);
 }
+/* ===== CONTACT ===== */
+
+.contact-page {
+  padding-top: 120px;
+}
+
+.contact-hero {
+  max-width: 800px;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.contact-hero h1 {
+  font-size: clamp(48px, 10vw, 120px);
+  font-weight: 900;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form label {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #d9b76f;
+}
