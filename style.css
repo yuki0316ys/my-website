@@ -425,10 +425,6 @@ h2 {
   margin: 0;
 }
 
-.reveal {
-  animation: fadeUp 900ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
-}
-
 .video-section {
   animation-delay: 120ms;
 }
@@ -444,12 +440,6 @@ h2 {
 .social {
   animation-delay: 420ms;
 }
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(22px);
-  }
 
   to {
     opacity: 1;
@@ -562,7 +552,6 @@ h2 {
     padding: 24px;
   }
 
-  .button,
   .social-link {
     width: 100%;
   }
@@ -614,14 +603,7 @@ h2 {
 .video-section {
   padding-top: 100px;
 }
-/* ===== ボタン基本 ===== */
-.button {
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
 
-/* ===== 光エフェクト ===== */
 .button::before {
   content: "";
   position: absolute;
@@ -723,17 +705,11 @@ h2 {
   letter-spacing: 2px;
 }
 
-.button {
-  transition: all 0.3s ease;
-}
-
-/* ===== メインCTA ===== */
 .main-cta:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 30px rgba(255,255,255,0.2);
 }
 
-/* ===== FAN CLUB特別化 ===== */
 .fanclub-btn {
   background: linear-gradient(135deg, #ff0000, #ff5d93);
   color: #fff;
@@ -745,14 +721,12 @@ h2 {
   box-shadow: 0 15px 50px rgba(255,0,0,0.5);
 }
 
-/* ===== 秘密感 ===== */
 .fanclub-note {
   font-size: 11px;
   opacity: 0.5;
   margin-top: 10px;
 }
 
-/* ===== スクロールフェード ===== */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -813,15 +787,6 @@ hr {
 .social-link:hover{
   transform: translateY(-6px) scale(1.02);
   box-shadow: 0 30px 80px rgba(245,194,107,0.25);
-}
-
-/* === ボタン光る === */
-.button{
-  position: relative;
-  overflow: hidden;
-  border-radius: 999px;
-  background: linear-gradient(90deg,#111,#222);
-  border: 1px solid rgba(255,255,255,0.1);
 }
 
 .button::after{
@@ -939,4 +904,27 @@ body::before{
 }
 .hero__content {
   margin-top: 120px;
+}
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 0 20px;
+  min-height: 48px;
+
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.1);
+
+  background: linear-gradient(90deg,#111,#222);
+  color: rgba(247,241,232,0.92);
+
+  font-size: 0.86rem;
+  font-weight: 800;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
