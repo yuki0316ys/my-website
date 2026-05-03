@@ -7,7 +7,7 @@
   <title>All Songs | Yuki</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -20,5 +20,20 @@
     <section class="music reveal" id="other"><div class="section-heading"><p class="eyebrow">Other songs</p><h2>その他</h2></div><div class="track-grid"><a class="track-card" href="JENESIS.html"><span class="track-card__index">08</span><div><p class="track-card__type">Ambient</p><h3>JENESIS</h3><p>無音の軌道を漂うような浮遊感。</p></div></a><a class="track-card" href="輪廻の中で自由を求め続けた弱者.html"><span class="track-card__index">09</span><div><p class="track-card__type">Vocal</p><h3>輪廻の中で自由を求め続けた弱者</h3><p>湖面に映る記憶をなぞるメロディ。</p></div></a><a class="track-card" href="曉.html"><span class="track-card__index">10</span><div><p class="track-card__type">Electronic</p><h3>曉</h3><p>祈りのように反復するシンセライン。</p></div></a><a class="track-card" href="Breakingallthechains.html"><span class="track-card__index">11</span><div><p class="track-card__type">Cinematic</p><h3>Breakingallthechains</h3><p>空洞に咲く花を描くダークポップ。</p></div></a><a class="track-card" href="ウーノ.html"><span class="track-card__index">12</span><div><p class="track-card__type">Ending Theme</p><h3>ウーノ</h3><p>エンドロール前の静かな余韻。</p></div></a><a class="track-card" href="The Beast.html"><span class="track-card__index">13</span><div><p class="track-card__type">Outro</p><h3>The Beast</h3><p>夜明けに残る足跡をたどるラストトラック。</p></div></a></div></section>
     <section class="social reveal" id="follow"><div><p class="eyebrow">Follow</p><h2>YUKIをフォローする</h2></div><div class="social__links"><a class="social-link" href="https://x.com/" target="_blank" rel="noopener noreferrer">Xでフォローする</a><a class="social-link" href="https://youtube.com/@yukiofficialstudiopro01?si=7eOnVVEDxAtZ4mGE" target="_blank" rel="noopener noreferrer">Youtubeでフォローする</a></div></section>
   </main>
+
+  <script>
+const els = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("active");
+    }
+  });
+});
+
+els.forEach(el=>observer.observe(el));
+</script>
+  
 </body>
 </html>
