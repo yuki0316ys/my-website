@@ -1275,3 +1275,59 @@ body::before{
   color: #fff;
   text-shadow: 0 0 20px rgba(255,255,255,0.4);
 }
+/* 英語サビ */
+.en {
+  letter-spacing: 0.08em;
+}
+
+/* サビ（メイン） */
+.lyrics-highlight {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 40px 0;
+
+  color: #fff;
+  text-shadow: 0 0 20px rgba(255,255,255,0.4);
+}
+
+/* サブ英語 */
+.lyrics-sub {
+  font-size: 14px;
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+/* 強調 */
+.lyrics-highlight {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 40px 0;
+
+  color: #fff;
+  text-shadow: 0 0 18px rgba(255,93,147,0.35);
+}
+
+/* 弱さ・内面 */
+.lyrics-sub {
+  opacity: 0.5;
+}
+
+/* ラスト（最大感情） */
+.lyrics-highlight.final {
+  font-size: 20px;
+  text-shadow: 0 0 25px rgba(255,93,147,0.6);
+}
+/* 強調（決意・宣言） */
+.lyrics-highlight {
+  font-size: 18px;
+  font-weight: 800;
+  margin: 40px 0;
+
+  color: #fff;
+  text-shadow: 0 0 18px rgba(116,213,255,0.35);
+}
+
+/* ラスト（最大パンチ） */
+.lyrics-highlight.final {
+  font-size: 20px;
+  text-shadow: 0 0 25px rgba(217,183,111,0.6);
+}
