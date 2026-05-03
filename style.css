@@ -197,7 +197,6 @@ h1 {
   text-transform: uppercase;
   text-align: center;
 }
-}
 
 .button,
 .social-link {
@@ -508,12 +507,6 @@ h2 {
     display: none;
   }
 
-  .hero {
-  min-height: 100vh;
-  gap: 38px;
-  padding: 56px 0 180px;
-}
-
   .hero__meta {
   justify-content: center;
 }
@@ -705,12 +698,6 @@ h2 {
   transform: scale(1.05);
   box-shadow: 0 10px 40px rgba(255,0,0,0.4);
 }
-/* ===== 背景を映画っぽく ===== */
-.hero {
-  position: relative;
-  overflow: hidden;
-  min-height: 100vh;
-}
 
 .hero-bg {
   position: absolute;
@@ -795,9 +782,6 @@ h2 {
   transform: translateY(0);
 }
 
-  /* ふわっと浮く感じ */
-  text-shadow: 0 10px 30px rgba(0,0,0,0.6);
-}
 /* 🔥 YUKIロゴを復活させる */
 .hero__content h1 {
   display: block ;
@@ -808,12 +792,7 @@ h2 {
   color: rgba(255,255,255,0.9);
   text-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
-/* 🔥 謎の横線を完全に消す */
 
-/* hero内の線を消す */
-.hero {
-  border: none ;
-}
 /* 中の要素の線も消す */
 .hero__content,
 .hero__meta,
