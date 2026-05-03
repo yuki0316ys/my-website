@@ -597,11 +597,6 @@ h2 {
   transition: all 0.8s ease;
 }
 
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .hero__content h1 {
   font-size: clamp(40px, 10vw, 80px);
   font-weight: 900;
