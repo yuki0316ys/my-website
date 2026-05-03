@@ -800,7 +800,7 @@ h2 {
 }
 /* 🔥 YUKIロゴを復活させる */
 .hero__content h1 {
-  display: block !important;
+  display: block ;
   font-size: 64px;
   font-weight: 800;
   letter-spacing: 4px;
@@ -812,18 +812,18 @@ h2 {
 
 /* hero内の線を消す */
 .hero {
-  border: none !important;
+  border: none ;
 }
 /* 中の要素の線も消す */
 .hero__content,
 .hero__meta,
 .hero__footer {
-  border: none !important;
+  border: none ;
 }
 
 /* 万が一hrタグなら消す */
 hr {
-  display: none !important;
+  display: none ;
 }
 /* ===== ナビバー透け防止（YUKIがうっすら見える問題対策） ===== */
 .navbar {
@@ -977,8 +977,8 @@ body::before{
 .hero__meta,
 .hero__content,
 .hero__footer {
-  transform: translateY(80px) !important;
+  transform: translateY(80px) ;
 }
 .hero__content {
-  margin-top: 120px !important;
+  margin-top: 120px;
 }
