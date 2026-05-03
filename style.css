@@ -1099,7 +1099,8 @@ body::before{
   border: 1px solid white;
   padding: 10px 20px;
 }
-/* ===== YUKIロゴ（光るボタン完成版） ===== */
+
+/* ===== YUKIロゴ（光るボタン完全版） ===== */
 
 .brand-button {
   position: relative;
@@ -1119,19 +1120,28 @@ body::before{
 
   backdrop-filter: blur(12px);
 
+  /* 常時グロー */
+  box-shadow:
+    0 0 10px rgba(217,183,111,0.4),
+    0 0 20px rgba(255,93,147,0.2);
+
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: transform 0.25s ease, background 0.3s ease;
 }
 
-/* ホバー本体 */
+/* ホバー */
 .brand-button:hover {
-  transform: translateY(-2px) scale(1.05);
+  transform: scale(1.05);
   background: linear-gradient(135deg, #d9b76f, #ff5d93);
   color: #000;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
 
-/* 光エフェクト */
+/* クリック */
+.brand-button:active {
+  transform: scale(0.92);
+}
+
+/* 光 */
 .brand-button::before {
   content: "";
   position: absolute;
@@ -1139,18 +1149,15 @@ body::before{
   left: -120%;
   width: 120%;
   height: 100%;
-
   background: linear-gradient(
     120deg,
     transparent,
     rgba(255,255,255,0.5),
     transparent
   );
-
   transform: skewX(-20deg);
 }
 
-/* 光が流れる */
 .brand-button:hover::before {
   animation: shine 1.2s ease;
 }
@@ -1158,4 +1165,9 @@ body::before{
 @keyframes shine {
   from { left: -120%; }
   to { left: 120%; }
+}
+
+/* スクロール縮小 */
+.header.scrolled .brand-button {
+  transform: scale(0.85);
 }
