@@ -110,17 +110,7 @@ main {
   position: relative;
   z-index: 2;
 }
-.hero__meta {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  color: rgba(247, 241, 232, 0.66);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
+
 .hero__meta span {
   padding: 9px 13px;
   background: rgba(255, 255, 255, 0.055);
@@ -768,14 +758,6 @@ body::before{
   padding-top: 140px; 
 }
 
-/* メタ情報（TOKYOとか） */
-.hero__meta {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
 .hero__footer {
   display: flex;
   flex-direction: column;
@@ -855,4 +837,18 @@ body::before{
 .hero__content {
   margin-top: 120px;
   margin-bottom: 20px;
+}
+.hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+
+  margin-bottom: 20px;
+
+  color: rgba(247, 241, 232, 0.66);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
