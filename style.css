@@ -2003,3 +2003,16 @@ input, textarea {
     );
   }
 }
+.hero-bg {
+  background-image: url("images/profile.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 1024px) {
+  .hero-bg {
+    background-size: contain;
+    background-position: left center;
+    background-repeat: no-repeat;
+  }
+}
