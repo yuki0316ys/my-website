@@ -39,26 +39,40 @@
   <!-- フォーム -->
   <section class="contact-form">
 
-    <form action="https://formspree.io/f/your-id" method="POST">
+    <form action="#" method="post" class="contact-form">
 
-      <label>会社名 / お名前</label>
-      <input type="text" name="name" required>
+  <!-- 名前 -->
+  <label>お名前</label>
+  <input type="text" name="name" placeholder="山田 太郎" required>
 
-      <label>メールアドレス</label>
-      <input type="email" name="email" required>
+  <!-- メール -->
+  <label>メールアドレス</label>
+  <input type="email" name="email" placeholder="example@email.com" required>
 
-      <label>お問い合わせ内容</label>
-      <textarea name="message" rows="6" required></textarea>
+  <!-- 件名 -->
+  <label>お問い合わせ内容</label>
+  <select name="type" required>
+    <option value="">選択してください</option>
+    <option value="music">楽曲制作の依頼</option>
+    <option value="live">ライブ出演依頼</option>
+    <option value="collab">コラボ・共同制作</option>
+    <option value="other">その他</option>
+  </select>
 
-      <p class="contact-cta">
-  あなたのプロジェクトに音楽で価値を加えます
-</p>
-      
-      <button type="submit" class="main-cta">
-       送信する
-      </button>
+  <!-- 本文 -->
+  <label>詳細</label>
+  <textarea name="message" rows="5" placeholder="内容をご記入ください" required></textarea>
 
-    </form>
+  <!-- CTA -->
+  <p class="contact-cta">
+    あなたのプロジェクトに音楽で価値を加えます
+  </p>
+
+  <button type="submit" class="button main-cta">
+    送信する
+  </button>
+
+</form>
 
   </section>
 
