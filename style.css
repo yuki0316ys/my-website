@@ -1593,3 +1593,51 @@ body::before {
   }
 
 }
+
+/* =========================
+   HEADER（常に最前面）
+========================= */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+
+/* =========================
+   HERO（ヘッダー分の余白）
+========================= */
+
+.hero {
+  padding-top: 100px; /* ヘッダーの高さ分 */
+  background-position: center center;
+}
+
+
+/* =========================
+   スマホレイアウト修正
+========================= */
+
+@media (max-width: 768px) {
+
+  .hero__content {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+}
+
+
+/* =========================
+   横ズレ防止
+========================= */
+
+body {
+  overflow-x: hidden;
+}
