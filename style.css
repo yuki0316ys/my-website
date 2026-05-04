@@ -1880,3 +1880,49 @@ body {
   }
 
 }
+
+/* =========================
+   CONTACT 強化
+========================= */
+
+.contact-target {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.contact-trust {
+  text-align: center;
+  font-size: 13px;
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+.contact-cta {
+  text-align: center;
+  margin: 20px 0;
+  font-weight: 700;
+}
+
+/* フォーム */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* モバイル */
+@media (max-width: 768px) {
+
+  form {
+    padding: 0 20px;
+  }
+
+}
