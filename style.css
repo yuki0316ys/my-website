@@ -1410,3 +1410,186 @@ body::before {
   margin-right: auto;
   text-align: center;
 }
+
+/* =========================
+   HERO 強化
+========================= */
+
+.hero-achievement {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  opacity: 0.6;
+  margin-bottom: 20px;
+}
+
+.hero-catch {
+  margin-top: 10px;
+  font-size: 16px;
+  opacity: 0.7;
+  letter-spacing: 0.15em;
+}
+
+.hero-sub {
+  font-size: 13px;
+  opacity: 0.6;
+  margin-top: 10px;
+}
+
+.hero-cta {
+  margin-top: 30px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+/* =========================
+   ACHIEVEMENTS（実績）
+========================= */
+
+.achievement {
+  text-align: center;
+  margin: 120px auto;
+}
+
+.section-title {
+  margin-bottom: 40px;
+  opacity: 0.6;
+}
+
+.achievement-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.achievement-item {
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(10px);
+  min-width: 160px;
+}
+
+.number {
+  font-size: 28px;
+  font-weight: 900;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-text {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.9;
+  opacity: 0.8;
+  text-align: center;
+}
+
+
+/* =========================
+   FINAL CTA
+========================= */
+
+.final-cta {
+  text-align: center;
+  padding: 140px 20px;
+  position: relative;
+}
+
+.final-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(245,194,107,0.15), transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.final-cta-sub {
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  opacity: 0.5;
+  margin-bottom: 20px;
+}
+
+.final-cta-title {
+  font-size: clamp(32px, 6vw, 56px);
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.final-cta-text {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  opacity: 0.7;
+  line-height: 1.8;
+}
+
+.final-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.main-cta {
+  background: linear-gradient(90deg, #d9b76f, #f5c26b);
+  color: #000;
+  font-weight: 800;
+  box-shadow: 0 0 20px rgba(245,194,107,0.5);
+}
+
+.sub-cta {
+  opacity: 0.85;
+}
+
+.main-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(245,194,107,0.7);
+}
+
+
+/* =========================
+   SONGS CTA（おまけ）
+========================= */
+
+.songs-cta {
+  text-align: center;
+  margin: 80px 0;
+}
+
+
+/* =========================
+   MOBILE 最適化
+========================= */
+
+@media (max-width: 768px) {
+
+  .hero__content h1 {
+    font-size: 38px;
+  }
+
+  .hero-catch {
+    font-size: 14px;
+  }
+
+  .achievement-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .final-cta {
+    padding: 100px 20px;
+  }
+
+  .final-cta-title {
+    font-size: 28px;
+  }
+
+}
