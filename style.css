@@ -1958,8 +1958,9 @@ body {
 /* PC用（顔を全部表示＋左寄せ） */
 @media (min-width: 1024px) {
   .hero-bg {
-    background-size: contain;
+    background-size: 80%;   /* ← ここで大きさ調整 */
     background-position: left center;
+    background-repeat: no-repeat;
   }
 }
 
