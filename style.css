@@ -1736,3 +1736,57 @@ body {
   margin-top: 40px;
   opacity: 0.7;
 }
+
+/* =========================
+   NEWS CARD
+========================= */
+
+.news-list {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.news-card {
+  padding: 24px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.03);
+  transition: 0.3s;
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+}
+
+/* 強調カード */
+.news-card.featured {
+  border: 1px solid rgba(245,194,107,0.4);
+}
+
+/* 日付 */
+.news-card .date {
+  font-size: 12px;
+  opacity: 0.5;
+  margin-bottom: 10px;
+}
+
+/* CTA */
+.news-cta {
+  margin-top: 20px;
+}
+
+.news-cta .cta-text {
+  font-size: 13px;
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+
+/* モバイル */
+@media (max-width: 768px) {
+  .news-list {
+    padding: 60px 20px;
+  }
+}
