@@ -1991,3 +1991,15 @@ input, textarea {
     background-position: center 20%;
   }
 }
+@media (min-width: 1024px) {
+  .hero-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to right,
+      rgba(0,0,0,0.2),
+      rgba(0,0,0,0.8)
+    );
+  }
+}
