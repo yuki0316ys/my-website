@@ -126,16 +126,6 @@ h1 {
   text-shadow: 0 36px 120px rgba(217, 183, 111, 0.22);
 }
 
-.hero__footer {
-  display: flex;
-  flex-direction: column;   /* ← 追加 */
-  align-items: center;      /* ← 中央 */
-  justify-content: center;  /* ← 中央 */
-  gap: 10px;
-  padding-top: 28px;
-  border-top: 1px solid var(--line);
-}
-
 .hero__footer p {
   margin: 0;
   color: var(--dim);
@@ -433,11 +423,6 @@ h2 {
     font-size: 1.34rem;
   }
 
-  .hero__footer {
-  align-items: center;   /* ← これに変更 */
-  flex-direction: column;
-}
-
   .video-section,
   .profile,
   .music,
@@ -500,11 +485,7 @@ h2 {
 .nav-menu a:hover {
   opacity: 0.7;
 }
-@media (max-width: 680px) {
-  h1 {
-    font-size: clamp(32px, 12vw, 72px);
-  }
-}
+
 .hero__meta {
   margin-bottom: 20px;
 }
@@ -645,14 +626,6 @@ hr {
   justify-content: flex-start; 
   align-items: center;
   text-align: center;
-}
-
-.hero__footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  z-index: 2;
 }
 
 .hero__footer .button {
@@ -1390,7 +1363,6 @@ body::before {
   max-width: 1040px;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
 }
 
 /* =========================
@@ -1963,4 +1935,13 @@ input, textarea {
   .hero__content {
     margin-top: 60px;
   }
+}
+.hero__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+  z-index: 2;
 }
