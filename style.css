@@ -1849,3 +1849,34 @@ body {
   }
 
 }
+
+/* =========================
+   PROFILE 強化
+========================= */
+
+.profile-catch {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+/* CTA */
+.profile-cta {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.profile-cta .cta-text {
+  opacity: 0.7;
+  margin: 10px 0 20px;
+}
+
+/* モバイル */
+@media (max-width: 768px) {
+
+  .profile-cta {
+    padding: 80px 20px;
+  }
+
+}
