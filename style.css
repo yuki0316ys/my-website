@@ -1641,3 +1641,69 @@ body::before {
 body {
   overflow-x: hidden;
 }
+
+/* =========================
+   SONGS CTA（プロ版）
+========================= */
+
+.songs-cta {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.cta-sub {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  opacity: 0.5;
+  margin-bottom: 20px;
+}
+
+.cta-title {
+  font-size: clamp(26px, 5vw, 40px);
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.cta-text {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  line-height: 1.8;
+  opacity: 0.7;
+}
+
+/* ボタン強化 */
+.songs-cta .main-cta {
+  background: linear-gradient(90deg, #d9b76f, #f5c26b);
+  color: #000;
+  font-weight: 800;
+  box-shadow: 0 0 20px rgba(245,194,107,0.5);
+}
+
+.songs-cta .main-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(245,194,107,0.7);
+}
+
+/* =========================
+   余白改善
+========================= */
+
+.music {
+  margin-bottom: 80px;
+}
+
+/* =========================
+   スマホ最適化
+========================= */
+
+@media (max-width: 768px) {
+
+  .songs-cta {
+    padding: 80px 20px;
+  }
+
+  .cta-title {
+    font-size: 24px;
+  }
+
+}
