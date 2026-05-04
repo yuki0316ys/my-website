@@ -1390,3 +1390,73 @@ body::before{
   width: 100%;
   border-radius: 12px;
 }
+/* ===== HERO強化 ===== */
+
+.hero-achievement {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  opacity: 0.6;
+  margin-bottom: 20px;
+}
+
+.hero-catch {
+  margin-top: 10px;
+  font-size: 16px;
+  opacity: 0.7;
+  letter-spacing: 0.15em;
+}
+
+.hero-cta {
+  margin-top: 30px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ===== 実績 ===== */
+
+.achievement {
+  text-align: center;
+  margin: 120px auto;
+}
+
+.section-title {
+  margin-bottom: 40px;
+  opacity: 0.6;
+}
+
+.achievement-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.number {
+  font-size: 28px;
+  font-weight: 900;
+}
+
+/* ===== Songs CTA ===== */
+
+.songs-cta {
+  text-align: center;
+  margin: 80px 0;
+}
+
+/* ===== モバイル最適化 ===== */
+
+@media (max-width: 768px) {
+  .hero__content h1 {
+    font-size: 42px;
+  }
+
+  .hero {
+    padding: 100px 20px;
+  }
+
+  .achievement-grid {
+    gap: 20px;
+  }
+}
