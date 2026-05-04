@@ -1712,3 +1712,27 @@ body {
   opacity: 0.6;
   margin-bottom: 10px;
 }
+.live-card {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.live-date {
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+
+.live-title {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.live-place {
+  margin: 10px 0 30px;
+}
+
+.live-copy {
+  text-align: center;
+  margin-top: 40px;
+  opacity: 0.7;
+}
