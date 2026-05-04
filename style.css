@@ -1974,3 +1974,20 @@ input, textarea {
   display: flex;
   gap: 20px;
 }
+.hero-bg {
+  background-image: url("images/profile.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 1024px) {
+  .hero-bg {
+    background-position: center 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-bg {
+    background-position: center 20%;
+  }
+}
