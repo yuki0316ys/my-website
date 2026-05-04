@@ -32,19 +32,6 @@ body {
   font-family: "Inter", "Noto Sans JP", sans-serif;
 }
 
-body::before {
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  pointer-events: none;
-  content: "";
-  background:
-    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
-  background-size: 100% 8px, 8px 100%;
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent 78%);
-}
-
 a {
   color: inherit;
   text-decoration: none;
@@ -110,12 +97,7 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 999px;
 }
-.hero__content {
-  align-self: center;
-  max-width: 1040px;
-  margin: 0 auto;
-  text-align: center;
-}
+
 .eyebrow {
   margin: 0 0 18px;
   color: var(--gold);
@@ -653,20 +635,6 @@ hr {
   100%{transform:translateX(100%)}
 }
 
-/* === マウスライト === */
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  background: radial-gradient(
-    circle at var(--x,50%) var(--y,50%),
-    rgba(245,194,107,0.15),
-    transparent 40%
-  );
-  z-index:0;
-}
-
 .reveal.active{
   opacity:1;
   transform:translateY(0);
@@ -719,29 +687,6 @@ body::before{
   z-index: 1;
 }
 
-.button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-
-  padding: 0 20px;
-  min-height: 48px;
-
-  position: relative;
-  overflow: hidden;
-
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.1);
-
-  background: linear-gradient(90deg,#111,#222);
-  color: rgba(247,241,232,0.92);
-
-  font-size: 0.86rem;
-  font-weight: 800;
-
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 .button:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
@@ -765,10 +710,7 @@ body::before{
 .button:hover::before {
   left: 100%;
 }
-.hero__content {
-  margin-top: 120px;
-  margin-bottom: 20px;
-}
+
 .hero__meta {
   display: flex;
   flex-wrap: wrap;
@@ -1265,29 +1207,9 @@ body::before{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* サビ・キーフレーズ */
-.lyrics-highlight {
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  margin: 40px 0;
 
-  color: #fff;
-  text-shadow: 0 0 20px rgba(255,255,255,0.4);
-}
-/* 英語サビ */
 .en {
   letter-spacing: 0.08em;
-}
-
-/* サビ（メイン） */
-.lyrics-highlight {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 40px 0;
-
-  color: #fff;
-  text-shadow: 0 0 20px rgba(255,255,255,0.4);
 }
 
 /* サブ英語 */
@@ -1296,42 +1218,11 @@ body::before{
   opacity: 0.6;
   margin-bottom: 30px;
 }
-/* 強調 */
-.lyrics-highlight {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 40px 0;
-
-  color: #fff;
-  text-shadow: 0 0 18px rgba(255,93,147,0.35);
-}
 
 /* 弱さ・内面 */
 .lyrics-sub {
   opacity: 0.5;
 }
-
-/* ラスト（最大感情） */
-.lyrics-highlight.final {
-  font-size: 20px;
-  text-shadow: 0 0 25px rgba(255,93,147,0.6);
-}
-/* 強調（決意・宣言） */
-.lyrics-highlight {
-  font-size: 18px;
-  font-weight: 800;
-  margin: 40px 0;
-
-  color: #fff;
-  text-shadow: 0 0 18px rgba(116,213,255,0.35);
-}
-
-/* ラスト（最大パンチ） */
-.lyrics-highlight.final {
-  font-size: 20px;
-  text-shadow: 0 0 25px rgba(217,183,111,0.6);
-}
-/* ===== PROFILE ===== */
 
 .profile-page {
   padding-top: 120px;
@@ -1459,4 +1350,63 @@ body::before{
   .achievement-grid {
     gap: 20px;
   }
+}
+.lyrics-highlight {
+  font-size: 18px;
+  font-weight: 800;
+  margin: 40px 0;
+  color: #fff;
+  text-shadow: 0 0 18px rgba(116,213,255,0.35);
+}
+
+.lyrics-highlight.final {
+  font-size: 20px;
+  text-shadow: 0 0 25px rgba(217,183,111,0.6);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 0 20px;
+  min-height: 48px;
+
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.1);
+
+  background: linear-gradient(90deg,#111,#222);
+  color: rgba(247,241,232,0.92);
+
+  font-size: 0.86rem;
+  font-weight: 800;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body::before {
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+
+  background:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px),
+    radial-gradient(circle at var(--x,50%) var(--y,50%), rgba(245,194,107,0.15), transparent 40%);
+
+  background-size: 100% 8px, 8px 100%, auto;
+}
+
+.hero__content {
+  margin-top: 120px;
+  margin-bottom: 20px;
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
