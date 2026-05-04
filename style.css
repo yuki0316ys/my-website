@@ -1836,7 +1836,7 @@ body {
 }
 
 /* =========================
-   CONTACT 強化
+   CONTACT 完全版
 ========================= */
 
 .contact-target {
@@ -1858,36 +1858,11 @@ body {
   font-weight: 700;
 }
 
-/* フォーム */
-form {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  border: none;
-}
-
-/* モバイル */
-@media (max-width: 768px) {
-
-  form {
-    padding: 0 20px;
-  }
-
-}
-
-/* =========================
-   CONTACT FORM 強化
-========================= */
-
+/* フォーム本体 */
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
 }
@@ -1912,6 +1887,18 @@ input, textarea {
   color: #fff;
 }
 
+/* プレースホルダー */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+/* textarea */
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
 /* フォーカス */
 .contact-form input:focus,
 .contact-form textarea:focus,
@@ -1923,32 +1910,14 @@ input, textarea {
 /* ボタン */
 .contact-form button {
   margin-top: 10px;
-}
-@media (max-width: 680px) {
-  h1 {
-    font-size: clamp(32px, 10vw, 56px);
-    line-height: 1.2;
-  }
+  padding: 14px;
+  font-size: 14px;
+  cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .hero__content {
-    margin-top: 60px;
-  }
-}
-.hero__footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  padding-top: 28px;
-  border-top: 1px solid var(--line);
-  z-index: 2;
-}
 /* =========================
    HEADER 復活
 ========================= */
-
 .header {
   position: fixed;
   top: 0;
@@ -1974,8 +1943,8 @@ input, textarea {
   display: flex;
   gap: 20px;
 }
-/* ===== HERO BG 最終版 ===== */
 
+/* ===== HERO BG 最終版 ===== */
 /* ベース（スマホ含む） */
 .hero-bg {
   position: absolute;
