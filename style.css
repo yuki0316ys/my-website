@@ -518,15 +518,6 @@ h2 {
   box-shadow: 0 10px 40px rgba(0,0,0,0.5);
 }
 
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background-image: url("images/profile.jpg");
-  background-position: center;
-  background-size: cover; /* ← ここ変更 */
-  background-repeat: no-repeat;
-  filter: brightness(0.6);
-}
 @keyframes heroZoom {
   from { transform: scale(1.0); }
   to { transform: scale(1.05); }
@@ -1949,17 +1940,6 @@ body {
   gap: 20px;
 }
 
-/* ===== HERO BG 最終版 ===== */
-/* ベース（スマホ含む） */
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background-image: url("images/profile.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 /* PC用（顔を全部表示＋左寄せ） */
 @media (min-width: 1024px) {
   .hero-bg {
@@ -2078,6 +2058,8 @@ body {
   inset: 0;
   width: 100%;
   height: 100%;
+  background-image: url("images/profile.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
-
