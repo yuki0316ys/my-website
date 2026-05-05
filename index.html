@@ -208,6 +208,13 @@ window.addEventListener("scroll", () => {
   }
 });
 </script>
-  
+ <script>
+const hamburger = document.getElementById("hamburger");
+const nav = document.getElementById("nav");
+
+hamburger.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
+</script> 
 </body>
 </html>
