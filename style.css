@@ -2163,39 +2163,37 @@ body {
   }
 
 }
-/* ===== 動画背景 ===== */
-.hero-video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
+/* =========================
+   HERO（画像版 完成）
+========================= */
+
+.hero {
+  position: relative;
+  overflow: hidden;
 }
 
-/* ===== 暗幕（超重要） ===== */
-.hero-overlay {
+/* 背景画像 */
+.hero-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.7),
-    rgba(0,0,0,0.4),
-    rgba(0,0,0,0.7)
-  );
-  z-index: 1;
+  background-image: url("images/profile.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-/* コンテンツ前面 */
-.hero__content,
-.hero__meta {
+/* 文字を前面に */
+.hero__meta,
+.hero__content {
   position: relative;
   z-index: 2;
 }
-.hero-video {
-  transition: transform 1.5s ease;
-}
 
-.hero.active .hero-video {
-  transform: scale(1.05);
+/* 暗幕（見やすくする） */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 1;
 }
