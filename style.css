@@ -2009,17 +2009,18 @@ body {
   50% { transform: translateY(10px); opacity: 1; }
   100% { transform: translateY(20px); opacity: 0; }
 }
+
 @media (max-width: 768px) {
 
   .hero-bg {
     background-position: center 0%;
   }
 
-@media (max-width: 768px) {
   .hero__content {
-    margin-top: 150px;  /* ← ここ変更 */
+    margin-top: 150px;
     padding: 0 16px;
   }
+
 }
 
 }
