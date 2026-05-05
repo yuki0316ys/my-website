@@ -408,14 +408,6 @@ h2 {
   }
 }
 
-  .header {
-    min-height: 70px;
-  }
-
-  .nav {
-    display: none;
-  }
-
   .hero__meta {
   justify-content: center;
 }
@@ -1544,9 +1536,13 @@ body::before {
   top: 0;
   left: 0;
   width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
   z-index: 9999;
 }
-
 
 .hero {
   position: relative;
@@ -1918,21 +1914,8 @@ body {
 }
 
 /* =========================
-   HEADER 復活
+   HEADER
 ========================= */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-
-  z-index: 9999; /* ← 最重要 */
-}
 
 /* ロゴ */
 .brand-button {
@@ -2009,7 +1992,6 @@ body {
 
 }
 
-}
 /* ハンバーガー */
 .hamburger {
   display: none;
@@ -2018,17 +2000,14 @@ body {
   cursor: pointer;
   z-index: 10001;
 }
+
 .hamburger span {
   display: block;
   width: 25px;
   height: 2px;
   background: #fff;
 }
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 @media (max-width: 768px) {
 
   .hamburger {
@@ -2057,4 +2036,3 @@ body {
   }
 
 }
-
