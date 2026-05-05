@@ -1970,11 +1970,6 @@ body {
 }
 
 /* スマホ微調整（任意） */
-@media (max-width: 768px) {
-  .hero-bg {
-    background-position: center 20%;
-  }
-}
 .scroll-guide {
   margin-top: 20px;
   text-align: center;
