@@ -2045,3 +2045,6 @@ body {
   }
 
 }
+.hamburger {
+  display: none !important;
+}
