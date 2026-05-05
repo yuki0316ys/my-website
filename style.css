@@ -1999,23 +1999,37 @@ body {
   }
 }
 /* =========================
-   MOBILE 完全最適化（最強版）
+   MOBILE 最終仕上げ
 ========================= */
 
 @media (max-width: 768px) {
 
-  /* 全体余白 */
-  body {
-    font-size: 14px;
+  /* ===== ヘッダー（見やすく） ===== */
+  .header {
+    height: 60px;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
   }
 
-  /* HERO */
+  .nav {
+    font-size: 10px;
+    gap: 10px;
+  }
+
+  /* ===== HERO ===== */
   .hero {
     padding: 80px 16px 40px;
   }
 
+  .hero-bg {
+    background-size: 130%;
+    background-position: center 25%;
+  }
+
   .hero__content {
     margin-top: 60px;
+    padding: 20px 16px;
+    border-radius: 20px;
   }
 
   .hero__content h1 {
@@ -2032,7 +2046,7 @@ body {
     font-size: 12px;
   }
 
-  /* CTAボタン */
+  /* ===== CTAボタン ===== */
   .hero__cta {
     flex-direction: column;
     gap: 12px;
@@ -2040,16 +2054,26 @@ body {
 
   .button {
     width: 100%;
-    min-height: 52px;
+    min-height: 56px;
     font-size: 14px;
   }
 
-  /* スクロールガイド */
-  .scroll-guide {
-    margin-top: 10px;
+  .main-cta {
+    font-size: 15px;
   }
 
-  /* 実績 */
+  /* ===== Scroll誘導 ===== */
+  .scroll-guide {
+    margin-top: 10px;
+    font-size: 11px;
+    opacity: 0.6;
+  }
+
+  .scroll-guide .arrow {
+    height: 20px;
+  }
+
+  /* ===== 実績 ===== */
   .achievement {
     margin: 60px auto;
   }
@@ -2067,7 +2091,7 @@ body {
     font-size: 32px;
   }
 
-  /* 動画 */
+  /* ===== 動画 ===== */
   .video-section {
     padding: 60px 16px;
   }
@@ -2076,7 +2100,7 @@ body {
     flex-direction: column;
   }
 
-  /* プロフィール */
+  /* ===== プロフィール ===== */
   .profile {
     padding: 60px 16px;
   }
@@ -2085,7 +2109,7 @@ body {
     padding: 20px;
   }
 
-  /* 曲 */
+  /* ===== 曲 ===== */
   .track-grid {
     grid-template-columns: 1fr;
   }
@@ -2094,7 +2118,7 @@ body {
     min-height: auto;
   }
 
-  /* SNS */
+  /* ===== SNS ===== */
   .social {
     padding: 60px 16px;
   }
@@ -2107,7 +2131,7 @@ body {
     width: 100%;
   }
 
-  /* FINAL CTA */
+  /* ===== FINAL CTA ===== */
   .final-cta {
     padding: 80px 16px;
   }
