@@ -174,7 +174,7 @@ document.addEventListener("mousemove", e=>{
   document.body.style.setProperty("--y", e.clientY + "px");
 });
 
-// スクロールふわっと表示
+// スクロールふわっと表示（修正版）
 const els = document.querySelectorAll(".reveal");
 
 const observer = new IntersectionObserver(entries=>{
@@ -183,9 +183,18 @@ const observer = new IntersectionObserver(entries=>{
       entry.target.classList.add("active");
     }
   });
+}, {
+  threshold: 0.1
 });
 
-els.forEach(el=>observer.observe(el));
+els.forEach(el=>{
+  observer.observe(el);
+
+  // 🔥 初期表示も強制で発火（ここが超重要）
+  if(el.getBoundingClientRect().top < window.innerHeight){
+    el.classList.add("active");
+  }
+});
 </script>
 
 <script>
