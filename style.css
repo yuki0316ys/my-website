@@ -2014,3 +2014,16 @@ body {
   50% { transform: translateY(10px); opacity: 1; }
   100% { transform: translateY(20px); opacity: 0; }
 }
+@media (max-width: 768px) {
+
+  .hero-bg {
+    background-position: center 15%;
+    background-size: cover;
+  }
+
+  .hero__content {
+    margin-top: 40px;
+    padding: 0 16px;
+  }
+
+}
