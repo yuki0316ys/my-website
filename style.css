@@ -1998,3 +1998,122 @@ body {
     gap: 12px;
   }
 }
+/* =========================
+   MOBILE 完全最適化（最強版）
+========================= */
+
+@media (max-width: 768px) {
+
+  /* 全体余白 */
+  body {
+    font-size: 14px;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 80px 16px 40px;
+  }
+
+  .hero__content {
+    margin-top: 60px;
+  }
+
+  .hero__content h1 {
+    font-size: 34px;
+    letter-spacing: 2px;
+  }
+
+  .hero-catch {
+    font-size: 13px;
+    letter-spacing: 0.1em;
+  }
+
+  .hero-sub {
+    font-size: 12px;
+  }
+
+  /* CTAボタン */
+  .hero__cta {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .button {
+    width: 100%;
+    min-height: 52px;
+    font-size: 14px;
+  }
+
+  /* スクロールガイド */
+  .scroll-guide {
+    margin-top: 10px;
+  }
+
+  /* 実績 */
+  .achievement {
+    margin: 60px auto;
+  }
+
+  .achievement-grid {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .achievement-item {
+    width: 100%;
+  }
+
+  .number {
+    font-size: 32px;
+  }
+
+  /* 動画 */
+  .video-section {
+    padding: 60px 16px;
+  }
+
+  .video-cta {
+    flex-direction: column;
+  }
+
+  /* プロフィール */
+  .profile {
+    padding: 60px 16px;
+  }
+
+  .profile__panel {
+    padding: 20px;
+  }
+
+  /* 曲 */
+  .track-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .track-card {
+    min-height: auto;
+  }
+
+  /* SNS */
+  .social {
+    padding: 60px 16px;
+  }
+
+  .social__links {
+    flex-direction: column;
+  }
+
+  .social-link {
+    width: 100%;
+  }
+
+  /* FINAL CTA */
+  .final-cta {
+    padding: 80px 16px;
+  }
+
+  .final-cta-title {
+    font-size: 26px;
+  }
+
+}
