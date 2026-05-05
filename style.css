@@ -1970,3 +1970,38 @@ body {
     background-position: center 20%;
   }
 }
+.scroll-guide {
+  margin-top: 20px;
+  text-align: center;
+  opacity: 0.6;
+  font-size: 12px;
+}
+
+/* 矢印 */
+.scroll-guide .arrow {
+  width: 2px;
+  height: 30px;
+  background: #fff;
+  margin: 6px auto 0;
+  position: relative;
+  animation: scrollMove 1.5s infinite;
+}
+
+.scroll-guide .arrow::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -4px;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+}
+
+/* アニメーション */
+@keyframes scrollMove {
+  0% { transform: translateY(0); opacity: 0.3; }
+  50% { transform: translateY(10px); opacity: 1; }
+  100% { transform: translateY(20px); opacity: 0; }
+}
