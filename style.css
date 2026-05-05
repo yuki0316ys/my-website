@@ -406,7 +406,6 @@ h2 {
   .social__links {
     justify-content: flex-start;
   }
-}
 
   .hero__meta {
   justify-content: center;
@@ -610,6 +609,7 @@ hr {
 .hero__footer .button {
   margin: 0 auto;
 }
+/* 
 .hero::after {
   content: "";
   position: absolute;
@@ -621,6 +621,7 @@ hr {
   );
   z-index: 1;
 }
+*/
 
 .button:hover {
   transform: translateY(-2px);
@@ -1323,6 +1324,7 @@ hr {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* 
 body::before {
   content:"";
   position:fixed;
@@ -1336,6 +1338,7 @@ body::before {
 
   background-size: 100% 8px, 8px 100%, auto;
 }
+*/
 
 .hero__content {
   margin-bottom: 20px;
@@ -1567,6 +1570,8 @@ body::before {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  pointer-events: none; /* ← これ追加 */
 }
 
 /* =========================
