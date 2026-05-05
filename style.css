@@ -221,7 +221,12 @@ h2 {
   height: 100%;
   border: 0;
 }
-
+.video-cta {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+}
 .profile {
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
