@@ -1973,7 +1973,7 @@ body {
 .scroll-guide {
   margin-top: 20px;
   text-align: center;
-  opacity: 0.6;
+  opacity: 0.7;
   font-size: 12px;
 }
 
@@ -1986,7 +1986,11 @@ body {
   position: relative;
   animation: scrollMove 1.5s infinite;
 }
+.scroll-guide span {
 
+  letter-spacing: 0.1em;
+
+}
 .scroll-guide .arrow::after {
   content: "";
   position: absolute;
