@@ -2177,7 +2177,7 @@ body {
   position: absolute;
   inset: 0;
   background-image: url("images/profile.jpg");
-  background-size: cover;
+  background-size: 50;
   background-position: center;
   background-repeat: no-repeat;
 }
