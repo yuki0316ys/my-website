@@ -2192,3 +2192,10 @@ body {
   position: relative;
   z-index: 2;
 }
+.hero-video {
+  transition: transform 1.5s ease;
+}
+
+.hero.active .hero-video {
+  transform: scale(1.05);
+}
