@@ -2505,3 +2505,38 @@ body {
 
   pointer-events: none;
 }
+/* ===== BREAKING ALL THE CHAINS ===== */
+
+.chains-art img {
+  filter:
+    brightness(0.95)
+    contrast(1.06)
+    saturate(1.02);
+
+  box-shadow:
+    0 30px 120px rgba(255,200,120,0.18),
+    0 0 80px rgba(255,255,255,0.12);
+}
+
+.chains-art {
+  position: relative;
+}
+
+.chains-art::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.03),
+      transparent,
+      rgba(255,180,80,0.08)
+    );
+
+  border-radius: 28px;
+
+  pointer-events: none;
+}
