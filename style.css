@@ -2824,3 +2824,34 @@ body {
 
   white-space: nowrap;
 }
+/* =========================
+   HERO RIGHT VISUAL
+========================= */
+
+.hero-side {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 50%;
+  height: 100%;
+
+  background-image: url("images/uno.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  opacity: 0.28;
+
+  mix-blend-mode: lighten;
+
+  filter:
+    grayscale(100%)
+    contrast(1.1)
+    brightness(0.7);
+
+  pointer-events: none;
+
+  z-index: 0;
+}
