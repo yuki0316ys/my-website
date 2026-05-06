@@ -2027,10 +2027,12 @@ body {
   }
 
   .hero__content {
-    margin-top: 140px;
-    padding: 20px 16px;
-    border-radius: 20px;
-  }
+  margin-top: 260px;
+
+  padding: 20px 16px;
+
+  border-radius: 20px;
+}
 
   .hero__content h1 {
     font-size: 34px;
@@ -2206,10 +2208,6 @@ body {
     filter: brightness(0.55);
   }
 
-  .hero__content {
-    transform: translateY(120px);
-  }
-
   .nav {
     flex-wrap: wrap;
     justify-content: center;
@@ -2232,11 +2230,6 @@ body {
     background-size: cover;
     background-position: center top;
     filter: brightness(0.48);
-  }
-
-  /* カード位置 */
-  .hero__content {
-    transform: translateY(150px);
   }
 
 }
