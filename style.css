@@ -2602,3 +2602,26 @@ body {
 
   pointer-events: none;
 }
+/* =========================
+   BRAND LOGO FIX
+========================= */
+
+.header .brand-button {
+  font-family: "Inter", sans-serif;
+
+  font-size: 1rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.28em;
+
+  text-transform: uppercase;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  line-height: 1;
+
+  flex-shrink: 0;
+}
