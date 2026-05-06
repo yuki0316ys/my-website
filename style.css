@@ -2172,13 +2172,17 @@ body {
 .hero {
   position: relative;
   overflow: hidden;
+  background: #000;
 }
 
-/* 背景画像 */
 .hero-bg {
   position: absolute;
   inset: 0;
+
   background-image: url("images/profile.jpg");
+
+  background-color: #000;
+
   background-size: 50%;
   background-position: 0;
   background-repeat: no-repeat;
