@@ -2774,3 +2774,57 @@ body {
   }
 
 }
+/* =========================
+   BRAND CHARACTER
+========================= */
+
+.brand-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+/* キャラ */
+
+.brand-chara {
+  width: 28px;
+
+  height: 28px;
+
+  object-fit: contain;
+
+  opacity: 0.92;
+
+  transform: translateY(1px);
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease,
+    filter 0.3s ease;
+
+  filter:
+    drop-shadow(0 0 10px rgba(120,180,255,0.15));
+}
+
+/* ホバー */
+
+.brand-button:hover .brand-chara {
+  transform:
+    translateY(-2px)
+    rotate(3deg);
+
+  opacity: 1;
+}
+
+/* スマホ */
+
+@media (max-width: 768px) {
+
+  .brand-chara {
+    width: 24px;
+    height: 24px;
+  }
+
+}
