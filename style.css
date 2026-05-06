@@ -2471,3 +2471,37 @@ body {
 
   pointer-events: none;
 }
+/* ===== AKATSUKI ===== */
+
+.akatsuki-art img {
+  filter:
+    contrast(1.08)
+    brightness(0.9)
+    saturate(1.05);
+
+  box-shadow:
+    0 30px 120px rgba(255,80,40,0.18),
+    0 0 80px rgba(255,180,80,0.12);
+}
+
+.akatsuki-art {
+  position: relative;
+}
+
+.akatsuki-art::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(255,120,80,0.08),
+      transparent
+    );
+
+  border-radius: 28px;
+
+  pointer-events: none;
+}
