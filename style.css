@@ -2197,3 +2197,22 @@ body {
   background: rgba(0,0,0,0.3);
   z-index: 1;
 }
+
+@media (max-width: 768px) {
+
+  .hero-bg {
+    background-size: cover;
+    background-position: center top;
+    filter: brightness(0.55);
+  }
+
+  .hero__content {
+    transform: translateY(120px);
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+}
