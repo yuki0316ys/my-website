@@ -2349,3 +2349,14 @@ body {
 
   transform: translateY(0);
 }
+/* ===== UNO ===== */
+
+.uno-art img {
+  filter:
+    contrast(1.08)
+    brightness(0.88)
+    saturate(0.92);
+
+  box-shadow:
+    0 30px 100px rgba(255,0,0,0.15);
+}
