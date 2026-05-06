@@ -2633,3 +2633,144 @@ body {
 
   justify-content: center;
 }
+/* =========================
+   UNO PRO UPGRADE
+========================= */
+
+/* ===== HEROに狂気感 ===== */
+
+.uno-page .hero {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.uno-page .hero::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(120,0,0,0.18),
+      transparent 70%
+    );
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+/* ===== テキスト前面 ===== */
+
+.uno-page .hero__content,
+.uno-page .hero__meta {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== ジャケット演出 ===== */
+
+.uno-art {
+  position: relative;
+
+  transform: rotate(-2deg);
+}
+
+.uno-art::before {
+  content: "";
+
+  position: absolute;
+  inset: -10px;
+
+  border-radius: 32px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,0,0,0.12),
+      transparent
+    );
+
+  z-index: -1;
+
+  filter: blur(20px);
+}
+
+/* ===== ジャケット質感 ===== */
+
+.uno-art img {
+  filter:
+    contrast(1.12)
+    brightness(0.84)
+    saturate(0.88);
+
+  box-shadow:
+    0 40px 120px rgba(255,0,0,0.18);
+}
+
+/* ===== タイポ強化 ===== */
+
+.uno-page h1,
+.uno-page h2,
+.uno-page .lyrics-highlight {
+  letter-spacing: 0.22em;
+
+  text-shadow:
+    0 0 12px rgba(255,0,0,0.25);
+}
+
+/* ===== 余白調整 ===== */
+
+.uno-page .song-copy {
+  margin-bottom: 12px;
+
+  line-height: 1.7;
+}
+
+.uno-page .lyrics-highlight.final {
+  margin-top: 10px;
+}
+
+/* ===== ガラス感 ===== */
+
+.uno-page .streaming-links,
+.uno-page .song-experience {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.05),
+      rgba(255,255,255,0.02)
+    );
+
+  border: 1px solid rgba(255,255,255,0.06);
+
+  backdrop-filter: blur(18px);
+
+  border-radius: 32px;
+}
+
+/* ===== ホバー ===== */
+
+.uno-page .stream-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 20px 40px rgba(255,0,0,0.15);
+}
+
+/* ===== スマホ ===== */
+
+@media (max-width: 768px) {
+
+  .uno-art {
+    transform: rotate(-1deg);
+  }
+
+  .uno-page h1 {
+    font-size: 42px;
+  }
+
+}
