@@ -2266,3 +2266,86 @@ body {
 
   display: block;
 }
+.live-card.cinematic {
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.08),
+      rgba(255,255,255,0.03)
+    );
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(20px);
+
+  transition: 0.4s ease;
+}
+
+.live-card.cinematic:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(217,183,111,0.4);
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.5),
+    0 0 40px rgba(217,183,111,0.12);
+}
+
+.live-description {
+  opacity: 0.65;
+
+  line-height: 1.7;
+}
+.ticket-btn {
+  padding: 14px 26px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #d9b76f,
+      #ffb347
+    );
+
+  color: #000;
+
+  font-weight: 900;
+
+  transition: 0.3s ease;
+}
+
+.ticket-btn:hover {
+  transform: scale(1.08);
+
+  box-shadow:
+    0 0 40px rgba(255,190,80,0.45);
+}
+.soldout {
+  display: inline-block;
+
+  margin-top: 16px;
+
+  color: #ff5d93;
+
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+}
+.live-card {
+  opacity: 0;
+
+  transform: translateY(40px);
+
+  transition: 0.8s ease;
+}
+
+.live-card.active {
+  opacity: 1;
+
+  transform: translateY(0);
+}
