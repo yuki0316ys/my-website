@@ -2216,3 +2216,27 @@ body {
   }
 
 }
+@media (max-width: 768px) {
+
+  /* ナビ調整 */
+  .nav {
+    font-size: 0.7rem;
+    gap: 14px;
+    letter-spacing: 0.08em;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* 背景写真 */
+  .hero-bg {
+    background-size: cover;
+    background-position: center top;
+    filter: brightness(0.48);
+  }
+
+  /* カード位置 */
+  .hero__content {
+    transform: translateY(150px);
+  }
+
+}
