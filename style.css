@@ -2404,3 +2404,37 @@ body {
 
   pointer-events: none;
 }
+/* ===== AMATERASU ===== */
+
+.amaterasu-art img {
+  filter:
+    brightness(1.02)
+    saturate(1.08);
+
+  box-shadow:
+    0 30px 120px rgba(255,220,140,0.22),
+    0 0 80px rgba(120,180,255,0.14);
+}
+
+.amaterasu-art {
+  position: relative;
+}
+
+.amaterasu-art::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.05),
+      transparent,
+      rgba(255,220,120,0.08)
+    );
+
+  border-radius: 28px;
+
+  pointer-events: none;
+}
