@@ -2609,3 +2609,71 @@ body {
 
   pointer-events: none;
 }
+/* =========================
+   SONGS MOBILE FIX
+========================= */
+
+@media (max-width: 768px) {
+
+  /* HERO高さ問題 */
+
+  .hero,
+  .songs-hero {
+    min-height: auto;
+
+    height: auto;
+
+    padding-top: 180px;
+    padding-bottom: 120px;
+  }
+
+  /* カード浮き解除 */
+
+  .songs-card,
+  .glass-card,
+  .hero-card {
+    transform: none !important;
+  }
+
+  /* テキスト重なり防止 */
+
+  .section-copy {
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: 30px;
+
+    line-height: 1.8;
+  }
+
+  /* ボタン余白 */
+
+  .button {
+    padding: 18px 28px;
+  }
+
+  /* Songsカード余白 */
+
+  .music,
+  .songs-section,
+  .track-grid {
+    margin-top: 40px;
+  }
+
+  /* タイトル調整 */
+
+  .section-heading h2,
+  .hero h1 {
+    line-height: 1.05;
+  }
+
+  /* ガラスカード高さ自動 */
+
+  .video-card,
+  .glass-panel,
+  .song-panel {
+    height: auto;
+  }
+
+}
