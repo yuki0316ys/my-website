@@ -2360,3 +2360,15 @@ body {
   box-shadow:
     0 30px 100px rgba(255,0,0,0.15);
 }
+/* ===== NEXT INNOVATION ===== */
+
+.next-art img {
+  filter:
+    saturate(1.15)
+    brightness(0.95)
+    contrast(1.05);
+
+  box-shadow:
+    0 30px 120px rgba(255,0,180,0.18),
+    0 0 80px rgba(0,180,255,0.14);
+}
