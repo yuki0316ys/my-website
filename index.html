@@ -191,12 +191,26 @@ els.forEach(el=>{
 
 <script>
 window.addEventListener("scroll", () => {
-  const header = document.querySelector(".header");
-  if (window.scrollY > 50) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
+
+  const scrolled = window.scrollY;
+  const heroBg = document.querySelector(".hero-bg");
+
+  /* PC */
+  if (window.innerWidth > 768) {
+
+    heroBg.style.transform =
+      `scale(1.08) translateY(${scrolled * 0.15}px)`;
+
   }
+
+  /* スマホ */
+  else {
+
+    heroBg.style.transform =
+      `scale(1.04) translateY(${scrolled * 0.06}px)`;
+
+  }
+
 });
 </script>
 
