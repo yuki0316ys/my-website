@@ -2240,3 +2240,18 @@ body {
   }
 
 }
+/* ===== パララックス ===== */
+
+.hero-bg {
+  transform: scale(1.08);
+  transition: transform 0.2s ease-out;
+  will-change: transform;
+}
+
+/* ===== HEROふわっと ===== */
+
+.hero__content {
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
+}
