@@ -2372,3 +2372,35 @@ body {
     0 30px 120px rgba(255,0,180,0.18),
     0 0 80px rgba(0,180,255,0.14);
 }
+/* ===== RINNE ===== */
+
+.rinne-art img {
+  filter:
+    brightness(0.72)
+    contrast(1.08);
+
+  box-shadow:
+    0 30px 120px rgba(0,0,0,0.7);
+}
+
+.rinne-art {
+  position: relative;
+}
+
+.rinne-art::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle,
+      transparent 45%,
+      rgba(0,0,0,0.45)
+    );
+
+  border-radius: 28px;
+
+  pointer-events: none;
+}
