@@ -841,7 +841,7 @@ background-position:
 ========================= */
 
 .video-card {
-  padding: 1px;
+  padding: 0;
 }
 
 .video-frame {
@@ -849,7 +849,7 @@ background-position:
 
   width: 100%;
 
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 7.2;
 
   overflow: hidden;
 
