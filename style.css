@@ -136,25 +136,6 @@ h1 {
   text-align: center;
 }
 
-.button,
-.social-link {
-  min-height: 48px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 0 20px;
-  background: rgba(255, 255, 255, 0.075);
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  color: rgba(247, 241, 232, 0.92);
-  font-size: 0.86rem;
-  font-weight: 800;
-  letter-spacing: 0.02em;
-  backdrop-filter: blur(18px);
-  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
-}
-
 .video-section,
 .profile,
 .music,
@@ -573,15 +554,6 @@ hr {
   box-shadow: 0 30px 80px rgba(245,194,107,0.25);
 }
 
-.button::after{
-  content:"";
-  position:absolute;
-  inset:-2px;
-  background: linear-gradient(90deg,transparent,rgba(245,194,107,0.6),transparent);
-  opacity:0;
-  transition:.4s;
-}
-
 @keyframes shine{
   0%{transform:translateX(-100%)}
   100%{transform:translateX(100%)}
@@ -608,30 +580,6 @@ hr {
 
 .hero__footer .button {
   margin: 0 auto;
-}
-
-.button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-.button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,0.4),
-    transparent
-  );
-  transition: 0.5s;
-}
-
-.button:hover::before {
-  left: 100%;
 }
 
 .hero__meta {
@@ -1274,30 +1222,6 @@ hr {
   text-shadow: 0 0 25px rgba(217,183,111,0.6);
 }
 
-.button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-
-  padding: 0 20px;
-  min-height: 48px;
-
-  position: relative;
-  overflow: hidden;
-
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.1);
-
-  background: linear-gradient(90deg,#111,#222);
-  color: rgba(247,241,232,0.92);
-
-  font-size: 0.86rem;
-  font-weight: 800;
-
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
 /* 
 body::before {
   content:"";
@@ -1441,20 +1365,8 @@ body::before {
   flex-wrap: wrap;
 }
 
-.main-cta {
-  background: linear-gradient(90deg, #d9b76f, #f5c26b);
-  color: #000;
-  font-weight: 800;
-  box-shadow: 0 0 20px rgba(245,194,107,0.5);
-}
-
 .sub-cta {
   opacity: 0.85;
-}
-
-.main-cta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 30px rgba(245,194,107,0.7);
 }
 
 /* =========================
@@ -3023,6 +2935,145 @@ body {
 
     padding:
       20px 16px;
+  }
+
+}
+
+/* =========================
+   BUTTON SYSTEM
+========================= */
+
+.button,
+.social-link {
+  position: relative;
+  overflow: hidden;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 52px;
+  padding: 0 24px;
+
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.1);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.08),
+      rgba(255,255,255,0.03)
+    );
+
+  backdrop-filter: blur(18px);
+
+  color: rgba(247,241,232,0.92);
+
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* 光 */
+
+.button::before,
+.social-link::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: -120%;
+
+  width: 120%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      120deg,
+      transparent,
+      rgba(255,255,255,0.35),
+      transparent
+    );
+
+  transition: 0.6s ease;
+}
+
+/* hover */
+
+.button:hover,
+.social-link:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(245,194,107,0.35);
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.35),
+    0 0 30px rgba(245,194,107,0.12);
+}
+
+.button:hover::before,
+.social-link:hover::before {
+  left: 120%;
+}
+
+/* =========================
+   MAIN CTA
+========================= */
+
+.main-cta {
+  background:
+    linear-gradient(
+      135deg,
+      #d9b76f,
+      #f5c26b
+    );
+
+  color: #000;
+
+  font-weight: 900;
+
+  box-shadow:
+    0 0 24px rgba(245,194,107,0.35);
+}
+
+/* =========================
+   FANCLUB CTA
+========================= */
+
+.fanclub-btn,
+.fanclub {
+  background:
+    linear-gradient(
+      135deg,
+      #ff003c,
+      #ff5d93
+    );
+
+  color: #fff;
+
+  border: none;
+
+  box-shadow:
+    0 0 30px rgba(255,0,80,0.25);
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px) {
+
+  .button,
+  .social-link {
+    width: 100%;
+
+    min-height: 56px;
+
+    font-size: 14px;
   }
 
 }
