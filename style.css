@@ -21,17 +21,12 @@
   --cyan: #74d5ff;
   --rose: #ff5d93;
 
-  --glass:
-    linear-gradient(
-      145deg,
-      rgba(255,255,255,0.07),
-      rgba(255,255,255,0.03)
-    );
+  --glass: rgba(12,12,14,0.92);
 
   --shadow:
-    0 20px 60px rgba(0,0,0,0.45);
+  0 10px 30px rgba(0,0,0,0.28);
 
-  --radius: 24px;
+  --radius: 14px;
 
   --max: 1180px;
 }
@@ -372,10 +367,10 @@ h2 {
 
   background-repeat: no-repeat;
 
-  background-size: 50%;
+  background-size: cover;
 
-  background-position:
-    left center;
+background-position:
+  center center;
 
   background-color: #000;
 
@@ -406,12 +401,12 @@ h2 {
   inset: 0;
 
   background:
-    linear-gradient(
-      to bottom,
-      rgba(0,0,0,0.65),
-      rgba(0,0,0,0.35),
-      rgba(0,0,0,0.55)
-    );
+  linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.35),
+    rgba(0,0,0,0.72)
+  );
 
   z-index: 1;
 }
@@ -453,13 +448,13 @@ h2 {
     0 0 20px;
 
   font-size:
-    clamp(3rem, 8vw, 6.5rem);
+  clamp(2.8rem, 7vw, 5.5rem);
 
   font-weight: 900;
 
   line-height: 0.95;
 
-  letter-spacing: 0.08em;
+  letter-spacing: 0.03em;
 
   color:
     rgba(255,255,255,0.95);
@@ -517,10 +512,10 @@ h2 {
   border-radius: 999px;
 
   background:
-    rgba(255,255,255,0.06);
+  rgba(255,255,255,0.03);
 
   border:
-    1px solid rgba(255,255,255,0.1);
+  1px solid rgba(255,255,255,0.06);
 
   backdrop-filter: blur(14px);
 
@@ -548,16 +543,6 @@ h2 {
   flex-wrap: wrap;
 
   gap: 16px;
-}
-
-.hero-achievement {
-  margin-top: 20px;
-
-  font-size: 12px;
-
-  opacity: 0.65;
-
-  letter-spacing: 0.18em;
 }
 
 .hero-catch {
@@ -622,46 +607,16 @@ h2 {
     border-color 0.3s ease;
 }
 
-.button::before,
-.social-link::before {
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-  left: -120%;
-
-  width: 120%;
-  height: 100%;
-
-  background:
-    linear-gradient(
-      120deg,
-      transparent,
-      rgba(255,255,255,0.35),
-      transparent
-    );
-
-  transition: 0.6s ease;
-}
-
 .button:hover,
 .social-link:hover {
-  transform: translateY(-3px);
+  transform: translateY(-1px);
 
   border-color:
     rgba(245,194,107,0.35);
 
   box-shadow:
-    0 20px 50px rgba(0,0,0,0.35),
-    0 0 30px rgba(245,194,107,0.12);
+   0 10px 24px rgba(0,0,0,0.22);
 }
-
-.button:hover::before,
-.social-link:hover::before {
-  left: 120%;
-}
-
 
 /* =========================
    MAIN CTA
@@ -1273,69 +1228,6 @@ h2 {
 
   text-transform: uppercase;
 }
-
-
-/* =========================
-   SCROLL GUIDE
-========================= */
-
-.scroll-guide {
-  margin-top: 20px;
-
-  text-align: center;
-
-  opacity: 0.7;
-
-  font-size: 12px;
-}
-
-.scroll-guide .arrow {
-  width: 2px;
-  height: 30px;
-
-  margin: 6px auto 0;
-
-  position: relative;
-
-  background: #fff;
-
-  animation: scrollMove 1.5s infinite;
-}
-
-.scroll-guide .arrow::after {
-  content: "";
-
-  position: absolute;
-
-  bottom: 0;
-  left: -4px;
-
-  width: 10px;
-  height: 10px;
-
-  border-bottom: 2px solid #fff;
-  border-right: 2px solid #fff;
-
-  transform: rotate(45deg);
-}
-
-@keyframes scrollMove {
-  0% {
-    transform: translateY(0);
-    opacity: 0.3;
-  }
-
-  50% {
-    transform: translateY(10px);
-    opacity: 1;
-  }
-
-  100% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-}
-
 
 /* =========================
    MOBILE
