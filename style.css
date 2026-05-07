@@ -921,6 +921,8 @@ background-position:
   margin:
     0 0 140px;
 
+  margin-bottom: 50px;
+
   padding:
     20px 0 24px;
 
@@ -943,7 +945,7 @@ background-position:
 .profile-lead {
   max-width: 920px;
 
-  margin-top: 50px;
+  margin-top: 0;
 
   padding-left: 6px;
 
