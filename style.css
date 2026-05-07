@@ -1157,8 +1157,11 @@ background-position:
 
   padding: 30px;
 
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  background-color: #050507;
 
   isolation: isolate;
 }
