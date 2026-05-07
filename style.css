@@ -874,7 +874,6 @@ background-position:
   margin-top: 20px;
 }
 
-
 /* =========================
    PROFILE
 ========================= */
@@ -883,42 +882,133 @@ background-position:
   display: grid;
 
   grid-template-columns:
-    0.95fr 1.05fr;
+    0.9fr 1.1fr;
 
   gap:
-    clamp(36px, 7vw, 86px);
+    clamp(40px, 8vw, 120px);
 
-  align-items: start;
+  align-items: center;
 }
+
+/* ===== LEFT ===== */
 
 .profile__intro {
   position: sticky;
-  top: 28px;
+  top: 120px;
 }
+
+.profile__intro h2 {
+  font-size:
+    clamp(2.6rem, 5vw, 5.5rem);
+
+  line-height: 1.02;
+
+  letter-spacing: -0.04em;
+
+  margin-bottom: 24px;
+}
+
+/* ===== PANEL ===== */
 
 .profile__panel {
+  position: relative;
+
   padding:
-    clamp(28px, 5vw, 52px);
+    clamp(32px, 5vw, 60px);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.05),
+      rgba(255,255,255,0.02)
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.35);
 }
+
+/* 上の光 */
+
+.profile__panel::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(245,194,107,0.5),
+      transparent
+    );
+}
+
+/* TEXT */
 
 .profile__panel p {
-  margin-bottom: 24px;
+  margin: 0 0 28px;
 
-  color: var(--muted);
+  color:
+    rgba(247,241,232,0.72);
 
-  line-height: 2;
+  font-size: 1rem;
+
+  line-height: 2.1;
+
+  letter-spacing: 0.04em;
 }
 
-.profile-catch {
-  text-align: center;
-
-  margin-top: 20px;
-
-  font-weight: 700;
-
-  opacity: 0.8;
+.profile__panel p:last-child {
+  margin-bottom: 0;
 }
 
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .profile {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .profile__intro {
+    position: static;
+  }
+
+  .profile__intro h2 {
+    font-size:
+      clamp(2.4rem, 12vw, 4rem);
+
+    line-height: 1.04;
+  }
+
+  .profile__panel {
+    padding: 28px 22px;
+  }
+
+  .profile__panel p {
+    font-size: 0.95rem;
+
+    line-height: 1.95;
+  }
+
+}
 
 /* =========================
    TRACK GRID
