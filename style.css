@@ -563,7 +563,128 @@ background-position:
   opacity: 0.6;
 }
 
+/* =========================
+   ACHIEVEMENTS
+========================= */
 
+.achievement {
+  padding: 140px 20px;
+
+  text-align: center;
+}
+
+.section-title {
+  margin-bottom: 70px;
+
+  font-size: clamp(3rem, 10vw, 7rem);
+
+  font-weight: 900;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.04em;
+
+  color: rgba(255,255,255,0.95);
+}
+
+/* GRID */
+
+.achievement-grid {
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+/* CARD */
+
+.achievement-item {
+  position: relative;
+
+  padding: 40px 24px;
+
+  border-radius: 14px;
+
+  background:
+    rgba(255,255,255,0.03);
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.achievement-item:hover {
+  transform: translateY(-4px);
+
+  border-color:
+    rgba(245,194,107,0.22);
+}
+
+/* NUMBER */
+
+.number {
+  margin-bottom: 14px;
+
+  font-size: clamp(2.6rem, 5vw, 4.6rem);
+
+  font-weight: 900;
+
+  line-height: 1;
+
+  color: #fff;
+}
+
+/* LABEL */
+
+.achievement-label {
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+
+  line-height: 1.8;
+
+  color:
+    rgba(247,241,232,0.58);
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .achievement {
+    padding: 90px 16px;
+  }
+
+  .section-title {
+    margin-bottom: 40px;
+
+    font-size: 3rem;
+  }
+
+  .achievement-grid {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+  .achievement-item {
+    padding: 30px 20px;
+  }
+
+}
 /* =========================
    BUTTON SYSTEM
 ========================= */
