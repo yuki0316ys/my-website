@@ -887,7 +887,12 @@ background-position:
 ========================= */
 
 .profile-hero {
-  margin-bottom: 90px;
+  margin-bottom: 120px;
+
+  padding-bottom: 40px;
+
+  border-bottom:
+    1px solid rgba(255,255,255,0.06);
 }
 
 .profile-kicker {
@@ -905,14 +910,14 @@ background-position:
 }
 
 .profile-title {
-  max-width: 900px;
+ max-width: 1100px;
 
-  margin-bottom: 30px;
+  margin-bottom: 46px;
 
   font-size:
     clamp(3rem, 9vw, 7rem);
 
-  line-height: 0.92;
+  line-height: 1.02;
 
   font-weight: 900;
 
@@ -920,7 +925,11 @@ background-position:
 }
 
 .profile-lead {
-  max-width: 760px;
+   max-width: 900px;
+
+  margin-top: 0;
+
+  padding-left: 6px;
 
   color:
     rgba(255,255,255,0.72);
