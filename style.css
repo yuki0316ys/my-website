@@ -2862,3 +2862,10 @@ body {
 
   will-change: transform;
 }
+.hero-achievement {
+  margin-top: 20px;
+
+  opacity: 0.65;
+
+  letter-spacing: 0.18em;
+}
