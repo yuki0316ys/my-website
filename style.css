@@ -1007,6 +1007,37 @@ background-position:
     var(--glass);
 }
 
+/* =========================
+   MUSIC FOOTER
+========================= */
+
+.music-footer {
+  margin-top: 36px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 14px;
+}
+
+.music-button {
+  min-width: 220px;
+}
+
+.music-count {
+  margin: 0;
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.22em;
+
+  text-transform: uppercase;
+
+  color: rgba(247,241,232,0.42);
+}
 
 /* =========================
    NEWS
