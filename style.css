@@ -1163,43 +1163,99 @@ background-position:
 ========================= */
 
 .live-list {
-  max-width: 1000px;
+  max-width: 1200px;
 
   margin: 0 auto;
 
   display: flex;
   flex-direction: column;
 
-  gap: 30px;
+  gap: 40px;
 }
 
 .live-card {
-  padding: 60px 30px;
+  position: relative;
 
-  text-align: center;
+  overflow: hidden;
+
+  min-height: 520px;
+
+  padding: 70px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  text-align: left;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,0.88),
+      rgba(0,0,0,0.2)
+    ),
+    url("images/live-main.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 40px 100px rgba(0,0,0,0.5);
 }
 
 .live-date {
-  margin-bottom: 10px;
+  margin-bottom: 18px;
 
-  opacity: 0.6;
+  color: var(--gold);
+
+  font-size: 0.8rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.24em;
+
+  text-transform: uppercase;
 }
 
 .live-title {
-  font-size: 40px;
+  max-width: 900px;
+
+  margin-bottom: 20px;
+
+  font-size:
+    clamp(2.8rem, 5vw, 5rem);
+
+  line-height: 0.95;
 
   font-weight: 900;
+
+  letter-spacing: -0.04em;
 }
 
 .live-place {
-  margin: 10px 0 30px;
+  margin: 0 0 30px;
+
+  font-size: 1.1rem;
+
+  opacity: 0.78;
 }
 
 .live-description,
 .live-copy {
-  opacity: 0.7;
+  max-width: 620px;
 
-  line-height: 1.7;
+  margin-bottom: 30px;
+
+  font-size: 1.05rem;
+
+  line-height: 1.9;
+
+  opacity: 0.74;
 }
 
 .ticket-btn {
