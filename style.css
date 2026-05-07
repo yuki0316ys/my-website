@@ -1291,6 +1291,13 @@ background-position:
     rgba(245,194,107,0.4);
 }
 
+.news-page {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 170px 24px 100px;
+}
 
 /* =========================
    LIVE
