@@ -2898,3 +2898,6 @@ body {
 .track-card h3 {
   font-size: clamp(1.2rem, 1.8vw, 1.8rem);
 }
+.songs-cta {
+  margin-top: 60px;
+}
