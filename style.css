@@ -1530,19 +1530,6 @@ body::before {
   overflow: hidden;
 }
 
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("images/profile.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  pointer-events: none; /* ← これ追加 */
-}
-
 /* =========================
    スマホレイアウト修正
 ========================= */
@@ -1867,15 +1854,6 @@ body {
   gap: 20px;
 }
 
-/* PC用（顔を全部表示＋左寄せ） */
-@media (min-width: 1024px) {
-  .hero-bg {
-    background-size: 50%;   /* ← ここで大きさ調整 */
-    background-position: left center;
-    background-repeat: no-repeat;
-  }
-}
-
 /* スマホ微調整（任意） */
 .scroll-guide {
   margin-top: 20px;
@@ -1920,20 +1898,6 @@ body {
 /* =========================
    HERO MOBILE
 ========================= */
-
-@media (max-width: 768px) {
-
-  .hero-bg {
-    background-size: 130%;
-    background-position: center 15%;
-  }
-
-  .hero__content {
-    margin-top: 120px;
-    padding: 0 16px;
-  }
-
-}
 
 @media (max-width: 768px) {
   .nav {
@@ -2149,39 +2113,6 @@ body {
   z-index: 1;
 }
 
-@media (max-width: 768px) {
-
-  .hero-bg {
-    background-size: cover;
-    background-position: center top;
-    filter: brightness(0.55);
-  }
-
-  .nav {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-}
-@media (max-width: 768px) {
-
-  /* ナビ調整 */
-  .nav {
-    font-size: 0.7rem;
-    gap: 14px;
-    letter-spacing: 0.08em;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  /* 背景写真 */
-  .hero-bg {
-    background-size: cover;
-    background-position: center top;
-    filter: brightness(0.48);
-  }
-
-}
 /* ===== パララックス ===== */
 
 .hero-bg {
@@ -3020,4 +2951,48 @@ body {
 .songs-cta .main-cta:hover {
   transform: translateY(-2px);
   box-shadow: 0 0 30px rgba(245,194,107,0.7);
+}
+
+/* =========================
+   HERO BACKGROUND
+========================= */
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+
+  background-image: url("images/profile.jpg");
+  background-repeat: no-repeat;
+
+  background-size: 50%;
+  background-position: left center;
+
+  background-color: #000;
+
+  filter:
+    brightness(0.58)
+    contrast(1.05);
+
+  transform: scale(1.08);
+
+  transition: transform 0.2s ease-out;
+
+  will-change: transform;
+
+  pointer-events: none;
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px) {
+
+  .hero-bg {
+    background-size: cover;
+    background-position: center top;
+
+    filter:
+      brightness(0.48)
+      contrast(1.05);
+  }
+
 }
