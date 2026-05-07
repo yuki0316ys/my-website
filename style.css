@@ -132,15 +132,15 @@ h2 {
 .section-copy {
   max-width: 980px;
 
-  margin-top: 42px;
+  margin-top: 18px;
 
-  padding-left: 8px;
+  padding-left: 2px;
 
   color: rgba(255,255,255,0.72);
 
   font-size: 1.02rem;
 
-  line-height: 2.1;
+  line-height: 2;
 }
 
 .eyebrow {
