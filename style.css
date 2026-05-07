@@ -648,13 +648,7 @@ hr {
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
-.hero__content,
-.hero__meta,
-.hero__footer {
-  position: relative;
-  z-index: 2;
-  border: none;
-}
+
 .fanclub-btn {
   background: linear-gradient(135deg, #ff0000, #ff5d93);
   color: #fff;
@@ -1320,13 +1314,6 @@ body::before {
 }
 */
 
-.hero__content {
-  margin-bottom: 20px;
-  max-width: 1040px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /* =========================
    HERO 強化
 ========================= */
@@ -1515,23 +1502,6 @@ body::before {
   padding: 0 20px;
   z-index: 9999;
 }
-
-/* =========================
-   スマホレイアウト修正
-========================= */
-
-@media (max-width: 768px) {
-
-  .hero__content {
-    margin: 0 auto;
-    padding: 0 20px;
-    width: 100%;
-    max-width: 100%;
-    text-align: center;
-  }
-
-}
-
 
 /* =========================
    横ズレ防止
@@ -1918,13 +1888,6 @@ body {
     background-position: center 25%;
   }
 
-  .hero__content {
-  margin-top: 260px;
-
-  padding: 20px 16px;
-
-  border-radius: 20px;
-}
 
   .hero__content h1 {
     font-size: 34px;
@@ -2096,14 +2059,6 @@ body {
   transform: scale(1.08);
   transition: transform 0.2s ease-out;
   will-change: transform;
-}
-
-/* ===== HEROふわっと ===== */
-
-.hero__content {
-  transition:
-    transform 0.4s ease,
-    opacity 0.4s ease;
 }
 
 /* ===== Featured MP4 ===== */
