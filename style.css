@@ -2899,3 +2899,12 @@ body {
 .track-card h3 {
   font-size: clamp(1.2rem, 1.8vw, 1.8rem);
 }
+/* ===== STORY タイトル調整 ===== */
+
+.story-section h2 {
+  font-size: clamp(2.4rem, 4.6vw, 4.6rem);
+
+  line-height: 0.95;
+
+  letter-spacing: -0.03em;
+}
