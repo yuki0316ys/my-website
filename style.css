@@ -1905,7 +1905,11 @@ body {
   font-size: 14px;
   cursor: pointer;
 }
+/* ===== CONTACT 下余白 ===== */
 
+.contact-page {
+  padding-bottom: 120px;
+}
 /* =========================
    HEADER
 ========================= */
