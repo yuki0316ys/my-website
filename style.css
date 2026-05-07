@@ -1516,20 +1516,6 @@ body::before {
   z-index: 9999;
 }
 
-.hero {
-  position: relative;
-  min-height: 100vh;
-  padding-top: 100px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-
-  text-align: center;
-  overflow: hidden;
-}
-
 /* =========================
    スマホレイアウト修正
 ========================= */
@@ -1926,9 +1912,6 @@ body {
   }
 
   /* ===== HERO ===== */
-  .hero {
-    padding: 80px 16px 40px;
-  }
 
   .hero-bg {
     background-size: 130%;
@@ -2077,12 +2060,6 @@ body {
 /* =========================
    HERO（画像版 完成）
 ========================= */
-
-.hero {
-  position: relative;
-  overflow: hidden;
-  background: #000;
-}
 
 .hero-bg {
   position: absolute;
@@ -2993,6 +2970,59 @@ body {
     filter:
       brightness(0.48)
       contrast(1.05);
+  }
+
+}
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding:
+    100px 20px 60px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  background: #000;
+}
+
+/* ===== DARK OVERLAY ===== */
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.65),
+      rgba(0,0,0,0.35),
+      rgba(0,0,0,0.55)
+    );
+
+  z-index: 1;
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px) {
+
+  .hero {
+    padding:
+      80px 16px 40px;
   }
 
 }
