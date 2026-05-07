@@ -1350,7 +1350,116 @@ background-position:
 
   opacity: 0.74;
 }
+.live-section {
+  max-width: 1400px;
 
+  margin: 0 auto;
+
+  padding: 160px 24px 120px;
+}
+
+.live-hero {
+  margin-bottom: 80px;
+}
+
+.live-page-title {
+  max-width: 900px;
+
+  margin: 20px 0;
+
+  font-size:
+    clamp(3rem, 8vw, 7rem);
+
+  line-height: 0.9;
+
+  font-weight: 900;
+
+  letter-spacing: -0.05em;
+}
+
+.live-page-copy {
+  max-width: 700px;
+
+  color:
+    rgba(255,255,255,0.72);
+
+  line-height: 2;
+}
+
+.live-card {
+  position: relative;
+
+  overflow: hidden;
+
+  min-height: 620px;
+
+  border-radius: 28px;
+
+  background:
+    url("images/live-main.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.live-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,0.92),
+      rgba(0,0,0,0.18)
+    );
+}
+
+.live-content {
+  position: relative;
+
+  z-index: 2;
+
+  padding: 70px;
+}
+
+.live-title {
+  max-width: 900px;
+
+  margin: 20px 0;
+
+  font-size:
+    clamp(2.5rem, 5vw, 5rem);
+
+  line-height: 0.95;
+
+  font-weight: 900;
+}
+
+@media (max-width: 768px) {
+
+  .live-section {
+    padding: 120px 20px 80px;
+  }
+
+  .live-card {
+    min-height: 480px;
+  }
+
+  .live-content {
+    padding: 30px 24px;
+  }
+
+  .live-page-title {
+    font-size: 3.2rem;
+
+    line-height: 1;
+  }
+
+}
 .ticket-btn {
   display: inline-flex;
   align-items: center;
