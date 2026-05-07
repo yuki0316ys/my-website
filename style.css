@@ -2869,3 +2869,12 @@ body {
 
   letter-spacing: 0.18em;
 }
+.hero .main-cta {
+  width: fit-content;
+
+  min-width: 320px;
+
+  margin: 0 auto;
+
+  padding: 18px 46px;
+}
