@@ -124,15 +124,23 @@ h2 {
 
   font-size: clamp(2.4rem, 7vw, 6rem);
 
-  line-height: 0.95;
+  line-height: 1.02;
 
   font-weight: 900;
 }
 
 .section-copy {
-  color: var(--muted);
+  max-width: 980px;
 
-  line-height: 1.8;
+  margin-top: 42px;
+
+  padding-left: 8px;
+
+  color: rgba(255,255,255,0.72);
+
+  font-size: 1.02rem;
+
+  line-height: 2.1;
 }
 
 .eyebrow {
@@ -162,9 +170,9 @@ h2 {
 }
 
 .section-heading {
-  max-width: 900px;
+  max-width: 1200px;
 
-  margin-bottom: 34px;
+  margin-bottom: 80px;
 }
 
 
