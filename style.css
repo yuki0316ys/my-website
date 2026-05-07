@@ -3028,3 +3028,12 @@ body {
     font-size: 15px;
   }
 }
+/* ===== STORY タイトル改行調整 ===== */
+
+.story-section h2 {
+  font-size: clamp(2rem, 4vw, 4rem);
+
+  line-height: 0.95;
+
+  letter-spacing: -0.04em;
+}
