@@ -2908,3 +2908,123 @@ body {
 
   letter-spacing: -0.03em;
 }
+.biography-section {
+  padding: 120px 20px;
+  background: #000;
+  color: #fff;
+}
+
+.biography-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.biography-title {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.biography-subtitle {
+  text-align: center;
+  font-size: 18px;
+  opacity: 0.7;
+  margin-bottom: 80px;
+  letter-spacing: 2px;
+}
+
+.biography-block {
+  display: flex;
+  gap: 40px;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.bio-year {
+  min-width: 130px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #999;
+  letter-spacing: 1px;
+}
+
+.bio-text {
+  flex: 1;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.company-info {
+  margin-top: 120px;
+  padding-top: 60px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.company-info h2 {
+  font-size: 36px;
+  margin-bottom: 50px;
+  letter-spacing: 4px;
+}
+
+.company-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  font-size: 16px;
+}
+
+.company-row span:first-child {
+  color: #888;
+  min-width: 120px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .biography-section {
+    padding: 80px 20px;
+  }
+
+  .biography-title {
+    font-size: 34px;
+  }
+
+  .biography-subtitle {
+    margin-bottom: 50px;
+  }
+
+  .biography-block {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 0;
+  }
+
+  .bio-year {
+    min-width: auto;
+    font-size: 14px;
+  }
+
+  .bio-text {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .company-info {
+    margin-top: 80px;
+    padding-top: 40px;
+  }
+
+  .company-info h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .company-row {
+    flex-direction: column;
+    gap: 8px;
+    font-size: 15px;
+  }
+}
