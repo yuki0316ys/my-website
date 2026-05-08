@@ -2138,18 +2138,18 @@ background-position:
 }
 
 .follow-title{
-  max-width: 760px;
+  max-width:10ch;
 
   margin-bottom: 24px;
 
   font-size:
-    clamp(2.8rem, 7vw, 5.5rem);
+    clamp(3.2rem, 7vw, 7rem);
 
-  line-height: 0.92;
+  line-height: 0.95;
 
   font-weight: 900;
 
-  letter-spacing: -0.05em;
+  letter-spacing: -0.04em;
 }
 
 .follow-text{
