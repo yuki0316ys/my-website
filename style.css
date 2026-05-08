@@ -2240,3 +2240,159 @@ background-position:
   }
 
 }
+/* =========================
+   CINEMATIC LYRICS
+========================= */
+
+.lyrics-section{
+  position:relative;
+
+  padding:
+    clamp(80px,10vw,140px)
+    clamp(24px,6vw,80px);
+
+  overflow:hidden;
+}
+
+.lyrics-section::before{
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(120,0,30,.18),
+      transparent 40%
+    );
+
+  pointer-events:none;
+}
+
+.lyrics-title{
+  margin-bottom:80px;
+
+  color:#f5f1ea;
+
+  font-size:
+    clamp(2.8rem,7vw,7rem);
+
+  line-height:.9;
+
+  letter-spacing:-.06em;
+
+  font-weight:900;
+}
+
+.cinematic-lyrics{
+  display:flex;
+  flex-direction:column;
+
+  gap:56px;
+
+  max-width:900px;
+}
+
+.cinematic-lyrics p{
+  position:relative;
+
+  margin:0;
+
+  padding-left:28px;
+
+  color:
+    rgba(255,255,255,.88);
+
+  font-size:
+    clamp(1rem,1.2vw,1.15rem);
+
+  line-height:2.2;
+
+  letter-spacing:.04em;
+
+  font-weight:500;
+}
+
+.cinematic-lyrics p::before{
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  top:.6em;
+
+  width:2px;
+  height:70%;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #f3c969,
+      transparent
+    );
+
+  opacity:.7;
+}
+
+.cinematic-lyrics .lyrics-highlight{
+  color:#f5f1ea;
+
+  font-size:
+    clamp(1.15rem,1.4vw,1.4rem);
+
+  font-weight:700;
+}
+
+.cinematic-lyrics .lyrics-sub{
+  color:
+    rgba(255,255,255,.55);
+
+  font-style:italic;
+}
+
+.cinematic-lyrics .final{
+  margin-top:20px;
+
+  color:#f3c969;
+
+  font-size:
+    clamp(1.3rem,2vw,2rem);
+
+  line-height:1.8;
+
+  font-weight:800;
+}
+
+.cinematic-lyrics .lyrics-repeat{
+  color:
+    rgba(255,255,255,.4);
+
+  letter-spacing:.12em;
+
+  text-transform:uppercase;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+  .lyrics-title{
+    margin-bottom:56px;
+
+    font-size:
+      clamp(2.5rem,14vw,4.5rem);
+  }
+
+  .cinematic-lyrics{
+    gap:42px;
+  }
+
+  .cinematic-lyrics p{
+    line-height:2;
+  }
+
+}
