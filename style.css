@@ -881,18 +881,18 @@ background-position:
   margin-top: -40px;
 }
 
-.profile-page {
+/* =========================
+   Profile
+========================= */
+
+ .profile-page {
   max-width: 1100px;
 
   margin: 0 auto;
 
   padding: 160px 24px 120px;
 }
-
-/* =========================
-   HERO
-========================= */
-
+   
 .profile-hero {
   display: flex;
 
@@ -935,10 +935,9 @@ padding: 140px 20px 60px;
 }
 
  .profile-title {
-  max-width: 1100px;
+  max-width: 900px;
 
-  margin:
-    0 0 90px;
+  margin: 20px 0;
 
   padding:
     20px 0 24px;
@@ -946,9 +945,9 @@ padding: 140px 20px 60px;
   line-height: 1.08;
 
   font-size:
-    clamp(3rem, 9vw, 7rem);
+    clamp(3rem, 8vw, 7rem);
 
-  line-height: 1.02;
+ line-height: 0.9;
 
   font-weight: 900;
 
