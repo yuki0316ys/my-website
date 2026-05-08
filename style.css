@@ -906,6 +906,18 @@ background-position:
 
   border-bottom:
     1px solid rgba(255,255,255,0.06);
+
+padding: 140px 20px 60px;
+
+  text-align: center;
+
+  min-height: auto;
+}
+
+.profile-hero .hero__content {
+
+  margin: 40px auto 0;
+
 }
 
 .profile-kicker {
