@@ -2075,3 +2075,155 @@ background-position:
 .songs-hero .hero__content {
   margin: 40px auto 0;
 }
+/* =========================
+   FOLLOW CTA
+========================= */
+
+.follow-cta{
+  padding: 140px 24px 140px;
+}
+
+.follow-cta__inner{
+  max-width: 980px;
+
+  margin: 0 auto;
+
+  padding: 80px;
+
+  border-radius: 36px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(120,0,40,0.28),
+      rgba(0,0,0,0.96) 65%
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.55);
+}
+
+.follow-label{
+  margin-bottom: 20px;
+
+  color: var(--gold);
+
+  font-size: 0.78rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.24em;
+}
+
+.follow-title{
+  max-width: 760px;
+
+  margin-bottom: 24px;
+
+  font-size:
+    clamp(2.8rem, 7vw, 5.5rem);
+
+  line-height: 0.92;
+
+  font-weight: 900;
+
+  letter-spacing: -0.05em;
+}
+
+.follow-text{
+  max-width: 560px;
+
+  margin-bottom: 42px;
+
+  color:
+    rgba(255,255,255,0.68);
+
+  font-size: 1.05rem;
+
+  line-height: 1.9;
+}
+
+.follow-buttons{
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 18px;
+}
+
+.follow-btn{
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 200px;
+
+  padding: 18px 28px;
+
+  border-radius: 999px;
+
+  border:
+    1px solid rgba(255,255,255,0.1);
+
+  background:
+    rgba(255,255,255,0.04);
+
+  color: #fff;
+
+  font-weight: 800;
+
+  transition: 0.35s ease;
+}
+
+.follow-btn:hover{
+  transform: translateY(-4px);
+
+  background:
+    rgba(255,255,255,0.08);
+}
+
+.follow-btn--gold{
+  background:
+    linear-gradient(
+      135deg,
+      var(--gold),
+      #ffb347
+    );
+
+  color: #000;
+
+  border: none;
+}
+
+.follow-btn--gold:hover{
+  box-shadow:
+    0 0 40px rgba(255,190,80,0.35);
+}
+
+@media (max-width: 768px){
+
+  .follow-cta{
+    padding: 100px 20px;
+  }
+
+  .follow-cta__inner{
+    padding: 48px 28px;
+  }
+
+  .follow-title{
+    font-size: 3rem;
+  }
+
+  .follow-btn{
+    width: 100%;
+  }
+
+}
