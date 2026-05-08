@@ -1296,7 +1296,15 @@ background-position:
   border-color:
     rgba(245,194,107,0.4);
 }
+.news-page {
+  padding-bottom: 40px;
+}
 
+.news-hero {
+  min-height: auto;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
 /* =========================
    LIVE
 ========================= */
