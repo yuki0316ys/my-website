@@ -1969,6 +1969,31 @@ background-position:
 
 }
 
+/* =========================
+   Store
+========================= */
+.store-page {
+  position: relative;
+}
+
+.store-page::before {
+  content: "";
+
+  position: fixed;
+
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(255,0,80,0.12),
+      transparent 40%
+    );
+
+  pointer-events: none;
+
+  z-index: -1;
+}
 .store-hero {
   padding: 140px 20px 60px;
 
@@ -1981,13 +2006,6 @@ background-position:
   margin: 40px auto 0;
 }
 
-.songs-hero {
-  padding: 140px 20px 60px;
-
-  text-align: center;
-
-  min-height: auto;
-}
 
 /* =========================
    Songs
@@ -1995,4 +2013,12 @@ background-position:
 
 .songs-hero .hero__content {
   margin: 40px auto 0;
+}
+
+.songs-hero {
+  padding: 140px 20px 60px;
+
+  text-align: center;
+
+  min-height: auto;
 }
