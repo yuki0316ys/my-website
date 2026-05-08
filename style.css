@@ -2014,3 +2014,19 @@ padding: 140px 20px 60px;
 .store-hero .hero__content {
   margin: 40px auto 0;
 }
+
+.songs-hero {
+  padding: 140px 20px 60px;
+
+  text-align: center;
+
+  min-height: auto;
+}
+
+/* =========================
+   Songs
+========================= */
+
+.songs-hero .hero__content {
+  margin: 40px auto 0;
+}
