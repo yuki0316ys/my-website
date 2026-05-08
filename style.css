@@ -894,20 +894,7 @@ background-position:
 }
    
 .profile-hero {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 26px;
-   
-  margin-bottom: 120px;
-
-  padding-bottom: 40px;
-
-  border-bottom:
-    1px solid rgba(255,255,255,0.06);
-
-padding: 140px 20px 60px;
+  padding: 140px 20px 60px;
 
   text-align: center;
 
@@ -915,9 +902,7 @@ padding: 140px 20px 60px;
 }
 
 .profile-hero .hero__content {
-
   margin: 40px auto 0;
-
 }
 
 .profile-kicker {
