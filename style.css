@@ -1130,24 +1130,23 @@ background-position:
   gap: 14px;
 }
 
-.track-card {
+.track-card{
   position: relative;
-
-  overflow: hidden;
 
   min-height: 420px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  border-radius: 28px;
 
-  padding: 30px;
+  overflow: hidden;
 
-  background-size: contain;
-  background-position: center center;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 
-  background-color: #050507;
+  display: flex;
+  align-items: flex-end;
+
+  padding: 32px;
 
   isolation: isolate;
 }
