@@ -1118,26 +1118,38 @@ background-position:
 }
 
 /* =========================
-   SONG CARD - CINEMATIC STYLE
+   TRACK GRID
+========================= */
+
+.track-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:18px;
+}
+
+/* =========================
+   CARD
 ========================= */
 
 .track-card{
-  position: relative;
+  position:relative;
 
-  min-height: 520px;
+  display:flex;
+  flex-direction:column;
 
-  padding: 2rem;
+  min-height:560px;
 
-  display: flex;
-  align-items: flex-end;
+  overflow:hidden;
 
-  overflow: hidden;
+  border-radius:28px;
 
-  border-radius: 32px;
+  background:#050505;
 
-  background: #050505;
-
-  border: 1px solid rgba(255,255,255,.08);
+  border:
+    1px solid rgba(255,255,255,.08);
 
   transition:
     transform .5s ease,
@@ -1145,200 +1157,95 @@ background-position:
     box-shadow .5s ease;
 }
 
-/* HOVER */
-
 .track-card:hover{
-  transform: translateY(-8px);
+  transform:
+    translateY(-8px);
 
   border-color:
-    rgba(255,255,255,.18);
+    rgba(255,255,255,.16);
 
   box-shadow:
-    0 25px 60px rgba(0,0,0,.45);
-}
-
-/* CENTER IMAGE */
-
-.track-card::before{
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-  right: 0;
-
-  top: 18%;
-  bottom: 18%;
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  opacity: .92;
-
-  z-index: 0;
-
-  transition:
-    transform .7s ease,
-    opacity .7s ease;
-}
-
-/* IMAGE ZOOM */
-
-.track-card:hover::before{
-  transform: scale(1.04);
-
-  opacity: 1;
-}
-
-/* BLACK CINEMATIC OVERLAY */
-
-.track-card::after{
-  content: "";
-
-  position: absolute;
-  inset: 0;
-
-  background:
-    linear-gradient(
-      to top,
-      rgba(0,0,0,.94) 0%,
-      rgba(0,0,0,.55) 38%,
-      rgba(0,0,0,.18) 70%,
-      rgba(0,0,0,.88) 100%
-    );
-
-  z-index: 1;
-}
-
-/* CONTENT */
-
-.track-card > div,
-.track-card__index{
-  position: relative;
-  z-index: 2;
-}
-
-/* INDEX */
-
-.track-card__index{
-  position: absolute;
-
-  top: 1.6rem;
-  left: 1.6rem;
-
-  font-size: .95rem;
-  font-weight: 800;
-
-  letter-spacing: .18em;
-
-  color:
-    rgba(255,255,255,.5);
-}
-
-/* TYPE */
-
-.track-card__type{
-  margin-bottom: .7rem;
-
-  font-size: .78rem;
-  font-weight: 800;
-
-  letter-spacing: .18em;
-
-  color: #f3c969;
-}
-
-/* TITLE */
-
-.track-card h3{
-  font-size: clamp(2rem, 2.8vw, 4rem);
-
-  line-height: .95;
-
-  letter-spacing: -.04em;
-
-  margin-bottom: 1rem;
-
-  word-break: break-word;
-}
-
-/* DESCRIPTION */
-
-.track-card p{
-  color:
-    rgba(255,255,255,.78);
-
-  line-height: 1.7;
+    0 24px 60px rgba(0,0,0,.45);
 }
 
 /* =========================
-   IMAGE ASSIGN
+   IMAGE AREA
 ========================= */
 
-.track-card--sakayume::before{
-  background-image:
-    url('../images/sakayume.jpg');
+.track-card__image{
+  position:relative;
+
+  margin-top:86px;
+
+  height:260px;
+
+  overflow:hidden;
 }
 
-.track-card--betrip::before{
-  background-image:
-    url('../images/be-trip.jpg');
+.track-card__image img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
 }
 
-.track-card--next::before{
-  background-image:
-    url('../images/next.jpg');
+/* =========================
+   CONTENT
+========================= */
+
+.track-card__content{
+  padding:
+    2rem;
 }
 
-.track-card--freedom::before{
-  background-image:
-    url('../images/freedom.jpg');
+.track-card__index{
+  position:absolute;
+
+  top:1.5rem;
+  left:1.5rem;
+
+  color:
+    rgba(255,255,255,.45);
+
+  font-size:.9rem;
+
+  font-weight:800;
+
+  letter-spacing:.12em;
 }
 
-.track-card--keep::before{
-  background-image:
-    url('../images/keep.jpg');
+.track-card__type{
+  margin-bottom:.8rem;
+
+  color:#f3c969;
+
+  font-size:.78rem;
+
+  font-weight:800;
+
+  letter-spacing:.18em;
+
+  text-transform:uppercase;
 }
 
-.track-card--haru::before{
-  background-image:
-    url('../images/haru.jpg');
+.track-card h3{
+  margin-bottom:1rem;
+
+  font-size:
+    clamp(2rem,2.4vw,4rem);
+
+  line-height:.95;
+
+  letter-spacing:-.04em;
 }
 
-.track-card--amaterasu::before{
-  background-image:
-    url('../images/amaterasu.jpg');
-}
+.track-card p:last-child{
+  color:
+    rgba(255,255,255,.72);
 
-.track-card--jenesis::before{
-  background-image:
-    url('../images/jenesis.jpg');
-}
-
-.track-card--rinne::before{
-  background-image:
-    url('../images/rinne.jpg');
-}
-
-.track-card--akatsuki::before{
-  background-image:
-    url('../images/akatsuki.jpg');
-}
-
-.track-card--chains::before{
-  background-image:
-    url('../images/chains.jpg');
-}
-
-.track-card--uno::before{
-  background-image:
-    url('../images/uno.jpg');
-}
-
-.track-card--beast::before{
-  background-image:
-    url('../images/beast.jpg');
+  line-height:1.8;
 }
 /* =========================
    MUSIC FOOTER
