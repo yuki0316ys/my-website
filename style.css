@@ -1327,23 +1327,19 @@ background-position:
 
   overflow: hidden;
 
-  min-height: 520px;
-
-  padding: 70px;
+  min-height: 620px;
 
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
 
-  text-align: left;
+  align-items: flex-end;
 
-  border-radius: 24px;
+  border-radius: 28px;
 
   background:
     linear-gradient(
       to top,
       rgba(0,0,0,0.88),
-      rgba(0,0,0,0.2)
+      rgba(0,0,0,0.18)
     ),
     url("images/live-main.jpg");
 
@@ -1450,25 +1446,6 @@ background-position:
   line-height: 2;
 }
 
-.live-card {
-  position: relative;
-
-  overflow: hidden;
-
-  min-height: 620px;
-
-  border-radius: 28px;
-
-  background:
-    url("images/live-main.jpg");
-
-  background-size: cover;
-  background-position: center;
-
-  display: flex;
-  align-items: flex-end;
-}
-
 .live-overlay {
   position: absolute;
 
@@ -1486,6 +1463,8 @@ background-position:
   position: relative;
 
   z-index: 2;
+
+  width: 100%;
 
   padding: 70px;
 }
