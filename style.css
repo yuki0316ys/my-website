@@ -1694,6 +1694,8 @@ background-position:
   flex-direction: column;
 
   gap: 20px;
+
+  padding-bottom: 80px;
 }
 
 .contact-form input,
