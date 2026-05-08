@@ -1413,7 +1413,15 @@ background-position:
 }
 
 .live-hero {
-  margin-bottom: 80px;
+  padding: 140px 20px 60px;
+
+  text-align: center;
+
+  min-height: auto;
+}
+
+.live-hero .hero__content {
+  margin: 40px auto 0;
 }
 
 .live-page-title {
