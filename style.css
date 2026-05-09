@@ -3003,6 +3003,10 @@ background-position:
 .page-title{
   margin:0 0 24px;
 
+  max-width: 10ch;
+
+  margin-inline:auto;
+
   font-size:
     clamp(4rem,10vw,8rem);
 
