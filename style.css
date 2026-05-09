@@ -2956,46 +2956,8 @@ background-position:
    BIOGRAPHY
 ========================= */
 
-.biography-hero{
-  position: relative;
 
-  min-height: 70vh;
 
-  padding:
-    180px 20px 120px;
-
-  text-align:center;
-
-  overflow:hidden;
-
-  display:block;
-}
-
-.biography-hero::before{
-  content:"";
-
-  position:absolute;
-  inset:0;
-
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(0,0,0,.5),
-      rgba(0,0,0,.82)
-    ),
-    url("images/biography-bg.jpg");
-
-  background-size:cover;
-  background-position:center;
-
-  transform:scale(1.06);
-
-  z-index:-1;
-}
-
-.biography-hero .hero__content{
-  margin:40px auto 0;
-}
 
 .biography-container{
   max-width:1000px;
@@ -3003,10 +2965,39 @@ background-position:
   margin:0 auto;
 }
 
-
 /* =========================
-   BIOGRAPHY BLOCK
+   BIOGRAPHY
 ========================= */
+
+.profile-hero{
+  position:relative;
+
+  overflow:hidden;
+
+  background:#000;
+}
+
+.profile-hero::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      circle at left top,
+      rgba(245,194,107,.10),
+      transparent 40%
+    ),
+
+    radial-gradient(
+      circle at right center,
+      rgba(80,160,255,.08),
+      transparent 45%
+    );
+
+  pointer-events:none;
+}
 
 .biography-block{
   display:flex;
@@ -3098,32 +3089,6 @@ background-position:
 
   line-height:2;
 }
-
-
-/* =========================
-   TITLE
-========================= */
-
-.biography-title{
-  text-align:center;
-
-  font-size:48px;
-
-  letter-spacing:6px;
-
-  margin-bottom:10px;
-}
-
-.biography-subtitle{
-  text-align:center;
-
-  font-size:18px;
-
-  opacity:.7;
-
-  margin-bottom:80px;
-}
-
 
 /* =========================
    MOBILE
