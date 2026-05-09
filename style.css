@@ -2956,14 +2956,22 @@ background-position:
     radial-gradient(
       circle at left top,
       rgba(245,194,107,.10),
-      transparent 40%
+      transparent 45%
     ),
 
     radial-gradient(
       circle at right center,
       rgba(80,160,255,.08),
-      transparent 45%
+      transparent 50%
+    ),
+
+    radial-gradient(
+      circle at center bottom,
+      rgba(255,0,80,.06),
+      transparent 55%
     );
+
+  opacity:.9;
 
   pointer-events:none;
 }
@@ -3032,7 +3040,7 @@ background-position:
     1px solid rgba(255,255,255,.08);
 
   backdrop-filter:
-    blur(18px);
+    blur(8px);
 
   color:
     rgba(255,255,255,.88);
@@ -3052,7 +3060,6 @@ background-position:
   box-shadow:
     0 10px 40px rgba(0,0,0,.22);
 
-  overflow:hidden;
 }
 
 .page-subtitle::before{
