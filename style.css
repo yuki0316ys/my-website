@@ -60,7 +60,24 @@ body {
 
    -webkit-font-smoothing: antialiased;
 
+  background:#000;
+
+  position:relative;
+}
+
+body::before{
+  content:"";
+
+  position:fixed;
+
+  inset:0;
+
+  z-index:-1;
+
+  pointer-events:none;
+
   background:
+
     radial-gradient(
       circle at 12% 0%,
       rgba(217,183,111,0.18),
@@ -75,16 +92,20 @@ body {
 
     radial-gradient(
       circle at 50% 78%,
-      rgba(255,93,147,0.1),
+      rgba(255,93,147,0.10),
       transparent 38rem
     ),
 
     linear-gradient(
       180deg,
       #08080a 0%,
-      var(--bg) 45%,
+      #020203 45%,
       #000 100%
     );
+
+  background-repeat:no-repeat;
+
+  background-size:cover;
 }
 
 a {
@@ -357,8 +378,6 @@ h2 {
   text-align: center;
 
   overflow: hidden;
-
-  background: #000;
 }
 
 .hero-bg {
@@ -2925,7 +2944,6 @@ background-position:
 
   text-align:center;
 
-  background:#000;
 }
 
 .page-hero::before{
