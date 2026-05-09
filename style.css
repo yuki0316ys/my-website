@@ -2766,3 +2766,213 @@ background-position:
 
   opacity:.92;
 }
+/* =========================
+   BIOGRAPHY UPGRADE
+========================= */
+
+.biography-hero{
+  position: relative;
+
+  min-height: 70vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+
+  overflow:hidden;
+}
+
+.biography-hero::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,.5),
+      rgba(0,0,0,.82)
+    ),
+    url("images/biography-bg.jpg");
+
+  background-size:cover;
+  background-position:center;
+
+  transform:scale(1.06);
+
+  z-index:-1;
+}
+
+.biography-container{
+  max-width: 1100px;
+}
+
+.biography-block{
+  position:relative;
+
+  padding:
+    34px 34px 34px 120px;
+
+  border-radius:28px;
+
+  background:
+    rgba(255,255,255,.03);
+
+  border:
+    1px solid rgba(255,255,255,.06);
+
+  backdrop-filter:
+    blur(18px);
+
+  transition:
+    transform .45s ease,
+    border-color .45s ease;
+
+  overflow:hidden;
+
+  margin-bottom:20px;
+}
+
+.biography-block:hover{
+  transform:
+    translateY(-6px);
+
+  border-color:
+    rgba(255,255,255,.14);
+}
+
+.biography-block::before{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:0;
+  bottom:0;
+
+  width:4px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #f5c96d,
+      transparent
+    );
+}
+
+.bio-year{
+  position:absolute;
+
+  left:34px;
+  top:34px;
+
+  color:var(--gold);
+
+  font-size:1.1rem;
+
+  font-weight:900;
+
+  letter-spacing:.08em;
+}
+
+.bio-text{
+  color:
+    rgba(255,255,255,.78);
+
+  line-height:2;
+}
+
+
+/* =========================
+   ACHIEVEMENT
+========================= */
+
+.achievement-grid{
+  margin-top:80px;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:24px;
+}
+
+.achievement-card{
+  padding:40px 28px;
+
+  border-radius:28px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.04),
+      rgba(255,255,255,.015)
+    );
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  text-align:center;
+
+  transition:
+    transform .4s ease,
+    border-color .4s ease;
+}
+
+.achievement-card:hover{
+  transform:
+    translateY(-8px);
+
+  border-color:
+    rgba(255,255,255,.16);
+}
+
+.achievement-card h3{
+  margin-bottom:12px;
+
+  color:var(--gold);
+
+  letter-spacing:.14em;
+
+  font-size:.82rem;
+}
+
+.achievement-card p{
+  margin-bottom:18px;
+
+  color:
+    rgba(255,255,255,.5);
+}
+
+.achievement-card span{
+  font-size:2.2rem;
+
+  font-weight:900;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+  .biography-block{
+    padding:
+      88px 24px 24px;
+  }
+
+  .bio-year{
+    left:24px;
+    top:24px;
+  }
+
+  .achievement-grid{
+    grid-template-columns:1fr;
+  }
+
+}
