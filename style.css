@@ -3245,3 +3245,18 @@ background-position:
   }
 
 }
+/* =========================
+   FIX HERO JUMP
+========================= */
+
+.hero.reveal{
+  opacity:1 !important;
+
+  transform:none !important;
+}
+
+.hero.reveal.active{
+  opacity:1 !important;
+
+  transform:none !important;
+}
