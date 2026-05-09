@@ -361,11 +361,6 @@ h2 {
   background: #000;
 }
 
-
-/* =========================
-   HERO BG
-========================= */
-
 .hero-bg {
   position: absolute;
 
@@ -395,10 +390,6 @@ background-position:
 
   pointer-events: none;
 }
-
-/* =========================
-   HERO CINEMATIC LIGHT
-========================= */
 
 .hero-light{
   position:absolute;
@@ -590,11 +581,6 @@ background-position:
 
   text-transform: uppercase;
 }
-
-
-/* =========================
-   HERO CTA
-========================= */
 
 .hero-cta {
   margin-top: 30px;
@@ -1248,18 +1234,6 @@ background-position:
   padding: 160px 24px 120px;
 }
    
-.profile-hero {
-  padding: 140px 20px 60px;
-
-  text-align: center;
-
-  min-height: auto;
-}
-
-.profile-hero .hero__content {
-  margin: 40px auto 0;
-}
-
 .profile-kicker {
   margin-bottom: 20px;
 
@@ -1311,10 +1285,6 @@ background-position:
   line-height: 2;
 }
 
-/* =========================
-   BODY
-========================= */
-
 .profile-layout {
   display: grid;
 
@@ -1325,11 +1295,6 @@ background-position:
 
   align-items: start;
 }
-
-
-/* =========================
-   SIDE INFO
-========================= */
 
 .profile-info {
   position: sticky;
@@ -1456,7 +1421,7 @@ background-position:
 }
 
 /* =========================
-   TRACK GRID
+   TRACK 
 ========================= */
 
 .track-grid{
@@ -1467,10 +1432,6 @@ background-position:
 
   gap:18px;
 }
-
-/* =========================
-   CARD
-========================= */
 
 .track-card{
   position:relative;
@@ -1506,10 +1467,6 @@ background-position:
     0 24px 60px rgba(0,0,0,.45);
 }
 
-/* =========================
-   IMAGE AREA
-========================= */
-
 .track-card__image{
   position:relative;
 
@@ -1528,10 +1485,6 @@ background-position:
 
   display:block;
 }
-
-/* =========================
-   CONTENT
-========================= */
 
 .track-card__content{
   padding:
@@ -1646,17 +1599,6 @@ background-position:
   padding-bottom: 40px;
 }
 
-.news-hero {
-  padding: 140px 20px 60px;
-
-  text-align: center;
-
-  min-height: auto;
-}
-
-.news-hero .hero__content {
-  margin: 40px auto 0;
-}
 /* =========================
    LIVE
 ========================= */
@@ -1777,18 +1719,6 @@ background-position:
 
   padding:
     4rem 0 8rem;
-}
-
-.live-hero {
-  padding: 140px 20px 60px;
-
-  text-align: center;
-
-  min-height: auto;
-}
-
-.live-hero .hero__content {
-  margin: 40px auto 0;
 }
 
 .live-page-title {
@@ -1918,7 +1848,6 @@ background-position:
   letter-spacing: 0.2em;
 }
 
-
 /* =========================
    SOCIAL
 ========================= */
@@ -1951,17 +1880,7 @@ background-position:
 /* =========================
    CONTACT
 ========================= */
-.contact-hero {
-  padding: 140px 20px 60px;
 
-  text-align: center;
-
-  min-height: auto;
-}
-
-.contact-hero .hero__content {
-  margin: 40px auto 0;
-}
 .contact-form {
   max-width: 600px;
 
@@ -2014,7 +1933,6 @@ background-position:
   box-shadow:
     0 0 0 1px rgba(245,194,107,0.5);
 }
-
 
 /* =========================
    FINAL CTA
@@ -2074,7 +1992,6 @@ background-position:
 
   gap: 16px;
 }
-
 
 /* =========================
    FOOTER
@@ -2275,7 +2192,7 @@ background-position:
 }
 
 /* =========================
-   GOODS GRID
+   GOODS 
 ========================= */
 
 .goods-grid{
@@ -2292,11 +2209,6 @@ background-position:
 
   gap:24px;
 }
-
-
-/* =========================
-   GOODS CARD
-========================= */
 
 .goods-card{
   position:relative;
@@ -2331,11 +2243,6 @@ background-position:
     0 30px 80px rgba(0,0,0,.55);
 }
 
-
-/* =========================
-   IMAGE
-========================= */
-
 .goods-card__image{
   position:relative;
 
@@ -2358,11 +2265,6 @@ background-position:
   transform:scale(1.06);
 }
 
-
-/* =========================
-   OVERLAY
-========================= */
-
 .goods-card__image::after{
   content:"";
 
@@ -2377,11 +2279,6 @@ background-position:
       transparent
     );
 }
-
-
-/* =========================
-   CONTENT
-========================= */
 
 .goods-card__content{
   padding:30px;
@@ -2431,7 +2328,6 @@ background-position:
   color:#fff;
 }
 
-
 /* =========================
    MOBILE
 ========================= */
@@ -2448,44 +2344,6 @@ background-position:
     padding:140px 20px 90px;
   }
 
-}
-
-/* =========================
-   SONGS HERO
-========================= */
-
-.profile-hero{
-  position:relative;
-
-  overflow:hidden;
-
-  background:#000;
-}
-
-.profile-hero::before{
-  content:"";
-
-  position:absolute;
-  inset:0;
-
-  background:
-    radial-gradient(
-      circle at left top,
-      rgba(245,194,107,.10),
-      transparent 40%
-    ),
-
-    radial-gradient(
-      circle at right center,
-      rgba(80,160,255,.08),
-      transparent 45%
-    );
-
-  pointer-events:none;
-}
-
-.songs-hero .hero__content {
-  margin: 40px auto 0;
 }
 
 /* =========================
@@ -2865,47 +2723,10 @@ background-position:
    BIOGRAPHY
 ========================= */
 
-
-
-
 .biography-container{
   max-width:1000px;
 
   margin:0 auto;
-}
-
-/* =========================
-   BIOGRAPHY
-========================= */
-
-.profile-hero{
-  position:relative;
-
-  overflow:hidden;
-
-  background:#000;
-}
-
-.profile-hero::before{
-  content:"";
-
-  position:absolute;
-  inset:0;
-
-  background:
-    radial-gradient(
-      circle at left top,
-      rgba(245,194,107,.10),
-      transparent 40%
-    ),
-
-    radial-gradient(
-      circle at right center,
-      rgba(80,160,255,.08),
-      transparent 45%
-    );
-
-  pointer-events:none;
 }
 
 .biography-block{
@@ -2966,11 +2787,6 @@ background-position:
     );
 }
 
-
-/* =========================
-   YEAR
-========================= */
-
 .bio-year{
   min-width:140px;
 
@@ -2984,11 +2800,6 @@ background-position:
 
   flex-shrink:0;
 }
-
-
-/* =========================
-   TEXT
-========================= */
 
 .bio-text{
   flex:1;
@@ -3101,4 +2912,117 @@ background-position:
   opacity:1 !important;
 
   transform:none !important;
+}
+.page-hero{
+  position:relative;
+
+  overflow:hidden;
+
+  min-height:70vh;
+
+  padding:
+    180px 20px 120px;
+
+  text-align:center;
+
+  background:#000;
+}
+
+.page-hero::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      circle at left top,
+      rgba(245,194,107,.10),
+      transparent 40%
+    ),
+
+    radial-gradient(
+      circle at right center,
+      rgba(80,160,255,.08),
+      transparent 45%
+    );
+
+  pointer-events:none;
+}
+
+.page-hero .hero__content{
+  position:relative;
+
+  z-index:3;
+
+  margin:40px auto 0;
+
+  max-width:1000px;
+}
+
+.page-kicker{
+  margin-bottom:20px;
+
+  color:var(--gold);
+
+  font-size:.75rem;
+
+  font-weight:900;
+
+  letter-spacing:.24em;
+
+  text-transform:uppercase;
+}
+
+.page-title{
+  margin:0 0 24px;
+
+  font-size:
+    clamp(4rem,10vw,8rem);
+
+  line-height:.88;
+
+  font-weight:900;
+
+  letter-spacing:-.06em;
+
+  color:
+    rgba(255,255,255,.96);
+
+  text-shadow:
+    0 10px 40px rgba(0,0,0,.75);
+}
+
+.page-subtitle{
+  color:
+    rgba(255,255,255,.82);
+
+  font-size:
+    clamp(1rem,2vw,1.4rem);
+
+  font-weight:700;
+
+  line-height:2;
+}
+
+@media(max-width:768px){
+
+  .page-hero{
+    padding:
+      140px 20px 100px;
+  }
+
+  .page-title{
+    font-size:
+      clamp(3rem,16vw,5rem);
+
+    line-height:.95;
+  }
+
+  .page-subtitle{
+    font-size:1rem;
+
+    line-height:1.9;
+  }
+
 }
