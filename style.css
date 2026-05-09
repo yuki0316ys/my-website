@@ -565,10 +565,8 @@ background-position:
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-
   gap: 12px;
-
-  margin-bottom: 28px;
+  margin-bottom: 56px;
 }
 
 .hero__meta span {
@@ -2976,61 +2974,35 @@ background-position:
 }
 
 .page-kicker{
-  margin-bottom:20px;
-
+  margin-bottom:34px;
   color:var(--gold);
-
   font-size:.75rem;
-
   font-weight:900;
-
   letter-spacing:.24em;
-
   text-transform:uppercase;
 }
 
 .page-title{
   margin:0 0 24px;
-
   max-width: 10ch;
-
   margin-inline:auto;
-
-  font-size:
-    clamp(4rem,10vw,8rem);
-
-  line-height:.88;
-
+  font-size:clamp(3.6rem,9vw,7rem);
+  line-height:.92;
   font-weight:900;
-
   letter-spacing:-.06em;
-
-  color:
-    rgba(255,255,255,.96);
-
-  text-shadow:
-    0 10px 40px rgba(0,0,0,.75);
+  color:rgba(255,255,255,.96);
+  text-shadow:0 10px 40px rgba(0,0,0,.75);
 }
 
 .page-subtitle{
-  margin-top:18px;
-
-  color:
-    rgba(255,255,255,.72);
-
-  font-size:
-    clamp(1rem,2vw,1.35rem);
-
+  margin-top:34px;
+  color:rgba(255,255,255,.72);
+  font-size:clamp(1rem,2vw,1.35rem);
   font-weight:600;
-
   letter-spacing:.18em;
-
   line-height:2;
-
   text-transform:none;
-
-  text-shadow:
-    0 4px 24px rgba(0,0,0,.45);
+  text-shadow:0 4px 24px rgba(0,0,0,.45);
 }
 
 @keyframes subtitleShine{
