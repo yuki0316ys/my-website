@@ -1905,22 +1905,15 @@ background-position:
 ========================= */
 
 .contact-form {
-  max-width: 600px;
-
+  max-width: 760px;
   margin: 0 auto;
-
-  padding: 140px 20px 100px;
-
-  display: flex;
-  flex-direction: column;
+  padding: 140px 24px 120px;
 }
 
 .contact-form form {
   display: flex;
   flex-direction: column;
-
-  gap: 20px;
-
+  gap: 30px;
   padding-bottom: 80px;
 }
 
@@ -1928,23 +1921,17 @@ background-position:
 .contact-form textarea,
 .contact-form select {
   width: 100%;
-
-  padding: 14px;
-
-  border-radius: 10px;
-
-  border:
-    1px solid rgba(255,255,255,0.08);
-
-  background:
-    rgba(255,255,255,0.05);
-
+  padding: 18px 20px;
+  border-radius: 18px;
+  border:1px solid rgba(255,255,255,0.08);
+  font-size: 1rem;
+  line-height: 1.6;
+  background:rgba(255,255,255,0.05);
   color: #fff;
 }
 
 .contact-form textarea {
-  min-height: 120px;
-
+  min-height: 220px;
   resize: vertical;
 }
 
@@ -1952,9 +1939,7 @@ background-position:
 .contact-form textarea:focus,
 .contact-form select:focus {
   outline: none;
-
-  box-shadow:
-    0 0 0 1px rgba(245,194,107,0.5);
+  box-shadow:0 0 0 1px rgba(245,194,107,0.5);
 }
 
 /* =========================
