@@ -1331,10 +1331,27 @@ background-position:
   display: flex;
   flex-direction: column;
 
-  gap: 40px;
+  gap: 28px;
+}
+
+.live-card:hover{
+  transform:
+    translateY(-6px);
+
+  border-color:
+    rgba(255,255,255,.18);
+
+  box-shadow:
+    0 50px 120px rgba(0,0,0,.6);
 }
 
 .live-card {
+
+    transition:
+    transform .45s ease,
+    border-color .45s ease,
+    box-shadow .45s ease;
+   
   position: relative;
 
   overflow: hidden;
@@ -1345,7 +1362,7 @@ background-position:
 
   align-items: flex-end;
 
-  border-radius: 28px;
+  border-radius: 32px;
 
   background:
     linear-gradient(
@@ -1363,7 +1380,10 @@ background-position:
 
   box-shadow:
     0 40px 100px rgba(0,0,0,0.5);
+
+    padding: 56px;
 }
+
 
 .live-date {
   margin-bottom: 18px;
@@ -1419,7 +1439,8 @@ background-position:
 
   margin: 0 auto;
 
-  padding: 160px 24px 120px;
+  padding:
+    4rem 0 8rem;
 }
 
 .live-hero {
