@@ -1966,70 +1966,6 @@ background-position:
   margin-bottom: 10px;
 }
 
-/* =========================
-   BIOGRAPHY
-========================= */
-.biography-hero {
-  padding: 140px 20px 60px;
-
-  text-align: center;
-
-  min-height: auto;
-}
-
-.biography-hero .hero__content {
-  margin: 40px auto 0;
-}
-.biography-container {
-  max-width: 1000px;
-
-  margin: 0 auto;
-}
-
-.biography-title {
-  text-align: center;
-
-  font-size: 48px;
-
-  letter-spacing: 6px;
-
-  margin-bottom: 10px;
-}
-
-.biography-subtitle {
-  text-align: center;
-
-  font-size: 18px;
-
-  opacity: 0.7;
-
-  margin-bottom: 80px;
-}
-
-.biography-block {
-  display: flex;
-
-  gap: 40px;
-
-  padding: 24px 0;
-
-  border-bottom:
-    1px solid rgba(255,255,255,0.08);
-}
-
-.bio-year {
-  min-width: 130px;
-
-  color: #999;
-
-  font-weight: 700;
-}
-
-.bio-text {
-  flex: 1;
-
-  line-height: 1.9;
-}
 
 /* =========================
    CONTACT
@@ -3036,7 +2972,7 @@ background-position:
   opacity:.92;
 }
 /* =========================
-   BIOGRAPHY UPGRADE
+   BIOGRAPHY 
 ========================= */
 
 .biography-hero{
@@ -3044,13 +2980,14 @@ background-position:
 
   min-height: 70vh;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  padding:
+    180px 20px 120px;
 
   text-align:center;
 
   overflow:hidden;
+
+  display:block;
 }
 
 .biography-hero::before{
@@ -3154,6 +3091,34 @@ background-position:
   line-height:2;
 }
 
+.biography-hero .hero__content {
+  margin: 40px auto 0;
+}
+.biography-container {
+  max-width: 1000px;
+
+  margin: 0 auto;
+}
+
+.biography-title {
+  text-align: center;
+
+  font-size: 48px;
+
+  letter-spacing: 6px;
+
+  margin-bottom: 10px;
+}
+
+.biography-subtitle {
+  text-align: center;
+
+  font-size: 18px;
+
+  opacity: 0.7;
+
+  margin-bottom: 80px;
+}
 
 /* =========================
    ACHIEVEMENT
