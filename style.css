@@ -927,14 +927,12 @@ background-position:
 }
 
 .video-cta {
-  display: flex;
-  justify-content: center;
+  display:flex;
+  justify-content:center;
+  gap:16px;
 
-  gap: 16px;
-
-  margin-top: -40px;
+  margin-top:40px;
 }
-
 /* =========================
    Profile
 ========================= */
