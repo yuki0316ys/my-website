@@ -885,6 +885,309 @@ background-position:
    Profile
 ========================= */
 
+.profile-biography{
+  position: relative;
+
+  padding:
+    8rem 0;
+
+  overflow: hidden;
+}
+
+.profile-biography::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(120,0,40,.22),
+      transparent 55%
+    );
+
+  pointer-events:none;
+}
+
+.profile-biography__inner{
+  position: relative;
+
+  max-width: 980px;
+
+  margin: 0 auto;
+
+  padding:
+    5rem;
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  border-radius: 36px;
+
+  background:
+    rgba(8,8,8,.72);
+
+  backdrop-filter:
+    blur(24px);
+
+  box-shadow:
+    0 40px 120px rgba(0,0,0,.45);
+}
+
+.profile-label{
+  margin-bottom: 18px;
+
+  color: var(--gold);
+
+  font-size: .78rem;
+
+  font-weight: 900;
+
+  letter-spacing: .22em;
+
+  text-transform: uppercase;
+}
+
+.profile-title{
+  margin-bottom: 28px;
+
+  font-size:
+    clamp(3rem,7vw,6rem);
+
+  line-height: .95;
+
+  font-weight: 900;
+
+  letter-spacing: -.04em;
+}
+
+.profile-lead{
+  max-width: 760px;
+
+  margin-bottom: 56px;
+
+  color:
+    rgba(255,255,255,.82);
+
+  font-size:
+    clamp(1.1rem,1.8vw,1.45rem);
+
+  line-height: 2;
+}
+
+.profile-text {
+  display: flex;
+  flex-direction: column;
+
+  gap: 34px;
+}
+
+.profile-text p {
+  margin: 0;
+
+  color:
+    rgba(255,255,255,0.78);
+
+  font-size: 1.05rem;
+
+  line-height: 2.2;
+}
+
+.profile-text p::before{
+  content:"";
+
+  position:absolute;
+
+  top: 14px;
+  left:0;
+
+  width:10px;
+  height:10px;
+
+  border-radius:50%;
+
+  background: var(--gold);
+
+  box-shadow:
+    0 0 18px rgba(255,210,120,.6);
+}
+
+.profile-links{
+  margin-top: 64px;
+
+  display:flex;
+  flex-wrap:wrap;
+
+  gap: 18px;
+}
+
+.profile-link{
+  display:inline-flex;
+
+  align-items:center;
+  justify-content:center;
+
+  padding:
+    16px 26px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f3c567,
+      #d89f3f
+    );
+
+  color:#000;
+
+  font-weight:800;
+
+  text-decoration:none;
+
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+}
+
+.profile-link:hover{
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 18px 40px rgba(243,197,103,.25);
+}
+
+
+/* =========================
+   DISCOGRAPHY
+========================= */
+
+.discography{
+  padding:
+    0 0 8rem;
+}
+
+.discography__inner{
+  max-width: 980px;
+
+  margin:0 auto;
+
+  display:grid;
+
+  gap: 32px;
+}
+
+.discography-block{
+  padding:
+    3rem;
+
+  border-radius: 32px;
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.03),
+      rgba(255,255,255,.015)
+    );
+
+  backdrop-filter:
+    blur(16px);
+}
+
+.discography-label{
+  margin-bottom: 28px;
+
+  color: var(--gold);
+
+  font-size: .78rem;
+
+  font-weight: 900;
+
+  letter-spacing: .22em;
+
+  text-transform: uppercase;
+}
+
+.discography-list{
+  display:grid;
+
+  gap: 18px;
+
+  list-style:none;
+
+  padding:0;
+  margin:0;
+}
+
+.discography-list li{
+  display:flex;
+
+  justify-content:space-between;
+
+  gap: 24px;
+
+  padding-bottom: 18px;
+
+  border-bottom:
+    1px solid rgba(255,255,255,.06);
+
+  color:
+    rgba(255,255,255,.82);
+
+  line-height:1.8;
+}
+
+.discography-list span{
+  color:
+    rgba(255,255,255,.42);
+
+  white-space:nowrap;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+  .profile-biography__inner{
+    padding: 2rem;
+  }
+
+  .profile-title{
+    font-size: 3rem;
+  }
+
+  .profile-lead{
+    font-size: 1rem;
+    line-height: 1.9;
+  }
+
+  .profile-text p{
+    padding-left: 20px;
+
+    font-size: .95rem;
+
+    line-height: 2;
+  }
+
+  .discography-block{
+    padding: 2rem;
+  }
+
+  .discography-list li{
+    flex-direction:column;
+
+    gap:4px;
+  }
+
+}
  .profile-page {
   max-width: 1100px;
 
@@ -971,23 +1274,6 @@ background-position:
   align-items: start;
 }
 
-.profile-text {
-  display: flex;
-  flex-direction: column;
-
-  gap: 34px;
-}
-
-.profile-text p {
-  margin: 0;
-
-  color:
-    rgba(255,255,255,0.78);
-
-  font-size: 1.05rem;
-
-  line-height: 2.2;
-}
 
 /* =========================
    SIDE INFO
