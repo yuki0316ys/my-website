@@ -2275,67 +2275,6 @@ background-position:
 }
 
 /* =========================
-   STORE CINEMATIC
-========================= */
-
-.store-hero{
-  position:relative;
-
-  overflow:hidden;
-
-  padding:160px 20px 120px;
-
-  text-align:center;
-
-  background:#000;
-}
-
-.store-bg{
-  position:absolute;
-
-  inset:0;
-
-  background-image:
-    url("images/store-bg.jpg");
-
-  background-size:cover;
-  background-position:center;
-
-  filter:
-    brightness(.42)
-    contrast(1.05);
-
-  transform:scale(1.08);
-
-  z-index:0;
-}
-
-.store-hero::before{
-  content:"";
-
-  position:absolute;
-
-  inset:0;
-
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(0,0,0,.45),
-      rgba(0,0,0,.82)
-    );
-
-  z-index:1;
-}
-
-.store-hero .hero__meta,
-.store-hero .hero__content{
-  position:relative;
-
-  z-index:2;
-}
-
-
-/* =========================
    GOODS GRID
 ========================= */
 
@@ -2510,75 +2449,45 @@ background-position:
   }
 
 }
+
 /* =========================
-   Songs
+   SONGS HERO
 ========================= */
 
-.songs-hero .hero__content {
-  margin: 40px auto 0;
+.profile-hero{
+  position:relative;
+
+  overflow:hidden;
+
+  background:#000;
 }
 
-.songs-hero {
-  position: relative;
+.profile-hero::before{
+  content:"";
 
-  overflow: hidden;
-
-  padding: 140px 20px 80px;
-
-  text-align: center;
-
-  min-height: auto;
-
-  background: #000;
-}
-
-.songs-bg {
-  position: absolute;
-
-  inset: 0;
-
-  background-image:
-    url("images/songs-bg.jpg");
-
-  background-size: cover;
-  background-position: center;
-
-  filter:
-    brightness(0.38)
-    contrast(1.05);
-
-  transform: scale(1.08);
-
-  z-index: 0;
-}
-
-.songs-hero::before {
-  content: "";
-
-  position: absolute;
-
-  inset: 0;
+  position:absolute;
+  inset:0;
 
   background:
-    linear-gradient(
-      to bottom,
-      rgba(0,0,0,0.45),
-      rgba(0,0,0,0.72)
+    radial-gradient(
+      circle at left top,
+      rgba(245,194,107,.10),
+      transparent 40%
+    ),
+
+    radial-gradient(
+      circle at right center,
+      rgba(80,160,255,.08),
+      transparent 45%
     );
 
-  z-index: 1;
-}
-
-.songs-hero .hero__meta,
-.songs-hero .hero__content {
-  position: relative;
-
-  z-index: 2;
+  pointer-events:none;
 }
 
 .songs-hero .hero__content {
   margin: 40px auto 0;
 }
+
 /* =========================
    FOLLOW CTA
 ========================= */
