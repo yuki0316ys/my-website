@@ -2953,7 +2953,7 @@ background-position:
   opacity:.92;
 }
 /* =========================
-   BIOGRAPHY 
+   BIOGRAPHY
 ========================= */
 
 .biography-hero{
@@ -2993,15 +2993,31 @@ background-position:
   z-index:-1;
 }
 
-.biography-container{
-  max-width: 1100px;
+.biography-hero .hero__content{
+  margin:40px auto 0;
 }
 
+.biography-container{
+  max-width:1000px;
+
+  margin:0 auto;
+}
+
+
+/* =========================
+   BIOGRAPHY BLOCK
+========================= */
+
 .biography-block{
+  display:flex;
+
+  gap:40px;
+
+  align-items:flex-start;
+
   position:relative;
 
-  padding:
-    34px 34px 34px 120px;
+  padding:34px;
 
   border-radius:28px;
 
@@ -3050,11 +3066,13 @@ background-position:
     );
 }
 
-.bio-year{
-  position:absolute;
 
-  left:34px;
-  top:34px;
+/* =========================
+   YEAR
+========================= */
+
+.bio-year{
+  min-width:140px;
 
   color:var(--gold);
 
@@ -3063,33 +3081,68 @@ background-position:
   font-weight:900;
 
   letter-spacing:.08em;
+
+  flex-shrink:0;
 }
 
+
+/* =========================
+   TEXT
+========================= */
+
 .bio-text{
+  flex:1;
+
   color:
     rgba(255,255,255,.78);
 
   line-height:2;
 }
 
-.biography-title {
-  text-align: center;
 
-  font-size: 48px;
+/* =========================
+   TITLE
+========================= */
 
-  letter-spacing: 6px;
+.biography-title{
+  text-align:center;
 
-  margin-bottom: 10px;
+  font-size:48px;
+
+  letter-spacing:6px;
+
+  margin-bottom:10px;
 }
 
-.biography-subtitle {
-  text-align: center;
+.biography-subtitle{
+  text-align:center;
 
-  font-size: 18px;
+  font-size:18px;
 
-  opacity: 0.7;
+  opacity:.7;
 
-  margin-bottom: 80px;
+  margin-bottom:80px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+  .biography-block{
+    flex-direction:column;
+
+    gap:14px;
+
+    padding:28px 24px;
+  }
+
+  .bio-year{
+    min-width:auto;
+  }
+
 }
 
 /* =========================
@@ -3160,28 +3213,6 @@ background-position:
   font-weight:900;
 }
 
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:768px){
-
-  .biography-block{
-    padding:
-      88px 24px 24px;
-  }
-
-  .bio-year{
-    left:24px;
-    top:24px;
-  }
-
-  .achievement-grid{
-    grid-template-columns:1fr;
-  }
-
-}
 /* =========================
    FIX HERO JUMP
 ========================= */
