@@ -3012,15 +3012,83 @@ background-position:
 }
 
 .page-subtitle{
+  display:inline-block;
+
+  position:relative;
+
+  padding:
+    18px 34px;
+
+  border-radius:999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.04),
+      rgba(255,255,255,.015)
+    );
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  backdrop-filter:
+    blur(18px);
+
   color:
-    rgba(255,255,255,.82);
+    rgba(255,255,255,.88);
 
   font-size:
-    clamp(1rem,2vw,1.4rem);
+    clamp(1rem,1.5vw,1.18rem);
 
   font-weight:700;
 
-  line-height:2;
+  letter-spacing:.12em;
+
+  line-height:1.9;
+
+  text-shadow:
+    0 4px 18px rgba(0,0,0,.45);
+
+  box-shadow:
+    0 10px 40px rgba(0,0,0,.22);
+
+  overflow:hidden;
+}
+
+.page-subtitle::before{
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+    linear-gradient(
+      120deg,
+      transparent,
+      rgba(255,255,255,.08),
+      transparent
+    );
+
+  transform:
+    translateX(-120%);
+
+  animation:
+    subtitleShine 6s ease infinite;
+}
+
+@keyframes subtitleShine{
+
+  0%{
+    transform:
+      translateX(-120%);
+  }
+
+  100%{
+    transform:
+      translateX(120%);
+  }
+
 }
 
 @media(max-width:768px){
