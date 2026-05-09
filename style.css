@@ -58,6 +58,8 @@ body {
     "Noto Sans JP",
     sans-serif;
 
+   -webkit-font-smoothing: antialiased;
+
   background:
     radial-gradient(
       circle at 12% 0%,
@@ -387,8 +389,7 @@ background-position:
 
   transform: scale(1.08);
 
-  transition:
-    transform 0.2s ease-out;
+  transition:none;
 
   will-change: transform;
 
@@ -451,10 +452,6 @@ background-position:
 
 }
 
-/* =========================
-   HERO OVERLAY
-========================= */
-
 .hero::before {
   content: "";
 
@@ -470,19 +467,14 @@ background-position:
     rgba(0,0,0,0.72)
   );
 
-  z-index: 1;
+  z-index: 2;
 }
-
-
-/* =========================
-   HERO CONTENT
-========================= */
 
 .hero__meta,
 .hero__content,
 .hero__footer {
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 .hero__content {
@@ -499,11 +491,6 @@ background-position:
     transform 0.4s ease,
     opacity 0.4s ease;
 }
-
-
-/* =========================
-   HERO TITLE
-========================= */
 
 .hero__content h1{
   margin:
@@ -525,8 +512,8 @@ background-position:
     0 10px 40px rgba(0,0,0,.75),
     0 0 60px rgba(245,194,107,.14);
 
-  animation:
-    heroTitleFloat 5s ease-in-out infinite alternate;
+  animation:none;
+   
 }
 
 @keyframes heroTitleFloat{
@@ -562,10 +549,6 @@ background-position:
   text-shadow:
     0 4px 20px rgba(0,0,0,.45);
 }
-
-/* =========================
-   HERO META
-========================= */
 
 .hero__meta {
   display: flex;
@@ -3089,15 +3072,6 @@ background-position:
     rgba(255,255,255,.78);
 
   line-height:2;
-}
-
-.biography-hero .hero__content {
-  margin: 40px auto 0;
-}
-.biography-container {
-  max-width: 1000px;
-
-  margin: 0 auto;
 }
 
 .biography-title {
