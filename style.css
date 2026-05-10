@@ -2876,18 +2876,9 @@ background-position:
 }
 
 /* =========================
-           HERO
+         page
 ========================= */
 
-.hero.reveal{
-  opacity:1 !important;
-  transform:none !important;
-}
-
-.hero.reveal.active{
-  opacity:1 !important;
-  transform:none !important;
-}
 .page-hero{
   position:relative;
   overflow:hidden;
