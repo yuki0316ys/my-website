@@ -614,12 +614,41 @@ background-position:
    ACHIEVEMENTS
 ========================= */
 
-.achievement-grid {
-  max-width: 1100px;
-  margin: 80px auto 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+.achievement-marquee{
+  overflow:hidden;
+
+  width:100%;
+
+  position:relative;
+
+  margin-top:80px;
+}
+
+.achievement-track{
+  display:flex;
+
+  gap:24px;
+
+  width:max-content;
+
+  animation:
+    achievementLoop 28s linear infinite;
+}
+
+.achievement-track:hover{
+  animation-play-state:paused;
+}
+
+@keyframes achievementLoop{
+
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(calc(-50% - 12px));
+  }
+
 }
 
 .achievement-card{
