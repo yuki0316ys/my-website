@@ -713,31 +713,7 @@ background-position:
     rgba(247,241,232,0.58);
 }
 
-/* MOBILE */
 
-@media (max-width: 768px) {
-
-  .achievement {
-    padding: 90px 16px;
-  }
-
-  .section-title {
-    margin-bottom: 40px;
-
-    font-size: 3rem;
-  }
-
-  .achievement-grid {
-    grid-template-columns: 1fr;
-
-    gap: 14px;
-  }
-
-  .achievement-item {
-    padding: 30px 20px;
-  }
-
-}
 /* =========================
    BUTTON SYSTEM
 ========================= */
@@ -1194,237 +1170,6 @@ background-position:
 }
 
 
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:768px){
-
-  .profile-biography__inner{
-    padding: 2rem;
-  }
-
-  .profile-title{
-    font-size: 3rem;
-  }
-
-  .profile-lead{
-    font-size: 1rem;
-    line-height: 1.9;
-  }
-
-  .profile-text p{
-    padding-left: 20px;
-
-    font-size: .95rem;
-
-    line-height: 2;
-  }
-
-  .discography-block{
-    padding: 2rem;
-  }
-
-  .discography-list li{
-    flex-direction:column;
-
-    gap:4px;
-  }
-
-}
- .profile-page {
-  max-width: 1100px;
-
-  margin: 0 auto;
-
-  padding: 160px 24px 120px;
-}
-   
-.profile-kicker {
-  margin-bottom: 20px;
-
-  color: var(--gold);
-
-  font-size: 0.75rem;
-
-  font-weight: 900;
-
-  letter-spacing: 0.24em;
-
-  text-transform: uppercase;
-}
-
- .profile-title {
-  max-width: 900px;
-
-  margin: 20px 0;
-
-  padding:
-    20px 0 24px;
-
-  line-height: 1.08;
-
-  font-size:
-    clamp(3rem, 8vw, 7rem);
-
- line-height: 0.9;
-
-  font-weight: 900;
-
-  letter-spacing: -0.05em;
-
-  display: block;
-}
-
-.profile-lead {
-  max-width: 920px;
-
-  margin-top: 0;
-
-  padding-left: 6px;
-
-  color:
-    rgba(255,255,255,0.72);
-
-  font-size: 1.15rem;
-
-  line-height: 2;
-}
-
-.profile-layout {
-  display: grid;
-
-  grid-template-columns:
-    1.1fr 0.7fr;
-
-  gap: 60px;
-
-  align-items: start;
-}
-
-.profile-info {
-  position: sticky;
-
-  top: 100px;
-
-  padding: 34px;
-
-  border-radius: 24px;
-
-  background:
-    rgba(255,255,255,0.03);
-
-  border:
-    1px solid rgba(255,255,255,0.08);
-
-  backdrop-filter: blur(20px);
-}
-
-.info-block {
-  padding-bottom: 24px;
-
-  margin-bottom: 24px;
-
-  border-bottom:
-    1px solid rgba(255,255,255,0.08);
-}
-
-.info-block:last-child {
-  padding-bottom: 0;
-
-  margin-bottom: 0;
-
-  border-bottom: none;
-}
-
-.info-label {
-  margin-bottom: 10px;
-
-  color: var(--gold);
-
-  font-size: 0.72rem;
-
-  font-weight: 900;
-
-  letter-spacing: 0.18em;
-
-  text-transform: uppercase;
-}
-
-.info-value {
-  font-size: 1rem;
-
-  line-height: 1.8;
-
-  color:
-    rgba(255,255,255,0.82);
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 768px) {
-
-  .profile-page {
-    padding: 120px 20px 80px;
-  }
-
-  .profile-title {
-    font-size: 3rem;
-
-    line-height: 1;
-  }
-
-  .profile-layout {
-    grid-template-columns: 1fr;
-
-    gap: 40px;
-  }
-
-  .profile-info {
-    position: static;
-  }
-
-  .profile-text p {
-    font-size: 0.98rem;
-
-    line-height: 2;
-  }
-
-}
-/* MOBILE */
-
-@media (max-width: 768px) {
-
-  .profile {
-    grid-template-columns: 1fr;
-
-    gap: 40px;
-  }
-
-  .profile__intro {
-    position: static;
-  }
-
-  .profile__intro h2 {
-  font-size:
-    clamp(1.8rem, 9vw, 2.6rem);
-
-  line-height: 1.1;
-}
-
-  .profile__panel {
-    padding: 28px 22px;
-  }
-
-  .profile__panel p {
-    font-size: 0.95rem;
-
-    line-height: 1.95;
-  }
-
-}
 
 /* =========================
    TRACK 
@@ -1775,27 +1520,7 @@ background-position:
   padding: 70px;
 }
 
-@media (max-width: 768px) {
 
-  .live-section {
-    padding: 120px 20px 80px;
-  }
-
-  .live-card {
-    min-height: 480px;
-  }
-
-  .live-content {
-    padding: 30px 24px;
-  }
-
-  .live-page-title {
-    font-size: 3.2rem;
-
-    line-height: 1;
-  }
-
-}
 .ticket-btn {
   display: inline-flex;
   align-items: center;
@@ -2880,3 +2605,47 @@ background-position:
 .final-cta {padding: 80px 16px;}
 .final-cta-title {font-size: 26px;}
 }
+
+@media (max-width: 768px) {.achievement {padding: 90px 16px;}
+.section-title {margin-bottom: 40px;font-size: 3rem;}
+.achievement-grid {grid-template-columns: 1fr;gap: 14px;}
+.achievement-item {padding: 30px 20px;}
+}
+
+@media (max-width: 768px) {.live-section {padding: 120px 20px 80px;}
+.live-card {min-height: 480px;}
+.live-content {padding: 30px 24px;}
+.live-page-title {font-size: 3.2rem;line-height: 1;}
+}
+
+@media (max-width: 768px) {.profile-page {padding: 120px 20px 80px;}
+.profile-title {font-size: 3rem;line-height: 1;}
+.profile-layout {grid-template-columns: 1fr;gap: 40px;}
+.profile-info {position: static;}
+.profile-text p {font-size: 0.98rem;line-height: 2;}
+}
+
+@media (max-width: 768px) {.profile {grid-template-columns: 1fr;gap: 40px;}
+.profile__intro {position: static;}
+.profile__intro h2 {font-size:clamp(1.8rem, 9vw, 2.6rem);line-height: 1.1;}
+.profile__panel {padding: 28px 22px;}
+.profile__panel p {font-size: 0.95rem;line-height: 1.95;}
+}
+
+@media(max-width:768px){.profile-biography__inner{padding: 2rem;}
+.profile-title{font-size: 3rem;}
+.profile-lead{font-size: 1rem;line-height: 1.9;}
+.profile-text p{padding-left: 20px;font-size: .95rem;line-height: 2;}
+.discography-block{padding: 2rem;}
+.discography-list{liflex-direction:column;gap:4px;}}
+.profile-page {max-width: 1100px;margin: 0 auto;padding: 160px 24px 120px;}
+.profile-kicker {margin-bottom: 20px;color: var(--gold);font-size: 0.75rem;font-weight: 900;letter-spacing: 0.24em;text-transform: uppercase;}
+.profile-title {max-width: 900px;margin: 20px 0;padding:20px 0 24px;line-height: 1.08;font-size:clamp(3rem, 8vw, 7rem);line-height: 0.9;font-weight: 900;letter-spacing: -0.05em;display: block;}
+.profile-lead {max-width: 920px;margin-top: 0;padding-left: 6px;color:rgba(255,255,255,0.72);font-size: 1.15rem;line-height: 2;}
+.profile-layout {display: grid;grid-template-columns:1.1fr 0.7fr;gap: 60px;align-items: start;}
+.profile-info {position: sticky;top: 100px;padding: 34px;border-radius: 24px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);backdrop-filter: blur(20px);}
+.info-block {padding-bottom: 24px;margin-bottom: 24px;border-bottom:1px solid rgba(255,255,255,0.08);}
+.info-block:last-child {padding-bottom: 0;margin-bottom: 0;border-bottom: none;}
+.info-label {margin-bottom: 10px;color: var(--gold);font-size: 0.72rem;font-weight: 900;letter-spacing: 0.18em;text-transform: uppercase;}
+.info-value {font-size: 1rem;line-height: 1.8;color:rgba(255,255,255,0.82);}
+
