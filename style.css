@@ -969,31 +969,22 @@ background-position:
 }
 
 .profile-text p {
+  position: relative;
   margin: 0;
-
-  color:
-    rgba(255,255,255,0.78);
-
+  color:rgba(255,255,255,0.78);
   font-size: 1.05rem;
-
   line-height: 2.2;
 }
 
 .profile-text p::before{
   content:"";
-
   position:absolute;
-
   top: 14px;
   left:0;
-
   width:10px;
   height:10px;
-
   border-radius:50%;
-
   background: var(--gold);
-
   box-shadow:
     0 0 18px rgba(255,210,120,.6);
 }
