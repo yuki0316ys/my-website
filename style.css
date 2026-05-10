@@ -655,21 +655,6 @@ background-position:
   color: rgba(255,255,255,0.95);
 }
 
-/* GRID */
-
-.achievement-grid {
-  max-width: 1100px;
-
-  margin: 0 auto;
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(4, 1fr);
-
-  gap: 20px;
-}
-
 /* CARD */
 
 .achievement-item {
@@ -2846,15 +2831,13 @@ background-position:
    ACHIEVEMENT
 ========================= */
 
-.achievement-grid{
+.achievement-grid {
+  max-width: 1100px;
   margin-top:80px;
-
-  display:grid;
-
-  grid-template-columns:
-    repeat(4,1fr);
-
-  gap:24px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap: 24px;
 }
 
 .achievement-card{
