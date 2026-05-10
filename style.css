@@ -264,21 +264,16 @@ h2 {
     0 0 20px rgba(255,93,147,0.15);
 
   transition:
-    transform 0.3s ease,
-    background 0.3s ease;
+  transform var(--speed-main) var(--ease),
+  background var(--speed-main) var(--ease),
+  color var(--speed-main) var(--ease),
+  box-shadow var(--speed-main) var(--ease);
 }
 
 .brand-button:hover {
-  transform: scale(1.05);
-
-  background:
-    linear-gradient(
-      135deg,
-      var(--gold),
-      var(--rose)
-    );
-
-  color: #000;
+ transform:translateY(-2px);
+ background:linear-gradient(135deg,var(--gold),var(--rose));
+ color: #000;
 }
 
 .brand-button::before {
@@ -343,8 +338,8 @@ h2 {
   text-transform: uppercase;
 
   transition:
-    color 0.25s ease,
-    opacity 0.25s ease;
+  color var(--speed-main) var(--ease),
+  opacity var(--speed-main) var(--ease);
 }
 
 .nav a:hover {
@@ -491,9 +486,9 @@ background-position:
   padding:
     24px 20px;
 
-  transition:
-    transform 0.4s ease,
-    opacity 0.4s ease;
+ transition:
+  transform var(--speed-main) var(--ease),
+  opacity var(--speed-main) var(--ease);
 }
 
 .hero__content h1{
@@ -650,15 +645,14 @@ background-position:
     1px solid rgba(255,255,255,0.06);
 
   transition:
-    transform 0.3s ease,
-    border-color 0.3s ease;
+  transform var(--speed-main) var(--ease),
+  border-color var(--speed-main) var(--ease),
+  box-shadow var(--speed-main) var(--ease);
 }
 
 .achievement-item:hover {
-  transform: translateY(-4px);
-
-  border-color:
-    rgba(245,194,107,0.22);
+  transform:translateY(-6px);
+  border-color:rgba(245,194,107,0.22);
 }
 
 /* NUMBER */
@@ -731,20 +725,17 @@ background-position:
   letter-spacing: 0.02em;
 
   transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    border-color 0.3s ease;
+  transform var(--speed-main) var(--ease),
+  box-shadow var(--speed-main) var(--ease),
+  border-color var(--speed-main) var(--ease),
+  background var(--speed-main) var(--ease);
 }
 
 .button:hover,
 .social-link:hover {
-  transform: translateY(-1px);
-
-  border-color:
-    rgba(245,194,107,0.35);
-
-  box-shadow:
-   0 10px 24px rgba(0,0,0,0.22);
+ transform:translateY(-2px);
+ border-color:rgba(245,194,107,0.35);
+ box-shadow:0 10px 24px rgba(0,0,0,0.22);
 }
 
 /* =========================
@@ -816,9 +807,9 @@ background-position:
   box-shadow: var(--shadow);
 
   transition:
-    transform 0.35s ease,
-    border-color 0.35s ease,
-    box-shadow 0.35s ease;
+  transform var(--speed-main) var(--ease),
+  border-color var(--speed-main) var(--ease),
+  box-shadow var(--speed-main) var(--ease);
 }
 
 .track-card:hover,
@@ -827,13 +818,8 @@ background-position:
 .item:hover,
 .live-card:hover {
   transform: translateY(-6px);
-
-  border-color:
-    rgba(245,194,107,0.3);
-
-  box-shadow:
-    0 30px 80px rgba(0,0,0,0.55),
-    0 0 30px rgba(245,194,107,0.12);
+  border-color:rgba(245,194,107,0.3);
+  box-shadow:0 18px 50px rgba(0,0,0,.38);
 }
 
 
@@ -1180,21 +1166,16 @@ background-position:
   border:
     1px solid rgba(255,255,255,.08);
 
-  transition:
-    transform .5s ease,
-    border-color .5s ease,
-    box-shadow .5s ease;
+ transition:
+  transform var(--speed-main) var(--ease),
+  border-color var(--speed-main) var(--ease),
+  box-shadow var(--speed-main) var(--ease);
 }
 
 .track-card:hover{
-  transform:
-    translateY(-8px);
-
-  border-color:
-    rgba(255,255,255,.16);
-
-  box-shadow:
-    0 24px 60px rgba(0,0,0,.45);
+  transform:translateY(-6px);
+  border-color:rgba(255,255,255,.16);
+  box-shadow:0 24px 60px rgba(0,0,0,.45);
 }
 
 .track-card__image{
@@ -1376,10 +1357,10 @@ background-position:
 
   margin-bottom: 32px;
 
-  transition:
-    transform .45s ease,
-    border-color .45s ease,
-    box-shadow .45s ease;
+ transition:
+  transform var(--speed-main) var(--ease),
+  border-color var(--speed-main) var(--ease),
+  box-shadow var(--speed-main) var(--ease);
 }
 
 .live-card:hover{
@@ -1740,9 +1721,9 @@ background-position:
     blur(18px);
 
   transition:
-    transform .45s ease,
-    border-color .45s ease,
-    box-shadow .45s ease;
+  transform var(--speed-main) var(--ease),
+  border-color var(--speed-main) var(--ease),
+  box-shadow var(--speed-main) var(--ease);
 }
 
 .goods-card:hover{
@@ -1947,7 +1928,10 @@ background-position:
 
   font-weight: 800;
 
-  transition: 0.35s ease;
+  transition:
+  transform var(--speed-main) var(--ease),
+  background var(--speed-main) var(--ease),
+  box-shadow var(--speed-main) var(--ease);
 }
 
 .follow-btn:hover{
@@ -2503,6 +2487,31 @@ background-position:
   min-height:64px;
 
   font-size:1rem;
+}
+
+.reveal{
+
+  opacity:0;
+
+  transform:
+    translateY(40px);
+
+  transition:
+    opacity var(--speed-slow) var(--ease),
+    transform var(--speed-slow) var(--ease);
+
+  will-change:
+    transform,
+    opacity;
+
+}
+
+.reveal.active{
+
+  opacity:1;
+
+  transform:none;
+
 }
 
 /* ========================================
