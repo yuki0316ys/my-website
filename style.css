@@ -2978,8 +2978,9 @@ background-position:
   color:var(--gold);
   font-size:.75rem;
   font-weight:900;
-  letter-spacing:.24em;
+  letter-spacing:.28em;
   text-transform:uppercase;
+   transform:translateX(-2px);
 }
 
 .page-title{
