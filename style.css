@@ -2478,6 +2478,55 @@ transform:translateY(-4px);
 
 }
 
+.menu-toggle{
+  display:none;
+
+  width:52px;
+  height:52px;
+
+  border:none;
+
+  background:
+    rgba(255,255,255,.04);
+
+  border-radius:16px;
+
+  backdrop-filter:blur(12px);
+
+  position:relative;
+
+  z-index:10001;
+
+  cursor:pointer;
+}
+
+.menu-toggle span{
+  position:absolute;
+
+  left:14px;
+
+  width:24px;
+  height:2px;
+
+  background:#fff;
+
+  border-radius:999px;
+
+  transition:.4s ease;
+}
+
+.menu-toggle span:nth-child(1){
+  top:18px;
+}
+
+.menu-toggle span:nth-child(2){
+  top:25px;
+}
+
+.menu-toggle span:nth-child(3){
+  top:32px;
+}
+
 /* ========================================
    MOBILE
 ======================================== */
