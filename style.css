@@ -7,30 +7,24 @@
 ========================= */
 
 :root {
-  --bg: #020203;
-
-  --ink: #f7f1e8;
-  --muted: #aaa196;
-  --dim: #69625d;
-
-  --line: rgba(255,255,255,0.1);
-
-  --gold: #d9b76f;
-  --gold-light: #f5c26b;
-
-  --cyan: #74d5ff;
-  --rose: #ff5d93;
-
-  --glass: rgba(12,12,14,0.92);
-
-  --shadow:
-  0 10px 30px rgba(0,0,0,0.28);
-
-  --radius: 14px;
-
-  --max: 1180px;
+   --ease:cubic-bezier(.22,.61,.36,1);
+   --speed-fast: .4s;
+   --speed-main: .6s;
+   --speed-slow: 1s;
+   --bg: #020203;
+   --ink: #f7f1e8;
+   --muted: #aaa196;
+   --dim: #69625d;
+   --line: rgba(255,255,255,0.1);
+   --gold: #d9b76f;
+   --gold-light: #f5c26b;
+   --cyan: #74d5ff;
+   --rose: #ff5d93;
+   --glass: rgba(12,12,14,0.92);
+   --shadow:0 10px 30px rgba(0,0,0,0.28);
+   --radius: 14px;
+   --max: 1180px;
 }
-
 
 /* =========================
    RESET
