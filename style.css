@@ -609,11 +609,28 @@ background-position:
    ACHIEVEMENTS
 ========================= */
 
-.achievement {
-  padding: 140px 20px;
-
-  text-align: center;
+.achievement-grid {
+  max-width: 1100px;
+  margin: 80px auto 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
 }
+
+.achievement-card{
+  padding:40px 28px;
+  border-radius:28px;
+  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.015));
+  border:1px solid rgba(255,255,255,.08);
+  text-align:center;
+  transition:transform .4s ease,border-color .4s ease;
+}
+
+.achievement-card:hover{transform:translateY(-8px);border-color:rgba(255,255,255,.16);}
+.achievement-card h3{margin-bottom:12px;color:var(--gold);letter-spacing:.14em;font-size:.82rem;}
+.achievement-card p{margin-bottom:18px;color:rgba(255,255,255,.5);}
+.achievement-card span{font-size:2.2rem;font-weight:900;}
+.achievement {padding: 140px 20px;text-align: center;}
 
 .section-title {
   margin-bottom: 70px;
@@ -629,21 +646,7 @@ background-position:
   color: rgba(255,255,255,0.95);
 }
 
-/* CARD */
-
-.achievement-item {
-  position: relative;
-
-  padding: 40px 24px;
-
-  border-radius: 14px;
-
-  background:
-    rgba(255,255,255,0.03);
-
-  border:
-    1px solid rgba(255,255,255,0.06);
-
+.achievement-item {position: relative;padding: 40px 24px;border-radius: 14px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);
   transition:
   transform var(--speed-main) var(--ease),
   border-color var(--speed-main) var(--ease),
@@ -2243,71 +2246,7 @@ background-position:
 }
 
 
-/* =========================
-   ACHIEVEMENT
-========================= */
 
-.achievement-grid {
-  max-width: 1100px;
-  margin-top:80px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns:repeat(4, 1fr);
-  gap: 24px;
-}
-
-.achievement-card{
-  padding:40px 28px;
-
-  border-radius:28px;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,.04),
-      rgba(255,255,255,.015)
-    );
-
-  border:
-    1px solid rgba(255,255,255,.08);
-
-  text-align:center;
-
-  transition:
-    transform .4s ease,
-    border-color .4s ease;
-}
-
-.achievement-card:hover{
-  transform:
-    translateY(-8px);
-
-  border-color:
-    rgba(255,255,255,.16);
-}
-
-.achievement-card h3{
-  margin-bottom:12px;
-
-  color:var(--gold);
-
-  letter-spacing:.14em;
-
-  font-size:.82rem;
-}
-
-.achievement-card p{
-  margin-bottom:18px;
-
-  color:
-    rgba(255,255,255,.5);
-}
-
-.achievement-card span{
-  font-size:2.2rem;
-
-  font-weight:900;
-}
 
 /* =========================
          page
