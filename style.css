@@ -973,6 +973,7 @@ background-position:
 
 .profile-text p {
   position: relative;
+  padding-left:34px;
   margin: 0;
   color:rgba(255,255,255,0.78);
   font-size: 1.05rem;
@@ -982,14 +983,14 @@ background-position:
 .profile-text p::before{
   content:"";
   position:absolute;
-  top: 14px;
+  top: 16px;
   left:0;
-  width:10px;
-  height:10px;
+  width:8px;
+  height:8px;
   border-radius:50%;
   background: var(--gold);
   box-shadow:
-    0 0 18px rgba(255,210,120,.6);
+    0 0 14px rgba(255,210,120,.45);
 }
 
 .profile-links{
