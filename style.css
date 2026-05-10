@@ -24,6 +24,11 @@
    --shadow:0 10px 30px rgba(0,0,0,0.28);
    --radius: 14px;
    --max: 1180px;
+   --text-xs:.72rem;
+   --text-sm:.9rem;
+   --text-md:1rem;
+   --text-lg:1.1rem;
+   --text-xl:1.25rem;
 }
 
 /* =========================
@@ -1501,12 +1506,7 @@ background-position:
   transition: 0.3s ease;
 }
 
-.ticket-btn:hover {
-  transform: scale(1.08);
-
-  box-shadow:
-    0 0 40px rgba(255,190,80,0.45);
-}
+.ticket-btn:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(255,190,80,.28);}
 
 .soldout {
   display: inline-block;
