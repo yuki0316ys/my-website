@@ -2424,69 +2424,49 @@ transform:translateY(-4px);
 }
 
 .results-bar{
+  overflow:hidden;
 
   position:relative;
 
-  overflow:hidden;
+  padding:18px 0;
 
-  padding:22px 0;
+  border-top:
+    1px solid rgba(255,255,255,.08);
 
-  border-top:1px solid rgba(255,255,255,.06);
-
-  border-bottom:1px solid rgba(255,255,255,.06);
+  border-bottom:
+    1px solid rgba(255,255,255,.08);
 
   background:
-    linear-gradient(
-      90deg,
-      rgba(255,255,255,.03),
-      rgba(255,255,255,.01)
-    );
+    rgba(255,255,255,.02);
 
-  backdrop-filter:blur(14px);
+  backdrop-filter:blur(12px);
 }
 
 .results-track{
-
   display:flex;
 
   gap:80px;
 
   width:max-content;
 
-  padding-left:80px;
-
-  animation:resultsFlow 26s linear infinite;
+  animation:
+    resultsLoop 26s linear infinite;
 }
 
 .results-track span{
-
-  position:relative;
-
-  white-space:nowrap;
-
-  color:rgba(255,255,255,.82);
+  color:
+    rgba(255,255,255,.72);
 
   font-size:.78rem;
 
-  font-weight:900;
+  font-weight:800;
 
-  letter-spacing:.24em;
+  letter-spacing:.22em;
 
-  text-transform:uppercase;
+  white-space:nowrap;
 }
 
-.results-track span::after{
-
-  content:"•";
-
-  position:absolute;
-
-  right:-42px;
-
-  color:var(--gold);
-}
-
-@keyframes resultsFlow{
+@keyframes resultsLoop{
 
   from{
     transform:translateX(0);
