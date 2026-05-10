@@ -2991,14 +2991,15 @@ background-position:
 
 .page-title{
   margin:0 0 24px;
-  max-width: 10ch;
+  max-width: 12ch;
   margin-inline:auto;
-  font-size:clamp(3.6rem,9vw,7rem);
-  line-height:.92;
+  font-size:clamp(2.8rem,7vw,5.8rem);
+  line-height:1.02;
   font-weight:900;
-  letter-spacing:-.06em;
+  letter-spacing:-.05em;
   color:rgba(255,255,255,.96);
   text-shadow:0 10px 40px rgba(0,0,0,.75);
+  word-break: keep-all;
 }
 
 .page-subtitle{
