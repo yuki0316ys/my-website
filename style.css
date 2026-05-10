@@ -1684,6 +1684,12 @@ background-position:
     0 50px 120px rgba(0,0,0,.6);
 }
 
+.live-card:first-child{
+
+  margin-top:40px;
+
+}
+
 .live-date {
   margin-bottom: 18px;
 
@@ -1739,7 +1745,7 @@ background-position:
   margin: 0 auto;
 
   padding:
-    4rem 0 8rem;
+    10rem 0 8rem;
 }
 
 .live-page-title {
