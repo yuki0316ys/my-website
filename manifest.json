@@ -1,11 +1,10 @@
 {
   "name": "YUKI / 佑樹",
   "short_name": "YUKI",
-  "start_url": "/my-website/",
+  "start_url": "/my-website/index.html",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
-  "orientation": "portrait",
   "icons": [
     {
       "src": "images/icon-192.png",
