@@ -1999,176 +1999,6 @@ background-position:
   text-transform: uppercase;
 }
 
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 768px) {
-
-  .header {
-    height: 64px;
-
-    padding: 0 14px;
-  }
-
-  .nav {
-    gap: 12px;
-  }
-
-  .nav a {
-    font-size: 0.65rem;
-
-    letter-spacing: 0.08em;
-  }
-
-  .brand-chara {
-    width: 24px;
-    height: 24px;
-  }
-
-  .hero {
-    padding:
-      80px 16px 40px;
-  }
-
-  .hero-bg {
-    background-size: cover;
-
-    background-position:
-      center top;
-
-    filter:
-      brightness(0.48)
-      contrast(1.05);
-  }
-
-  .hero__content {
-    margin:
-      220px auto 20px;
-
-    padding:
-      20px 16px;
-  }
-
-  .hero__content h1 {
-    font-size:
-      clamp(2.2rem, 12vw, 3rem);
-
-    line-height: 1.02;
-
-    letter-spacing: 0.04em;
-  }
-
-  .hero-catch {
-    font-size: 13px;
-  }
-
-  .hero-sub {
-    font-size: 12px;
-  }
-
-  .hero__meta {
-    gap: 8px;
-  }
-
-  .hero__meta span {
-    min-height: 34px;
-
-    padding: 0 14px;
-
-    font-size: 0.65rem;
-  }
-
-  .hero-cta {
-    flex-direction: column;
-  }
-
-  .button,
-  .social-link {
-    width: 100%;
-
-    min-height: 56px;
-
-    font-size: 14px;
-  }
-
-  .video-section,
-  .profile,
-  .music,
-  .social,
-  .biography-section {
-    padding: 80px 16px;
-  }
-
-  .profile {
-    grid-template-columns: 1fr;
-  }
-
-  .profile__intro {
-    position: static;
-  }
-
-  .profile__panel {
-    padding: 20px;
-  }
-
-  .track-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .track-card {
-  min-height: 320px;
-}
-
-  .social {
-    grid-template-columns: 1fr;
-  }
-
-  .social__links {
-    flex-direction: column;
-
-    justify-content: flex-start;
-  }
-
-  .live-card {
-    padding: 40px 20px;
-  }
-
-  .live-title {
-    font-size: 28px;
-  }
-
-  .news-list {
-    padding: 60px 20px;
-  }
-
-  .biography-title {
-    font-size: 34px;
-  }
-
-  .biography-subtitle {
-    margin-bottom: 50px;
-  }
-
-  .biography-block {
-    flex-direction: column;
-
-    gap: 10px;
-  }
-
-  .bio-year {
-    min-width: auto;
-  }
-
-  .final-cta {
-    padding: 80px 16px;
-  }
-
-  .final-cta-title {
-    font-size: 26px;
-  }
-
-}
 
 /* =========================
    GOODS 
@@ -2307,23 +2137,6 @@ background-position:
   color:#fff;
 }
 
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:768px){
-
-  .goods-grid{
-    grid-template-columns:1fr;
-
-    padding:80px 20px;
-  }
-
-  .store-hero{
-    padding:140px 20px 90px;
-  }
-
-}
 
 /* =========================
    FOLLOW CTA
@@ -2458,25 +2271,7 @@ background-position:
     0 0 40px rgba(255,190,80,0.35);
 }
 
-@media (max-width: 768px){
 
-  .follow-cta{
-    padding: 100px 20px;
-  }
-
-  .follow-cta__inner{
-    padding: 48px 28px;
-  }
-
-  .follow-title{
-    font-size: 3rem;
-  }
-
-  .follow-btn{
-    width: 100%;
-  }
-
-}
 /* =========================
    CINEMATIC LYRICS
 ========================= */
@@ -2611,28 +2406,7 @@ background-position:
   text-transform:uppercase;
 }
 
-/* =========================
-   MOBILE
-========================= */
 
-@media(max-width:768px){
-
-  .lyrics-title{
-    margin-bottom:56px;
-
-    font-size:
-      clamp(2.5rem,14vw,4.5rem);
-  }
-
-  .cinematic-lyrics{
-    gap:42px;
-  }
-
-  .cinematic-lyrics p{
-    line-height:2;
-  }
-
-}
 /* =========================
    PREVIEW PLAYER
 ========================= */
@@ -2789,25 +2563,6 @@ background-position:
   line-height:2;
 }
 
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:768px){
-
-  .biography-block{
-    flex-direction:column;
-
-    gap:14px;
-
-    padding:28px 24px;
-  }
-
-  .bio-year{
-    min-width:auto;
-  }
-
-}
 
 /* =========================
    ACHIEVEMENT
@@ -2971,23 +2726,6 @@ background-position:
 
 }
 
-@media(max-width:768px){
-
-  .page-hero{
-    padding:220px 20px 180px;
-  }
-
-  .page-title{
-    font-size:clamp(3rem,16vw,5rem);
-    line-height:.95;
-  }
-
-  .page-subtitle{
-    font-size:1rem;
-    line-height:1.9;
-  }
-
-}
 /* =========================
    STORE FINAL CTA
 ========================= */
@@ -3082,15 +2820,63 @@ background-position:
 ========================= */
 
 @media(max-width:768px){
+.store-final{padding:140px 20px 140px;}
+.store-final h2{font-size:clamp(2.8rem,14vw,4.8rem);}
+}
 
-  .store-final{
-    padding:
-      140px 20px 140px;
-  }
+@media(max-width:768px){.goods-grid{grid-template-columns:1fr;padding:80px 20px;}
+.store-hero{padding:140px 20px 90px;}
+}
 
-  .store-final h2{
-    font-size:
-      clamp(2.8rem,14vw,4.8rem);
-  }
+@media(max-width:768px){.page-hero{padding:220px 20px 180px;}
+.page-title{font-size:clamp(3rem,16vw,5rem);line-height:.95;}
+.page-subtitle{font-size:1rem;line-height:1.9;}
+}
 
+@media(max-width:768px){.biography-block{flex-direction:column;gap:14px;padding:28px 24px;}
+.bio-year{min-width:auto;}
+}
+
+@media(max-width:768px){.lyrics-title{margin-bottom:56px;font-size:clamp(2.5rem,14vw,4.5rem);}
+.cinematic-lyrics{gap:42px;}
+.cinematic-lyrics p{line-height:2;}
+}
+
+@media (max-width: 768px){.follow-cta{padding: 100px 20px;}
+.follow-cta__inner{padding: 48px 28px;}
+.follow-title{font-size: 3rem;}
+.follow-btn{width: 100%;}
+}
+
+@media (max-width: 768px) {.header {height: 64px;padding: 0 14px;}
+.nav {gap: 12px;}
+.nav a {font-size: 0.65rem;letter-spacing: 0.08em;}
+.brand-chara {width: 24px;height: 24px;}
+.hero {padding:80px 16px 40px;}
+.hero-bg {background-size: cover;background-position:center top;filter:brightness(0.48)contrast(1.05);}
+.hero__content {margin:220px auto 20px;padding:20px 16px;}
+.hero__content h1 {font-size:clamp(2.2rem, 12vw, 3rem);line-height: 1.02;letter-spacing: 0.04em;}
+.hero-catch {font-size: 13px;}
+.hero-sub {font-size: 12px;}
+.hero__meta {gap: 8px;}
+.hero__meta span {min-height: 34px;padding: 0 14px;font-size: 0.65rem;}
+.hero-cta {flex-direction: column;}
+.button,.social-link {width: 100%;min-height: 56px;font-size: 14px;}
+.video-section,.profile,.music,.social,.biography-section {padding: 80px 16px;}
+.profile {grid-template-columns: 1fr;}
+.profile__intro {position: static;}
+.profile__panel {padding: 20px;}
+.track-grid {grid-template-columns: 1fr;}
+.track-card {min-height: 320px;}
+.social {grid-template-columns: 1fr;}
+.social__links {flex-direction: column;justify-content: flex-start;}
+.live-card {padding: 40px 20px;}
+.live-title {font-size: 28px;}
+.news-list {padding: 60px 20px;}
+.biography-title {font-size: 34px;}
+.biography-subtitle {margin-bottom: 50px;}
+.biography-block {flex-direction: column;gap: 10px;}
+.bio-year {min-width: auto;}
+.final-cta {padding: 80px 16px;}
+.final-cta-title {font-size: 26px;}
 }
