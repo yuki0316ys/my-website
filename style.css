@@ -497,25 +497,7 @@ background-position:
 }
 
 .hero__content h1{
-  margin:
-    0 0 20px;
 
-  font-size:
-    clamp(3.6rem,10vw,8rem);
-
-  font-weight:900;
-
-  line-height:.88;
-
-  letter-spacing:-.05em;
-
-  color:
-    rgba(255,255,255,.96);
-
-  text-shadow:
-    0 10px 40px rgba(0,0,0,.9),
-    0 0 60px rgba(0,0,0,.5);
-  
   display:flex;
 
   align-items:center;
@@ -524,6 +506,62 @@ background-position:
 
   gap:10px;
 
+  margin:0 0 20px;
+
+  font-size:
+    clamp(3.6rem,10vw,8rem);
+
+  font-weight:900;
+
+  line-height:.88;
+
+  letter-spacing:-.06em;
+
+  text-shadow:
+    0 10px 40px rgba(0,0,0,.85);
+}
+
+/* =========================
+   YUKI（白）
+========================= */
+
+.en-name,
+.slash{
+
+  color:
+    rgba(255,255,255,.96);
+}
+
+
+/* =========================
+   佑樹（金）
+========================= */
+
+.jp-name{
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff8e8 0%,
+      #f3d487 35%,
+      #d6a63c 65%,
+      #ffe7b8 100%
+    );
+
+  -webkit-background-clip:text;
+
+  -webkit-text-fill-color:transparent;
+
+  text-shadow:
+    0 0 24px rgba(243,201,105,.12);
+}
+
+/* =========================
+   / の距離調整
+========================= */
+
+.slash{
+  margin-right:-6px;
 }
 
 .hero__content h1 .slash{
