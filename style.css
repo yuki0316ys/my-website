@@ -530,8 +530,10 @@ background-position:
 
   color:
     rgba(255,255,255,.96);
-}
 
+  -webkit-text-fill-color:
+    rgba(255,255,255,.96);
+}
 
 /* =========================
    佑樹（金）
@@ -566,26 +568,6 @@ background-position:
 
 .hero__content h1 .slash{
   margin-right:-6px;
-}
-
-.hero__content h1 span{
-
-  background:
-    linear-gradient(
-      135deg,
-      #fff8e8 0%,
-      #f3d487 35%,
-      #e6b85c 65%,
-      #ffe8c7 100%
-    );
-
-  -webkit-background-clip:text;
-
-  -webkit-text-fill-color:transparent;
-
-  text-shadow:
-    0 0 20px rgba(243,201,105,.10),
-    0 8px 30px rgba(0,0,0,.45);
 }
 
 .hero__lead{
