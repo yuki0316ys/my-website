@@ -518,6 +518,24 @@ background-position:
   
 }
 
+.hero__content h1 span{
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff6d5 0%,
+      #f3c969 40%,
+      #ff5d93 100%
+    );
+
+  -webkit-background-clip:text;
+
+  -webkit-text-fill-color:transparent;
+
+  text-shadow:
+    0 0 30px rgba(243,201,105,.15);
+}
+
 .hero__lead{
   max-width:820px;
 
