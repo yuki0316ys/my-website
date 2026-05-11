@@ -2662,7 +2662,12 @@ gap:20px;
 .follow-cta__inner{padding:48px 28px;}
 .follow-title{font-size:3rem;}
 .follow-btn{width:100%;}
-.goods-grid{grid-template-columns:1fr;padding:80px 20px;}
+.goods-grid{
+grid-template-columns:
+repeat(3,1fr);
+gap:14px;
+padding:80px 20px;
+}
 .store-hero{padding:140px 20px 90px;}
 .store-final{padding:140px 20px;}
 .store-final h2{font-size:clamp(2.8rem,14vw,4.8rem);}
