@@ -614,6 +614,17 @@ background-position:
    ACHIEVEMENTS
 ========================= */
 
+.achievement-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap:24px;
+
+}
+
 .achievement-track:hover{
   animation-play-state:paused;
 }
@@ -650,7 +661,12 @@ background-position:
   color: rgba(255,255,255,0.95);
 }
 
-.achievement-item {position: relative;padding: 40px 24px;border-radius: 14px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);
+.achievement-item {
+  position: relative;
+  padding: 54px 30px;
+  border-radius: 14px;
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.06);
   transition:
   transform var(--speed-main) var(--ease),
   border-color var(--speed-main) var(--ease),
@@ -2604,7 +2620,10 @@ transform:translateY(-4px);
 .video-section,.profile,.music,.social,.biography-section{padding:80px 16px;}
 .achievement{padding:90px 16px;}
 .section-title{margin-bottom:40px;font-size:3rem;}
-.achievement-grid{grid-template-columns:1fr;gap:14px;}
+.achievement-grid{
+grid-template-columns:1fr;
+gap:20px;
+}
 .achievement-item{padding:30px 20px;}
 .track-grid{grid-template-columns:1fr;}
 .track-card{min-height:320px;}
