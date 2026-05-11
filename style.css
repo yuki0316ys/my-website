@@ -507,7 +507,7 @@ background-position:
 
   line-height:.88;
 
-  letter-spacing:-.06em;
+  letter-spacing:-.05em;
 
   color:
     rgba(255,255,255,.96);
@@ -522,8 +522,12 @@ background-position:
 
   justify-content:center;
 
-  gap:24px;
+  gap:10px;
 
+}
+
+.hero__content h1 .slash{
+  margin-right:-6px;
 }
 
 .hero__content h1 span{
