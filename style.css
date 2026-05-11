@@ -2289,7 +2289,7 @@ transform:translateY(-4px);
   margin:0 0 24px;
   max-width: 12ch;
   margin-inline:auto;
-  font-size:clamp(2.8rem,7vw,5.8rem);
+  font-size:clamp(2rem,5vw,4.2rem);
   line-height:1.02;
   font-weight:900;
   letter-spacing:-.05em;
