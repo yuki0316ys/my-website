@@ -504,7 +504,7 @@ background-position:
 
   justify-content:center;
 
-  gap:10px;
+  gap:16px;
 
   margin:0 0 20px;
 
@@ -544,18 +544,19 @@ background-position:
   background:
     linear-gradient(
       135deg,
-      #fff8e8 0%,
-      #f3d487 35%,
-      #d6a63c 65%,
-      #ffe7b8 100%
+      #fff6dc 0%,
+      #f2d084 22%,
+      #c79b3b 52%,
+      #f6e3b2 78%,
+      #fff8ea 100%
     );
 
   -webkit-background-clip:text;
-
   -webkit-text-fill-color:transparent;
 
   text-shadow:
-    0 0 24px rgba(243,201,105,.12);
+    0 2px 12px rgba(255,215,120,.08),
+    0 8px 30px rgba(0,0,0,.45);
 }
 
 /* =========================
