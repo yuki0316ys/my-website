@@ -513,9 +513,17 @@ background-position:
     rgba(255,255,255,.96);
 
   text-shadow:
-    0 10px 40px rgba(0,0,0,.75),
-    0 0 60px rgba(245,194,107,.14);
+    0 10px 40px rgba(0,0,0,.9),
+    0 0 60px rgba(0,0,0,.5);
   
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:24px;
+
 }
 
 .hero__content h1 span{
@@ -523,9 +531,10 @@ background-position:
   background:
     linear-gradient(
       135deg,
-      #fff6d5 0%,
-      #f3c969 40%,
-      #ff5d93 100%
+      #fff8e8 0%,
+      #f3d487 35%,
+      #e6b85c 65%,
+      #ffe8c7 100%
     );
 
   -webkit-background-clip:text;
@@ -533,7 +542,8 @@ background-position:
   -webkit-text-fill-color:transparent;
 
   text-shadow:
-    0 0 30px rgba(243,201,105,.15);
+    0 0 20px rgba(243,201,105,.10),
+    0 8px 30px rgba(0,0,0,.45);
 }
 
 .hero__lead{
