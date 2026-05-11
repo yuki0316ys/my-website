@@ -2414,6 +2414,34 @@ transform:translateY(-4px);
   font-size:1rem;
 }
 
+.store-category{
+  width:
+    min(100% - 48px, 1400px);
+
+  margin:
+    140px auto 60px;
+
+  padding-left: 8px;
+}
+
+.store-category-title{
+  margin:0;
+
+  font-size:
+    clamp(3rem,8vw,7rem);
+
+  line-height:.9;
+
+  font-weight:900;
+
+  letter-spacing:-.06em;
+
+  color:#fff;
+
+  text-shadow:
+    0 10px 40px rgba(0,0,0,.6);
+}
+
 .reveal{
 
   opacity:0;
