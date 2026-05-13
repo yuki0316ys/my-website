@@ -65,9 +65,6 @@ body {
 
 }
 
-body.profile-page .profile{
-  padding-bottom:40px;}
-
 body::before{
   content:"";
 
@@ -192,7 +189,7 @@ h2 {
 .music,
 .social,
 .biography-section {
-  padding: 120px 20px;
+  padding: var(--section-space) 20px;
 }
 
 .section-heading {
@@ -2665,12 +2662,22 @@ transform:translateY(-4px);
   top:32px;
 }
 
+/* ===== biography 余白修正 ===== */
+
+.biography-container{
+  margin-bottom:0;
+}
+
+.biography-block:last-child{
+  margin-bottom:0;
+}
+
 .biography-section{
   padding-bottom:60px;
 }
 
 .company{
-  margin-top:20px;
+  margin-top:40px;
 }
 /* ========================================
    MOBILE
@@ -2746,7 +2753,9 @@ transform:translateY(-4px);
 .hero__meta span{min-height:34px;padding:0 14px;font-size:.65rem;}
 .hero-cta{flex-direction:column;}
 .button,.social-link{width:100%;min-height:56px;font-size:14px;}
-.video-section,.profile,.music,.social,.biography-section{padding:80px 16px;}
+.video-section,.profile,.music,.social,.biography-section{
+padding:64px 16px;
+}
 .achievement{padding:90px 16px;}
 .section-title{margin-bottom:40px;font-size:3rem;}
 .achievement-grid{
