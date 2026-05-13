@@ -2222,7 +2222,6 @@ transform:translateY(-4px);
 
 .biography-container{
   max-width:1000px;
-  margin-bottom:0;
   margin:0 auto;
 }
 
@@ -2304,6 +2303,8 @@ transform:translateY(-4px);
 
 .company{
   margin-top:40px;
+  padding-top:30px;
+  border-top:1px solid rgba(255,255,255,0.08);
 }
 
 .company h2{
