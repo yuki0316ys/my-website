@@ -2222,7 +2222,7 @@ transform:translateY(-4px);
 
 .biography-container{
   max-width:1000px;
-
+  margin-bottom:0;
   margin:0 auto;
 }
 
@@ -2241,7 +2241,11 @@ transform:translateY(-4px);
   border-color var(--speed-main) var(--ease),
   box-shadow var(--speed-main) var(--ease);
   overflow:hidden;
-  margin-bottom:20px;
+  margin-bottom:20px; 
+}
+
+.biography-block:last-child{
+  margin-bottom:0; 
 }
 
 .biography-block:hover{
@@ -2271,6 +2275,10 @@ transform:translateY(-4px);
     );
 }
 
+.biography-section{
+  padding-bottom:60px;
+}
+
 .bio-year{
   min-width:140px;
 
@@ -2294,8 +2302,17 @@ transform:translateY(-4px);
   line-height:2;
 }
 
+.company{
+  margin-top:40px;
+}
 
-
+.company h2{
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: 0.06em;
+  opacity: 0.9;
+}
 
 /* =========================
          page
@@ -2662,23 +2679,6 @@ transform:translateY(-4px);
   top:32px;
 }
 
-/* ===== biography 余白修正 ===== */
-
-.biography-container{
-  margin-bottom:0;
-}
-
-.biography-block:last-child{
-  margin-bottom:0;
-}
-
-.biography-section{
-  padding-bottom:60px;
-}
-
-.company{
-  margin-top:40px;
-}
 /* ========================================
    MOBILE
 ======================================== */
