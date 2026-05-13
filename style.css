@@ -2665,14 +2665,13 @@ transform:translateY(-4px);
   top:32px;
 }
 
-/* =========================
-   COMPANY SPACING FIX
-========================= */
-
-.company-section{
-  margin-top:140px;
+.biography-section{
+  padding-bottom:60px;
 }
 
+.company{
+  margin-top:20px;
+}
 /* ========================================
    MOBILE
 ======================================== */
