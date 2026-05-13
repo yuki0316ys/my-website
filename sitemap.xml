@@ -2,34 +2,44 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-<url>
-<loc>
-https://yuki0316ys.github.io/my-website/
-</loc>
-</url>
+  <url>
+    <loc>https://yuki-music.jp/</loc>
+    <lastmod>2026-05-13</lastmod>
+  </url>
 
-<url>
-<loc>
-https://yuki0316ys.github.io/my-website/profile.html
-</loc>
-</url>
+  <url>
+    <loc>https://yuki-music.jp/news.html</loc>
+    <lastmod>2026-05-13</lastmod>
+  </url>
 
-<url>
-<loc>
-https://yuki0316ys.github.io/my-website/live.html
-</loc>
-</url>
+  <url>
+    <loc>https://yuki-music.jp/live.html</loc>
+    <lastmod>2026-05-13</lastmod>
+  </url>
 
-<url>
-<loc>
-https://yuki0316ys.github.io/my-website/biography.html
-</loc>
-</url>
+  <url>
+    <loc>https://yuki-music.jp/profile.html</loc>
+    <lastmod>2026-05-13</lastmod>
+  </url>
 
-<url>
-<loc>
-https://yuki0316ys.github.io/my-website/songs/songs.html
-</loc>
-</url>
+  <url>
+    <loc>https://yuki-music.jp/biography.html</loc>
+    <lastmod>2026-05-13</lastmod>
+  </url>
+
+  <url>
+    <loc>https://yuki-music.jp/songs/songs.html</loc>
+    <lastmod>2026-05-13</lastmod>
+  </url>
+
+  <url>
+    <loc>https://yuki-music.jp/store.html</loc>
+    <lastmod>2026-05-13</lastmod>
+  </url>
+
+  <url>
+    <loc>https://yuki-music.jp/contact.html</loc>
+    <lastmod>2026-05-13</lastmod>
+  </url>
 
 </urlset>
