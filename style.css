@@ -189,7 +189,7 @@ h2 {
 .music,
 .social,
 .biography-section {
-  padding: var(--section-space) 20px;
+  padding: 120px 20px;
 }
 
 .section-heading {
