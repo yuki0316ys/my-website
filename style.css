@@ -65,6 +65,10 @@ body {
 
 }
 
+body.profile-page .profile {
+  padding-bottom: 20px;
+}
+
 body::before{
   content:"";
 
@@ -2302,16 +2306,16 @@ transform:translateY(-4px);
 }
 
 .company{
-  margin-top:40px;
+  margin-top:60px;
   padding-top:30px;
   border-top:1px solid rgba(255,255,255,0.08);
 }
 
 .company h2{
-  font-size: clamp(1.8rem, 4vw, 3.2rem);
-  line-height: 1.1;
-  margin-bottom: 20px;
-  letter-spacing: 0.06em;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.2;
+  margin-bottom: 16px;
+  letter-spacing: 0.04em;
   opacity: 0.9;
 }
 
