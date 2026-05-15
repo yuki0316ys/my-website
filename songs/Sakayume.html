@@ -87,6 +87,13 @@ content="summary_large_image">
     <a href="../store.html">Store</a>
     <a href="../contact.html">contact</a>
   </nav>
+
+  <button class="menu-toggle" id="menuToggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
 </header>
   
   <main>
@@ -586,6 +593,19 @@ if ("serviceWorker" in navigator) {
     .catch(err => {
       console.log("SW error", err);
     });
+
+    const menuToggle =
+  document.getElementById("menuToggle");
+
+const nav =
+  document.getElementById("nav");
+
+menuToggle.addEventListener("click",()=>{
+
+  nav.classList.toggle("active");
+  menuToggle.classList.toggle("active");
+
+});
 
 }
 </script>
