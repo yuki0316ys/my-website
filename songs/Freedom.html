@@ -612,19 +612,18 @@ if ("serviceWorker" in navigator) {
       console.log("SW error", err);
     });
 
-    const menuToggle =
-  document.getElementById("menuToggle");
+}
+</script>
 
-const nav =
-  document.getElementById("nav");
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const nav = document.getElementById("nav");
 
-menuToggle.addEventListener("click",()=>{
-
-  nav.classList.toggle("active");
-  menuToggle.classList.toggle("active");
-
-});
-
+if(menuToggle && nav){
+  menuToggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+    menuToggle.classList.toggle("active");
+  });
 }
 </script>
   
