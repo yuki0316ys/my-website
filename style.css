@@ -2705,7 +2705,7 @@ transform:translateY(-4px);
 .slash{
   margin: 0 8px;
   font-size: 0.6em;        /* ← さらに小さく */
-  opacity: 0.4;
+  opacity: 0.35;
   font-weight: 400;
 }
 
