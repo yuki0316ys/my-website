@@ -2782,7 +2782,15 @@ gap:20px;
 .live-page-title{font-size:3.2rem;line-height:1;}
 .news-list{padding:60px 20px;}
 .page-hero{padding:220px 20px 180px;}
-.page-title{font-size:clamp(3rem,16vw,5rem);line-height:.95;}
+.page-title{
+
+    font-size: clamp(2rem, 8vw, 3.2rem);
+
+    word-break: break-word;
+
+    line-height: 1.2;
+
+  }
 .page-subtitle{font-size:1rem;line-height:1.9;}
 .profile-page{padding:120px 20px 80px;}
 .profile-layout{grid-template-columns:1fr;gap:40px;}
