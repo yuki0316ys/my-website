@@ -2689,11 +2689,23 @@ transform:translateY(-4px);
   top:32px;
 }
 
-/* スラッシュ調整（タイトル用） */
+/* タイトルバランス最適化 */
+.en-name{
+  font-size: 1em;          /* 基準（そのまま） */
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.jp-name{
+  font-size: 0.85em;       /* ← 少し小さく */
+  font-weight: 700;
+  letter-spacing: 0.04em;  /* ← 少し広げる */
+}
+
 .slash{
-  margin: 0 8px;      /* ← 距離詰める */
-  font-size: 0.8em;   /* ← 少し小さく */
-  opacity: 0.6;       /* ← 主張弱める */
+  margin: 0 8px;
+  font-size: 0.7em;        /* ← さらに小さく */
+  opacity: 0.5;
   font-weight: 400;
 }
 
