@@ -355,75 +355,35 @@ href="https://yuki0316ys.github.io/my-website/biography.html">
 
 </section>
     
-    <div class="company-info">
-      <h2>COMPANY</h2>
-
-      <div class="company-row">
-        <span>社名</span>
-        <span>YUKI OFFICIAL STUDIO PRO 01</span>
-      </div>
-
-      <div class="company-row">
-        <span>設立</span>
-        <span>2021年</span>
-      </div>
-
-      <div class="company-row">
-        <span>代表者</span>
-        <span>佑樹</span>
-      </div>
-
-      <div class="company-row">
-        <span>オフィス</span>
-        <span>東京都</span>
-      </div>
-
-      <div class="company-row">
-        <span>事業内容</span>
-        <span>音楽配信、プロデュース、グッズ販売</span>
-      </div>
-    </div>
-
-  </div>
 </section>
    <footer class="footer"><p>&copy; 2026 YUKI / 佑樹. All rights reserved.</p></footer>
-  <script>
 
+ <script>
+// Service Worker（別）
 if ("serviceWorker" in navigator) {
-
   navigator.serviceWorker
-
     .register("/my-website/sw.js")
-
     .then(() => {
-
       console.log("SW registered");
-
     })
-
     .catch(err => {
-
       console.log("SW error", err);
-
     });
-
-    const menuToggle =
-  document.getElementById("menuToggle");
-
-const nav =
-  document.getElementById("nav");
-
-menuToggle.addEventListener("click",()=>{
-
-  nav.classList.toggle("active");
-  menuToggle.classList.toggle("active");
-
-});
-
 }
-
 </script>
 
+<script>
+// 🔥 ハンバーガーは外に出す
+const menuToggle = document.getElementById("menuToggle");
+const nav = document.getElementById("nav");
+
+if(menuToggle && nav){
+  menuToggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+    menuToggle.classList.toggle("active");
+  });
+}
+</script>
 
   </body>
 

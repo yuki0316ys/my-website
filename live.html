@@ -205,32 +205,29 @@ window.addEventListener("scroll", () => {
 });
 </script>
   <script>
+// Service Worker（別）
 if ("serviceWorker" in navigator) {
-
   navigator.serviceWorker
     .register("/my-website/sw.js")
-
     .then(() => {
       console.log("SW registered");
     })
-
     .catch(err => {
       console.log("SW error", err);
     });
+}
+</script>
 
-    const menuToggle =
-  document.getElementById("menuToggle");
+<script>
+// 🔥 ハンバーガーは外に出す
+const menuToggle = document.getElementById("menuToggle");
+const nav = document.getElementById("nav");
 
-const nav =
-  document.getElementById("nav");
-
-menuToggle.addEventListener("click",()=>{
-
-  nav.classList.toggle("active");
-  menuToggle.classList.toggle("active");
-
-});
-
+if(menuToggle && nav){
+  menuToggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+    menuToggle.classList.toggle("active");
+  });
 }
 </script>
   
