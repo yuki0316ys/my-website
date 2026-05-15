@@ -2773,16 +2773,25 @@ gap:20px;
 }
 .achievement-item{padding:30px 20px;}
 .track-grid{grid-template-columns:1fr;}
-.track-card{min-height:320px;}
-.track-card__image img{
+
+ .track-card__image{
+
+    aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+
+  }
+
+  .track-card__image img{
 
     width:100%;
 
-    height:auto;
+    height:100%;
 
-    object-fit:contain;
+    object-fit: cover;
 
   }
+.track-card{min-height:320px;}
 .social__links{flex-direction:column;justify-content:flex-start;}
 .live-section{padding:120px 20px 80px;}
 .live-card{min-height:480px;padding:40px 20px;}
