@@ -2773,7 +2773,11 @@ transform:translateY(-4px);
 }
 
 .brand-chara{width:24px;height:24px;}
-.hero{padding:80px 16px 40px;}
+.hero{
+  padding:80px 16px 40px;
+ height:70vh;
+  min-height:480px;
+}
 .hero-bg{background-size:cover;background-position:center top;filter:brightness(.48)contrast(1.05);}
 .hero__content{margin:220px auto 20px;padding:20px 16px;}
 .hero__content h1{font-size:clamp(2.2rem,12vw,3rem);line-height:1.02;letter-spacing:.04em;}
