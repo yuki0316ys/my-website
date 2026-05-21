@@ -2807,17 +2807,21 @@ padding:64px 16px;
 }
 
 .achievement{
-
-    padding: 80px 20px;
-
+    padding: 80px 16px;
   }
 
 .section-title{margin-bottom:40px;font-size:3rem;}
+
 .achievement-grid{
+padding: 0 4px;
 grid-template-columns:1fr;
 gap:20px;
 }
-.achievement-item{padding:30px 20px;}
+
+.achievement-item{
+  padding:30px 20px;
+ width:100%;
+}
 .track-grid{grid-template-columns:1fr;}
 
  .track-card__image{
