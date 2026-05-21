@@ -2843,21 +2843,18 @@ gap:20px;
   }
 .track-card{min-height:320px;}
 .social__links{flex-direction:column;justify-content:flex-start;}
+
  .live-section{
-
-    padding:120px 16px 80px;
-
+    padding:120px 20px 80px;
   }
 
   .live-card{
-
-    width:100%;
-
+    width:calc(100% - 16px);
     margin:0 auto;
     min-height:480px;
     padding:40px 20px;
-
   }
+  
 .live-content{padding:30px 24px;}
 .live-title{font-size:28px;}
 .live-page-title{font-size:3.2rem;line-height:1;}
