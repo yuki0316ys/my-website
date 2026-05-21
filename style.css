@@ -2901,7 +2901,12 @@ gap:20px;
     box-shadow: none;
 
     background: transparent;
-.profile-biography__inner{padding:2rem;}
+
+}
+
+.profile-biography__inner{
+    padding:2rem;
+}
 .discography-block{padding:2rem;}
 .discography-list li{flex-direction:column;gap:4px;}
 .biography-title{font-size:34px;}
@@ -2976,9 +2981,10 @@ gap:20px;
 
   }
 }
+
 .store-hero{padding:140px 20px 90px;}
 .store-final{padding:140px 20px;}
 .store-final h2{font-size:clamp(2.8rem,14vw,4.8rem);}
 .final-cta{padding:80px 16px;}
 .final-cta-title{font-size:26px;}
-}
+
