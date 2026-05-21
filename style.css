@@ -2791,10 +2791,21 @@ word-break: keep-all;
 overflow-wrap: break-word;
 }
 .button,.social-link{width:100%;min-height:56px;font-size:14px;}
+
+.button{
+white-space: nowrap;
+}
+
 .video-section,.profile,.music,.social,.biography-section{
 padding:64px 16px;
 }
-.achievement{padding:90px 16px;}
+
+.achievement{
+
+    padding: 80px 20px;
+
+  }
+  
 .section-title{margin-bottom:40px;font-size:3rem;}
 .achievement-grid{
 grid-template-columns:1fr;
@@ -2822,8 +2833,21 @@ gap:20px;
   }
 .track-card{min-height:320px;}
 .social__links{flex-direction:column;justify-content:flex-start;}
-.live-section{padding:120px 20px 80px;}
-.live-card{min-height:480px;padding:40px 20px;}
+ .live-section{
+
+    padding:120px 16px 80px;
+
+  }
+
+  .live-card{
+
+    width:100%;
+
+    margin:0 auto;
+    min-height:480px;
+    padding:40px 20px;
+
+  }
 .live-content{padding:30px 24px;}
 .live-title{font-size:28px;}
 .live-page-title{font-size:3.2rem;line-height:1;}
@@ -2838,7 +2862,21 @@ gap:20px;
     line-height: 1.2;
 
   }
-.page-subtitle{font-size:1rem;line-height:1.9;}
+
+.page-subtitle{
+
+  font-size:1rem;
+
+    word-break: keep-all;
+
+    overflow-wrap: normal;
+
+    line-height: 1.8;
+
+    padding: 0 10px;
+
+  }
+
 .profile-page{padding:120px 20px 80px;}
 .profile-layout{grid-template-columns:1fr;gap:40px;}
 .profile{grid-template-columns:1fr;gap:40px;}
@@ -2850,6 +2888,13 @@ gap:20px;
 .profile-text p{padding-left:20px;font-size:.95rem;line-height:2;}
 .profile__panel{padding:28px 22px;}
 .profile__panel p{font-size:.95rem;line-height:1.95;}
+.profile-biography{
+
+    border: none;
+
+    box-shadow: none;
+
+    background: transparent;
 .profile-biography__inner{padding:2rem;}
 .discography-block{padding:2rem;}
 .discography-list li{flex-direction:column;gap:4px;}
