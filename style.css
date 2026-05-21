@@ -2805,7 +2805,7 @@ padding:64px 16px;
     padding: 80px 20px;
 
   }
-  
+
 .section-title{margin-bottom:40px;font-size:3rem;}
 .achievement-grid{
 grid-template-columns:1fr;
@@ -2865,15 +2865,21 @@ gap:20px;
 
 .page-subtitle{
 
-  font-size:1rem;
-
     word-break: keep-all;
 
     overflow-wrap: normal;
 
+    padding: 0 10px;
+
+    font-size: 0.95rem;
+
     line-height: 1.8;
 
-    padding: 0 10px;
+    text-align: center;
+
+    max-width: 280px;
+
+    margin: 0 auto;
 
   }
 
@@ -2909,11 +2915,66 @@ gap:20px;
 .follow-cta__inner{padding:48px 28px;}
 .follow-title{font-size:3rem;}
 .follow-btn{width:100%;}
+
 .goods-grid{
-grid-template-columns:
-repeat(3,1fr);
-gap:14px;
-padding:80px 20px;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap:16px;
+
+  }
+
+  .goods-card{
+
+    padding: 16px 12px 20px;
+
+  }
+
+  /* ラベル小さく */
+
+  .goods-card__label{
+
+    font-size: 10px;
+
+    letter-spacing: .2em;
+
+    opacity: .7;
+
+    margin-bottom: 6px;
+
+  }
+
+  /* 商品名を主役に */
+
+  .goods-card h3{
+
+    font-size: 1.4rem;
+
+    line-height: 1.2;
+
+    margin-bottom: 8px;
+
+  }
+
+  /* 価格を見やすく */
+
+  .goods-card__price{
+
+    font-size: 1.1rem;
+
+    font-weight: 600;
+
+    opacity: .9;
+
+  }
+
+.goods-card img{
+
+    height: 140px;
+
+    object-fit: contain;
+
+  }
 }
 .store-hero{padding:140px 20px 90px;}
 .store-final{padding:140px 20px;}
