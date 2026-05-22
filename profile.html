@@ -30,6 +30,22 @@ content="summary_large_image">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=999999">
+  <style>
+    @media (max-width: 768px) {
+      .profile-biography {
+        padding: 24px 0 72px;
+        background: transparent;
+      }
+
+      .profile-biography::before {
+        opacity: 0;
+      }
+
+      .profile-biography__inner {
+        margin-top: 0;
+      }
+    }
+  </style>
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
 
 <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
