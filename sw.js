@@ -1,10 +1,8 @@
 self.addEventListener("install", event => {
   console.log("Service Worker Installed");
+  self.skipWaiting(); // ←これ重要
 });
 
-self.addEventListener("fetch", event => {
-
-});
 self.addEventListener("activate", event => {
   event.waitUntil(
     caches.keys().then(keys => {
@@ -13,4 +11,5 @@ self.addEventListener("activate", event => {
       );
     })
   );
+  self.clients.claim(); // ←これも重要
 });
