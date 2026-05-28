@@ -1,0 +1,77 @@
+name: Sync header social navigation
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Unify header social navigation
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+
+          const version = '2026052803';
+          const social = `  <div class="header-social" aria-label="SNS links">
+    <a class="header-social__link header-social__link--x" href="https://x.com/Youking74514090" target="_blank" rel="noopener noreferrer" aria-label="X"></a>
+    <a class="header-social__link header-social__link--youtube" href="https://www.youtube.com/@YUKIOFFICIALSTUDIOPRO01" target="_blank" rel="noopener noreferrer" aria-label="YouTube"></a>
+    <a class="header-social__link header-social__link--tiktok" href="https://www.tiktok.com/@yukiosp01?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok"></a>
+  </div>`;
+
+          function walk(dir) {
+            return fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+              const file = path.join(dir, entry.name);
+              if (entry.isDirectory()) {
+                if (['.git', '.github', 'node_modules'].includes(entry.name)) return [];
+                return walk(file);
+              }
+              return file.endsWith('.html') ? [file] : [];
+            });
+          }
+
+          for (const file of walk('.')) {
+            let html = fs.readFileSync(file, 'utf8');
+            const original = html;
+            const inSongs = file.split(path.sep).includes('songs');
+            const cssHref = inSongs ? `../style.css?v=${version}` : `style.css?v=${version}`;
+
+            html = html.replace(/href=(['"])(?:\.\.\/)?style\.css(?:\?v=[^'"]*)?\1/g, `href="${cssHref}"`);
+
+            if (/<header\b[\s\S]*?class=(['"])[^'"]*header/.test(html) && /<nav\b[\s\S]*?class=(['"])[^'"]*nav/.test(html)) {
+              html = html.replace(/\n?\s*<div class="header-social"[\s\S]*?<\/div>\s*(?=<button\b)/, `\n\n${social}\n\n  `);
+
+              if (!html.includes('class="header-social"')) {
+                html = html.replace(/<\/nav>\s*(?=<button\b)/, `</nav>\n\n${social}\n\n  `);
+              }
+            }
+
+            if (html !== original) {
+              fs.writeFileSync(file, html);
+              console.log(`updated ${file}`);
+            }
+          }
+          NODE
+
+      - name: Commit synced headers
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          if git diff --cached --quiet; then
+            echo "No header changes needed."
+          else
+            git commit -m "Unify header social navigation"
+            git push
+          fi
