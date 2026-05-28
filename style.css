@@ -182,3 +182,41 @@
     height: 36px;
   }
 }
+/* ===== 電光掲示板のカクつき修正版 ===== */
+
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  width: 100%;
+}
+
+.marquee-track {
+  display: flex;
+  flex-shrink: 0;
+  gap: 48px;
+
+  /* ← linear が超重要 */
+  animation: marquee 20s linear infinite;
+
+  /* Safari/iPhone対策 */
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.marquee-track span {
+  flex-shrink: 0;
+}
+
+/* ← ここで滑らかに流す */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
