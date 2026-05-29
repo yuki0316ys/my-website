@@ -16,8 +16,16 @@
 
 /* Typography */
 
+html,
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--body-font) !important;
+}
+
 body {
-  font-family: var(--body-font);
   font-weight: 500;
   letter-spacing: 0.02em;
   font-feature-settings: "palt" 1;
@@ -30,8 +38,11 @@ h2,
 h3,
 .brand,
 .brand-button,
+.brand-button span,
 .nav,
+.nav a,
 .hero__meta,
+.hero__meta span,
 .eyebrow,
 .button,
 .social-link,
@@ -41,41 +52,57 @@ h3,
 .news-date,
 .live-date,
 .results-track span {
-  font-family: var(--display-font);
+  font-family: var(--display-font) !important;
   text-transform: uppercase;
 }
 
 h1,
 h2,
 .page-title,
-.section-heading h2 {
-  font-weight: 900;
+.section-heading h2,
+.section-title,
+.hero h1,
+.hero h1 .en-name,
+.hero h1 .jp-name,
+.profile-title,
+.discography-label {
+  font-family: var(--display-font) !important;
+  font-weight: 900 !important;
   letter-spacing: 0.04em;
   line-height: 0.9;
 }
 
 h3,
 .track-card h3,
+.track-card__content h3,
 .news-title,
-.live-title {
-  font-family: var(--display-font);
-  font-weight: 800;
+.live-title,
+.achievement-label,
+.number {
+  font-family: var(--display-font) !important;
+  font-weight: 800 !important;
   letter-spacing: 0.04em;
   line-height: 1.25;
 }
 
 .nav,
+.nav a,
 .brand,
 .brand-button,
+.brand-button span,
 .hero__meta,
+.hero__meta span,
+.hero-catch,
 .eyebrow,
 .button,
 .social-link,
 .track-card__type,
 .news-tag,
 .live-tag,
-.results-track span {
-  font-weight: 800;
+.results-track span,
+.profile-link {
+  font-family: var(--display-font) !important;
+  font-weight: 800 !important;
   letter-spacing: 0.18em;
 }
 
@@ -83,11 +110,16 @@ p,
 .section-copy,
 .concept-line,
 .profile__panel p,
+.profile-text,
+.profile-text p,
+.discography-list,
+.discography-list li,
 .page-subtitle,
 .lyrics,
+.lyrics p,
 .live-place,
 .live-status {
-  font-family: var(--body-font);
+  font-family: var(--body-font) !important;
   font-weight: 500;
   letter-spacing: 0.05em;
 }
@@ -329,22 +361,39 @@ p,
   h1,
   h2,
   .page-title,
-  .section-heading h2 {
+  .section-heading h2,
+  .section-title,
+  .hero h1,
+  .hero h1 .en-name,
+  .hero h1 .jp-name,
+  .profile-title {
     letter-spacing: 0.025em;
   }
 
   .nav,
+  .nav a,
   .brand,
   .brand-button,
+  .brand-button span,
   .hero__meta,
+  .hero__meta span,
+  .hero-catch,
   .eyebrow,
   .button,
   .social-link,
   .track-card__type,
   .news-tag,
   .live-tag,
-  .results-track span {
+  .results-track span,
+  .profile-link {
     letter-spacing: 0.12em;
+  }
+
+  .profile-text,
+  .profile-text p,
+  .discography-list,
+  .discography-list li {
+    letter-spacing: 0.04em;
   }
 
   .page-hero {
