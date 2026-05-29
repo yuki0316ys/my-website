@@ -206,4 +206,73 @@
   to {
     transform: translateX(-50%);
   }
+  
+}
+.live-list{
+  max-width:1100px;
+  margin:0 auto 120px;
+  padding:0 24px;
+}
+
+.live-item{
+  padding:40px 0;
+  border-bottom:1px dotted #666;
+}
+
+.live-meta{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-bottom:24px;
+}
+
+.live-tag{
+  width:130px;
+  height:30px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#d8d8d8;
+  border-radius:999px;
+  font-size:.9rem;
+  font-weight:700;
+}
+
+.live-date{
+  font-size:1.8rem;
+  font-weight:700;
+}
+
+.live-title{
+  margin:0;
+  font-size:1.8rem;
+  line-height:1.5;
+}
+
+.live-place,
+.live-status{
+  margin-top:12px;
+  color:#666;
+}
+
+@media(max-width:768px){
+
+  .live-item{
+    padding:28px 0;
+  }
+
+  .live-tag{
+    width:90px;
+    height:24px;
+    font-size:.75rem;
+  }
+
+  .live-date{
+    font-size:1.1rem;
+  }
+
+  .live-title{
+    font-size:1.1rem;
+  }
+
 }
