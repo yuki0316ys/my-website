@@ -91,7 +91,7 @@ body .music#music .index-section-title {
 }
 
 .video-cta.index-action-row,
-music-footer.index-action-row,
+.music-footer.index-action-row,
 .store-final .index-action-row {
   display: flex !important;
   justify-content: center !important;
