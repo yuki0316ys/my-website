@@ -55,17 +55,19 @@
 
 .brand-button {
   position: relative !important;
-  display: inline-flex !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;
-  justify-content: center !important;
-  width: auto !important;
-  min-width: clamp(154px, 16vw, 224px) !important;
-  min-height: 54px !important;
+  display: block !important;
+  width: clamp(148px, 15vw, 218px) !important;
+  min-width: 0 !important;
+  height: clamp(48px, 4.8vw, 68px) !important;
+  min-height: 0 !important;
   padding: 0 !important;
   border: 0 !important;
   border-radius: 0 !important;
-  background: transparent !important;
+  background-color: transparent !important;
+  background-image: url("images/home.jpg?v=20260531") !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  background-position: left center !important;
   box-shadow: none !important;
   overflow: visible !important;
   transform: none !important;
@@ -77,37 +79,10 @@
   display: none !important;
 }
 
-.brand-button::before {
-  content: "YUKI / 佑樹";
-  display: block;
-  width: max-content;
-  max-width: 100%;
-  background: linear-gradient(90deg, #fff 0 43%, rgba(255, 255, 255, 0.42) 43% 54%, #d7b967 54% 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  font-family: var(--display-font, "Montserrat", "Noto Sans JP", sans-serif) !important;
-  font-size: clamp(1.45rem, 2.25vw, 2.5rem) !important;
-  font-weight: 900 !important;
-  letter-spacing: 0 !important;
-  line-height: 0.9 !important;
-  text-transform: none !important;
-  white-space: nowrap;
-  text-shadow: 0 14px 34px rgba(215, 185, 103, 0.16);
-}
-
+.brand-button::before,
 .brand-button::after {
-  content: "13 TRACKS • TOP 10 IN JAPAN";
-  display: block;
-  margin-top: 7px;
-  color: rgba(247, 241, 232, 0.66);
-  font-family: var(--display-font, "Montserrat", "Noto Sans JP", sans-serif) !important;
-  font-size: clamp(0.48rem, 0.62vw, 0.68rem) !important;
-  font-weight: 800 !important;
-  letter-spacing: 0.16em !important;
-  line-height: 1.1 !important;
-  text-transform: uppercase !important;
-  white-space: nowrap;
+  content: none !important;
+  display: none !important;
 }
 
 .news-list .news-title {
@@ -325,18 +300,8 @@ body .music#music .index-section-title {
 
 @media (max-width: 768px) {
   .brand-button {
-    min-width: 142px !important;
-    min-height: 48px !important;
-  }
-
-  .brand-button::before {
-    font-size: clamp(1.28rem, 6.4vw, 1.7rem) !important;
-  }
-
-  .brand-button::after {
-    margin-top: 5px;
-    font-size: 0.46rem !important;
-    letter-spacing: 0.11em !important;
+    width: clamp(128px, 39vw, 168px) !important;
+    height: clamp(42px, 13vw, 54px) !important;
   }
 
   .hero::after {
@@ -413,16 +378,8 @@ body .music#music .index-section-title {
 
 @media (max-width: 420px) {
   .brand-button {
-    min-width: 128px !important;
-  }
-
-  .brand-button::before {
-    font-size: 1.18rem !important;
-  }
-
-  .brand-button::after {
-    font-size: 0.4rem !important;
-    letter-spacing: 0.08em !important;
+    width: 126px !important;
+    height: 42px !important;
   }
 }
 
