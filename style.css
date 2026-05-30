@@ -64,14 +64,21 @@
   font-size: clamp(0.72rem, 0.75vw, 0.82rem);
 }
 
-.index-section-heading {
-  width: 100%;
-  max-width: 100%;
+body .video-section .index-section-heading,
+body .music#music .index-section-heading {
+  display: flex !important;
+  width: 100% !important;
+  max-width: 100% !important;
   margin: 0 auto clamp(34px, 5vw, 64px) !important;
-  text-align: center;
+  padding: 0 !important;
+  justify-content: center !important;
+  text-align: center !important;
 }
 
-.index-section-title {
+body .video-section .index-section-title,
+body .music#music .index-section-title {
+  width: auto !important;
+  max-width: none !important;
   margin: 0 auto !important;
   color: rgba(247, 241, 232, 0.94) !important;
   font-family: var(--display-font, "Montserrat", "Noto Sans JP", sans-serif) !important;
@@ -79,13 +86,8 @@
   font-weight: 800 !important;
   line-height: 1 !important;
   letter-spacing: 0.14em !important;
-  text-align: center;
-  text-transform: lowercase;
-}
-
-.video-section .index-section-heading,
-.music#music .index-section-heading {
-  display: block;
+  text-align: center !important;
+  text-transform: lowercase !important;
 }
 
 .goods-card[href="#"] {
@@ -140,11 +142,13 @@
     font-size: 0.72rem;
   }
 
-  .index-section-heading {
+  body .video-section .index-section-heading,
+  body .music#music .index-section-heading {
     margin-bottom: 32px !important;
   }
 
-  .index-section-title {
+  body .video-section .index-section-title,
+  body .music#music .index-section-title {
     font-size: clamp(1.3rem, 8vw, 2rem) !important;
     letter-spacing: 0.12em !important;
   }
