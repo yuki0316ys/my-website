@@ -117,7 +117,8 @@ body .music#music .index-section-title {
 .index-text-link,
 .video-cta .index-text-link,
 .music-footer .index-text-link,
-.store-final .index-text-link {
+.store-final .index-text-link,
+.store-final .button.main-cta {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -142,8 +143,24 @@ body .music#music .index-section-title {
   transition: color 0.25s ease, opacity 0.25s ease, transform 0.25s ease !important;
 }
 
+.store-final .button.main-cta {
+  font-size: 0 !important;
+}
+
+.store-final .button.main-cta::after {
+  content: "View Tunecore >";
+  color: #ff1b12 !important;
+  font-size: clamp(0.95rem, 1.15vw, 1.22rem) !important;
+  font-style: italic !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.045em !important;
+  line-height: 1.1 !important;
+}
+
 .index-text-link:hover,
-.index-text-link:focus-visible {
+.index-text-link:focus-visible,
+.store-final .button.main-cta:hover,
+.store-final .button.main-cta:focus-visible {
   color: #ff3a2f !important;
   opacity: 0.86 !important;
   transform: skew(-8deg) translateX(4px) !important;
@@ -215,7 +232,8 @@ body .music#music .index-section-title {
   .index-text-link,
   .video-cta .index-text-link,
   .music-footer .index-text-link,
-  .store-final .index-text-link {
+  .store-final .index-text-link,
+  .store-final .button.main-cta::after {
     font-size: 1rem !important;
     letter-spacing: 0.035em !important;
   }
