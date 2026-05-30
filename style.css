@@ -130,7 +130,7 @@ body .music#music .index-section-title {
   border-radius: 0 !important;
   background: transparent !important;
   box-shadow: none !important;
-  color: #ff1b12 !important;
+  color: #d7b967 !important;
   font-family: var(--display-font, "Montserrat", "Noto Sans JP", sans-serif) !important;
   font-size: clamp(0.95rem, 1.15vw, 1.22rem) !important;
   font-style: italic !important;
@@ -149,7 +149,7 @@ body .music#music .index-section-title {
 
 .store-final .button.main-cta::after {
   content: "View Tunecore >";
-  color: #ff1b12 !important;
+  color: #d7b967 !important;
   font-size: clamp(0.95rem, 1.15vw, 1.22rem) !important;
   font-style: italic !important;
   font-weight: 800 !important;
@@ -161,8 +161,8 @@ body .music#music .index-section-title {
 .index-text-link:focus-visible,
 .store-final .button.main-cta:hover,
 .store-final .button.main-cta:focus-visible {
-  color: #ff3a2f !important;
-  opacity: 0.86 !important;
+  color: #f1d88a !important;
+  opacity: 0.9 !important;
   transform: skew(-8deg) translateX(4px) !important;
 }
 
