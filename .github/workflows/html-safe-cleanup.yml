@@ -1,0 +1,55 @@
+name: Safe HTML Cleanup
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Clean HTML whitespace safely
+        run: |
+          python3 <<'PY'
+          from pathlib import Path
+          import re
+
+          for path in Path('.').rglob('*.html'):
+              if '.git' in path.parts:
+                  continue
+
+              text = path.read_text(encoding='utf-8')
+              original = text
+
+              # Normalize line endings and remove trailing whitespace only.
+              text = text.replace('\r\n', '\n').replace('\r', '\n')
+              lines = [line.rstrip() for line in text.split('\n')]
+              text = '\n'.join(lines)
+
+              # Collapse excessive blank lines while keeping readable separation.
+              text = re.sub(r'\n{4,}', '\n\n\n', text)
+
+              # Keep exactly one final newline.
+              text = text.rstrip() + '\n'
+
+              if text != original:
+                  path.write_text(text, encoding='utf-8')
+
+          Path('.github/workflows/html-safe-cleanup.yml').unlink(missing_ok=True)
+          PY
+      - name: Commit safe HTML cleanup
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No safe HTML cleanup changes to commit"
+          else
+            git commit -m "Clean HTML whitespace safely"
+            git push
+          fi
