@@ -156,6 +156,18 @@ p,
   word-break: auto-phrase;
 }
 
+/* Song page cleanup */
+
+body:has(.lyrics-section) .page-hero .hero__meta,
+body:has(.lyrics-section) .page-hero .page-subtitle,
+body:has(.lyrics-section) .lyrics-title {
+  display: none !important;
+}
+
+body:has(.lyrics-section) .page-hero .hero__content {
+  margin-top: 0;
+}
+
 /* Header SNS icons */
 
 .header-social {
@@ -405,6 +417,10 @@ p,
     max-width: 100%;
     margin: 22px auto 0;
     padding: 0 16px;
+  }
+
+  body:has(.lyrics-section) .page-hero .hero__content {
+    margin-top: 0;
   }
 
   .page-hero .page-title {
