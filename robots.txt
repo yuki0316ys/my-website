@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap:
-https://yuki0316ys.github.io/my-website/sitemap.xml
+Sitemap: https://yuki-music.jp/sitemap.xml
