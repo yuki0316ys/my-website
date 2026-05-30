@@ -1,0 +1,89 @@
+name: Reorder Song Sections
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  reorder:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reorder all song section cards by release date
+        run: |
+          python3 <<'PY'
+          from pathlib import Path
+          import re
+
+          release_order = [
+              "Freedom.html",
+              "KeepOnlyOneLady.html",
+              "akatsuki.html",
+              "Sakayume.html",
+              "JENESIS.html",
+              "BE-TRIP.html",
+              "harutoakikaze.html",
+              "amaterasu.html",
+              "Nextinnovation.html",
+              "Breakingallthechains.html",
+              "The Beast.html",
+              "rinne.html",
+              "uno.html",
+          ]
+
+          def norm_href(href):
+              href = href.split('#', 1)[0].split('?', 1)[0]
+              return href.rsplit('/', 1)[-1]
+
+          def update_index(card, index):
+              return re.sub(
+                  r'(<span class="track-card__index">)\d+(</span>)',
+                  rf'\g<1>{index:02d}\2',
+                  card,
+                  count=1,
+              )
+
+          section_pattern = re.compile(r'(<section class="music reveal"[^>]*>)(.*?)(</section>)', re.S)
+          card_pattern = re.compile(r'<a class="track-card[^"]*" href="([^"]+)">.*?</a>', re.S)
+
+          for path in Path('songs').glob('*.html'):
+              text = path.read_text(encoding='utf-8')
+              original = text
+
+              def reorder_section(match):
+                  start, body, end = match.groups()
+                  found = list(card_pattern.finditer(body))
+                  if not found:
+                      return match.group(0)
+                  by_file = {norm_href(item.group(1)): item.group(0) for item in found}
+                  if not all(name in by_file for name in release_order):
+                      return match.group(0)
+
+                  first = found[0].start()
+                  last = found[-1].end()
+                  prefix = body[:first].rstrip()
+                  suffix = body[last:].lstrip()
+                  ordered = "\n\n".join(update_index(by_file[name], i) for i, name in enumerate(release_order, 1))
+                  return f"{start}{prefix}\n\n{ordered}\n\n{suffix}{end}"
+
+              text = section_pattern.sub(reorder_section, text)
+              if text != original:
+                  path.write_text(text, encoding='utf-8')
+
+          Path('.github/workflows/reorder-song-sections.yml').unlink(missing_ok=True)
+          PY
+      - name: Commit reordered song sections
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No song section order changes to commit"
+          else
+            git commit -m "Reorder all song page cards by release date"
+            git push
+          fi
