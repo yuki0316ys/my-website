@@ -78,13 +78,13 @@
 }
 
 .goods-card[href="#"] .goods-card__content::after {
-  content: "STOREへ進む";
+  content: "購入は下部STOREへ";
   display: inline-flex;
   margin-top: 18px;
   color: rgba(245, 194, 107, 0.88);
   font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
 }
 
 @media (max-width: 768px) {
