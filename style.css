@@ -1,34 +1,9 @@
-@import url("https://cdn.jsdelivr.net/gh/yuki0316ys/my-website@49efa52699d306e8cf82e9767b9b2312fc4e1fcd/style.css");
+@import url("https://cdn.jsdelivr.net/gh/yuki0316ys/my-website@5512480343be9fdf66c8238ad035361b81786ec2/style.css");
 
-/* Keep the TOPIX title centered while the news items stay left-aligned. */
-.achievement .section-title {
-  text-align: center !important;
-  font-size: 0 !important;
-  letter-spacing: 0 !important;
+.nav .nav-fanclub {
+  color: var(--gold, #d9b76f) !important;
 }
 
-.achievement .section-title::before {
-  content: "-topix-";
-  display: inline-block;
-  font-family: var(--display-font, "Montserrat", "Noto Sans JP", sans-serif) !important;
-  color: rgba(247, 241, 232, 0.96);
-  font-size: clamp(1.55rem, 3.4vw, 2.7rem) !important;
-  font-weight: 800 !important;
-  line-height: 1 !important;
-  letter-spacing: 0.14em !important;
-  text-transform: lowercase;
-}
-
-.achievement-grid,
-.achievement-item,
-.achievement-item .number,
-.achievement-label {
-  text-align: left !important;
-}
-
-@media (max-width: 768px) {
-  .achievement .section-title::before {
-    font-size: clamp(1.35rem, 8vw, 2.15rem) !important;
-    letter-spacing: 0.12em !important;
-  }
+.nav .nav-fanclub:hover {
+  color: rgba(247, 241, 232, 1) !important;
 }
