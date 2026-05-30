@@ -91,7 +91,7 @@ body .music#music .index-section-title {
 }
 
 .video-cta.index-action-row,
-.music-footer.index-action-row,
+music-footer.index-action-row,
 .store-final .index-action-row {
   display: flex !important;
   justify-content: center !important;
@@ -168,6 +168,10 @@ body .music#music .index-section-title {
   font-weight: 800 !important;
   letter-spacing: 0.045em !important;
   line-height: 1.1 !important;
+}
+
+.store-page .store-final .button.main-cta::after {
+  content: "View BASE >";
 }
 
 .index-text-link:hover,
