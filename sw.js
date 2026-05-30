@@ -17,7 +17,7 @@ self.addEventListener("activate", event => {
 });
 
 function addFanclubLink(html) {
-  if (html.includes(FANCLUB_URL) || !html.includes('class="nav"')) {
+  if (html.includes("nav-fanclub") || !html.includes('class="nav"')) {
     return html;
   }
 
