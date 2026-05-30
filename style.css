@@ -64,10 +64,6 @@
   font-size: clamp(0.72rem, 0.75vw, 0.82rem);
 }
 
-.nav a[href$="contact.html"] {
-  text-transform: capitalize;
-}
-
 .goods-card[href="#"] {
   cursor: default;
   pointer-events: none;
