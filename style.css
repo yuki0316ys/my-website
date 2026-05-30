@@ -1,4 +1,4 @@
-@import url("https://cdn.jsdelivr.net/gh/yuki0316ys/my-website@5512480343be9fdf66c8238ad035361b81786ec2/style.css");
+@import url("https://cdn.jsdelivr.net/gh/yuki0316ys/my-website@eab8f8a4ad513b61ff80e10447b1e99ea553235b/style.css");
 
 .nav .nav-fanclub {
   color: var(--gold, #d9b76f) !important;
@@ -6,4 +6,168 @@
 
 .nav .nav-fanclub:hover {
   color: rgba(247, 241, 232, 1) !important;
+}
+
+/* Store apparel: clean product-list layout inspired by modern artist shops. */
+.store-category {
+  width: min(100% - 40px, var(--max, 1180px));
+  margin: 0 auto;
+  padding: clamp(54px, 7vw, 92px) 0 clamp(26px, 4vw, 48px) !important;
+  text-align: center;
+}
+
+.store-category-title {
+  margin: 0 !important;
+  color: rgba(247, 241, 232, 0.94) !important;
+  font-family: var(--display-font, "Montserrat", "Noto Sans JP", sans-serif) !important;
+  font-size: clamp(1.45rem, 3.2vw, 2.65rem) !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: lowercase;
+}
+
+.store-category-title::first-letter {
+  text-transform: lowercase;
+}
+
+.store-grid {
+  width: min(100% - 40px, var(--max, 1180px));
+  margin: 0 auto;
+  padding: 0 0 clamp(76px, 9vw, 128px) !important;
+}
+
+.goods-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(34px, 4vw, 58px) clamp(18px, 3vw, 34px) !important;
+}
+
+.goods-card {
+  display: block !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+  color: rgba(247, 241, 232, 0.92);
+}
+
+.goods-card::before,
+.goods-card::after {
+  display: none !important;
+}
+
+.goods-card__image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1.14;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0 !important;
+}
+
+.goods-card__image img {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  object-fit: cover !important;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.goods-card:hover .goods-card__image img {
+  transform: scale(1.035);
+  filter: brightness(1.06);
+}
+
+.goods-card__content {
+  padding: 18px 0 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  text-align: left;
+}
+
+.goods-category {
+  margin: 0 0 8px !important;
+  color: rgba(217, 183, 111, 0.86) !important;
+  font-family: var(--display-font, "Montserrat", "Noto Sans JP", sans-serif) !important;
+  font-size: 0.68rem !important;
+  font-weight: 800 !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase;
+}
+
+.goods-card h3 {
+  margin: 0 0 8px !important;
+  color: rgba(247, 241, 232, 0.96) !important;
+  font-family: var(--display-font, "Montserrat", "Noto Sans JP", sans-serif) !important;
+  font-size: clamp(0.95rem, 1.35vw, 1.16rem) !important;
+  font-weight: 700 !important;
+  line-height: 1.45 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase;
+}
+
+.goods-price {
+  margin: 0 !important;
+  color: rgba(247, 241, 232, 0.68) !important;
+  font-family: var(--body-font, "Montserrat", "Noto Sans JP", sans-serif) !important;
+  font-size: 0.92rem !important;
+  font-weight: 600 !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.06em !important;
+}
+
+.store-final {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width: 900px) {
+  .goods-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .store-category,
+  .store-grid {
+    width: min(100% - 34px, var(--max, 1180px));
+  }
+
+  .store-category {
+    padding: 48px 0 28px !important;
+  }
+
+  .store-category-title {
+    font-size: clamp(1.3rem, 8vw, 2rem) !important;
+    letter-spacing: 0.12em !important;
+  }
+
+  .goods-grid {
+    gap: 34px 16px !important;
+  }
+
+  .goods-card__image {
+    aspect-ratio: 1 / 1.18;
+  }
+
+  .goods-card__content {
+    padding-top: 13px !important;
+  }
+
+  .goods-category {
+    font-size: 0.58rem !important;
+    letter-spacing: 0.12em !important;
+  }
+
+  .goods-card h3 {
+    font-size: 0.86rem !important;
+    letter-spacing: 0.06em !important;
+  }
+
+  .goods-price {
+    font-size: 0.82rem !important;
+  }
 }
