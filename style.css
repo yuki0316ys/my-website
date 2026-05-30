@@ -110,8 +110,20 @@ body .music#music .index-section-title {
   margin-top: clamp(34px, 4.5vw, 64px) !important;
 }
 
+.store-final {
+  padding-block: clamp(28px, 5vw, 58px) !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.store-final h2,
+.store-final p {
+  display: none !important;
+}
+
 .store-final .index-action-row {
-  margin-top: clamp(20px, 2.8vw, 34px) !important;
+  margin-top: 0 !important;
 }
 
 .index-text-link,
@@ -125,6 +137,7 @@ body .music#music .index-section-title {
   width: auto !important;
   min-width: 0 !important;
   min-height: 0 !important;
+  margin-inline: auto !important;
   padding: 0 !important;
   border: 0 !important;
   border-radius: 0 !important;
@@ -227,6 +240,10 @@ body .music#music .index-section-title {
   body .music#music .index-section-title {
     font-size: clamp(1.3rem, 8vw, 2rem) !important;
     letter-spacing: 0.12em !important;
+  }
+
+  .store-final {
+    padding-block: 34px !important;
   }
 
   .index-text-link,
