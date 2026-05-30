@@ -4,3 +4,76 @@
 .track-card[href*="breakingallthechains"] .track-card__content::before {
   content: "2024.04.24";
 }
+
+.hero-bg {
+  background-image: none !important;
+  background-color: #000;
+  filter: none !important;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero-bg::before,
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: -2%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  filter: brightness(0.58) contrast(1.05);
+  opacity: 0;
+  transform: scale(1.08) translate3d(0, 0, 0);
+  will-change: opacity, transform;
+  animation: heroScreensaver 22s ease-in-out infinite;
+}
+
+.hero-bg::before {
+  background-image: url("images/top.jpg");
+  animation-delay: 0s;
+}
+
+.hero-bg::after {
+  background-image: url("images/index-ver2.jpg");
+  background-position: 62% center;
+  animation-delay: 11s;
+}
+
+@keyframes heroScreensaver {
+  0%, 42% {
+    opacity: 1;
+    transform: scale(1.08) translate3d(0, 0, 0);
+  }
+
+  50%, 92% {
+    opacity: 0;
+    transform: scale(1.13) translate3d(-1.2%, -0.8%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1.08) translate3d(0, 0, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-bg::before {
+    background-position: 74% center;
+  }
+
+  .hero-bg::after {
+    background-position: 68% center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg::before {
+    opacity: 1;
+    animation: none;
+  }
+
+  .hero-bg::after {
+    opacity: 0;
+    animation: none;
+  }
+}
