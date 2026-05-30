@@ -72,6 +72,28 @@
   letter-spacing: 0.01em !important;
 }
 
+.achievement .number {
+  font-size: 0 !important;
+}
+
+.achievement .number::after {
+  content: "topics";
+  display: inline-block;
+  font-size: clamp(0.78rem, 1vw, 0.95rem) !important;
+  line-height: 1.2;
+  animation: topicsBlink 1.7s ease-in-out infinite;
+}
+
+@keyframes topicsBlink {
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.32;
+  }
+}
+
 body .video-section .index-section-heading,
 body .music#music .index-section-heading {
   display: flex !important;
@@ -283,6 +305,10 @@ body .music#music .index-section-title {
     font-size: 0.72rem;
   }
 
+  .achievement .number::after {
+    font-size: 0.75rem !important;
+  }
+
   body .video-section .index-section-heading,
   body .music#music .index-section-heading {
     margin-bottom: 32px !important;
@@ -316,6 +342,10 @@ body .music#music .index-section-title {
 @media (prefers-reduced-motion: reduce) {
   .hero::after {
     opacity: 0;
+    animation: none;
+  }
+
+  .achievement .number::after {
     animation: none;
   }
 }
