@@ -117,6 +117,15 @@ body .music#music .index-section-title {
   box-shadow: none !important;
 }
 
+.store-final::before,
+.store-final::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
 .store-final h2,
 .store-final p {
   display: none !important;
@@ -142,7 +151,9 @@ body .music#music .index-section-title {
   border: 0 !important;
   border-radius: 0 !important;
   background: transparent !important;
+  background-image: none !important;
   box-shadow: none !important;
+  outline: 0 !important;
   color: #d7b967 !important;
   font-family: var(--display-font, "Montserrat", "Noto Sans JP", sans-serif) !important;
   font-size: clamp(0.95rem, 1.15vw, 1.22rem) !important;
@@ -156,13 +167,36 @@ body .music#music .index-section-title {
   transition: color 0.25s ease, opacity 0.25s ease, transform 0.25s ease !important;
 }
 
+.store-final .button.main-cta,
+.store-final .button.main-cta:hover,
+.store-final .button.main-cta:focus,
+.store-final .button.main-cta:focus-visible {
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
 .store-final .button.main-cta {
   font-size: 0 !important;
 }
 
+.store-final .button.main-cta::before {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
 .store-final .button.main-cta::after {
   content: "View Tunecore >";
+  display: inline-flex !important;
   color: #d7b967 !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
   font-size: clamp(0.95rem, 1.15vw, 1.22rem) !important;
   font-style: italic !important;
   font-weight: 800 !important;
