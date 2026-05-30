@@ -64,6 +64,14 @@
   font-size: clamp(0.72rem, 0.75vw, 0.82rem);
 }
 
+.page-hero + main .news-list .news-title {
+  color: rgba(247, 241, 232, 0.86) !important;
+  font-size: clamp(0.94rem, 1.02vw, 1.12rem) !important;
+  font-weight: 400 !important;
+  line-height: 1.72 !important;
+  letter-spacing: 0.01em !important;
+}
+
 body .video-section .index-section-heading,
 body .music#music .index-section-heading {
   display: flex !important;
@@ -263,6 +271,12 @@ body .music#music .index-section-title {
   .news-list .news-title {
     font-size: 1rem;
     line-height: 1.78;
+  }
+
+  .page-hero + main .news-list .news-title {
+    font-size: 0.94rem !important;
+    font-weight: 400 !important;
+    line-height: 1.78 !important;
   }
 
   .news-list .news-meta {
