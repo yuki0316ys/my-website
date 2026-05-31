@@ -110,6 +110,11 @@ html body .header.scrolled .nav a:focus-visible {
   translate: none !important;
 }
 
+html body .header .nav a[href$="contact.html"],
+html body .header.scrolled .nav a[href$="contact.html"] {
+  text-transform: capitalize !important;
+}
+
 /* Final action buttons */
 html body .store-final {
   padding-block: clamp(28px, 5vw, 58px) !important;
