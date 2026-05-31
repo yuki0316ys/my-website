@@ -63,9 +63,9 @@
   align-items: center !important;
   justify-content: center !important;
   width: auto !important;
-  min-width: clamp(154px, 15vw, 230px) !important;
+  min-width: clamp(104px, 10vw, 150px) !important;
   height: auto !important;
-  min-height: 52px !important;
+  min-height: 42px !important;
   padding: 0 !important;
   border: 0 !important;
   border-radius: 0 !important;
@@ -82,44 +82,19 @@
 
 .brand-button span,
 .brand-button img,
-.brand-button .brand-chara {
-  display: none !important;
-}
-
+.brand-button .brand-chara,
 .brand-button::before {
-  content: "YUKI / 佑樹" !important;
-  position: static !important;
-  display: block !important;
-  width: auto !important;
-  height: auto !important;
-  max-width: none !important;
-  pointer-events: none !important;
-  background: none !important;
-  border: 0 !important;
-  box-shadow: none !important;
-  opacity: 1 !important;
-  mix-blend-mode: normal !important;
-  filter: none !important;
-  -webkit-mask-image: none !important;
-  mask-image: none !important;
-  color: rgba(255, 255, 255, 0.96) !important;
-  font-family: "Cormorant Garamond", "Times New Roman", "Noto Serif JP", serif !important;
-  font-size: clamp(1.55rem, 2.1vw, 2.35rem) !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.045em !important;
-  line-height: 0.92 !important;
-  text-align: center !important;
-  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.34);
-  white-space: nowrap;
+  content: none !important;
+  display: none !important;
 }
 
 .brand-button::after {
   content: "official Site" !important;
   display: block !important;
-  margin-top: 7px !important;
-  color: rgba(255, 255, 255, 0.92) !important;
+  margin-top: 0 !important;
+  color: rgba(255, 255, 255, 0.94) !important;
   font-family: "Cormorant Garamond", "Times New Roman", serif !important;
-  font-size: clamp(0.68rem, 0.78vw, 0.9rem) !important;
+  font-size: clamp(0.86rem, 1.05vw, 1.12rem) !important;
   font-weight: 700 !important;
   letter-spacing: 0.08em !important;
   line-height: 1 !important;
@@ -216,6 +191,30 @@
   font-weight: 400 !important;
   line-height: 1.72 !important;
   letter-spacing: 0.01em !important;
+}
+
+.achievement .section-title {
+  font-size: 0 !important;
+  line-height: 1 !important;
+}
+
+.achievement .section-title::before,
+.achievement .section-title::after {
+  content: none !important;
+  display: none !important;
+}
+
+.achievement .section-title::after {
+  content: "Topics" !important;
+  display: inline-block !important;
+  color: rgba(255, 255, 255, 0.96) !important;
+  font-family: "Cormorant Garamond", "Times New Roman", "Noto Serif JP", serif !important;
+  font-size: clamp(1.55rem, 3.3vw, 2.8rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.07em !important;
+  line-height: 1 !important;
+  text-transform: none !important;
+  text-shadow: 0 12px 34px rgba(0, 0, 0, 0.36);
 }
 
 .achievement .number {
@@ -436,18 +435,18 @@ body .music#music .index-section-title::after {
   .header.scrolled .brand-button,
   .header .brand-button:hover,
   .header.scrolled .brand-button:hover {
-    min-width: 132px !important;
-    min-height: 46px !important;
+    min-width: 100px !important;
+    min-height: 38px !important;
   }
 
   .brand-button::before {
-    font-size: clamp(1.14rem, 5.8vw, 1.52rem) !important;
-    letter-spacing: 0.035em !important;
+    content: none !important;
+    display: none !important;
   }
 
   .brand-button::after {
-    margin-top: 5px !important;
-    font-size: 0.58rem !important;
+    margin-top: 0 !important;
+    font-size: 0.74rem !important;
     letter-spacing: 0.075em !important;
   }
 
@@ -460,6 +459,7 @@ body .music#music .index-section-title::after {
     font-size: clamp(1.45rem, 9vw, 2.2rem) !important;
   }
 
+  .achievement .section-title::after,
   body .video-section .index-section-title::after,
   body .music#music .index-section-title::after {
     font-size: clamp(1.45rem, 9vw, 2.2rem) !important;
@@ -541,15 +541,16 @@ body .music#music .index-section-title::after {
   .header.scrolled .brand-button,
   .header .brand-button:hover,
   .header.scrolled .brand-button:hover {
-    min-width: 124px !important;
+    min-width: 94px !important;
   }
 
   .brand-button::before {
-    font-size: 1.04rem !important;
+    content: none !important;
+    display: none !important;
   }
 
   .brand-button::after {
-    font-size: 0.52rem !important;
+    font-size: 0.68rem !important;
   }
 }
 
