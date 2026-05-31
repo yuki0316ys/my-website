@@ -58,11 +58,14 @@
 .header .brand-button:hover,
 .header.scrolled .brand-button:hover {
   position: relative !important;
-  display: block !important;
-  width: clamp(148px, 15vw, 218px) !important;
-  min-width: 0 !important;
-  height: clamp(48px, 4.8vw, 68px) !important;
-  min-height: 0 !important;
+  display: inline-flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: auto !important;
+  min-width: clamp(154px, 15vw, 230px) !important;
+  height: auto !important;
+  min-height: 52px !important;
   padding: 0 !important;
   border: 0 !important;
   border-radius: 0 !important;
@@ -84,27 +87,46 @@
 }
 
 .brand-button::before {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
+  content: "YUKI / 佑樹" !important;
+  position: static !important;
   display: block !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: none !important;
   pointer-events: none !important;
-  background-image: url("images/home.jpg?v=20260531b") !important;
-  background-repeat: no-repeat !important;
-  background-size: contain !important;
-  background-position: left center !important;
+  background: none !important;
   border: 0 !important;
   box-shadow: none !important;
-  opacity: 0.82 !important;
-  mix-blend-mode: screen;
-  filter: brightness(1.08) contrast(1.14) saturate(0.9);
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 10%, #000 88%, transparent 100%);
-  mask-image: linear-gradient(90deg, transparent 0%, #000 10%, #000 88%, transparent 100%);
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+  filter: none !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+  color: rgba(255, 255, 255, 0.96) !important;
+  font-family: "Cormorant Garamond", "Times New Roman", "Noto Serif JP", serif !important;
+  font-size: clamp(1.55rem, 2.1vw, 2.35rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.045em !important;
+  line-height: 0.92 !important;
+  text-align: center !important;
+  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.34);
+  white-space: nowrap;
 }
 
 .brand-button::after {
-  content: none !important;
-  display: none !important;
+  content: "official Site" !important;
+  display: block !important;
+  margin-top: 7px !important;
+  color: rgba(255, 255, 255, 0.92) !important;
+  font-family: "Cormorant Garamond", "Times New Roman", serif !important;
+  font-size: clamp(0.68rem, 0.78vw, 0.9rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  text-transform: none !important;
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
 }
 
 .news-list .news-title {
@@ -321,15 +343,23 @@ body .music#music .index-section-title {
 }
 
 @media (max-width: 768px) {
-  .brand-button {
-    width: clamp(128px, 39vw, 168px) !important;
-    height: clamp(42px, 13vw, 54px) !important;
+  .brand-button,
+  .header.scrolled .brand-button,
+  .header .brand-button:hover,
+  .header.scrolled .brand-button:hover {
+    min-width: 132px !important;
+    min-height: 46px !important;
   }
 
   .brand-button::before {
-    opacity: 0.86 !important;
-    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 7%, #000 92%, transparent 100%);
-    mask-image: linear-gradient(90deg, transparent 0%, #000 7%, #000 92%, transparent 100%);
+    font-size: clamp(1.14rem, 5.8vw, 1.52rem) !important;
+    letter-spacing: 0.035em !important;
+  }
+
+  .brand-button::after {
+    margin-top: 5px !important;
+    font-size: 0.58rem !important;
+    letter-spacing: 0.075em !important;
   }
 
   .hero::after {
@@ -405,9 +435,19 @@ body .music#music .index-section-title {
 }
 
 @media (max-width: 420px) {
-  .brand-button {
-    width: 126px !important;
-    height: 42px !important;
+  .brand-button,
+  .header.scrolled .brand-button,
+  .header .brand-button:hover,
+  .header.scrolled .brand-button:hover {
+    min-width: 124px !important;
+  }
+
+  .brand-button::before {
+    font-size: 1.04rem !important;
+  }
+
+  .brand-button::after {
+    font-size: 0.52rem !important;
   }
 }
 
