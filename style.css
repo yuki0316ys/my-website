@@ -1,98 +1,30 @@
-@import url("https://cdn.jsdelivr.net/gh/yuki0316ys/my-website@e58dad9c219de2991dc379e1f21b2457687e041d/style.css");
+@import url("https://cdn.jsdelivr.net/gh/yuki0316ys/my-website@f1827177534b1034cb87a3939b2bd59a628b46df/style.css");
 
 :root {
   --serif-display: "Cormorant Garamond", "Times New Roman", "Noto Serif JP", serif;
 }
 
-.results-bar,
-.results-track,
-.results-track span,
-.achievement-label,
-.news-title,
-.news-list .news-title,
-.page-hero + main .news-list .news-title,
-.profile-page .profile-text,
-.profile-page .profile-text p,
-.profile-page .profile-text span,
-.profile-page .profile-text li,
-.contact-page label,
-.contact-page input,
-.contact-page select,
-.contact-page option,
-.contact-page textarea,
-.contact-page button,
-.contact-form label,
-.contact-form input,
-.contact-form select,
-.contact-form option,
-.contact-form textarea,
-.contact-form button {
+.index-text-link,
+.video-cta .index-text-link,
+.music-footer .index-text-link,
+.store-final .index-text-link,
+.store-final .button.main-cta,
+.store-final .button.main-cta::after {
   font-family: var(--serif-display) !important;
-  letter-spacing: 0.045em !important;
-  text-transform: none !important;
-}
-
-.results-track span {
+  font-size: clamp(1.18rem, 1.55vw, 1.58rem) !important;
   font-weight: 700 !important;
-}
-
-.achievement-label,
-.news-title,
-.news-list .news-title,
-.page-hero + main .news-list .news-title,
-.profile-page .profile-text,
-.profile-page .profile-text p,
-.profile-page .profile-text span,
-.profile-page .profile-text li {
-  font-weight: 600 !important;
-}
-
-.contact-page label,
-.contact-form label,
-.contact-page select,
-.contact-form select,
-.contact-page option,
-.contact-form option {
-  font-weight: 700 !important;
-}
-
-.contact-page input,
-.contact-page textarea,
-.contact-form input,
-.contact-form textarea {
-  font-weight: 600 !important;
-}
-
-.contact-page .button,
-.contact-page .main-cta,
-.contact-form .button,
-.contact-form .main-cta {
-  font-weight: 700 !important;
-}
-
-.news-title,
-.news-list .news-title,
-.page-hero + main .news-list .news-title {
-  line-height: 1.76 !important;
-}
-
-.profile-page .profile-text p {
-  line-height: 2.05 !important;
+  letter-spacing: 0.065em !important;
+  line-height: 1.12 !important;
 }
 
 @media (max-width: 768px) {
-  .results-track span {
-    font-size: clamp(0.86rem, 3.6vw, 1rem) !important;
-  }
-
-  .achievement-label,
-  .news-title,
-  .news-list .news-title,
-  .page-hero + main .news-list .news-title {
-    font-size: clamp(1rem, 4.2vw, 1.18rem) !important;
-  }
-
-  .profile-page .profile-text p {
-    font-size: clamp(1rem, 4vw, 1.12rem) !important;
+  .index-text-link,
+  .video-cta .index-text-link,
+  .music-footer .index-text-link,
+  .store-final .index-text-link,
+  .store-final .button.main-cta,
+  .store-final .button.main-cta::after {
+    font-size: clamp(1.2rem, 5.4vw, 1.52rem) !important;
+    letter-spacing: 0.055em !important;
   }
 }
