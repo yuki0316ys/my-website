@@ -1,94 +1,62 @@
-@import url("https://cdn.jsdelivr.net/gh/yuki0316ys/my-website@6df44320770ddac0484441bb586ffa4a64590017/style.css");
+@import url("https://cdn.jsdelivr.net/gh/yuki0316ys/my-website@9a4f498f0e4e82f4cb9ecfe7eb4b8675b72ded55/style.css");
 
 :root {
   --serif-display: "Cormorant Garamond", "Times New Roman", "Noto Serif JP", serif;
 }
 
-html body .store-final h2,
-html body .store-final p,
-html body .store-final .button.main-cta::before {
-  content: none !important;
+html body .header .brand-button,
+html body .header.scrolled .brand-button {
+  width: 106px !important;
+  min-width: 106px !important;
+  max-width: 106px !important;
+  height: 42px !important;
+  min-height: 42px !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+}
+
+html body .header .brand-button span,
+html body .header.scrolled .brand-button span {
   display: none !important;
 }
 
-html body .store-final {
-  padding-block: clamp(28px, 5vw, 58px) !important;
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-  text-align: center !important;
-}
-
-html body .store-final .button.main-cta,
-html body .store-final a.button.main-cta,
-html body .store-final .button.main-cta:visited,
-html body .store-final .button.main-cta:hover,
-html body .store-final .button.main-cta:focus,
-html body .store-final .button.main-cta:focus-visible {
-  position: relative !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: auto !important;
-  min-width: 0 !important;
-  min-height: 0 !important;
-  margin: 0 auto !important;
-  padding: 0 !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  box-shadow: none !important;
-  outline: 0 !important;
-  color: transparent !important;
-  -webkit-text-fill-color: transparent !important;
-  text-shadow: none !important;
-  font-size: 0 !important;
-  line-height: 0 !important;
-  text-decoration: none !important;
-  overflow: visible !important;
-  transform: skew(-8deg) !important;
-}
-
-html body .store-final .button.main-cta::after,
-html body .store-final a.button.main-cta::after {
-  content: "View Tunecore >" !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  color: #d7b967 !important;
-  -webkit-text-fill-color: #d7b967 !important;
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  border: 0 !important;
-  box-shadow: none !important;
+html body .header .brand-button::after,
+html body .header.scrolled .brand-button::after {
+  content: "Official Site" !important;
+  display: block !important;
+  color: #f7f1e8 !important;
+  -webkit-text-fill-color: #f7f1e8 !important;
   font-family: var(--serif-display) !important;
-  font-size: clamp(1.28rem, 1.72vw, 1.72rem) !important;
-  font-style: italic !important;
+  font-size: 15.68px !important;
+  font-style: normal !important;
   font-weight: 700 !important;
-  letter-spacing: 0.065em !important;
-  line-height: 1.12 !important;
+  letter-spacing: 0.035em !important;
+  line-height: 1 !important;
   text-transform: none !important;
   white-space: nowrap !important;
 }
 
-html body.store-page .store-final .button.main-cta::after,
-html body.store-page .store-final a.button.main-cta::after {
-  content: "View BASE >" !important;
-}
-
-html body .store-final .button.main-cta:hover::after,
-html body .store-final .button.main-cta:focus-visible::after {
-  color: #f1d88a !important;
-  -webkit-text-fill-color: #f1d88a !important;
+html body .header .brand-chara,
+html body .header.scrolled .brand-chara {
+  display: none !important;
 }
 
 @media (max-width: 768px) {
-  html body .store-final .button.main-cta::after,
-  html body .store-final a.button.main-cta::after {
-    font-size: clamp(1.28rem, 5.8vw, 1.62rem) !important;
-    letter-spacing: 0.055em !important;
+  html body .header .brand-button,
+  html body .header.scrolled .brand-button {
+    width: 106px !important;
+    min-width: 106px !important;
+    max-width: 106px !important;
+    height: 42px !important;
+    min-height: 42px !important;
+  }
+
+  html body .header .brand-button::after,
+  html body .header.scrolled .brand-button::after {
+    font-size: 15.68px !important;
+    letter-spacing: 0.035em !important;
   }
 }
