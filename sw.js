@@ -1,4 +1,5 @@
 const FANCLUB_URL = "https://www.youtube.com/channel/UCdZMz61Y8oS4kfC9CP4esTA/join";
+const STYLE_VERSION = "2026053113";
 
 self.addEventListener("install", event => {
   console.log("Service Worker Installed");
@@ -16,6 +17,13 @@ self.addEventListener("activate", event => {
   self.clients.claim();
 });
 
+function normalizeStylesheetVersion(html) {
+  return html.replace(
+    /(href="(?:\.\.\/)?style\.css)(?:\?v=[^"#]*)?("|#)/g,
+    `$1?v=${STYLE_VERSION}$2`
+  );
+}
+
 function addFanclubLink(html) {
   if (html.includes("nav-fanclub") || !html.includes('class="nav"')) {
     return html;
@@ -25,6 +33,10 @@ function addFanclubLink(html) {
     /(<a href="(?:\.\.\/)?contact\.html">contact<\/a>|<a href="(?:\.\.\/)?contact\.html">Contact<\/a>)/,
     `$1\n    <a class="nav-fanclub" href="${FANCLUB_URL}" target="_blank" rel="noopener noreferrer">FANCLUB</a>`
   );
+}
+
+function transformHtml(html) {
+  return normalizeStylesheetVersion(addFanclubLink(html));
 }
 
 self.addEventListener("fetch", event => {
@@ -50,7 +62,7 @@ self.addEventListener("fetch", event => {
         }
 
         return response.text().then(html => {
-          return new Response(addFanclubLink(html), {
+          return new Response(transformHtml(html), {
             status: response.status,
             statusText: response.statusText,
             headers: {
