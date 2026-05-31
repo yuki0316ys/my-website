@@ -1,95 +1,98 @@
-@import url("https://cdn.jsdelivr.net/gh/yuki0316ys/my-website@c7b846b294d71be09946de8bd1eb1673f8298d49/style.css");
+@import url("https://cdn.jsdelivr.net/gh/yuki0316ys/my-website@e58dad9c219de2991dc379e1f21b2457687e041d/style.css");
 
 :root {
   --serif-display: "Cormorant Garamond", "Times New Roman", "Noto Serif JP", serif;
 }
 
-.header .nav a,
-.header.scrolled .nav a,
-.nav a,
-.nav-fanclub {
+.results-bar,
+.results-track,
+.results-track span,
+.achievement-label,
+.news-title,
+.news-list .news-title,
+.page-hero + main .news-list .news-title,
+.profile-page .profile-text,
+.profile-page .profile-text p,
+.profile-page .profile-text span,
+.profile-page .profile-text li,
+.contact-page label,
+.contact-page input,
+.contact-page select,
+.contact-page option,
+.contact-page textarea,
+.contact-page button,
+.contact-form label,
+.contact-form input,
+.contact-form select,
+.contact-form option,
+.contact-form textarea,
+.contact-form button {
   font-family: var(--serif-display) !important;
-  font-size: clamp(0.92rem, 1vw, 1.08rem) !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.085em !important;
-  text-transform: none !important;
-}
-
-.index-text-link,
-.video-cta .index-text-link,
-.music-footer .index-text-link,
-.store-final .index-text-link,
-.store-final .button.main-cta,
-.store-final .button.main-cta::after {
-  font-family: var(--serif-display) !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.06em !important;
-}
-
-.news-meta,
-.news-tag,
-.news-date {
-  font-family: var(--serif-display) !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.08em !important;
-  text-transform: none !important;
-}
-
-.news-tag {
-  font-size: clamp(0.86rem, 0.95vw, 1.05rem) !important;
-}
-
-.news-date {
-  font-size: clamp(0.82rem, 0.9vw, 0.98rem) !important;
-}
-
-.profile-page .page-title,
-.profile-page .profile-title,
-.profile-page .profile-link,
-.profile-page .discography-label,
-.profile-page .discography-list,
-.profile-page .discography-list li,
-.profile-page .discography-list span,
-.profile-page .profile-links,
-.profile-page .profile-biography h2,
-.profile-page .profile-biography h3 {
-  font-family: var(--serif-display) !important;
-  font-weight: 700 !important;
   letter-spacing: 0.045em !important;
   text-transform: none !important;
 }
 
+.results-track span {
+  font-weight: 700 !important;
+}
+
+.achievement-label,
+.news-title,
+.news-list .news-title,
+.page-hero + main .news-list .news-title,
 .profile-page .profile-text,
 .profile-page .profile-text p,
 .profile-page .profile-text span,
 .profile-page .profile-text li {
-  font-family: inherit !important;
-  font-weight: inherit !important;
-  letter-spacing: inherit !important;
+  font-weight: 600 !important;
+}
+
+.contact-page label,
+.contact-form label,
+.contact-page select,
+.contact-form select,
+.contact-page option,
+.contact-form option {
+  font-weight: 700 !important;
+}
+
+.contact-page input,
+.contact-page textarea,
+.contact-form input,
+.contact-form textarea {
+  font-weight: 600 !important;
+}
+
+.contact-page .button,
+.contact-page .main-cta,
+.contact-form .button,
+.contact-form .main-cta {
+  font-weight: 700 !important;
+}
+
+.news-title,
+.news-list .news-title,
+.page-hero + main .news-list .news-title {
+  line-height: 1.76 !important;
+}
+
+.profile-page .profile-text p {
+  line-height: 2.05 !important;
 }
 
 @media (max-width: 768px) {
-  .header .nav a,
-  .header.scrolled .nav a,
-  .nav a,
-  .nav-fanclub {
-    font-size: clamp(1.7rem, 8.4vw, 2.55rem) !important;
-    letter-spacing: 0.06em !important;
+  .results-track span {
+    font-size: clamp(0.86rem, 3.6vw, 1rem) !important;
   }
 
-  .index-text-link,
-  .video-cta .index-text-link,
-  .music-footer .index-text-link,
-  .store-final .index-text-link,
-  .store-final .button.main-cta::after {
-    font-size: clamp(1.04rem, 4.6vw, 1.24rem) !important;
+  .achievement-label,
+  .news-title,
+  .news-list .news-title,
+  .page-hero + main .news-list .news-title {
+    font-size: clamp(1rem, 4.2vw, 1.18rem) !important;
   }
 
-  .news-tag {
-    font-size: 0.9rem !important;
-  }
-
-  .news-date {
-    font-size: 0.84rem !important;
+  .profile-page .profile-text p {
+    font-size: clamp(1rem, 4vw, 1.12rem) !important;
   }
 }
