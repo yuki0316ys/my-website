@@ -1,30 +1,49 @@
-@import url("https://cdn.jsdelivr.net/gh/yuki0316ys/my-website@f1827177534b1034cb87a3939b2bd59a628b46df/style.css");
+@import url("https://cdn.jsdelivr.net/gh/yuki0316ys/my-website@c4e13a34b6aa3d3814e69c8526078866f9fa35e8/style.css");
 
 :root {
   --serif-display: "Cormorant Garamond", "Times New Roman", "Noto Serif JP", serif;
 }
 
-.index-text-link,
-.video-cta .index-text-link,
-.music-footer .index-text-link,
-.store-final .index-text-link,
-.store-final .button.main-cta,
-.store-final .button.main-cta::after {
-  font-family: var(--serif-display) !important;
-  font-size: clamp(1.18rem, 1.55vw, 1.58rem) !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.065em !important;
-  line-height: 1.12 !important;
+@media (max-width: 768px) {
+  .brand-button,
+  .header.scrolled .brand-button,
+  .header .brand-button:hover,
+  .header.scrolled .brand-button:hover {
+    min-width: 112px !important;
+    min-height: 42px !important;
+  }
+
+  .brand-button::after {
+    font-size: clamp(0.9rem, 4.2vw, 1.06rem) !important;
+    letter-spacing: 0.075em !important;
+  }
+
+  .header .nav a,
+  .header.scrolled .nav a,
+  .nav a,
+  .nav-fanclub {
+    font-size: clamp(1.18rem, 5.2vw, 1.58rem) !important;
+    letter-spacing: 0.055em !important;
+    line-height: 1.18 !important;
+  }
 }
 
-@media (max-width: 768px) {
-  .index-text-link,
-  .video-cta .index-text-link,
-  .music-footer .index-text-link,
-  .store-final .index-text-link,
-  .store-final .button.main-cta,
-  .store-final .button.main-cta::after {
-    font-size: clamp(1.2rem, 5.4vw, 1.52rem) !important;
-    letter-spacing: 0.055em !important;
+@media (max-width: 420px) {
+  .brand-button,
+  .header.scrolled .brand-button,
+  .header .brand-button:hover,
+  .header.scrolled .brand-button:hover {
+    min-width: 106px !important;
+  }
+
+  .brand-button::after {
+    font-size: clamp(0.86rem, 4.1vw, 0.98rem) !important;
+  }
+
+  .header .nav a,
+  .header.scrolled .nav a,
+  .nav a,
+  .nav-fanclub {
+    font-size: clamp(1.08rem, 5vw, 1.36rem) !important;
   }
 }
