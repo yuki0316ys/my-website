@@ -115,6 +115,41 @@ html body .header.scrolled .nav a[href$="contact.html"] {
   text-transform: capitalize !important;
 }
 
+/* Music typography */
+html body .track-card__index,
+html body .track-card__type {
+  font-family: var(--serif-display) !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.075em !important;
+  line-height: 1 !important;
+  text-rendering: geometricPrecision !important;
+  -webkit-font-smoothing: antialiased !important;
+  font-synthesis: none !important;
+}
+
+html body .track-card__type {
+  font-size: clamp(0.9rem, 1.05vw, 1.05rem) !important;
+  color: rgba(247, 241, 232, 0.68) !important;
+}
+
+html body .preview-player h2,
+html body .preview-player__inner h2 {
+  font-family: var(--serif-display) !important;
+  font-size: clamp(2rem, 4.2vw, 4rem) !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+  line-height: 1.05 !important;
+  text-transform: none !important;
+  text-wrap: balance !important;
+  color: #f7f1e8 !important;
+  -webkit-text-fill-color: #f7f1e8 !important;
+  text-rendering: geometricPrecision !important;
+  -webkit-font-smoothing: antialiased !important;
+  font-synthesis: none !important;
+}
+
 /* Final action buttons */
 html body .store-final {
   padding-block: clamp(28px, 5vw, 58px) !important;
@@ -232,6 +267,18 @@ html body .store-final .button.main-cta:focus-visible::after {
     font-weight: 700 !important;
     letter-spacing: 0.06em !important;
     line-height: 1.15 !important;
+  }
+
+  html body .track-card__type {
+    font-size: clamp(0.92rem, 3.6vw, 1.08rem) !important;
+    letter-spacing: 0.06em !important;
+  }
+
+  html body .preview-player h2,
+  html body .preview-player__inner h2 {
+    font-size: clamp(2rem, 9vw, 3.05rem) !important;
+    letter-spacing: 0.025em !important;
+    line-height: 1.08 !important;
   }
 
   html body .store-final .button.main-cta::after,
