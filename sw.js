@@ -1,5 +1,5 @@
 const FANCLUB_URL = "https://www.youtube.com/channel/UCdZMz61Y8oS4kfC9CP4esTA/join";
-const STYLE_VERSION = "2026053117";
+const STYLE_VERSION = "2026053118";
 
 self.addEventListener("install", event => {
   console.log("Service Worker Installed");
