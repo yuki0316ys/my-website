@@ -129,6 +129,59 @@
   white-space: nowrap;
 }
 
+.page-title,
+.section-title,
+.index-section-title,
+.store-category-title,
+.song-hero h1,
+.song-title,
+.track-card h3,
+.disc-card h3,
+.goods-card h3,
+.social h2,
+.profile h2,
+.music h2,
+.video-section h2 {
+  color: rgba(255, 255, 255, 0.96) !important;
+  font-family: "Cormorant Garamond", "Times New Roman", "Noto Serif JP", serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.045em !important;
+  text-transform: none !important;
+}
+
+.page-title,
+.section-title,
+.index-section-title,
+.store-category-title,
+.song-hero h1,
+.song-title {
+  text-shadow: 0 12px 34px rgba(0, 0, 0, 0.36);
+}
+
+.page-title {
+  font-size: clamp(3rem, 8vw, 6.4rem) !important;
+  line-height: 0.94 !important;
+}
+
+.index-section-title,
+.store-category-title {
+  font-size: clamp(1.55rem, 3.3vw, 2.8rem) !important;
+  letter-spacing: 0.07em !important;
+}
+
+.track-card h3,
+.disc-card h3,
+.goods-card h3 {
+  letter-spacing: 0.035em !important;
+  line-height: 1.08 !important;
+}
+
+.song-hero h1,
+.song-title {
+  font-size: clamp(2.35rem, 7vw, 5.8rem) !important;
+  line-height: 0.95 !important;
+}
+
 .news-list .news-title {
   font-size: clamp(1.05rem, 1.25vw, 1.34rem);
   line-height: 1.72;
@@ -186,14 +239,7 @@ body .music#music .index-section-title {
   width: auto !important;
   max-width: none !important;
   margin: 0 auto !important;
-  color: rgba(247, 241, 232, 0.94) !important;
-  font-family: var(--display-font, "Montserrat", "Noto Sans JP", sans-serif) !important;
-  font-size: clamp(1.45rem, 3.2vw, 2.65rem) !important;
-  font-weight: 800 !important;
-  line-height: 1 !important;
-  letter-spacing: 0.14em !important;
   text-align: center !important;
-  text-transform: lowercase !important;
 }
 
 .video-cta.index-action-row,
@@ -362,6 +408,20 @@ body .music#music .index-section-title {
     letter-spacing: 0.075em !important;
   }
 
+  .page-title {
+    font-size: clamp(2.65rem, 13vw, 4.6rem) !important;
+  }
+
+  .index-section-title,
+  .store-category-title {
+    font-size: clamp(1.45rem, 9vw, 2.2rem) !important;
+  }
+
+  .song-hero h1,
+  .song-title {
+    font-size: clamp(2.1rem, 11vw, 4rem) !important;
+  }
+
   .hero::after {
     background-position: 64% center;
     filter: brightness(0.52) contrast(1.12) saturate(1.06);
@@ -407,12 +467,6 @@ body .music#music .index-section-title {
   body .video-section .index-section-heading,
   body .music#music .index-section-heading {
     margin-bottom: 32px !important;
-  }
-
-  body .video-section .index-section-title,
-  body .music#music .index-section-title {
-    font-size: clamp(1.3rem, 8vw, 2rem) !important;
-    letter-spacing: 0.12em !important;
   }
 
   .store-final {
