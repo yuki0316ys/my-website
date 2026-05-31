@@ -141,7 +141,11 @@
 .social h2,
 .profile h2,
 .music h2,
-.video-section h2 {
+.video-section h2,
+.hero h1 .en-name,
+.hero h1 .jp-name,
+.hero h1 .slash,
+.hero-catch {
   color: rgba(255, 255, 255, 0.96) !important;
   font-family: "Cormorant Garamond", "Times New Roman", "Noto Serif JP", serif !important;
   font-weight: 700 !important;
@@ -154,8 +158,21 @@
 .index-section-title,
 .store-category-title,
 .song-hero h1,
-.song-title {
+.song-title,
+.hero h1 {
   text-shadow: 0 12px 34px rgba(0, 0, 0, 0.36);
+}
+
+.hero h1 .en-name,
+.hero h1 .jp-name,
+.hero h1 .slash {
+  line-height: 0.9 !important;
+}
+
+.hero-catch {
+  color: rgba(255, 255, 255, 0.82) !important;
+  font-size: clamp(1rem, 1.25vw, 1.35rem) !important;
+  letter-spacing: 0.11em !important;
 }
 
 .page-title {
@@ -206,9 +223,13 @@
 }
 
 .achievement .number::after {
-  content: "topics";
+  content: "Topics";
   display: inline-block;
-  font-size: clamp(0.78rem, 1vw, 0.95rem) !important;
+  color: inherit;
+  font-family: "Cormorant Garamond", "Times New Roman", "Noto Serif JP", serif !important;
+  font-size: clamp(0.92rem, 1.22vw, 1.18rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
   line-height: 1.2;
   animation: topicsBlink 1.7s ease-in-out infinite;
 }
@@ -240,6 +261,28 @@ body .music#music .index-section-title {
   max-width: none !important;
   margin: 0 auto !important;
   text-align: center !important;
+  font-size: 0 !important;
+}
+
+body .video-section .index-section-title::after,
+body .music#music .index-section-title::after {
+  display: inline-block !important;
+  color: rgba(255, 255, 255, 0.96) !important;
+  font-family: "Cormorant Garamond", "Times New Roman", "Noto Serif JP", serif !important;
+  font-size: clamp(1.55rem, 3.3vw, 2.8rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.07em !important;
+  line-height: 1 !important;
+  text-transform: none !important;
+  text-shadow: 0 12px 34px rgba(0, 0, 0, 0.36);
+}
+
+body .video-section .index-section-title::after {
+  content: "Featured single";
+}
+
+body .music#music .index-section-title::after {
+  content: "Pickup";
 }
 
 .video-cta.index-action-row,
@@ -417,6 +460,11 @@ body .music#music .index-section-title {
     font-size: clamp(1.45rem, 9vw, 2.2rem) !important;
   }
 
+  body .video-section .index-section-title::after,
+  body .music#music .index-section-title::after {
+    font-size: clamp(1.45rem, 9vw, 2.2rem) !important;
+  }
+
   .song-hero h1,
   .song-title {
     font-size: clamp(2.1rem, 11vw, 4rem) !important;
@@ -461,7 +509,7 @@ body .music#music .index-section-title {
   }
 
   .achievement .number::after {
-    font-size: 0.75rem !important;
+    font-size: 0.86rem !important;
   }
 
   body .video-section .index-section-heading,
