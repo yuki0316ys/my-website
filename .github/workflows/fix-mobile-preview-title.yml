@@ -69,3 +69,5 @@ jobs:
           fi
           git commit -m "Fix mobile preview title wrapping"
           git push
+
+# trigger: 2026-06-01 mobile preview title
