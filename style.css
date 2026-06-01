@@ -159,6 +159,11 @@ html body .preview-player__inner h2 {
   font-synthesis: none !important;
 }
 
+html body .goods-card[href="#"] .goods-card__content::after {
+  content: none !important;
+  display: none !important;
+}
+
 /* Final action buttons */
 html body .store-final {
   padding-block: clamp(28px, 5vw, 58px) !important;
