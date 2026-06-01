@@ -159,6 +159,27 @@ html body .preview-player__inner h2 {
   font-synthesis: none !important;
 }
 
+html body .title-separator,
+html body .preview-divider {
+  display: inline-block !important;
+  font-family: Georgia, "Times New Roman", "Hiragino Mincho ProN", "Yu Mincho", serif !important;
+  font-style: normal !important;
+  font-weight: inherit !important;
+  line-height: 1 !important;
+  transform: none !important;
+  translate: none !important;
+  font-synthesis: none !important;
+}
+
+html body .track-card h3 .title-separator {
+  margin-inline: 0.03em !important;
+}
+
+html body .preview-player .title-separator,
+html body .preview-player .preview-divider {
+  margin-inline: 0.08em !important;
+}
+
 html body .goods-card[href="#"] .goods-card__content::after {
   content: none !important;
   display: none !important;
