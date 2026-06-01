@@ -361,3 +361,43 @@ html body .store-final .button.main-cta:focus-visible::after {
     white-space: normal !important;
   }
 }
+
+/* Mobile Safari stability */
+@media (max-width: 768px) {
+  html body .page-glow,
+  html body .hero-light {
+    display: none !important;
+    filter: none !important;
+  }
+
+  html body .header,
+  html body .nav,
+  html body .menu-toggle,
+  html body .track-card,
+  html body .video-card,
+  html body .preview-player__inner,
+  html body .social-link,
+  html body .header-social__link {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+
+  html body .hero-bg,
+  html body .reveal,
+  html body .track-card,
+  html body .video-card,
+  html body .preview-player__inner {
+    will-change: auto !important;
+  }
+
+  html body .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  html body .track-card:hover,
+  html body .video-card:hover,
+  html body .social-link:hover {
+    transform: none !important;
+  }
+}
