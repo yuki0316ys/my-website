@@ -401,3 +401,43 @@ html body .store-final .button.main-cta:focus-visible::after {
     transform: none !important;
   }
 }
+
+/* iOS navigation crash guard */
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 768px) {
+    html body {
+      overflow-x: hidden !important;
+      -webkit-text-size-adjust: 100% !important;
+    }
+
+    html body *,
+    html body *::before,
+    html body *::after {
+      transition-duration: 0.001ms !important;
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+    }
+
+    html body .results-track {
+      animation: none !important;
+      transform: none !important;
+    }
+
+    html body video,
+    html body audio,
+    html body iframe,
+    html body img {
+      max-width: 100% !important;
+    }
+
+    html body .featured-video,
+    html body .hero-bg,
+    html body .song-hero,
+    html body .profile-hero {
+      transform: none !important;
+      filter: none !important;
+      will-change: auto !important;
+    }
+  }
+}
