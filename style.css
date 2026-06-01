@@ -144,7 +144,7 @@ html body .track-card__type {
 
 html body .preview-player h2,
 html body .preview-player__inner h2 {
-  font-family: var(--serif-display) !important;
+  font-family: Georgia, "Times New Roman", "Hiragino Mincho ProN", "Yu Mincho", serif !important;
   font-size: clamp(2rem, 4.2vw, 4rem) !important;
   font-style: normal !important;
   font-weight: 700 !important;
