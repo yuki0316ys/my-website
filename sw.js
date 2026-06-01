@@ -1,5 +1,5 @@
 const FANCLUB_URL = "https://www.youtube.com/channel/UCdZMz61Y8oS4kfC9CP4esTA/join";
-const STYLE_VERSION = "2026060104";
+const STYLE_VERSION = "2026060105";
 
 self.addEventListener("install", event => {
   console.log("Service Worker Installed");
@@ -36,11 +36,21 @@ function addFanclubLink(html) {
 }
 
 function transformHtml(html) {
-  return normalizePreviewTitles(normalizeStylesheetVersion(addFanclubLink(html)));
+  return normalizeBeTripTitle(
+    normalizePreviewTitles(
+      normalizeStylesheetVersion(addFanclubLink(html))
+    )
+  );
 }
 
 function normalizePreviewTitles(html) {
   return html.replace(/\s+-\s+Preview/g, " | Preview");
+}
+
+function normalizeBeTripTitle(html) {
+  return html
+    .replace(/<h([123])([^>]*)>BE-TRIP<\/h\1>/g, '<h$1$2>BE<span class="title-separator">-</span>TRIP</h$1>')
+    .replace(/BE-TRIP \| Preview/g, 'BE<span class="title-separator">-</span>TRIP <span class="preview-divider">|</span> Preview');
 }
 
 self.addEventListener("fetch", event => {
