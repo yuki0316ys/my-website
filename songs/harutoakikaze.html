@@ -166,22 +166,8 @@ const observer = new IntersectionObserver(entries=>{
 });
 
 els.forEach(el=>observer.observe(el));
-</script><script>
-if ("serviceWorker" in navigator) {
-
-  navigator.serviceWorker
-    .register("/my-website/sw.js")
-
-    .then(() => {
-      console.log("SW registered");
-    })
-
-    .catch(err => {
-      console.log("SW error", err);
-    });
-
-}
-</script><script>
+</script>
+<script>
 const menuToggle = document.getElementById("menuToggle");
 const nav = document.getElementById("nav");
 
