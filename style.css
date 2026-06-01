@@ -142,6 +142,18 @@ html body .track-card__type {
   color: rgba(247, 241, 232, 0.68) !important;
 }
 
+html body .track-card[href$="BE-TRIP.html"] h3,
+html body .track-card[href*="/BE-TRIP.html"] h3 {
+  font-family: Georgia, "Times New Roman", "Hiragino Mincho ProN", "Yu Mincho", serif !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+  line-height: 1.05 !important;
+  text-rendering: geometricPrecision !important;
+  -webkit-font-smoothing: antialiased !important;
+  font-synthesis: none !important;
+}
+
 html body .preview-player h2,
 html body .preview-player__inner h2 {
   font-family: Georgia, "Times New Roman", "Hiragino Mincho ProN", "Yu Mincho", serif !important;
