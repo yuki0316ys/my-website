@@ -154,6 +154,17 @@ html body .track-card[href*="/BE-TRIP.html"] h3 {
   font-synthesis: none !important;
 }
 
+html:has(link[rel="canonical"][href$="/songs/BE-TRIP.html"]) body .page-title {
+  font-family: Georgia, "Times New Roman", "Hiragino Mincho ProN", "Yu Mincho", serif !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+  line-height: 1.05 !important;
+  text-rendering: geometricPrecision !important;
+  -webkit-font-smoothing: antialiased !important;
+  font-synthesis: none !important;
+}
+
 html body .preview-player h2,
 html body .preview-player__inner h2 {
   font-family: Georgia, "Times New Roman", "Hiragino Mincho ProN", "Yu Mincho", serif !important;
