@@ -340,3 +340,24 @@ html body .store-final .button.main-cta:focus-visible::after {
     letter-spacing: 0.055em !important;
   }
 }
+
+/* Mobile preview title fit */
+@media (max-width: 768px) {
+  html body .preview-player,
+  html body .preview-player__inner {
+    overflow: hidden !important;
+  }
+
+  html body .preview-player h2,
+  html body .preview-player__inner h2 {
+    max-width: 100% !important;
+    margin-inline: auto !important;
+    font-size: clamp(1.5rem, 7.2vw, 2.35rem) !important;
+    letter-spacing: 0.015em !important;
+    line-height: 1.12 !important;
+    text-align: center !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+  }
+}
