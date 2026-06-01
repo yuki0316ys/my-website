@@ -128,3 +128,5 @@ jobs:
           fi
           git commit -m "Stabilize mobile Safari navigation"
           git push
+
+# trigger mobile safari cleanup 2026-06-01
