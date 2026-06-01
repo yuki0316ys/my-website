@@ -1,0 +1,42 @@
+name: Remove Service Worker
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Remove service worker remnants
+        shell: bash
+        run: |
+          set -euo pipefail
+          perl -0pi -e 's/\s*<script>\s*\/\/ Service Worker[^<]*if \("serviceWorker" in navigator\) \{.*?\.register\("\/my-website\/sw\.js"\).*?\}\s*<\/script>\s*/\n/sg' $(find . -name '*.html' -print)
+          perl -0pi -e 's/\s*<script>\s*if \("serviceWorker" in navigator\) \{.*?\.register\("\/my-website\/sw\.js"\).*?\}\s*<\/script>\s*/\n/sg' $(find . -name '*.html' -print)
+          rm -f sw.js
+          rm -f .github/workflows/remove-service-worker.yml
+
+      - name: Commit cleanup
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No service worker remnants found."
+            exit 0
+          fi
+          git commit -m "Remove service worker remnants"
+          git push
