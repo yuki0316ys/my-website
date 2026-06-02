@@ -364,8 +364,7 @@ html body .store-final .button.main-cta:focus-visible::after {
 
 /* Mobile Safari stability */
 @media (max-width: 768px) {
-  html body .page-glow,
-  html body .hero-light {
+  html body .page-glow {
     display: none !important;
     filter: none !important;
   }
@@ -382,7 +381,6 @@ html body .store-final .button.main-cta:focus-visible::after {
     backdrop-filter: none !important;
   }
 
-  html body .hero-bg,
   html body .reveal,
   html body .track-card,
   html body .video-card,
@@ -419,11 +417,6 @@ html body .store-final .button.main-cta:focus-visible::after {
       scroll-behavior: auto !important;
     }
 
-    html body .results-track {
-      animation: none !important;
-      transform: none !important;
-    }
-
     html body video,
     html body audio,
     html body iframe,
@@ -432,7 +425,6 @@ html body .store-final .button.main-cta:focus-visible::after {
     }
 
     html body .featured-video,
-    html body .hero-bg,
     html body .song-hero,
     html body .profile-hero {
       transform: none !important;
@@ -539,6 +531,38 @@ html body .track-card[href*="/BE-TRIP.html"] h3::after {
     html:has(link[rel="canonical"][href$="/songs/BE-TRIP.html"]) body .page-title::after {
       font-size: clamp(2.5rem, 12vw, 4.4rem) !important;
       letter-spacing: 0.055em !important;
+    }
+  }
+}
+
+/* Mobile motion parity */
+@media (max-width: 768px) {
+  html body .hero-light {
+    display: block !important;
+    opacity: 0.9 !important;
+    animation: heroGlow 8s ease-in-out infinite alternate !important;
+    will-change: transform !important;
+  }
+
+  html body .hero-bg {
+    will-change: transform !important;
+  }
+
+  html body .results-track {
+    animation: resultsLoop 26s linear infinite !important;
+    will-change: transform !important;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 768px) {
+    html body .hero-light {
+      display: block !important;
+      animation: heroGlow 8s ease-in-out infinite alternate !important;
+    }
+
+    html body .results-track {
+      animation: resultsLoop 26s linear infinite !important;
     }
   }
 }
