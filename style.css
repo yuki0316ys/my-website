@@ -340,3 +340,192 @@ html body .store-final .button.main-cta:focus-visible::after {
     letter-spacing: 0.055em !important;
   }
 }
+
+/* Mobile preview title fit */
+@media (max-width: 768px) {
+  html body .preview-player,
+  html body .preview-player__inner {
+    overflow: hidden !important;
+  }
+
+  html body .preview-player h2,
+  html body .preview-player__inner h2 {
+    max-width: 100% !important;
+    margin-inline: auto !important;
+    font-size: clamp(1.5rem, 7.2vw, 2.35rem) !important;
+    letter-spacing: 0.015em !important;
+    line-height: 1.12 !important;
+    text-align: center !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+  }
+}
+
+/* Mobile Safari stability */
+@media (max-width: 768px) {
+  html body .page-glow {
+    display: none !important;
+    filter: none !important;
+  }
+
+  html body .header,
+  html body .nav,
+  html body .menu-toggle,
+  html body .track-card,
+  html body .video-card,
+  html body .preview-player__inner,
+  html body .social-link,
+  html body .header-social__link {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+
+  html body .reveal,
+  html body .track-card,
+  html body .video-card,
+  html body .preview-player__inner {
+    will-change: auto !important;
+  }
+
+  html body .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  html body .track-card:hover,
+  html body .video-card:hover,
+  html body .social-link:hover {
+    transform: none !important;
+  }
+}
+
+/* iOS navigation crash guard */
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 768px) {
+    html body {
+      overflow-x: hidden !important;
+      -webkit-text-size-adjust: 100% !important;
+    }
+
+    html body *,
+    html body *::before,
+    html body *::after {
+      transition-duration: 0.001ms !important;
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+    }
+
+    html body video,
+    html body audio,
+    html body iframe,
+    html body img {
+      max-width: 100% !important;
+    }
+
+    html body .featured-video,
+    html body .song-hero,
+    html body .profile-hero {
+      transform: none !important;
+      filter: none !important;
+      will-change: auto !important;
+    }
+  }
+}
+
+/* BE-TRIP title normalization */
+html body .track-card[href$="BE-TRIP.html"] h3,
+html body .track-card[href*="/BE-TRIP.html"] h3 {
+  white-space: normal !important;
+  font-family: Georgia, "Times New Roman", "Hiragino Mincho ProN", "Yu Mincho", serif !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+  line-height: 1.05 !important;
+  text-rendering: geometricPrecision !important;
+  -webkit-font-smoothing: antialiased !important;
+  font-synthesis: none !important;
+}
+
+@supports selector(html:has(body)) {
+  html:has(link[rel="canonical"][href$="/songs/BE-TRIP.html"]) body .page-title {
+    white-space: nowrap !important;
+    font-family: Georgia, "Times New Roman", "Hiragino Mincho ProN", "Yu Mincho", serif !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.06em !important;
+    line-height: 1 !important;
+    font-size: clamp(3rem, 7vw, 5.6rem) !important;
+    text-rendering: geometricPrecision !important;
+    -webkit-font-smoothing: antialiased !important;
+    font-synthesis: none !important;
+  }
+
+  html:has(link[rel="canonical"][href$="/songs/BE-TRIP.html"]) body .preview-player h2,
+  html:has(link[rel="canonical"][href$="/songs/BE-TRIP.html"]) body .preview-player__inner h2 {
+    white-space: normal !important;
+    font-family: Georgia, "Times New Roman", "Hiragino Mincho ProN", "Yu Mincho", serif !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.02em !important;
+    line-height: 1.12 !important;
+    font-size: clamp(2rem, 4.2vw, 4rem) !important;
+    text-align: center !important;
+    text-rendering: geometricPrecision !important;
+    -webkit-font-smoothing: antialiased !important;
+    font-synthesis: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  html body .track-card[href$="BE-TRIP.html"] h3,
+  html body .track-card[href*="/BE-TRIP.html"] h3 {
+    line-height: 1.08 !important;
+  }
+
+  @supports selector(html:has(body)) {
+    html:has(link[rel="canonical"][href$="/songs/BE-TRIP.html"]) body .page-title {
+      font-size: clamp(2.45rem, 12vw, 4.2rem) !important;
+      letter-spacing: 0.04em !important;
+    }
+
+    html:has(link[rel="canonical"][href$="/songs/BE-TRIP.html"]) body .preview-player h2,
+    html:has(link[rel="canonical"][href$="/songs/BE-TRIP.html"]) body .preview-player__inner h2 {
+      font-size: clamp(1.55rem, 7.2vw, 2.35rem) !important;
+      letter-spacing: 0.015em !important;
+    }
+  }
+}
+
+/* Mobile motion parity */
+@media (max-width: 768px) {
+  html body .hero-light {
+    display: block !important;
+    opacity: 0.9 !important;
+    animation: heroGlow 8s ease-in-out infinite alternate !important;
+    will-change: transform !important;
+  }
+
+  html body .hero-bg {
+    will-change: transform !important;
+  }
+
+  html body .results-track {
+    animation: resultsLoop 26s linear infinite !important;
+    will-change: transform !important;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 768px) {
+    html body .hero-light {
+      display: block !important;
+      animation: heroGlow 8s ease-in-out infinite alternate !important;
+    }
+
+    html body .results-track {
+      animation: resultsLoop 26s linear infinite !important;
+    }
+  }
+}
