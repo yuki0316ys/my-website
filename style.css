@@ -359,15 +359,7 @@ html body .discography-block:first-child .discography-list li {
   gap: 20px !important;
 }
 
-html body .discography-block:first-child .discography-list li:nth-child(1)::after {
-  content: "2023/2/8" !important;
-}
-
-html body .discography-block:first-child .discography-list li:nth-child(2)::after {
-  content: "2023/7/5" !important;
-}
-
-html body .discography-block:first-child .discography-list li::after {
+html body .discography-block:first-child .discography-list li span {
   color: rgba(222, 190, 116, 0.9) !important;
   flex: 0 0 auto !important;
   font-family: var(--serif-display) !important;
@@ -376,9 +368,7 @@ html body .discography-block:first-child .discography-list li::after {
   letter-spacing: 0.04em !important;
 }
 
-html body .store-category-title::after {
-  content: "主張しすぎない" !important;
-  display: block !important;
+html body .store-category-description {
   margin: 16px auto 0 !important;
   color: rgba(247, 241, 232, 0.72) !important;
   font-family: var(--serif-display) !important;
