@@ -50,7 +50,7 @@ html body .header.scrolled .brand-chara {
 
 html body .header .brand-button::after,
 html body .header.scrolled .brand-button::after {
-  content: "YUKI / 佑樹 Official Site" !important;
+  content: "YUKI / 佑樹\A Official Site" !important;
   display: block !important;
   color: #f7f1e8 !important;
   -webkit-text-fill-color: #f7f1e8 !important;
@@ -59,9 +59,9 @@ html body .header.scrolled .brand-button::after {
   font-style: normal !important;
   font-weight: 700 !important;
   letter-spacing: 0.035em !important;
-  line-height: 1 !important;
+  line-height: 1.05 !important;
   text-transform: none !important;
-  white-space: nowrap !important;
+  white-space: pre-line !important;
   transform: none !important;
   translate: none !important;
 }
@@ -360,7 +360,6 @@ html body .discography-block:first-child .discography-list li {
 }
 
 html body .discography-block:first-child .discography-list li span {
-  color: rgba(222, 190, 116, 0.9) !important;
   flex: 0 0 auto !important;
   font-family: var(--serif-display) !important;
   font-size: 0.9em !important;
@@ -369,7 +368,8 @@ html body .discography-block:first-child .discography-list li span {
 }
 
 html body .store-category-description {
-  margin: 16px auto 0 !important;
+  max-width: 760px !important;
+  margin: 22px auto 0 !important;
   color: rgba(247, 241, 232, 0.72) !important;
   font-family: var(--serif-display) !important;
   font-size: clamp(1.05rem, 1.5vw, 1.35rem) !important;
@@ -379,6 +379,14 @@ html body .store-category-description {
   line-height: 1.6 !important;
   text-align: center !important;
   text-transform: none !important;
+}
+
+html body .store-category-image {
+  display: block !important;
+  width: min(360px, 72vw) !important;
+  height: auto !important;
+  margin: 0 auto !important;
+  object-fit: contain !important;
 }
 
 @media (max-width: 420px) {
