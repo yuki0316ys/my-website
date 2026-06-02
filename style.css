@@ -412,6 +412,15 @@ html body .store-category-description {
   text-transform: none !important;
 }
 
+html body .store-category-title {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  margin-inline: auto !important;
+  text-align: center !important;
+}
+
 html body .store-category-image {
   display: block !important;
   width: min(360px, 72vw) !important;
