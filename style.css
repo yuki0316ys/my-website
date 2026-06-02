@@ -21,11 +21,17 @@ html body .header.scrolled .brand-button {
   box-sizing: border-box !important;
   padding: 0 0 0 2px !important;
   margin: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+  outline: 0 !important;
   line-height: 1 !important;
   text-align: left !important;
-  overflow: visible !important;
+  overflow: hidden !important;
   background: transparent !important;
   background-image: none !important;
+  text-decoration: none !important;
   transform: none !important;
   translate: none !important;
   transition: none !important;
@@ -44,7 +50,15 @@ html body .header.scrolled .brand-button:focus-visible {
   min-height: 54px !important;
   padding: 0 0 0 2px !important;
   margin: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+  outline: 0 !important;
   opacity: 1 !important;
+  background: transparent !important;
+  background-image: none !important;
+  text-decoration: none !important;
   transform: none !important;
   translate: none !important;
   transition: none !important;
@@ -56,6 +70,7 @@ html body .header.scrolled .brand-button span,
 html body .header .brand-chara,
 html body .header.scrolled .brand-chara {
   display: none !important;
+  pointer-events: none !important;
 }
 
 html body .header .brand-button::before,
@@ -90,6 +105,7 @@ html body .header.scrolled .brand-button::before {
   animation: none !important;
   clip-path: none !important;
   will-change: auto !important;
+  pointer-events: none !important;
   text-shadow: 0 0 18px rgba(0, 0, 0, 0.34) !important;
 }
 
@@ -125,6 +141,7 @@ html body .header.scrolled .brand-button::after {
   animation: none !important;
   clip-path: none !important;
   will-change: auto !important;
+  pointer-events: none !important;
   text-shadow: 0 0 14px rgba(0, 0, 0, 0.3) !important;
 }
 
