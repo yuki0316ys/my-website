@@ -9,36 +9,47 @@
 html body .header .brand-button,
 html body .header.scrolled .brand-button {
   position: relative !important;
-  width: 156px !important;
-  min-width: 156px !important;
-  max-width: 156px !important;
+  width: 152px !important;
+  min-width: 152px !important;
+  max-width: 152px !important;
   height: 48px !important;
   min-height: 48px !important;
   display: inline-flex !important;
   flex-direction: column !important;
-  align-items: flex-start !important;
+  align-items: center !important;
   justify-content: center !important;
   box-sizing: border-box !important;
-  padding: 0 0 0 2px !important;
+  padding: 0 !important;
   margin: 0 !important;
   line-height: 1 !important;
+  text-align: center !important;
+  background-image: linear-gradient(
+    90deg,
+    transparent,
+    rgba(215, 185, 103, 0.45),
+    rgba(247, 241, 232, 0.26),
+    transparent
+  ) !important;
+  background-position: center bottom 5px !important;
+  background-repeat: no-repeat !important;
+  background-size: 92px 1px !important;
   transform: none !important;
   translate: none !important;
-  transition: color 0.2s ease, opacity 0.2s ease !important;
+  transition: none !important;
 }
 
 html body .header .brand-button:hover,
 html body .header.scrolled .brand-button:hover,
 html body .header .brand-button:focus-visible,
 html body .header.scrolled .brand-button:focus-visible {
-  width: 156px !important;
-  min-width: 156px !important;
-  max-width: 156px !important;
+  width: 152px !important;
+  min-width: 152px !important;
+  max-width: 152px !important;
   height: 48px !important;
   min-height: 48px !important;
-  padding: 0 0 0 2px !important;
+  padding: 0 !important;
   margin: 0 !important;
-  opacity: 0.86 !important;
+  opacity: 1 !important;
   transform: none !important;
   translate: none !important;
 }
@@ -57,11 +68,11 @@ html body .header.scrolled .brand-button::before {
   color: #f7f1e8 !important;
   -webkit-text-fill-color: #f7f1e8 !important;
   font-family: var(--serif-display) !important;
-  font-size: 18px !important;
+  font-size: 17.5px !important;
   font-style: normal !important;
   font-weight: 700 !important;
-  letter-spacing: 0.035em !important;
-  line-height: 0.95 !important;
+  letter-spacing: 0.065em !important;
+  line-height: 1 !important;
   text-transform: none !important;
   white-space: nowrap !important;
   transform: none !important;
@@ -72,14 +83,14 @@ html body .header .brand-button::after,
 html body .header.scrolled .brand-button::after {
   content: "Official Site" !important;
   display: block !important;
-  margin-top: 5px !important;
-  color: rgba(247, 241, 232, 0.82) !important;
-  -webkit-text-fill-color: rgba(247, 241, 232, 0.82) !important;
+  margin-top: 6px !important;
+  color: rgba(215, 185, 103, 0.92) !important;
+  -webkit-text-fill-color: rgba(215, 185, 103, 0.92) !important;
   font-family: var(--serif-display) !important;
-  font-size: 10.5px !important;
+  font-size: 9.8px !important;
   font-style: normal !important;
   font-weight: 700 !important;
-  letter-spacing: 0.18em !important;
+  letter-spacing: 0.24em !important;
   line-height: 1 !important;
   text-transform: uppercase !important;
   white-space: nowrap !important;
@@ -307,9 +318,9 @@ html body .store-final .button.main-cta:focus-visible::after {
 @media (max-width: 768px) {
   html body .header .brand-button,
   html body .header.scrolled .brand-button {
-    width: 156px !important;
-    min-width: 156px !important;
-    max-width: 156px !important;
+    width: 150px !important;
+    min-width: 150px !important;
+    max-width: 150px !important;
     height: 48px !important;
     min-height: 48px !important;
   }
@@ -318,23 +329,23 @@ html body .store-final .button.main-cta:focus-visible::after {
   html body .header.scrolled .brand-button:hover,
   html body .header .brand-button:focus-visible,
   html body .header.scrolled .brand-button:focus-visible {
-    width: 156px !important;
-    min-width: 156px !important;
-    max-width: 156px !important;
+    width: 150px !important;
+    min-width: 150px !important;
+    max-width: 150px !important;
     height: 48px !important;
     min-height: 48px !important;
   }
 
   html body .header .brand-button::before,
   html body .header.scrolled .brand-button::before {
-    font-size: 17px !important;
-    letter-spacing: 0.03em !important;
+    font-size: 16.8px !important;
+    letter-spacing: 0.055em !important;
   }
 
   html body .header .brand-button::after,
   html body .header.scrolled .brand-button::after {
-    font-size: 10px !important;
-    letter-spacing: 0.16em !important;
+    font-size: 9.4px !important;
+    letter-spacing: 0.2em !important;
   }
 
   html body .header .nav a,
@@ -436,21 +447,21 @@ html body .store-category-image {
   html body .header.scrolled .brand-button:hover,
   html body .header .brand-button:focus-visible,
   html body .header.scrolled .brand-button:focus-visible {
-    width: 148px !important;
-    min-width: 148px !important;
-    max-width: 148px !important;
+    width: 142px !important;
+    min-width: 142px !important;
+    max-width: 142px !important;
   }
 
   html body .header .brand-button::before,
   html body .header.scrolled .brand-button::before {
-    font-size: 16px !important;
-    letter-spacing: 0.02em !important;
+    font-size: 15.8px !important;
+    letter-spacing: 0.045em !important;
   }
 
   html body .header .brand-button::after,
   html body .header.scrolled .brand-button::after {
-    font-size: 9.5px !important;
-    letter-spacing: 0.14em !important;
+    font-size: 9px !important;
+    letter-spacing: 0.18em !important;
   }
 
   html body .discography-block:first-child .discography-list li {
