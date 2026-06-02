@@ -9,34 +9,36 @@
 html body .header .brand-button,
 html body .header.scrolled .brand-button {
   position: relative !important;
-  width: 186px !important;
-  min-width: 186px !important;
-  max-width: 186px !important;
-  height: 42px !important;
-  min-height: 42px !important;
+  width: 156px !important;
+  min-width: 156px !important;
+  max-width: 156px !important;
+  height: 48px !important;
+  min-height: 48px !important;
   display: inline-flex !important;
-  align-items: center !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
   justify-content: center !important;
   box-sizing: border-box !important;
-  padding: 0 !important;
+  padding: 0 0 0 2px !important;
   margin: 0 !important;
   line-height: 1 !important;
   transform: none !important;
   translate: none !important;
-  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease !important;
+  transition: color 0.2s ease, opacity 0.2s ease !important;
 }
 
 html body .header .brand-button:hover,
 html body .header.scrolled .brand-button:hover,
 html body .header .brand-button:focus-visible,
 html body .header.scrolled .brand-button:focus-visible {
-  width: 186px !important;
-  min-width: 186px !important;
-  max-width: 186px !important;
-  height: 42px !important;
-  min-height: 42px !important;
-  padding: 0 !important;
+  width: 156px !important;
+  min-width: 156px !important;
+  max-width: 156px !important;
+  height: 48px !important;
+  min-height: 48px !important;
+  padding: 0 0 0 2px !important;
   margin: 0 !important;
+  opacity: 0.86 !important;
   transform: none !important;
   translate: none !important;
 }
@@ -48,24 +50,47 @@ html body .header.scrolled .brand-chara {
   display: none !important;
 }
 
-html body .header .brand-button::after,
-html body .header.scrolled .brand-button::after {
-  content: "YUKI / 佑樹\A Official Site" !important;
+html body .header .brand-button::before,
+html body .header.scrolled .brand-button::before {
+  content: "YUKI / 佑樹" !important;
   display: block !important;
   color: #f7f1e8 !important;
   -webkit-text-fill-color: #f7f1e8 !important;
   font-family: var(--serif-display) !important;
-  font-size: 15.68px !important;
+  font-size: 18px !important;
   font-style: normal !important;
   font-weight: 700 !important;
   letter-spacing: 0.035em !important;
-  line-height: 1.05 !important;
+  line-height: 0.95 !important;
   text-transform: none !important;
-  white-space: pre-line !important;
+  white-space: nowrap !important;
   transform: none !important;
   translate: none !important;
 }
 
+html body .header .brand-button::after,
+html body .header.scrolled .brand-button::after {
+  content: "Official Site" !important;
+  display: block !important;
+  margin-top: 5px !important;
+  color: rgba(247, 241, 232, 0.82) !important;
+  -webkit-text-fill-color: rgba(247, 241, 232, 0.82) !important;
+  font-family: var(--serif-display) !important;
+  font-size: 10.5px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.18em !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+  transform: none !important;
+  translate: none !important;
+}
+
+html body .header .brand-button:hover::before,
+html body .header.scrolled .brand-button:hover::before,
+html body .header .brand-button:focus-visible::before,
+html body .header.scrolled .brand-button:focus-visible::before,
 html body .header .brand-button:hover::after,
 html body .header.scrolled .brand-button:hover::after,
 html body .header .brand-button:focus-visible::after,
@@ -282,28 +307,34 @@ html body .store-final .button.main-cta:focus-visible::after {
 @media (max-width: 768px) {
   html body .header .brand-button,
   html body .header.scrolled .brand-button {
-    width: 178px !important;
-    min-width: 178px !important;
-    max-width: 178px !important;
-    height: 42px !important;
-    min-height: 42px !important;
+    width: 156px !important;
+    min-width: 156px !important;
+    max-width: 156px !important;
+    height: 48px !important;
+    min-height: 48px !important;
   }
 
   html body .header .brand-button:hover,
   html body .header.scrolled .brand-button:hover,
   html body .header .brand-button:focus-visible,
   html body .header.scrolled .brand-button:focus-visible {
-    width: 178px !important;
-    min-width: 178px !important;
-    max-width: 178px !important;
-    height: 42px !important;
-    min-height: 42px !important;
+    width: 156px !important;
+    min-width: 156px !important;
+    max-width: 156px !important;
+    height: 48px !important;
+    min-height: 48px !important;
+  }
+
+  html body .header .brand-button::before,
+  html body .header.scrolled .brand-button::before {
+    font-size: 17px !important;
+    letter-spacing: 0.03em !important;
   }
 
   html body .header .brand-button::after,
   html body .header.scrolled .brand-button::after {
-    font-size: 15.68px !important;
-    letter-spacing: 0.035em !important;
+    font-size: 10px !important;
+    letter-spacing: 0.16em !important;
   }
 
   html body .header .nav a,
@@ -396,14 +427,21 @@ html body .store-category-image {
   html body .header.scrolled .brand-button:hover,
   html body .header .brand-button:focus-visible,
   html body .header.scrolled .brand-button:focus-visible {
-    width: 170px !important;
-    min-width: 170px !important;
-    max-width: 170px !important;
+    width: 148px !important;
+    min-width: 148px !important;
+    max-width: 148px !important;
+  }
+
+  html body .header .brand-button::before,
+  html body .header.scrolled .brand-button::before {
+    font-size: 16px !important;
+    letter-spacing: 0.02em !important;
   }
 
   html body .header .brand-button::after,
   html body .header.scrolled .brand-button::after {
-    letter-spacing: 0.02em !important;
+    font-size: 9.5px !important;
+    letter-spacing: 0.14em !important;
   }
 
   html body .discography-block:first-child .discography-list li {
