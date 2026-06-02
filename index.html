@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=2026060206">
+  <link rel="stylesheet" href="style.css?v=2026060207">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -220,10 +220,12 @@
   <footer class="footer"><p>&copy; 2026 YUKI / 佑樹（YUKI OFFCIAL STUDIO PRO 01）. All rights reserved.</p></footer>
 
   <script>
-    document.addEventListener("mousemove", e => {
-      document.body.style.setProperty("--x", e.clientX + "px");
-      document.body.style.setProperty("--y", e.clientY + "px");
-    });
+    if (window.matchMedia("(min-width: 769px)").matches) {
+      document.addEventListener("mousemove", e => {
+        document.body.style.setProperty("--x", e.clientX + "px");
+        document.body.style.setProperty("--y", e.clientY + "px");
+      });
+    }
 
     const els = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver(entries => {
@@ -243,17 +245,15 @@
   </script>
 
   <script>
-    window.addEventListener("scroll", () => {
-      const heroBg = document.querySelector(".hero-bg");
-      if (!heroBg) return;
+    if (window.matchMedia("(min-width: 769px)").matches) {
+      window.addEventListener("scroll", () => {
+        const heroBg = document.querySelector(".hero-bg");
+        if (!heroBg) return;
 
-      const scrolled = window.scrollY;
-      if (window.innerWidth > 768) {
+        const scrolled = window.scrollY;
         heroBg.style.transform = "scale(1.08) translateY(" + (scrolled * 0.15) + "px)";
-      } else {
-        heroBg.style.transform = "scale(1.04) translateY(" + (scrolled * 0.06) + "px)";
-      }
-    });
+      }, { passive: true });
+    }
   </script>
 
   <script>
@@ -265,34 +265,6 @@
       menuToggle.classList.toggle("active");
     });
   </script>
-<script>
-(function () {
-  var isiOS = /iP(hone|od|ad)/.test(navigator.userAgent) ||
-    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-
-  if (!isiOS || !("serviceWorker" in navigator)) return;
-
-  window.addEventListener("load", function () {
-    navigator.serviceWorker.getRegistrations()
-      .then(function (registrations) {
-        registrations.forEach(function (registration) {
-          registration.unregister();
-        });
-      })
-      .catch(function () {});
-
-    if (window.caches && caches.keys) {
-      caches.keys()
-        .then(function (keys) {
-          keys.forEach(function (key) {
-            caches.delete(key);
-          });
-        })
-        .catch(function () {});
-    }
-  });
-})();
-</script>
 </body>
 </html>
 
