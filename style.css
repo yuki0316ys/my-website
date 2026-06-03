@@ -27,6 +27,19 @@ body:not(.store-page) .store-final .button.main-cta + .button.main-cta::before {
   transform: skew(8deg) !important;
 }
 
+.music-footer .index-text-link[href="songs/songs.html"] {
+  font-size: 0 !important;
+}
+
+.music-footer .index-text-link[href="songs/songs.html"]::after {
+  content: "Songsへ進む" !important;
+  font-size: clamp(1.18rem, 1.55vw, 1.58rem) !important;
+}
+
+.store-page .store-final .button.main-cta::after {
+  content: "BASEへ進む" !important;
+}
+
 @media (max-width: 768px) {
   body:not(.store-page) .store-final .button.main-cta + .button.main-cta {
     margin-left: 18px !important;
@@ -34,6 +47,10 @@ body:not(.store-page) .store-final .button.main-cta + .button.main-cta::before {
 
   body:not(.store-page) .store-final .button.main-cta + .button.main-cta::before {
     margin-right: 18px !important;
+    font-size: clamp(1.2rem, 5.4vw, 1.52rem) !important;
+  }
+
+  .music-footer .index-text-link[href="songs/songs.html"]::after {
     font-size: clamp(1.2rem, 5.4vw, 1.52rem) !important;
   }
 }
