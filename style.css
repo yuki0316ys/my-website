@@ -1,39 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap") screen and (min-width: 769px);
 @import url("https://cdn.jsdelivr.net/gh/yuki0316ys/my-website@19ba9e9d18f9591dddedffc603e9b1a322fe4c0e/style.css") screen and (min-width: 769px);
-@import url("mobile-safe.css?v=2026060309") screen and (max-width: 768px);
+@import url("mobile-safe.css?v=2026060310") screen and (max-width: 768px);
 
 body:not(.store-page) .store-final .button.main-cta::after {
   content: "Tunecoreへ進む" !important;
 }
 
-body:not(.store-page) .store-final .button.main-cta[href="songs.html"]::after {
-  content: "Songsへ戻る" !important;
-}
-
 body:not(.store-page) .preview-player ~ .store-final::before {
-  content: "" !important;
-  display: block !important;
-  width: min(220px, 42vw) !important;
-  height: 1px !important;
-  margin: 0 auto clamp(22px, 3vw, 32px) !important;
-  background: linear-gradient(90deg, transparent, rgba(215, 185, 103, 0.74), transparent) !important;
+  content: none !important;
+  display: none !important;
 }
 
-body:not(.store-page) .store-final .button.main-cta + .button.main-cta {
-  margin-left: clamp(28px, 4vw, 56px) !important;
-  position: relative !important;
+body:not(.store-page) .preview-player ~ .store-final .button.main-cta[href="songs.html"] {
+  display: none !important;
 }
 
+body:not(.store-page) .store-final .button.main-cta + .button.main-cta,
 body:not(.store-page) .store-final .button.main-cta + .button.main-cta::before {
-  content: "｜" !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  margin-right: clamp(28px, 4vw, 56px) !important;
-  color: rgba(215, 185, 103, 0.72) !important;
-  font-size: clamp(1.18rem, 1.55vw, 1.58rem) !important;
-  font-style: normal !important;
-  font-weight: 700 !important;
-  transform: skew(8deg) !important;
+  display: none !important;
+  content: none !important;
 }
 
 .music-footer .index-text-link[href="songs/songs.html"] {
@@ -50,20 +35,6 @@ body:not(.store-page) .store-final .button.main-cta + .button.main-cta::before {
 }
 
 @media (max-width: 768px) {
-  body:not(.store-page) .preview-player ~ .store-final::before {
-    width: min(180px, 46vw) !important;
-    margin-bottom: 24px !important;
-  }
-
-  body:not(.store-page) .store-final .button.main-cta + .button.main-cta {
-    margin-left: 18px !important;
-  }
-
-  body:not(.store-page) .store-final .button.main-cta + .button.main-cta::before {
-    margin-right: 18px !important;
-    font-size: clamp(1.2rem, 5.4vw, 1.52rem) !important;
-  }
-
   .music-footer .index-text-link[href="songs/songs.html"]::after {
     font-size: clamp(1.2rem, 5.4vw, 1.52rem) !important;
   }
