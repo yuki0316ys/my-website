@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Images Test | YUKI / 佑樹</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { background:#000; -webkit-text-size-adjust:100%; }
+    body { margin:0; background:#050505; color:#f7f1e8; font-family:system-ui,-apple-system,BlinkMacSystemFont,sans-serif; overflow-x:hidden; }
+    header { position:sticky; top:0; padding:18px; background:rgba(0,0,0,.92); border-bottom:1px solid rgba(255,255,255,.1); font-weight:700; }
+    main { padding:24px 18px 48px; }
+    h1 { font-size:2rem; }
+    .grid { display:grid; gap:22px; max-width:760px; margin:0 auto; }
+    .card { padding:16px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.04); border-radius:16px; }
+    img { width:100%; height:auto; display:block; background:#111; }
+    p { color:rgba(247,241,232,.72); line-height:1.7; }
+  </style>
+</head>
+<body>
+  <header>YUKI / 佑樹 Images Test</header>
+  <main>
+    <h1>Images Test</h1>
+    <p>本番で使っている主要画像だけを読み込むテストです。CSS演出・動画・JSはありません。</p>
+    <div class="grid">
+      <div class="card"><p>top.jpg</p><img src="images/top.jpg" alt="top"></div>
+      <div class="card"><p>index ver2.jpg</p><img src="images/index%20ver2.jpg" alt="index ver2"></div>
+      <div class="card"><p>sakayume.jpg</p><img src="images/sakayume.jpg" alt="sakayume"></div>
+      <div class="card"><p>be-trip.jpg</p><img src="images/be-trip.jpg" alt="be-trip"></div>
+      <div class="card"><p>next.jpg</p><img src="images/next.jpg" alt="next"></div>
+      <div class="card"><p>chara.png</p><img src="images/chara.png" alt="chara"></div>
+    </div>
+  </main>
+</body>
+</html>
