@@ -1,41 +1,633 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap") screen and (min-width: 769px);
-@import url("https://cdn.jsdelivr.net/gh/yuki0316ys/my-website@19ba9e9d18f9591dddedffc603e9b1a322fe4c0e/style.css") screen and (min-width: 769px);
-@import url("mobile-safe.css?v=2026060311") screen and (max-width: 768px);
-
-body:not(.store-page) .store-final .button.main-cta::after {
-  content: "Tunecoreへ進む" !important;
+/* YUKI / 佑樹 Official Site - rebuilt without important flags */
+:root {
+  --bg: #050505;
+  --bg-soft: #0c0709;
+  --panel: rgba(255, 255, 255, 0.035);
+  --panel-strong: rgba(255, 255, 255, 0.07);
+  --line: rgba(255, 255, 255, 0.11);
+  --line-gold: rgba(215, 185, 103, 0.28);
+  --text: #f7f1e8;
+  --muted: rgba(247, 241, 232, 0.7);
+  --soft: rgba(247, 241, 232, 0.48);
+  --gold: #d7b967;
+  --gold-bright: #f1d88a;
+  --red: #4a0614;
+  --blue: #121b26;
+  --serif-display: "Cormorant Garamond", "Times New Roman", serif;
+  --sans: "Inter", "Noto Sans JP", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --max: 1180px;
+  --header-h: 58px;
 }
 
-body:not(.store-page) .preview-player ~ .store-final::before {
-  content: none !important;
-  display: none !important;
+* { box-sizing: border-box; }
+html { background: #000; color-scheme: dark; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 82% 0%, rgba(34, 54, 62, 0.3), transparent 32%),
+    linear-gradient(180deg, #050505 0%, #090509 54%, #050505 100%);
+  color: var(--text);
+  font-family: var(--serif-display);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+body::selection { background: rgba(215, 185, 103, 0.28); }
+a { color: inherit; text-decoration: none; }
+img, video, iframe, audio { max-width: 100%; }
+img { display: block; }
+button, input, textarea, select { font: inherit; }
+
+.page-glow {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(215,185,103,.12), transparent 24rem),
+    radial-gradient(circle at 12% 0%, rgba(120, 20, 43, 0.18), transparent 28rem);
 }
 
-body:not(.store-page) .preview-player ~ .store-final .button.main-cta[href="songs.html"] {
-  display: none !important;
+.header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 1000;
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0 22px;
+  background: linear-gradient(90deg, rgba(28, 24, 18, .92), rgba(9, 8, 10, .94), rgba(14, 8, 15, .92));
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  backdrop-filter: blur(18px);
 }
-
-body:not(.store-page) .store-final .button.main-cta + .button.main-cta,
-body:not(.store-page) .store-final .button.main-cta + .button.main-cta::before {
-  display: none !important;
-  content: none !important;
+.brand-button {
+  position: relative;
+  flex: 0 0 178px;
+  width: 178px;
+  height: 54px;
+  display: block;
+  color: var(--text);
+  overflow: hidden;
 }
-
-.music-footer .index-text-link[href="songs/songs.html"] {
+.brand-button span,
+.brand-chara { display: none; }
+.brand-button::before,
+.brand-button::after {
+  position: absolute;
+  left: 2px;
+  display: block;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.brand-button::before {
+  content: "YUKI / 佑樹";
+  top: 5px;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: .035em;
+  text-shadow: 0 0 18px rgba(0,0,0,.34);
+}
+.brand-button::after {
+  content: "Official Site";
+  top: 34px;
+  left: 13px;
+  color: rgba(215,185,103,.86);
+  font-size: 11.2px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 1.5vw, 28px);
+}
+.nav a {
+  color: rgba(247,241,232,.78);
+  font-size: clamp(.92rem, .95vw, 1.08rem);
+  font-weight: 700;
+  letter-spacing: .08em;
+  transition: color .2s ease;
+}
+.nav a:hover,
+.nav a:focus-visible,
+.nav .nav-fanclub { color: var(--gold); }
+.header-social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header-social__link {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 50%;
+  background: rgba(255,255,255,.035);
+  color: var(--text);
+  font-family: var(--sans);
   font-size: 0;
 }
+.header-social__link::before { font-size: 15px; font-weight: 800; line-height: 1; }
+.header-social__link--x::before { content: "X"; }
+.header-social__link--youtube::before { content: "▶"; }
+.header-social__link--tiktok::before { content: "♪"; }
+.menu-toggle { display: none; }
 
-.music-footer .index-text-link[href="songs/songs.html"]::after {
-  content: "Songsへ進む";
-  font-size: clamp(1.18rem, 1.55vw, 1.58rem);
+main { min-height: 100vh; }
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #000;
+}
+.hero-bg,
+.hero-bg::before,
+.hero-bg::after {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hero-bg {
+  background-image: linear-gradient(180deg, rgba(0,0,0,.38), rgba(0,0,0,.72)), url("images/top.jpg");
+  transform: scale(1.05);
+}
+.hero-bg::before,
+.hero-bg::after { content: ""; opacity: 0; animation: heroFade 22s ease-in-out infinite; }
+.hero-bg::before {
+  background-image: linear-gradient(180deg, rgba(0,0,0,.36), rgba(0,0,0,.68)), url("images/index%20ver2.jpg");
+  background-position: 58% center;
+}
+.hero-bg::after {
+  background-image: linear-gradient(180deg, rgba(0,0,0,.38), rgba(0,0,0,.7)), url("images/top.jpg");
+  animation-delay: 11s;
+}
+.hero-light {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 48%, rgba(215,185,103,.14), transparent 28rem),
+    linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.5));
+}
+.hero__meta {
+  position: absolute;
+  top: calc(var(--header-h) + 34px);
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  width: min(100% - 40px, 780px);
+}
+.hero__meta span {
+  padding: 10px 24px;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 999px;
+  background: rgba(255,255,255,.07);
+  color: rgba(247,241,232,.78);
+  font-family: var(--sans);
+  font-size: .8rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+.hero__content {
+  position: relative;
+  z-index: 2;
+  width: min(100% - 44px, 960px);
+  margin: 0 auto;
+  text-align: center;
+}
+.hero h1,
+.page-title {
+  margin: 0;
+  font-size: clamp(4.6rem, 9vw, 9rem);
+  font-weight: 700;
+  line-height: .9;
+  letter-spacing: .035em;
+}
+.hero h1 {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .18em;
+}
+.jp-name { color: var(--gold); }
+.slash { color: rgba(247,241,232,.42); }
+.hero-catch,
+.page-subtitle {
+  margin: 22px auto 0;
+  color: rgba(247,241,232,.72);
+  font-family: var(--sans);
+  font-size: clamp(.95rem, 1.4vw, 1.35rem);
+  font-weight: 700;
+  letter-spacing: .13em;
+  line-height: 1.7;
 }
 
-.store-page .store-final .button.main-cta::after {
-  content: "Baseへ進む" !important;
+.results-bar {
+  overflow: hidden;
+  border-block: 1px solid rgba(215,185,103,.17);
+  background: rgba(9, 0, 5, .95);
+}
+.results-track {
+  display: flex;
+  width: max-content;
+  gap: 54px;
+  padding: 16px 0;
+  animation: ticker 40s linear infinite;
+}
+.results-track span {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  color: rgba(247,241,232,.72);
+  font-family: var(--sans);
+  font-size: .9rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+section { padding: clamp(72px, 7vw, 128px) 24px; }
+.section-heading,
+.index-section-heading { text-align: center; }
+.section-title,
+.index-section-title,
+.music h2,
+.social h2,
+.store-final h2,
+.lyrics-title {
+  margin: 0 0 clamp(34px, 4vw, 62px);
+  text-align: center;
+  font-size: clamp(2.5rem, 5vw, 5.2rem);
+  font-weight: 700;
+  letter-spacing: .06em;
+  line-height: 1;
+}
+.eyebrow { display: none; }
+
+.achievement-grid,
+.news-list,
+.live-list,
+.biography-list,
+.track-grid,
+.goods-grid,
+.disc-grid,
+.related-grid {
+  width: min(100%, var(--max));
+  margin: 0 auto;
+}
+.achievement-grid,
+.news-list,
+.live-list,
+.biography-list { display: grid; gap: 18px; }
+.achievement-item,
+.news-item,
+.live-item,
+.biography-item {
+  display: grid;
+  grid-template-columns: minmax(120px, 180px) 1fr;
+  gap: 28px;
+  padding: 22px 0;
+  border-top: 1px solid rgba(255,255,255,.12);
+  background: transparent;
+}
+.achievement-item:last-child,
+.news-item:last-child,
+.live-item:last-child,
+.biography-item:last-child { border-bottom: 1px solid rgba(255,255,255,.12); }
+.number,
+.news-date,
+.live-date,
+.biography-date {
+  color: var(--gold);
+  font-family: var(--serif-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+.achievement-label,
+.news-title,
+.live-title,
+.biography-title {
+  margin: 0;
+  color: rgba(247,241,232,.84);
+  font-size: clamp(1rem, 1.22vw, 1.25rem);
+  font-weight: 600;
+  letter-spacing: .04em;
+  line-height: 1.7;
+}
+.news-tag,
+.live-tag,
+.biography-tag { display: none; }
+
+.video-card,
+.preview-player__inner {
+  width: min(100%, 1040px);
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.11);
+  background: rgba(255,255,255,.035);
+}
+.video-frame,
+.song-video-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+.video-frame iframe,
+.video-frame video,
+.song-video-frame iframe,
+.featured-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: cover;
+}
+.index-action-row,
+.music-footer,
+.video-cta,
+.store-final { text-align: center; }
+.index-text-link,
+.button.main-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 28px;
+  color: var(--gold);
+  font-size: clamp(1.18rem, 1.55vw, 1.58rem);
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: .06em;
+  transform: skew(-8deg);
+}
+.index-text-link:hover,
+.button.main-cta:hover { color: var(--gold-bright); }
+
+.track-grid,
+.goods-grid,
+.disc-grid,
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(28px, 3vw, 48px);
+}
+.track-card,
+.goods-card,
+.disc-card {
+  display: block;
+  background: transparent;
+  color: var(--text);
+}
+.track-card__index,
+.track-card__type,
+.goods-category { display: none; }
+.track-card__image,
+.goods-card__image {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: rgba(255,255,255,.04);
+}
+.goods-card__image { aspect-ratio: 1 / 1; }
+.track-card__image img,
+.goods-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease, filter .5s ease;
+}
+.track-card:hover img,
+.goods-card:hover img { transform: scale(1.035); filter: brightness(1.08); }
+.track-card__content,
+.goods-card__content { padding-top: 12px; }
+.track-card h3,
+.goods-card h3,
+.disc-card h3 {
+  margin: 0;
+  color: rgba(247,241,232,.96);
+  font-size: clamp(1.18rem, 1.75vw, 2rem);
+  font-weight: 700;
+  letter-spacing: .045em;
+  line-height: 1.25;
+}
+.track-card__content::before {
+  display: block;
+  margin-bottom: 7px;
+  color: rgba(215,185,103,.86);
+  font-size: .86rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+.track-card[href*="Sakayume"] .track-card__content::before { content: "2021.11.01"; }
+.track-card[href*="BE-TRIP"] .track-card__content::before { content: "2022.06.06"; }
+.track-card[href*="Nextinnovation"] .track-card__content::before { content: "2023.11.23"; }
+.track-card[href*="Freedom"] .track-card__content::before { content: "2021.04.15"; }
+.track-card[href*="KeepOnlyOneLady"] .track-card__content::before { content: "2021.06.03"; }
+.track-card[href*="akatsuki"] .track-card__content::before { content: "2021.07.21"; }
+.track-card[href*="JENESIS"] .track-card__content::before { content: "2022.01.31"; }
+.track-card[href*="harutoakikaze"] .track-card__content::before { content: "2022.09.11"; }
+.track-card[href*="amaterasu"] .track-card__content::before { content: "2023.06.17"; }
+.track-card[href*="Breakingallthechains"] .track-card__content::before { content: "2024.04.24"; }
+.track-card[href*="The Beast"] .track-card__content::before { content: "2024.06.20"; }
+.track-card[href*="rinne"] .track-card__content::before { content: "2024.12.01"; }
+.track-card[href*="uno"] .track-card__content::before { content: "2025.11.24"; }
+
+.page-hero {
+  min-height: 44svh;
+  display: grid;
+  place-items: center;
+  padding-top: calc(var(--header-h) + 80px);
+  background:
+    radial-gradient(circle at 80% 0%, rgba(45,60,70,.34), transparent 38%),
+    linear-gradient(135deg, #171816 0%, #13060c 58%, #1b2131 100%);
+  text-align: center;
+}
+.page-hero .hero__content { width: min(100% - 44px, 980px); }
+.page-title { font-size: clamp(3.4rem, 6.7vw, 7.2rem); overflow-wrap: anywhere; }
+
+.lyrics-section,
+.preview-player,
+.profile-biography,
+.discography,
+.contact-section,
+.store-category,
+.store-grid { width: min(100%, var(--max)); margin: 0 auto; }
+.lyrics,
+.profile-text,
+.contact-form { width: min(100%, 880px); margin: 0 auto; }
+.lyrics p,
+.profile-text p,
+.discography-list li {
+  color: rgba(247,241,232,.82);
+  font-size: clamp(1.05rem, 1.28vw, 1.32rem);
+  line-height: 2.05;
+  letter-spacing: .045em;
+}
+.lyrics-highlight { color: var(--gold); font-weight: 700; }
+.lyrics-sub { color: rgba(247,241,232,.66); }
+.preview-player__inner { padding: clamp(28px, 4vw, 56px); border-radius: 26px; }
+.preview-player h2 { margin: 0 0 24px; text-align: center; font-size: clamp(2rem, 3.8vw, 4.2rem); line-height: 1.08; }
+.preview-player audio { width: 100%; }
+.store-final h2,
+.store-final p { display: none; }
+body:not(.store-page) .preview-player ~ .store-final::before,
+body:not(.store-page) .preview-player ~ .store-final .button.main-cta[href="songs.html"],
+body:not(.store-page) .store-final .button.main-cta + .button.main-cta,
+body:not(.store-page) .store-final .button.main-cta + .button.main-cta::before { display: none; content: none; }
+body:not(.store-page) .store-final .button.main-cta::after { content: "Tunecoreへ進む"; }
+.store-page .store-final .button.main-cta::after { content: "Baseへ進む"; }
+.store-final .button.main-cta { font-size: 0; }
+.store-final .button.main-cta::after { font-size: clamp(1.18rem, 1.55vw, 1.58rem); }
+
+.profile-visual { width: min(100%, 1040px); margin: 0 auto; }
+.profile-visual img { width: 100%; height: auto; }
+.profile-biography__inner,
+.profile-card {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  padding: clamp(34px, 5vw, 72px);
+  border: 1px solid rgba(255,255,255,.1);
+  background: rgba(0,0,0,.28);
+}
+.profile-title { margin: 0 0 24px; font-size: clamp(2.4rem, 5vw, 5rem); }
+.discography-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+.discography-list li { display: flex; justify-content: space-between; gap: 24px; border-bottom: 1px solid rgba(255,255,255,.08); padding-bottom: 12px; }
+.discography-list span { color: var(--gold); white-space: nowrap; }
+
+.store-category { text-align: center; }
+.store-category-title { display: flex; justify-content: center; margin: 0; }
+.store-category-image { width: min(360px, 72vw); height: auto; }
+.store-category-description {
+  max-width: 760px;
+  margin: 22px auto 0;
+  color: rgba(247,241,232,.72);
+  font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+  line-height: 1.85;
+  letter-spacing: .05em;
+}
+.goods-price { margin: 8px 0 0; color: var(--gold); font-size: 1.1rem; }
+
+.contact-form { display: grid; gap: 22px; }
+.form-group { display: grid; gap: 10px; }
+.form-group label { color: rgba(247,241,232,.82); font-size: 1.05rem; letter-spacing: .05em; }
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 16px 18px;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 999px;
+  background: rgba(255,255,255,.035);
+  color: var(--text);
+}
+.form-group textarea { min-height: 180px; border-radius: 18px; resize: vertical; }
+
+.social__links { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; }
+.social-link {
+  min-width: 58px;
+  height: 58px;
+  display: inline-grid;
+  place-items: center;
+  padding: 0 18px;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 999px;
+  background: rgba(255,255,255,.04);
+  font-family: var(--sans);
+  font-weight: 800;
+}
+.footer { padding: 44px 24px; text-align: center; color: rgba(247,241,232,.52); font-size: .86rem; letter-spacing: .04em; }
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity .8s ease, transform .8s ease; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+@keyframes heroFade { 0%, 12% { opacity: 0; } 22%, 48% { opacity: 1; } 58%, 100% { opacity: 0; } }
+@keyframes ticker { 0% { transform: translate3d(0,0,0); } 100% { transform: translate3d(-50%,0,0); } }
+
+@media (max-width: 980px) {
+  .header { padding-inline: 18px; }
+  .nav { gap: 14px; }
+  .track-grid,
+  .goods-grid,
+  .disc-grid,
+  .related-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 768px) {
-  .music-footer .index-text-link[href="songs/songs.html"]::after {
-    font-size: clamp(1.2rem, 5.4vw, 1.52rem);
+  :root { --header-h: 70px; }
+  .page-glow,
+  .hero-light,
+  .featured-video { display: none; }
+  .header {
+    position: sticky;
+    height: auto;
+    min-height: var(--header-h);
+    padding: 14px 18px;
+    background: rgba(7,8,8,.96);
   }
+  .brand-button { flex-basis: 158px; width: 158px; height: 48px; }
+  .brand-button::before { top: 6px; font-size: 18.5px; }
+  .brand-button::after { top: 33px; left: 10px; font-size: 9.6px; letter-spacing: .1em; }
+  .menu-toggle {
+    width: 48px;
+    height: 48px;
+    display: inline-grid;
+    place-items: center;
+    padding: 12px;
+    border: 0;
+    border-radius: 14px;
+    background: rgba(255,255,255,.08);
+    color: var(--text);
+  }
+  .menu-toggle span { display: block; width: 24px; height: 2px; margin: 3px 0; background: currentColor; border-radius: 999px; }
+  .nav {
+    position: absolute;
+    inset: var(--header-h) 0 auto 0;
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    padding: 14px 22px 20px;
+    background: #050505;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+  .nav.active { display: flex; }
+  .nav a { padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.08); font-size: 1.08rem; }
+  .header-social { display: none; }
+  .hero { min-height: 72svh; }
+  .hero-bg { background-position: 72% center; transform: none; }
+  .hero h1 { font-size: clamp(3.6rem, 18vw, 6.4rem); }
+  .hero__meta { top: calc(var(--header-h) + 28px); }
+  .hero__meta span { padding: 8px 16px; font-size: .72rem; }
+  .results-track { animation: none; width: auto; flex-wrap: wrap; justify-content: center; gap: 10px 18px; padding: 12px 18px; }
+  .results-track span { white-space: normal; font-size: .86rem; }
+  .results-track span:nth-child(n+8) { display: none; }
+  section { padding: 54px 18px; }
+  .achievement-item,
+  .news-item,
+  .live-item,
+  .biography-item { grid-template-columns: 1fr; gap: 8px; padding: 18px 0; }
+  .track-grid,
+  .goods-grid,
+  .disc-grid,
+  .related-grid { grid-template-columns: 1fr; gap: 34px; }
+  .track-card__image { aspect-ratio: 1 / 1; }
+  .page-hero { min-height: 42svh; padding-top: 84px; }
+  .page-title { font-size: clamp(2.8rem, 14vw, 5rem); }
+  .lyrics p,
+  .profile-text p,
+  .discography-list li { font-size: 1rem; line-height: 1.95; }
+  .preview-player__inner { padding: 28px 18px; border-radius: 22px; }
+  .preview-player h2 { font-size: clamp(1.55rem, 7vw, 2.35rem); overflow-wrap: anywhere; }
 }
