@@ -1,9 +1,10 @@
-/* Minimal mobile stylesheet for Safari crash isolation. PC styles are not affected. */
+/* YUKI / 佑樹 mobile stylesheet - no important flags */
 :root {
   --bg: #050505;
   --text: #f7f1e8;
   --muted: rgba(247,241,232,.72);
   --gold: #d7b967;
+  --gold-bright: #f1d88a;
   --serif: "Cormorant Garamond", "Times New Roman", serif;
   --sans: system-ui, -apple-system, BlinkMacSystemFont, "Noto Sans JP", sans-serif;
 }
@@ -16,15 +17,16 @@ body {
   background: linear-gradient(180deg, #050505 0%, #10060b 56%, #050505 100%);
   color: var(--text);
   font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
 }
 a { color: inherit; text-decoration: none; }
 img, video, iframe, audio { max-width: 100%; height: auto; }
-video, .featured-video, .page-glow, .hero-light, .hero-bg { display: none; }
+video, .featured-video, .page-glow, .hero-light { display: none; }
 
 .header {
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 20;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -33,9 +35,21 @@ video, .featured-video, .page-glow, .hero-light, .hero-bg { display: none; }
   background: rgba(7,8,8,.96);
   border-bottom: 1px solid rgba(255,255,255,.08);
 }
-.brand-button { font-family: var(--serif); font-weight: 700; font-size: 20px; }
-.brand-button span, .brand-chara { display: none; }
-.brand-button::before { content: "YUKI / 佑樹"; }
+.brand-button {
+  position: relative;
+  display: block;
+  width: 158px;
+  height: 48px;
+  color: var(--text);
+  font-family: var(--serif);
+  overflow: hidden;
+}
+.brand-button span,
+.brand-chara { display: none; }
+.brand-button::before,
+.brand-button::after { position: absolute; left: 2px; white-space: nowrap; }
+.brand-button::before { content: "YUKI / 佑樹"; top: 6px; font-size: 18.5px; font-weight: 700; letter-spacing: .025em; }
+.brand-button::after { content: "Official Site"; top: 33px; left: 10px; color: var(--gold); font-size: 9.6px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
 .menu-toggle {
   width: 48px;
   height: 48px;
@@ -50,11 +64,13 @@ video, .featured-video, .page-glow, .hero-light, .hero-bg { display: none; }
 .menu-toggle span { display:block; width:24px; height:2px; margin:3px 0; background: currentColor; border-radius:999px; }
 .nav { display:none; position:absolute; left:0; right:0; top:70px; padding:14px 22px 20px; background:#050505; border-bottom:1px solid rgba(255,255,255,.08); }
 .nav.active { display:flex; flex-direction:column; }
-.nav a { padding:12px 0; border-bottom:1px solid rgba(255,255,255,.08); font-weight:700; }
+.nav a { padding:12px 0; border-bottom:1px solid rgba(255,255,255,.08); font-weight:700; letter-spacing:.06em; }
+.nav-fanclub { color: var(--gold); }
 .header-social { display:none; }
 
 main { padding-top: 0; }
-.hero, .page-hero {
+.hero,
+.page-hero {
   min-height: 58svh;
   display: grid;
   place-items: center;
@@ -63,57 +79,85 @@ main { padding-top: 0; }
   background: linear-gradient(135deg, #050505 0%, #15070e 56%, #1b2131 100%);
   overflow: hidden;
 }
-.hero__content { width: min(100%, 680px); }
-.hero h1, .page-title {
+.hero { position: relative; min-height: 72svh; background: #000; }
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(180deg, rgba(0,0,0,.42), rgba(0,0,0,.7)), url("images/top.jpg");
+  background-size: cover;
+  background-position: 72% center;
+}
+.hero-bg::before,
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: 68% center;
+  opacity: 0;
+  animation: mobileHeroFade 20s ease-in-out infinite;
+}
+.hero-bg::before { background-image: linear-gradient(180deg, rgba(0,0,0,.4), rgba(0,0,0,.66)), url("images/index%20ver2.jpg"); }
+.hero-bg::after { background-image: linear-gradient(180deg, rgba(0,0,0,.42), rgba(0,0,0,.7)), url("images/top.jpg"); animation-delay: 10s; }
+.hero__content { position: relative; z-index: 2; width: min(100%, 680px); }
+.hero h1,
+.page-title {
   margin: 0;
   font-family: var(--serif);
   font-size: clamp(3.2rem, 16vw, 6rem);
   line-height: .95;
   letter-spacing: .04em;
 }
+.hero h1 { display: flex; justify-content: center; align-items: baseline; flex-wrap: wrap; gap: .18em; }
 .jp-name, .nav-fanclub { color: var(--gold); }
 .slash { color: rgba(247,241,232,.45); }
-.hero-catch { margin: 18px 0 0; color: var(--muted); font-weight:700; letter-spacing:.12em; }
+.hero-catch,
+.page-subtitle { margin: 18px 0 0; color: var(--muted); font-weight:700; letter-spacing:.12em; line-height:1.7; }
+.hero__meta { display: none; }
 
-.results-bar { padding: 12px 18px; border-block:1px solid rgba(215,185,103,.16); background:#0b0307; }
-.results-track { display:flex; flex-wrap:wrap; justify-content:center; gap:10px 18px; }
-.results-track span { font-size:.86rem; color:var(--muted); font-weight:700; }
-.results-track span:nth-child(n+8) { display:none; }
+.results-bar { padding: 12px 18px; border-block:1px solid rgba(215,185,103,.16); background:#0b0307; overflow:hidden; }
+.results-track { display:flex; width:max-content; gap:34px; animation: mobileTicker 34s linear infinite; }
+.results-track span { flex:0 0 auto; white-space:nowrap; font-size:.86rem; color:var(--muted); font-weight:700; letter-spacing:.08em; }
 
 section { padding: 54px 18px; }
-.section-title, .index-section-title, .music h2, .social h2 {
+.section-title, .index-section-title, .music h2, .social h2, .store-final h2 {
   margin:0 0 28px;
   text-align:center;
   font-family:var(--serif);
   font-size: clamp(2rem, 10vw, 3.4rem);
 }
-.achievement-grid, .track-grid, .social__links { width:min(100%,820px); margin:0 auto; }
-.achievement-grid, .track-grid { display:grid; gap:22px; }
-.achievement-item, .video-card { padding:20px; border:1px solid rgba(255,255,255,.1); background:rgba(255,255,255,.035); }
-.number { color:var(--gold); font-weight:700; letter-spacing:.1em; }
-.achievement-label { margin-top:8px; color:var(--muted); line-height:1.7; }
-.video-frame { aspect-ratio:16/9; background:#000; }
-.track-card__image { aspect-ratio:1/1; overflow:hidden; background:rgba(255,255,255,.04); }
-.track-card__image img { width:100%; height:100%; object-fit:cover; display:block; }
-.track-card__index, .track-card__type { display:none; }
-.track-card h3 { margin:12px 0 0; font-size:1.35rem; }
-.index-action-row, .music-footer, .video-cta { text-align:center; }
-.index-text-link { display:inline-block; margin-top:24px; color:var(--gold); font-family:var(--serif); font-size:1.35rem; font-style:italic; font-weight:700; }
+.achievement-grid, .track-grid, .social__links, .goods-grid, .disc-grid { width:min(100%,820px); margin:0 auto; }
+.achievement-grid, .track-grid, .goods-grid, .disc-grid { display:grid; gap:28px; }
+.achievement-item, .news-item, .live-item, .biography-item, .video-card, .preview-player__inner { padding:20px; border:1px solid rgba(255,255,255,.1); background:rgba(255,255,255,.035); }
+.number, .news-date, .live-date, .biography-date { color:var(--gold); font-weight:700; letter-spacing:.1em; }
+.achievement-label, .news-title, .live-title, .biography-title { margin-top:8px; color:var(--muted); line-height:1.7; }
+.video-frame, .song-video-frame { aspect-ratio:16/9; background:#000; }
+.video-frame iframe, .song-video-frame iframe { width:100%; height:100%; border:0; }
+.track-card__image, .goods-card__image { aspect-ratio:1/1; overflow:hidden; background:rgba(255,255,255,.04); }
+.track-card__image img, .goods-card__image img { width:100%; height:100%; object-fit:cover; display:block; }
+.track-card__index, .track-card__type, .goods-category { display:none; }
+.track-card h3, .goods-card h3 { margin:12px 0 0; font-family:var(--serif); font-size:1.35rem; }
+.index-action-row, .music-footer, .video-cta, .store-final { text-align:center; }
+.index-text-link, .button.main-cta { display:inline-block; margin-top:24px; color:var(--gold); font-family:var(--serif); font-size:1.35rem; font-style:italic; font-weight:700; transform:skew(-8deg); }
+
+.lyrics p, .profile-text p, .discography-list li { color: var(--muted); font-size: 1rem; line-height: 1.95; letter-spacing: .04em; }
+.preview-player__inner { border-radius: 22px; }
+.preview-player h2 { margin: 0 0 24px; text-align: center; font-family: var(--serif); font-size: clamp(1.55rem, 7vw, 2.35rem); overflow-wrap: anywhere; }
+.preview-player audio { width: 100%; }
+.store-final h2,
+.store-final p { display: none; }
+body:not(.store-page) .preview-player ~ .store-final::before { content: none; display: none; }
+body:not(.store-page) .preview-player ~ .store-final .button.main-cta[href="songs.html"] { display: none; }
+body:not(.store-page) .store-final .button.main-cta + .button.main-cta,
+body:not(.store-page) .store-final .button.main-cta + .button.main-cta::before { display: none; content: none; }
+body:not(.store-page) .store-final .button.main-cta::after { content: "Tunecoreへ進む"; font-size: 1.35rem; }
+.store-page .store-final .button.main-cta::after { content: "Baseへ進む"; font-size: 1.35rem; }
+.store-final .button.main-cta { font-size: 0; }
+
 .social__links { display:flex; justify-content:center; flex-wrap:wrap; gap:12px; }
 .social-link { display:inline-grid; place-items:center; min-width:54px; height:54px; padding:0 16px; border:1px solid rgba(255,255,255,.16); border-radius:999px; background:rgba(255,255,255,.04); font-weight:700; }
-
-body:not(.store-page) .preview-player ~ .store-final::before {
-  content: none;
-  display: none;
-}
-body:not(.store-page) .preview-player ~ .store-final .button.main-cta[href="songs.html"] {
-  display: none;
-}
-body:not(.store-page) .store-final .button.main-cta + .button.main-cta,
-body:not(.store-page) .store-final .button.main-cta + .button.main-cta::before {
-  display: none;
-  content: none;
-}
-
 .footer { padding:34px 18px; text-align:center; color:rgba(247,241,232,.52); font-size:.82rem; }
 .reveal { opacity:1; transform:none; }
+
+@keyframes mobileHeroFade { 0%, 10% { opacity: 0; } 18%, 48% { opacity: 1; } 58%, 100% { opacity: 0; } }
+@keyframes mobileTicker { 0% { transform: translate3d(0,0,0); } 100% { transform: translate3d(-50%,0,0); } }
