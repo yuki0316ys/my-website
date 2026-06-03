@@ -270,6 +270,11 @@ section { padding: clamp(54px, 13vw, 86px) 18px; }
   aspect-ratio: 16 / 9;
   background: #000;
 }
+.video-frame {
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.2)),
+    url("images/sakayume.jpg") center / cover no-repeat;
+}
 .video-frame iframe,
 .video-frame video,
 .song-video-frame iframe,
@@ -281,6 +286,7 @@ section { padding: clamp(54px, 13vw, 86px) 18px; }
   border: 0;
   object-fit: cover;
 }
+.featured-video { display: none !important; }
 
 .track-grid,
 .goods-grid,
