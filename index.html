@@ -21,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=2026060302" media="(min-width: 769px)">
-  <link rel="stylesheet" href="mobile.css?v=2026060301" media="(max-width: 768px)">
+  <link rel="stylesheet" href="mobile.css?v=2026060302" media="(max-width: 768px)">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -148,9 +148,7 @@
 
       <div class="video-card">
         <div class="video-frame">
-          <video class="featured-video" autoplay muted loop playsinline webkit-playsinline preload="metadata">
-            <source src="video/hero.mp4" type="video/mp4">
-          </video>
+          <video class="featured-video" autoplay muted loop playsinline webkit-playsinline preload="none" poster="images/sakayume.jpg" data-video-src="video/hero.mp4" aria-label="逆夢 featured video"></video>
         </div>
       </div>
 
@@ -219,6 +217,22 @@
   </main>
 
   <footer class="footer"><p>&copy; 2026 YUKI / 佑樹（YUKI OFFCIAL STUDIO PRO 01）. All rights reserved.</p></footer>
+
+  <script>
+    (function () {
+      if (!window.matchMedia("(min-width: 769px)").matches) return;
+
+      const video = document.querySelector(".featured-video[data-video-src]");
+      if (!video) return;
+
+      const source = document.createElement("source");
+      source.src = video.dataset.videoSrc;
+      source.type = "video/mp4";
+      video.appendChild(source);
+      video.load();
+      video.play().catch(() => {});
+    })();
+  </script>
 
   <script>
     if (window.matchMedia("(min-width: 769px)").matches) {
