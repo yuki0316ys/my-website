@@ -16,11 +16,22 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="mobile-safe.css?v=2026060338" media="(max-width: 768px)">
+<link rel="stylesheet" href="mobile-safe.css?v=2026060354" media="(max-width: 768px)">
 <style>
   @media (min-width: 769px) {
     html.desktop-loading body { opacity: 0; }
     html.desktop-ready body { opacity: 1; transition: opacity .12s ease; }
+  }
+  .store-page .store-final .button.main-cta { font-size: 0 !important; }
+  .store-page .store-final .button.main-cta::after {
+    content: "BASEへ進む" !important;
+    display: inline-flex !important;
+    color: #d7b967 !important;
+    font-size: clamp(1.18rem, 1.55vw, 1.58rem) !important;
+    font-style: italic !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.045em !important;
+    line-height: 1.1 !important;
   }
 </style>
 <script>
@@ -28,7 +39,7 @@
     document.documentElement.classList.add("desktop-loading");
     const desktopStylesheet = document.createElement("link");
     desktopStylesheet.rel = "stylesheet";
-    desktopStylesheet.href = "style.css?v=2026060338";
+    desktopStylesheet.href = "style.css?v=2026060354";
     desktopStylesheet.onload = () => {
       document.documentElement.classList.remove("desktop-loading");
       document.documentElement.classList.add("desktop-ready");
@@ -88,7 +99,7 @@
     <a class="goods-card" href="#"><div class="goods-card__image"><img src="images/store-Miller.jpg" alt="YUKI LOGO T-SHIRT"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>Miller</h3><p class="goods-price">¥3,980</p></div></a>
   </div>
 </section>
-<section class="store-final"><h2>Next Action</h2><p>全商品はBASEにて販売中。</p><a href="https://yukiosp01.base.shop/" target="_blank" class="button main-cta">STOREへ進む</a></section>
+<section class="store-final"><h2>Next Action</h2><p>全商品はBASEにて販売中。</p><a href="https://yukiosp01.base.shop/" target="_blank" class="button main-cta">BASEへ進む</a></section>
 <footer class="footer"><p>&copy; 2026 YUKI / 佑樹（YUKI OFFCIAL STUDIO PRO 01）. All rights reserved.</p></footer>
 </main>
 <script>
