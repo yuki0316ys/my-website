@@ -16,13 +16,32 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="mobile-safe.css?v=2026060314" media="(max-width: 768px)">
+<link rel="stylesheet" href="mobile-safe.css?v=2026060338" media="(max-width: 768px)">
+<style>
+  @media (min-width: 769px) {
+    html.desktop-loading body { opacity: 0; }
+    html.desktop-ready body { opacity: 1; transition: opacity .12s ease; }
+  }
+</style>
 <script>
   if (window.matchMedia("(min-width: 769px)").matches) {
+    document.documentElement.classList.add("desktop-loading");
     const desktopStylesheet = document.createElement("link");
     desktopStylesheet.rel = "stylesheet";
-    desktopStylesheet.href = "style.css?v=2026060314";
+    desktopStylesheet.href = "style.css?v=2026060338";
+    desktopStylesheet.onload = () => {
+      document.documentElement.classList.remove("desktop-loading");
+      document.documentElement.classList.add("desktop-ready");
+    };
+    desktopStylesheet.onerror = () => {
+      document.documentElement.classList.remove("desktop-loading");
+      document.documentElement.classList.add("desktop-ready");
+    };
     document.head.appendChild(desktopStylesheet);
+    setTimeout(() => {
+      document.documentElement.classList.remove("desktop-loading");
+      document.documentElement.classList.add("desktop-ready");
+    }, 1200);
   }
 </script>
 <link rel="manifest" href="manifest.json">
@@ -39,95 +58,45 @@
   "@type":"Store",
   "name":"YUKI / 佑樹 Official Store",
   "url":"https://yuki-music.jp/store.html",
-  "brand":{
-    "@type":"Brand",
-    "name":"YUKI / 佑樹"
-  }
+  "brand":{"@type":"Brand","name":"YUKI / 佑樹"}
 }
 </script>
 </head>
 <body class="store-page">
 <div class="page-glow" aria-hidden="true"></div>
 <header class="header">
-<a class="brand-button" href="index.html">
-  <span>HOME</span>
-  <img src="images/chara.png" alt="YUKI character" class="brand-chara">
-</a>
+<a class="brand-button" href="index.html"><span>HOME</span><img src="images/chara.png" alt="YUKI character" class="brand-chara"></a>
 <nav class="nav" id="nav">
-  <a href="news.html">News</a>
-  <a href="live.html">Live</a>
-  <a href="profile.html">Profile</a>
-  <a href="biography.html">Biography</a>
-  <a href="songs/songs.html">Songs</a>
-  <a href="store.html">Store</a>
-  <a href="contact.html">Contact</a>
-  <a class="nav-fanclub" href="https://www.youtube.com/channel/UCdZMz61Y8oS4kfC9CP4esTA/join" target="_blank" rel="noopener noreferrer">FANCLUB</a>
+  <a href="news.html">News</a><a href="live.html">Live</a><a href="profile.html">Profile</a><a href="biography.html">Biography</a><a href="songs/songs.html">Songs</a><a href="store.html">Store</a><a href="contact.html">Contact</a><a class="nav-fanclub" href="https://www.youtube.com/channel/UCdZMz61Y8oS4kfC9CP4esTA/join" target="_blank" rel="noopener noreferrer">FANCLUB</a>
 </nav>
-<div class="header-social" aria-label="SNS links">
-  <a class="header-social__link header-social__link--x" href="https://x.com/Youking74514090" target="_blank" rel="noopener noreferrer" aria-label="X"></a>
-  <a class="header-social__link header-social__link--youtube" href="https://www.youtube.com/@YUKIOFFICIALSTUDIOPRO01" target="_blank" rel="noopener noreferrer" aria-label="YouTube"></a>
-  <a class="header-social__link header-social__link--tiktok" href="https://www.tiktok.com/@yukiosp01?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok"></a>
-</div>
+<div class="header-social" aria-label="SNS links"><a class="header-social__link header-social__link--x" href="https://x.com/Youking74514090" target="_blank" rel="noopener noreferrer" aria-label="X"></a><a class="header-social__link header-social__link--youtube" href="https://www.youtube.com/@YUKIOFFICIALSTUDIOPRO01" target="_blank" rel="noopener noreferrer" aria-label="YouTube"></a><a class="header-social__link header-social__link--tiktok" href="https://www.tiktok.com/@yukiosp01?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok"></a></div>
 <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
 </header>
-<section class="page-hero">
-  <div class="hero-light"></div>
-  <div class="hero__content"><h1 class="page-title">Store</h1></div>
-</section>
+<section class="page-hero"><div class="hero-light"></div><div class="hero__content"><h1 class="page-title">Store</h1></div></section>
 <main>
 <section class="store-category">
-  <h2 class="store-category-title">
-    <img src="images/apparel.png" alt="Apparel" class="store-category-image">
-  </h2>
-  <p class="store-category-description">
-    主張しすぎない。<br>
-    でも、ちゃんと好きでいられる。<br>
-    YUKI / 佑樹が手掛ける、×APPAREL×のミニマルウェア。
-  </p>
+  <h2 class="store-category-title"><img src="images/apparel.png" alt="Apparel" class="store-category-image"></h2>
+  <p class="store-category-description">主張しすぎない。<br>でも、ちゃんと好きでいられる。<br>YUKI / 佑樹が手掛ける、×APPAREL×のミニマルウェア。</p>
 </section>
 <section class="store-grid">
   <div class="goods-grid">
-    <a class="goods-card" href="#">
-      <div class="goods-card__image"><img src="images/store-shirt.jpg" alt="YUKI LOGO T-SHIRT"></div>
-      <div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>shirt</h3><p class="goods-price">¥4,980</p></div>
-    </a>
-    <a class="goods-card" href="#">
-      <div class="goods-card__image"><img src="images/store-sweat.jpg" alt="YUKI LOGO T-SHIRT"></div>
-      <div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>pants</h3><p class="goods-price">¥5,980</p></div>
-    </a>
-    <a class="goods-card" href="#">
-      <div class="goods-card__image"><img src="images/store-food.jpg" alt="YUKI LOGO T-SHIRT"></div>
-      <div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>Parker</h3><p class="goods-price">¥8,980</p></div>
-    </a>
-    <a class="goods-card" href="#">
-      <div class="goods-card__image"><img src="images/store-towel.jpg" alt="YUKI LOGO T-SHIRT"></div>
-      <div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>Face towel</h3><p class="goods-price">¥3,980</p></div>
-    </a>
-    <a class="goods-card" href="#">
-      <div class="goods-card__image"><img src="images/store-bag.jpg" alt="YUKI LOGO T-SHIRT"></div>
-      <div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>Bag</h3><p class="goods-price">¥4,980</p></div>
-    </a>
-    <a class="goods-card" href="#">
-      <div class="goods-card__image"><img src="images/store-Miller.jpg" alt="YUKI LOGO T-SHIRT"></div>
-      <div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>Miller</h3><p class="goods-price">¥3,980</p></div>
-    </a>
+    <a class="goods-card" href="#"><div class="goods-card__image"><img src="images/store-shirt.jpg" alt="YUKI LOGO T-SHIRT"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>shirt</h3><p class="goods-price">¥4,980</p></div></a>
+    <a class="goods-card" href="#"><div class="goods-card__image"><img src="images/store-sweat.jpg" alt="YUKI LOGO T-SHIRT"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>pants</h3><p class="goods-price">¥5,980</p></div></a>
+    <a class="goods-card" href="#"><div class="goods-card__image"><img src="images/store-food.jpg" alt="YUKI LOGO T-SHIRT"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>Parker</h3><p class="goods-price">¥8,980</p></div></a>
+    <a class="goods-card" href="#"><div class="goods-card__image"><img src="images/store-towel.jpg" alt="YUKI LOGO T-SHIRT"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>Face towel</h3><p class="goods-price">¥3,980</p></div></a>
+    <a class="goods-card" href="#"><div class="goods-card__image"><img src="images/store-bag.jpg" alt="YUKI LOGO T-SHIRT"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>Bag</h3><p class="goods-price">¥4,980</p></div></a>
+    <a class="goods-card" href="#"><div class="goods-card__image"><img src="images/store-Miller.jpg" alt="YUKI LOGO T-SHIRT"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>Miller</h3><p class="goods-price">¥3,980</p></div></a>
   </div>
 </section>
-<section class="store-final">
-  <h2>Next Action</h2>
-  <p>全商品はBASEにて販売中。</p>
-  <a href="https://yukiosp01.base.shop/" target="_blank" class="button main-cta">STOREへ進む</a>
-</section>
+<section class="store-final"><h2>Next Action</h2><p>全商品はBASEにて販売中。</p><a href="https://yukiosp01.base.shop/" target="_blank" class="button main-cta">STOREへ進む</a></section>
 <footer class="footer"><p>&copy; 2026 YUKI / 佑樹（YUKI OFFCIAL STUDIO PRO 01）. All rights reserved.</p></footer>
 </main>
 <script>
 window.addEventListener("scroll", () => {
   const header = document.querySelector(".header");
-  if (window.scrollY > 50) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
-  }
+  if (!header) return;
+  if (window.scrollY > 50) { header.classList.add("scrolled"); }
+  else { header.classList.remove("scrolled"); }
 });
 const menuToggle = document.getElementById("menuToggle");
 const nav = document.getElementById("nav");
