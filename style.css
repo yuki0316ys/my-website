@@ -379,7 +379,7 @@ section { padding: clamp(72px, 7vw, 128px) 24px; }
 .button.main-cta:hover { color: var(--gold-bright); }
 
 .track-grid,
-goods-grid,
+.goods-grid,
 .disc-grid,
 .related-grid {
   display: grid;
