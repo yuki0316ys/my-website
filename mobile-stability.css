@@ -2,15 +2,15 @@
    Purpose: prevent iPhone Safari repeated reload crashes by disabling heavy mobile animations/layers. */
 @media (max-width: 768px) {
   *, *::before, *::after {
-    animation: none !important;
-    transition-duration: 0s !important;
-    scroll-behavior: auto !important;
+    animation: none;
+    transition-duration: 0s;
+    scroll-behavior: auto;
   }
 
   html,
   body {
-    overflow-x: hidden !important;
-    text-rendering: auto !important;
+    overflow-x: hidden;
+    text-rendering: auto;
   }
 
   .page-glow,
@@ -19,65 +19,65 @@
   .hero::after,
   .hero-bg::before,
   .hero-bg::after {
-    content: none !important;
-    display: none !important;
-    background: none !important;
-    background-image: none !important;
-    filter: none !important;
-    opacity: 0 !important;
-    transform: none !important;
-    will-change: auto !important;
+    content: none;
+    display: none;
+    background: none;
+    background-image: none;
+    filter: none;
+    opacity: 0;
+    transform: none;
+    will-change: auto;
   }
 
   .hero,
   .page-hero {
-    min-height: 62svh !important;
-    overflow: hidden !important;
-    contain: paint !important;
+    min-height: 62svh;
+    overflow: hidden;
+    contain: paint;
   }
 
   .hero-bg {
-    position: absolute !important;
-    inset: 0 !important;
-    background-color: #050505 !important;
-    background-image: linear-gradient(135deg, #050505 0%, #13060c 55%, #1b2131 100%) !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    filter: none !important;
-    opacity: 1 !important;
-    transform: none !important;
-    will-change: auto !important;
+    position: absolute;
+    inset: 0;
+    background-color: #050505;
+    background-image: linear-gradient(135deg, #050505 0%, #13060c 55%, #1b2131 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: none;
+    opacity: 1;
+    transform: none;
+    will-change: auto;
   }
 
   .results-track {
-    animation: none !important;
-    transform: none !important;
-    will-change: auto !important;
-    width: auto !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    padding-inline: 16px !important;
+    animation: none;
+    transform: none;
+    will-change: auto;
+    width: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-inline: 16px;
   }
 
   .results-track span:nth-child(n+8) {
-    display: none !important;
+    display: none;
   }
 
   img,
   video,
   iframe {
-    max-width: 100% !important;
+    max-width: 100%;
     height: auto;
   }
 
   video,
   .featured-video {
-    display: none !important;
+    display: none;
   }
 
   .reveal {
-    opacity: 1 !important;
-    transform: none !important;
+    opacity: 1;
+    transform: none;
   }
 }

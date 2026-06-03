@@ -69,6 +69,7 @@ video, .featured-video, .page-glow, .hero-light { display: none; }
 .header-social { display:none; }
 
 main { padding-top: 0; }
+.page-hero + main { min-height: auto; }
 .hero,
 .page-hero {
   min-height: 58svh;
@@ -127,10 +128,13 @@ section { padding: 54px 18px; }
   font-size: clamp(2rem, 10vw, 3.4rem);
 }
 .achievement-grid, .track-grid, .social__links, .goods-grid, .disc-grid { width:min(100%,820px); margin:0 auto; }
+.page-hero + main > .news-list,
+.page-hero + main > .live-list,
+.page-hero + main > .biography-list { padding:36px 18px 48px; }
 .achievement-grid, .track-grid, .goods-grid, .disc-grid { display:grid; gap:28px; }
-.achievement-item, .news-item, .live-item, .biography-item, .video-card, .preview-player__inner { padding:20px; border:1px solid rgba(255,255,255,.1); background:rgba(255,255,255,.035); }
+.achievement-item, .news-item, .live-item, .biography-item, .video-card, .preview-player__inner { padding:18px 0; border-top:1px solid rgba(255,255,255,.1); background:transparent; }
 .number, .news-date, .live-date, .biography-date { color:var(--gold); font-weight:700; letter-spacing:.1em; }
-.achievement-label, .news-title, .live-title, .biography-title { margin-top:8px; color:var(--muted); line-height:1.7; }
+.achievement-label, .news-title, .live-title, .biography-title { margin:8px 0 0; color:var(--muted); line-height:1.7; }
 .video-frame, .song-video-frame { aspect-ratio:16/9; background:#000; }
 .video-frame iframe, .song-video-frame iframe { width:100%; height:100%; border:0; }
 .track-card__image, .goods-card__image { aspect-ratio:1/1; overflow:hidden; background:rgba(255,255,255,.04); }
@@ -142,6 +146,23 @@ section { padding: 54px 18px; }
 .index-text-link, .button.main-cta { display:inline-block; margin-top:24px; color:var(--gold); font-family:var(--serif); font-size:1.35rem; font-style:italic; font-weight:700; transform:skew(-8deg); }
 
 .lyrics p, .profile-text p, .discography-list li { color: var(--muted); font-size: 1rem; line-height: 1.95; letter-spacing: .04em; }
+.contact-section { width:min(100%,820px); margin:0 auto; }
+.contact-form { display:grid; gap:20px; width:100%; }
+.form-group { display:grid; gap:10px; }
+.form-group label { color:rgba(247,241,232,.82); font-size:1rem; letter-spacing:.04em; }
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width:100%;
+  padding:15px 16px;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:22px;
+  background:rgba(255,255,255,.04);
+  color:var(--text);
+  appearance:auto;
+  pointer-events:auto;
+}
+.form-group textarea { min-height:160px; resize:vertical; }
 .preview-player__inner { border-radius: 22px; }
 .preview-player h2 { margin: 0 0 24px; text-align: center; font-family: var(--serif); font-size: clamp(1.55rem, 7vw, 2.35rem); overflow-wrap: anywhere; }
 .preview-player audio { width: 100%; }

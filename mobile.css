@@ -27,7 +27,7 @@ body {
 
 a { color: inherit; text-decoration: none; }
 img, video, iframe, audio { max-width: 100%; }
-.page-glow { display: none !important; }
+.page-glow { display: none; }
 
 .header {
   position: fixed;
@@ -50,7 +50,7 @@ img, video, iframe, audio { max-width: 100%; }
   overflow: hidden;
 }
 .brand-button span,
-.brand-chara { display: none !important; }
+.brand-chara { display: none; }
 .brand-button::before {
   content: "YUKI / 佑樹";
   position: absolute;
@@ -286,7 +286,7 @@ section { padding: clamp(54px, 13vw, 86px) 18px; }
   border: 0;
   object-fit: cover;
 }
-.featured-video { display: none !important; }
+.featured-video { display: none; }
 
 .track-grid,
 .goods-grid,
@@ -435,7 +435,7 @@ section { padding: clamp(54px, 13vw, 86px) 18px; }
   letter-spacing: 0.04em;
 }
 
-.reveal { opacity: 1 !important; transform: none !important; }
+.reveal { opacity: 1; transform: none; }
 
 @keyframes mobileHeroFade {
   0%, 10% { opacity: 0; }

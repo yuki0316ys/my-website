@@ -141,6 +141,7 @@ button, input, textarea, select { font: inherit; }
 .menu-toggle { display: none; }
 
 main { min-height: 100vh; }
+.page-hero + main { min-height: auto; }
 .hero {
   position: relative;
   min-height: 100svh;
@@ -289,6 +290,11 @@ section { padding: clamp(72px, 7vw, 128px) 24px; }
   width: min(100%, var(--max));
   margin: 0 auto;
 }
+.page-hero + main > .news-list,
+.page-hero + main > .live-list,
+.page-hero + main > .biography-list {
+  padding: clamp(46px, 5.6vw, 82px) 24px clamp(54px, 5vw, 78px);
+}
 .achievement-grid,
 .news-list,
 .live-list,
@@ -298,9 +304,9 @@ section { padding: clamp(72px, 7vw, 128px) 24px; }
 .live-item,
 .biography-item {
   display: grid;
-  grid-template-columns: minmax(120px, 180px) 1fr;
-  gap: 28px;
-  padding: 22px 0;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 24px 0;
   border-top: 1px solid rgba(255,255,255,.12);
   background: transparent;
 }
@@ -324,7 +330,7 @@ section { padding: clamp(72px, 7vw, 128px) 24px; }
 .biography-title {
   margin: 0;
   color: rgba(247,241,232,.84);
-  font-size: clamp(1rem, 1.22vw, 1.25rem);
+  font-size: clamp(1.02rem, 1.18vw, 1.22rem);
   font-weight: 600;
   letter-spacing: .04em;
   line-height: 1.7;
@@ -539,6 +545,8 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "Tunecoreã
   border-radius: 999px;
   background: rgba(255,255,255,.035);
   color: var(--text);
+  appearance: auto;
+  pointer-events: auto;
 }
 .form-group textarea { min-height: 180px; border-radius: 18px; resize: vertical; }
 
@@ -624,6 +632,9 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "Tunecoreã
   .news-item,
   .live-item,
   .biography-item { grid-template-columns: 1fr; gap: 8px; padding: 18px 0; }
+  .page-hero + main > .news-list,
+  .page-hero + main > .live-list,
+  .page-hero + main > .biography-list { padding: 36px 18px 48px; }
   .track-grid,
   .goods-grid,
   .disc-grid,
