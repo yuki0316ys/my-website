@@ -16,16 +16,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="mobile-safe.css?v=2026060315" media="(max-width: 768px)">
-<script>
-  if (window.matchMedia("(min-width: 769px)").matches) {
-    const desktopStylesheet = document.createElement("link");
-    desktopStylesheet.rel = "stylesheet";
-    desktopStylesheet.href = "style.css?v=2026060315";
-    document.head.appendChild(desktopStylesheet);
-  }
-</script>
+<link rel="stylesheet" href="mobile-safe.css?v=2026060339" media="(max-width: 768px)">
 <style>
+  @media (min-width: 769px) {
+    html.desktop-loading body { opacity: 0; }
+    html.desktop-ready body { opacity: 1; transition: opacity .12s ease; }
+  }
   .contact-hero { min-height: auto; padding: 150px 20px 82px; }
   .contact-hero .hero__content { margin: 32px auto 0; }
   .contact-hero .page-subtitle { margin-top: 32px; }
@@ -41,6 +37,27 @@
     .contact-page form.contact-form { padding: 0 0 44px; }
   }
 </style>
+<script>
+  if (window.matchMedia("(min-width: 769px)").matches) {
+    document.documentElement.classList.add("desktop-loading");
+    const desktopStylesheet = document.createElement("link");
+    desktopStylesheet.rel = "stylesheet";
+    desktopStylesheet.href = "style.css?v=2026060339";
+    desktopStylesheet.onload = () => {
+      document.documentElement.classList.remove("desktop-loading");
+      document.documentElement.classList.add("desktop-ready");
+    };
+    desktopStylesheet.onerror = () => {
+      document.documentElement.classList.remove("desktop-loading");
+      document.documentElement.classList.add("desktop-ready");
+    };
+    document.head.appendChild(desktopStylesheet);
+    setTimeout(() => {
+      document.documentElement.classList.remove("desktop-loading");
+      document.documentElement.classList.add("desktop-ready");
+    }, 1200);
+  }
+</script>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#000000">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
@@ -61,31 +78,14 @@
 <body>
 <div class="page-glow" aria-hidden="true"></div>
 <header class="header">
-<a class="brand-button" href="index.html">
-  <span>HOME</span>
-  <img src="images/chara.png" alt="YUKI character" class="brand-chara">
-</a>
+<a class="brand-button" href="index.html"><span>HOME</span><img src="images/chara.png" alt="YUKI character" class="brand-chara"></a>
 <nav class="nav" id="nav">
-  <a href="news.html">News</a>
-  <a href="live.html">Live</a>
-  <a href="profile.html">Profile</a>
-  <a href="biography.html">Biography</a>
-  <a href="songs/songs.html">Songs</a>
-  <a href="store.html">Store</a>
-  <a href="contact.html">Contact</a>
-  <a class="nav-fanclub" href="https://www.youtube.com/channel/UCdZMz61Y8oS4kfC9CP4esTA/join" target="_blank" rel="noopener noreferrer">FANCLUB</a>
+  <a href="news.html">News</a><a href="live.html">Live</a><a href="profile.html">Profile</a><a href="biography.html">Biography</a><a href="songs/songs.html">Songs</a><a href="store.html">Store</a><a href="contact.html">Contact</a><a class="nav-fanclub" href="https://www.youtube.com/channel/UCdZMz61Y8oS4kfC9CP4esTA/join" target="_blank" rel="noopener noreferrer">FANCLUB</a>
 </nav>
-<div class="header-social" aria-label="SNS links">
-  <a class="header-social__link header-social__link--x" href="https://x.com/Youking74514090" target="_blank" rel="noopener noreferrer" aria-label="X"></a>
-  <a class="header-social__link header-social__link--youtube" href="https://www.youtube.com/@YUKIOFFICIALSTUDIOPRO01" target="_blank" rel="noopener noreferrer" aria-label="YouTube"></a>
-  <a class="header-social__link header-social__link--tiktok" href="https://www.tiktok.com/@yukiosp01?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok"></a>
-</div>
+<div class="header-social" aria-label="SNS links"><a class="header-social__link header-social__link--x" href="https://x.com/Youking74514090" target="_blank" rel="noopener noreferrer" aria-label="X"></a><a class="header-social__link header-social__link--youtube" href="https://www.youtube.com/@YUKIOFFICIALSTUDIOPRO01" target="_blank" rel="noopener noreferrer" aria-label="YouTube"></a><a class="header-social__link header-social__link--tiktok" href="https://www.tiktok.com/@yukiosp01?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok"></a></div>
 <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
 </header>
-<section class="page-hero contact-hero">
-  <div class="hero-light"></div>
-  <div class="hero__content"><h1 class="page-title">Contact</h1></div>
-</section>
+<section class="page-hero contact-hero"><div class="hero-light"></div><div class="hero__content"><h1 class="page-title">Contact</h1></div></section>
 <main class="contact-page">
 <section class="contact-form">
   <form action="https://formspree.io/f/xdabeerg" method="POST" class="contact-form">
