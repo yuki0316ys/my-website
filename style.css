@@ -1,3 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap");
-@import url("https://cdn.jsdelivr.net/gh/yuki0316ys/my-website@19ba9e9d18f9591dddedffc603e9b1a322fe4c0e/style.css");
-@import url("mobile-stability.css?v=2026060304");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap") screen and (min-width: 769px);
+@import url("https://cdn.jsdelivr.net/gh/yuki0316ys/my-website@19ba9e9d18f9591dddedffc603e9b1a322fe4c0e/style.css") screen and (min-width: 769px);
+@import url("mobile-safe.css?v=2026060309") screen and (max-width: 768px);
