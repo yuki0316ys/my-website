@@ -23,7 +23,15 @@ content="https://yuki-music.jp/images/profile-ogp.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=2026052803">
+  <link rel="stylesheet" href="mobile-safe.css?v=2026060310" media="(max-width: 768px)">
+  <script>
+    if (window.matchMedia("(min-width: 769px)").matches) {
+      const desktopStylesheet = document.createElement("link");
+      desktopStylesheet.rel = "stylesheet";
+      desktopStylesheet.href = "style.css?v=2026060310";
+      document.head.appendChild(desktopStylesheet);
+    }
+  </script>
   <style>
     @media (max-width: 768px) {
       .profile-biography {
