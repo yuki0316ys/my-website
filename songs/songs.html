@@ -16,13 +16,32 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../mobile-safe.css?v=2026060316" media="(max-width: 768px)">
+  <link rel="stylesheet" href="../mobile-safe.css?v=2026060340" media="(max-width: 768px)">
+  <style>
+    @media (min-width: 769px) {
+      html.desktop-loading body { opacity: 0; }
+      html.desktop-ready body { opacity: 1; transition: opacity .12s ease; }
+    }
+  </style>
   <script>
     if (window.matchMedia("(min-width: 769px)").matches) {
+      document.documentElement.classList.add("desktop-loading");
       const desktopStylesheet = document.createElement("link");
       desktopStylesheet.rel = "stylesheet";
-      desktopStylesheet.href = "../style.css?v=2026060316";
+      desktopStylesheet.href = "../style.css?v=2026060340";
+      desktopStylesheet.onload = () => {
+        document.documentElement.classList.remove("desktop-loading");
+        document.documentElement.classList.add("desktop-ready");
+      };
+      desktopStylesheet.onerror = () => {
+        document.documentElement.classList.remove("desktop-loading");
+        document.documentElement.classList.add("desktop-ready");
+      };
       document.head.appendChild(desktopStylesheet);
+      setTimeout(() => {
+        document.documentElement.classList.remove("desktop-loading");
+        document.documentElement.classList.add("desktop-ready");
+      }, 1200);
     }
   </script>
   <meta name="theme-color" content="#000000">
@@ -44,83 +63,36 @@
 <body>
   <div class="page-glow" aria-hidden="true"></div>
   <header class="header">
-    <a class="brand-button" href="../index.html">
-      <span>HOME</span>
-      <img src="../images/chara.png" alt="YUKI character" class="brand-chara">
-    </a>
-    <nav class="nav" id="nav">
-      <a href="../news.html">News</a>
-      <a href="../live.html">Live</a>
-      <a href="../profile.html">Profile</a>
-      <a href="../biography.html">Biography</a>
-      <a href="songs.html">Songs</a>
-      <a href="../store.html">Store</a>
-      <a href="../contact.html">Contact</a>
-      <a class="nav-fanclub" href="https://www.youtube.com/channel/UCdZMz61Y8oS4kfC9CP4esTA/join" target="_blank" rel="noopener noreferrer">FANCLUB</a>
-    </nav>
-    <div class="header-social" aria-label="SNS links">
-      <a class="header-social__link header-social__link--x" href="https://x.com/Youking74514090" target="_blank" rel="noopener noreferrer" aria-label="X"></a>
-      <a class="header-social__link header-social__link--youtube" href="https://www.youtube.com/@YUKIOFFICIALSTUDIOPRO01" target="_blank" rel="noopener noreferrer" aria-label="YouTube"></a>
-      <a class="header-social__link header-social__link--tiktok" href="https://www.tiktok.com/@yukiosp01?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok"></a>
-    </div>
+    <a class="brand-button" href="../index.html"><span>HOME</span><img src="../images/chara.png" alt="YUKI character" class="brand-chara"></a>
+    <nav class="nav" id="nav"><a href="../news.html">News</a><a href="../live.html">Live</a><a href="../profile.html">Profile</a><a href="../biography.html">Biography</a><a href="songs.html">Songs</a><a href="../store.html">Store</a><a href="../contact.html">Contact</a><a class="nav-fanclub" href="https://www.youtube.com/channel/UCdZMz61Y8oS4kfC9CP4esTA/join" target="_blank" rel="noopener noreferrer">FANCLUB</a></nav>
+    <div class="header-social" aria-label="SNS links"><a class="header-social__link header-social__link--x" href="https://x.com/Youking74514090" target="_blank" rel="noopener noreferrer" aria-label="X"></a><a class="header-social__link header-social__link--youtube" href="https://www.youtube.com/@YUKIOFFICIALSTUDIOPRO01" target="_blank" rel="noopener noreferrer" aria-label="YouTube"></a><a class="header-social__link header-social__link--tiktok" href="https://www.tiktok.com/@yukiosp01?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok"></a></div>
     <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
   </header>
   <main>
-    <section class="page-hero">
-      <div class="hero-light"></div>
-      <div class="hero__content"><h1 class="page-title">Songs</h1></div>
-    </section>
-    <section class="music reveal" id="latest">
-      <div class="section-heading"><p class="eyebrow">TRACKS</p><h2>13 songs</h2></div>
-      <div class="track-grid">
-        <a class="track-card" href="Freedom.html"><span class="track-card__index">01</span><div class="track-card__image"><img src="../images/freedom.jpg" alt="Freedom"></div><div class="track-card__content"><p class="track-card__type">04 TRACK</p><h3>Freedom</h3></div></a>
-        <a class="track-card" href="KeepOnlyOneLady.html"><span class="track-card__index">02</span><div class="track-card__image"><img src="../images/keep.jpg" alt="Keep Only One Lady"></div><div class="track-card__content"><p class="track-card__type">05 TRACK</p><h3>Keep only one lady</h3></div></a>
-        <a class="track-card" href="akatsuki.html"><span class="track-card__index">03</span><div class="track-card__image"><img src="../images/akatsuki.jpg" alt="曉"></div><div class="track-card__content"><p class="track-card__type">10 TRACK</p><h3>曉</h3></div></a>
-        <a class="track-card" href="Sakayume.html"><span class="track-card__index">04</span><div class="track-card__image"><img src="../images/sakayume.jpg" alt="逆夢"></div><div class="track-card__content"><p class="track-card__type">01 TRACK</p><h3>逆夢</h3></div></a>
-        <a class="track-card" href="JENESIS.html"><span class="track-card__index">05</span><div class="track-card__image"><img src="../images/jenesis.jpg" alt="JENESIS"></div><div class="track-card__content"><p class="track-card__type">08 TRACK</p><h3>JENESIS</h3></div></a>
-        <a class="track-card" href="BE-TRIP.html"><span class="track-card__index">06</span><div class="track-card__image"><img src="../images/be-trip.jpg" alt="BE-TRIP"></div><div class="track-card__content"><p class="track-card__type">02 TRACK</p><h3>BE-TRIP</h3></div></a>
-        <a class="track-card" href="harutoakikaze.html"><span class="track-card__index">07</span><div class="track-card__image"><img src="../images/haru.jpg" alt="春と秋風の彩りを"></div><div class="track-card__content"><p class="track-card__type">06 TRACK</p><h3>春と秋風の彩りを</h3></div></a>
-        <a class="track-card" href="amaterasu.html"><span class="track-card__index">08</span><div class="track-card__image"><img src="../images/amaterasu.jpg" alt="天照"></div><div class="track-card__content"><p class="track-card__type">07 TRACK</p><h3>天照</h3></div></a>
-        <a class="track-card" href="Nextinnovation.html"><span class="track-card__index">09</span><div class="track-card__image"><img src="../images/next.jpg" alt="NextInnovation"></div><div class="track-card__content"><p class="track-card__type">03 TRACK</p><h3>Next innovation!</h3></div></a>
-        <a class="track-card" href="Breakingallthechains.html"><span class="track-card__index">10</span><div class="track-card__image"><img src="../images/chains.jpg" alt="Breaking All The Chains"></div><div class="track-card__content"><p class="track-card__type">11 TRACK</p><h3>Breaking all the chains</h3></div></a>
-        <a class="track-card" href="The Beast.html"><span class="track-card__index">11</span><div class="track-card__image"><img src="../images/beast.jpg" alt="The Beast"></div><div class="track-card__content"><p class="track-card__type">13 TRACK</p><h3>The Beast</h3></div></a>
-        <a class="track-card" href="rinne.html"><span class="track-card__index">12</span><div class="track-card__image"><img src="../images/rinne.jpg" alt="輪廻"></div><div class="track-card__content"><p class="track-card__type">09 TRACK</p><h3>輪廻の中で自由を求め続けた弱者</h3></div></a>
-        <a class="track-card" href="uno.html"><span class="track-card__index">13</span><div class="track-card__image"><img src="../images/uno.jpg" alt="ウーノ"></div><div class="track-card__content"><p class="track-card__type">12 TRACK</p><h3>ウーノ</h3></div></a>
-      </div>
-    </section>
-    <section class="store-final">
-      <h2>Next Action</h2>
-      <p>全曲、Tunecoreにて配信中。</p>
-      <a href="https://www.tunecore.co.jp/artists/Yu-103" target="_blank" class="button main-cta">Tunecoreへ進む</a>
-    </section>
+    <section class="page-hero"><div class="hero-light"></div><div class="hero__content"><h1 class="page-title">Songs</h1></div></section>
+    <section class="music reveal" id="latest"><div class="section-heading"><p class="eyebrow">TRACKS</p><h2>13 songs</h2></div><div class="track-grid">
+      <a class="track-card" href="Freedom.html"><span class="track-card__index">01</span><div class="track-card__image"><img src="../images/freedom.jpg" alt="Freedom"></div><div class="track-card__content"><p class="track-card__type">04 TRACK</p><h3>Freedom</h3></div></a>
+      <a class="track-card" href="KeepOnlyOneLady.html"><span class="track-card__index">02</span><div class="track-card__image"><img src="../images/keep.jpg" alt="Keep Only One Lady"></div><div class="track-card__content"><p class="track-card__type">05 TRACK</p><h3>Keep only one lady</h3></div></a>
+      <a class="track-card" href="akatsuki.html"><span class="track-card__index">03</span><div class="track-card__image"><img src="../images/akatsuki.jpg" alt="曉"></div><div class="track-card__content"><p class="track-card__type">10 TRACK</p><h3>曉</h3></div></a>
+      <a class="track-card" href="Sakayume.html"><span class="track-card__index">04</span><div class="track-card__image"><img src="../images/sakayume.jpg" alt="逆夢"></div><div class="track-card__content"><p class="track-card__type">01 TRACK</p><h3>逆夢</h3></div></a>
+      <a class="track-card" href="JENESIS.html"><span class="track-card__index">05</span><div class="track-card__image"><img src="../images/jenesis.jpg" alt="JENESIS"></div><div class="track-card__content"><p class="track-card__type">08 TRACK</p><h3>JENESIS</h3></div></a>
+      <a class="track-card" href="BE-TRIP.html"><span class="track-card__index">06</span><div class="track-card__image"><img src="../images/be-trip.jpg" alt="BE-TRIP"></div><div class="track-card__content"><p class="track-card__type">02 TRACK</p><h3>BE-TRIP</h3></div></a>
+      <a class="track-card" href="harutoakikaze.html"><span class="track-card__index">07</span><div class="track-card__image"><img src="../images/haru.jpg" alt="春と秋風の彩りを"></div><div class="track-card__content"><p class="track-card__type">06 TRACK</p><h3>春と秋風の彩りを</h3></div></a>
+      <a class="track-card" href="amaterasu.html"><span class="track-card__index">08</span><div class="track-card__image"><img src="../images/amaterasu.jpg" alt="天照"></div><div class="track-card__content"><p class="track-card__type">07 TRACK</p><h3>天照</h3></div></a>
+      <a class="track-card" href="Nextinnovation.html"><span class="track-card__index">09</span><div class="track-card__image"><img src="../images/next.jpg" alt="NextInnovation"></div><div class="track-card__content"><p class="track-card__type">03 TRACK</p><h3>Next innovation!</h3></div></a>
+      <a class="track-card" href="Breakingallthechains.html"><span class="track-card__index">10</span><div class="track-card__image"><img src="../images/chains.jpg" alt="Breaking All The Chains"></div><div class="track-card__content"><p class="track-card__type">11 TRACK</p><h3>Breaking all the chains</h3></div></a>
+      <a class="track-card" href="The Beast.html"><span class="track-card__index">11</span><div class="track-card__image"><img src="../images/beast.jpg" alt="The Beast"></div><div class="track-card__content"><p class="track-card__type">13 TRACK</p><h3>The Beast</h3></div></a>
+      <a class="track-card" href="rinne.html"><span class="track-card__index">12</span><div class="track-card__image"><img src="../images/rinne.jpg" alt="輪廻"></div><div class="track-card__content"><p class="track-card__type">09 TRACK</p><h3>輪廻の中で自由を求め続けた弱者</h3></div></a>
+      <a class="track-card" href="uno.html"><span class="track-card__index">13</span><div class="track-card__image"><img src="../images/uno.jpg" alt="ウーノ"></div><div class="track-card__content"><p class="track-card__type">12 TRACK</p><h3>ウーノ</h3></div></a>
+    </div></section>
+    <section class="store-final"><h2>Next Action</h2><p>全曲、Tunecoreにて配信中。</p><a href="https://www.tunecore.co.jp/artists/Yu-103" target="_blank" class="button main-cta">Tunecoreへ進む</a></section>
     <footer class="footer"><p>&copy; 2026 YUKI / 佑樹（YUKI OFFCIAL STUDIO PRO 01）. All rights reserved.</p></footer>
   </main>
   <script>
     const els = document.querySelectorAll(".reveal");
-    if ("IntersectionObserver" in window) {
-      const observer = new IntersectionObserver(entries=>{
-        entries.forEach(entry=>{
-          if(entry.isIntersecting){ entry.target.classList.add("active"); }
-        });
-      });
-      els.forEach(el=>observer.observe(el));
-    } else {
-      els.forEach(el=>el.classList.add("active"));
-    }
-    window.addEventListener("scroll", () => {
-      const header = document.querySelector(".header");
-      if (!header) return;
-      if (window.scrollY > 50) { header.classList.add("scrolled"); }
-      else { header.classList.remove("scrolled"); }
-    }, { passive: true });
-    const menuToggle = document.getElementById("menuToggle");
-    const nav = document.getElementById("nav");
-    if(menuToggle && nav){
-      menuToggle.addEventListener("click", () => {
-        nav.classList.toggle("active");
-        menuToggle.classList.toggle("active");
-      });
-    }
+    if ("IntersectionObserver" in window) { const observer = new IntersectionObserver(entries=>{ entries.forEach(entry=>{ if(entry.isIntersecting){ entry.target.classList.add("active"); } }); }); els.forEach(el=>observer.observe(el)); } else { els.forEach(el=>el.classList.add("active")); }
+    window.addEventListener("scroll", () => { const header = document.querySelector(".header"); if (!header) return; if (window.scrollY > 50) { header.classList.add("scrolled"); } else { header.classList.remove("scrolled"); } }, { passive: true });
+    const menuToggle = document.getElementById("menuToggle"); const nav = document.getElementById("nav"); if(menuToggle && nav){ menuToggle.addEventListener("click", () => { nav.classList.toggle("active"); menuToggle.classList.toggle("active"); }); }
   </script>
 </body>
 </html>

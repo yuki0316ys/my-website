@@ -2,30 +2,51 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>送信完了 | YUKI / 佑樹</title>
-<link rel="stylesheet" href="style.css">
-  <link rel="canonical" href="https://yuki-music.jp/thanks.html">
-  <meta property="og:url" content="https://yuki-music.jp/thanks.html">
-  <meta property="og:site_name" content="YUKI / 佑樹 Official Site">
-  <meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="mobile-safe.css?v=2026060333" media="(max-width: 768px)">
+<style>
+  @media (min-width: 769px) {
+    html.desktop-loading body { opacity: 0; }
+    html.desktop-ready body { opacity: 1; transition: opacity .12s ease; }
+  }
+</style>
+<script>
+  if (window.matchMedia("(min-width: 769px)").matches) {
+    document.documentElement.classList.add("desktop-loading");
+    const desktopStylesheet = document.createElement("link");
+    desktopStylesheet.rel = "stylesheet";
+    desktopStylesheet.href = "style.css?v=2026060333";
+    desktopStylesheet.onload = () => {
+      document.documentElement.classList.remove("desktop-loading");
+      document.documentElement.classList.add("desktop-ready");
+    };
+    desktopStylesheet.onerror = () => {
+      document.documentElement.classList.remove("desktop-loading");
+      document.documentElement.classList.add("desktop-ready");
+    };
+    document.head.appendChild(desktopStylesheet);
+    setTimeout(() => {
+      document.documentElement.classList.remove("desktop-loading");
+      document.documentElement.classList.add("desktop-ready");
+    }, 1200);
+  }
+</script>
+<link rel="canonical" href="https://yuki-music.jp/thanks.html">
+<meta property="og:url" content="https://yuki-music.jp/thanks.html">
+<meta property="og:site_name" content="YUKI / 佑樹 Official Site">
+<meta name="twitter:card" content="summary_large_image">
 </head>
-
 <body>
-
 <main style="text-align:center; padding:100px 20px;">
-
   <h1>送信完了</h1>
-
   <p>
     お問い合わせありがとうございます。<br>
     内容確認後、2〜3日以内にご連絡いたします。
   </p>
-
   <a href="index.html" class="button main-cta">
     トップへ戻る
   </a>
-
 </main>
-
 </body>
 </html>
