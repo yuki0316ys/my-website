@@ -9,3 +9,31 @@ body:not(.store-page) .store-final .button.main-cta::after {
 body:not(.store-page) .store-final .button.main-cta[href="songs.html"]::after {
   content: "Songsへ戻る" !important;
 }
+
+body:not(.store-page) .store-final .button.main-cta + .button.main-cta {
+  margin-left: clamp(28px, 4vw, 56px) !important;
+  position: relative !important;
+}
+
+body:not(.store-page) .store-final .button.main-cta + .button.main-cta::before {
+  content: "｜" !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  margin-right: clamp(28px, 4vw, 56px) !important;
+  color: rgba(215, 185, 103, 0.72) !important;
+  font-size: clamp(1.18rem, 1.55vw, 1.58rem) !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  transform: skew(8deg) !important;
+}
+
+@media (max-width: 768px) {
+  body:not(.store-page) .store-final .button.main-cta + .button.main-cta {
+    margin-left: 18px !important;
+  }
+
+  body:not(.store-page) .store-final .button.main-cta + .button.main-cta::before {
+    margin-right: 18px !important;
+    font-size: clamp(1.2rem, 5.4vw, 1.52rem) !important;
+  }
+}
