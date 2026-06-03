@@ -246,7 +246,7 @@ main { min-height: 100vh; }
   display: flex;
   width: max-content;
   gap: 54px;
-  padding: 16px 0;
+  padding: 8px 0;
   animation: ticker 40s linear infinite;
 }
 .results-track span {
@@ -379,7 +379,7 @@ section { padding: clamp(72px, 7vw, 128px) 24px; }
 .button.main-cta:hover { color: var(--gold-bright); }
 
 .track-grid,
-.goods-grid,
+goods-grid,
 .disc-grid,
 .related-grid {
   display: grid;
@@ -423,6 +423,12 @@ section { padding: clamp(72px, 7vw, 128px) 24px; }
   font-weight: 700;
   letter-spacing: .045em;
   line-height: 1.25;
+}
+.upright-hyphen {
+  display: inline-block;
+  font-family: var(--sans);
+  font-style: normal;
+  transform: none;
 }
 .track-card__content::before {
   display: block;
@@ -610,7 +616,7 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "Tunecoreã
   .hero h1 { font-size: clamp(3.6rem, 18vw, 6.4rem); }
   .hero__meta { top: calc(var(--header-h) + 28px); }
   .hero__meta span { padding: 8px 16px; font-size: .72rem; }
-  .results-track { animation: none; width: auto; flex-wrap: wrap; justify-content: center; gap: 10px 18px; padding: 12px 18px; }
+  .results-track { animation: none; width: auto; flex-wrap: wrap; justify-content: center; gap: 8px 18px; padding: 7px 16px; }
   .results-track span { white-space: normal; font-size: .86rem; }
   .results-track span:nth-child(n+8) { display: none; }
   section { padding: 54px 18px; }
