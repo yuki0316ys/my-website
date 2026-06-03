@@ -10,6 +10,15 @@ body:not(.store-page) .store-final .button.main-cta[href="songs.html"]::after {
   content: "Songsへ戻る" !important;
 }
 
+body:not(.store-page) .preview-player ~ .store-final::before {
+  content: "" !important;
+  display: block !important;
+  width: min(220px, 42vw) !important;
+  height: 1px !important;
+  margin: 0 auto clamp(22px, 3vw, 32px) !important;
+  background: linear-gradient(90deg, transparent, rgba(215, 185, 103, 0.74), transparent) !important;
+}
+
 body:not(.store-page) .store-final .button.main-cta + .button.main-cta {
   margin-left: clamp(28px, 4vw, 56px) !important;
   position: relative !important;
@@ -37,10 +46,15 @@ body:not(.store-page) .store-final .button.main-cta + .button.main-cta::before {
 }
 
 .store-page .store-final .button.main-cta::after {
-  content: "BASEへ進む" !important;
+  content: "Baseへ進む" !important;
 }
 
 @media (max-width: 768px) {
+  body:not(.store-page) .preview-player ~ .store-final::before {
+    width: min(180px, 46vw) !important;
+    margin-bottom: 24px !important;
+  }
+
   body:not(.store-page) .store-final .button.main-cta + .button.main-cta {
     margin-left: 18px !important;
   }
