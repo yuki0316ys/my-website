@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap") screen and (min-width: 769px);
 @import url("https://cdn.jsdelivr.net/gh/yuki0316ys/my-website@19ba9e9d18f9591dddedffc603e9b1a322fe4c0e/style.css") screen and (min-width: 769px);
-@import url("mobile-safe.css?v=2026060310") screen and (max-width: 768px);
+@import url("mobile-safe.css?v=2026060311") screen and (max-width: 768px);
 
 body:not(.store-page) .store-final .button.main-cta::after {
   content: "Tunecoreへ進む" !important;
@@ -22,12 +22,12 @@ body:not(.store-page) .store-final .button.main-cta + .button.main-cta::before {
 }
 
 .music-footer .index-text-link[href="songs/songs.html"] {
-  font-size: 0 !important;
+  font-size: 0;
 }
 
 .music-footer .index-text-link[href="songs/songs.html"]::after {
-  content: "Songsへ進む" !important;
-  font-size: clamp(1.18rem, 1.55vw, 1.58rem) !important;
+  content: "Songsへ進む";
+  font-size: clamp(1.18rem, 1.55vw, 1.58rem);
 }
 
 .store-page .store-final .button.main-cta::after {
@@ -36,6 +36,6 @@ body:not(.store-page) .store-final .button.main-cta + .button.main-cta::before {
 
 @media (max-width: 768px) {
   .music-footer .index-text-link[href="songs/songs.html"]::after {
-    font-size: clamp(1.2rem, 5.4vw, 1.52rem) !important;
+    font-size: clamp(1.2rem, 5.4vw, 1.52rem);
   }
 }
