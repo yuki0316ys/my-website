@@ -3,292 +3,162 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="YUKI / 佑樹のプロフィール。シネマティックポップを軸に活動するシンガーソングライターの公式プロフィール。">
-<title>
-Profile | YUKI / 佑樹 Official Artist Biography
-</title>
-  <meta property="og:type" content="website">
-
-<meta property="og:title"
-content="Profile | YUKI / 佑樹">
-
+<meta name="description" content="YUKI / 佑樹のプロフィール。シネマティックポップを軸に活動するシンガーソングライターの公式プロフィール。">
+<title>Profile | YUKI / 佑樹 Official Artist Biography</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Profile | YUKI / 佑樹">
 <meta property="og:description" content="YUKI / 佑樹のプロフィール。シネマティックポップを軸に活動するシンガーソングライターの公式プロフィール。">
-
 <meta property="og:url" content="https://yuki-music.jp/profile.html">
-
-<meta property="og:image"
-content="https://yuki-music.jp/images/profile-ogp.jpg">
-
+<meta property="og:image" content="https://yuki-music.jp/images/profile-ogp.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="YUKI / 佑樹のプロフィール。シネマティックポップを軸に活動するシンガーソングライターの公式プロフィール。">
+<meta property="og:site_name" content="YUKI / 佑樹 Official Site">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="mobile-safe.css?v=2026060310" media="(max-width: 768px)">
-  <script>
-    if (window.matchMedia("(min-width: 769px)").matches) {
-      const desktopStylesheet = document.createElement("link");
-      desktopStylesheet.rel = "stylesheet";
-      desktopStylesheet.href = "style.css?v=2026060310";
-      document.head.appendChild(desktopStylesheet);
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="mobile-safe.css?v=2026060336" media="(max-width: 768px)">
+<style>
+  @media (min-width: 769px) {
+    html.desktop-loading body { opacity: 0; }
+    html.desktop-ready body { opacity: 1; transition: opacity .12s ease; }
+  }
+  @media (max-width: 768px) {
+    .profile-biography {
+      padding: 24px 0 72px;
+      background: transparent;
     }
-  </script>
-  <style>
-    @media (max-width: 768px) {
-      .profile-biography {
-        padding: 24px 0 72px;
-        background: transparent;
-      }
 
-      .profile-biography::before {
-        opacity: 0;
-      }
-
-      .profile-biography__inner {
-        margin-top: 0;
-      }
+    .profile-biography::before {
+      opacity: 0;
     }
-  </style>
+
+    .profile-biography__inner {
+      margin-top: 0;
+    }
+  }
+</style>
+<script>
+  if (window.matchMedia("(min-width: 769px)").matches) {
+    document.documentElement.classList.add("desktop-loading");
+    const desktopStylesheet = document.createElement("link");
+    desktopStylesheet.rel = "stylesheet";
+    desktopStylesheet.href = "style.css?v=2026060336";
+    desktopStylesheet.onload = () => {
+      document.documentElement.classList.remove("desktop-loading");
+      document.documentElement.classList.add("desktop-ready");
+    };
+    desktopStylesheet.onerror = () => {
+      document.documentElement.classList.remove("desktop-loading");
+      document.documentElement.classList.add("desktop-ready");
+    };
+    document.head.appendChild(desktopStylesheet);
+    setTimeout(() => {
+      document.documentElement.classList.remove("desktop-loading");
+      document.documentElement.classList.add("desktop-ready");
+    }, 1200);
+  }
+</script>
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
-
 <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
-
 <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-
 <link rel="canonical" href="https://yuki-music.jp/profile.html">
 <meta name="theme-color" content="#000000">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
 <script type="application/ld+json">
 {
  "@context":"https://schema.org",
-
  "@type":"Person",
-
  "name":"YUKI / 佑樹",
-
  "url":"https://yuki-music.jp/profile.html"
 }
 </script>
-  <meta name="twitter:description" content="YUKI / 佑樹のプロフィール。シネマティックポップを軸に活動するシンガーソングライターの公式プロフィール。">
-  <meta property="og:site_name" content="YUKI / 佑樹 Official Site">
 </head>
-
 <body>
 <div class="page-glow" aria-hidden="true"></div>
 <header class="header">
  <a class="brand-button" href="index.html">
-
   <span>HOME</span>
-
-  <img
-    src="images/chara.png"
-    alt="YUKI character"
-    class="brand-chara"
-  >
-
+  <img src="images/chara.png" alt="YUKI character" class="brand-chara">
 </a>
-   <nav class="nav" id="nav">
-    <a href="news.html">News</a>
-    <a href="live.html">Live</a>
-    <a href="profile.html">Profile</a>
-    <a href="biography.html">Biography</a>
-    <a href="songs/songs.html">Songs</a>
-    <a href="store.html">Store</a>
-    <a href="contact.html">Contact</a>
-    <a class="nav-fanclub" href="https://www.youtube.com/channel/UCdZMz61Y8oS4kfC9CP4esTA/join" target="_blank" rel="noopener noreferrer">FANCLUB</a>
-  </nav>
-
-  <div class="header-social" aria-label="SNS links">
-    <a class="header-social__link header-social__link--x" href="https://x.com/Youking74514090" target="_blank" rel="noopener noreferrer" aria-label="X"></a>
-    <a class="header-social__link header-social__link--youtube" href="https://www.youtube.com/@YUKIOFFICIALSTUDIOPRO01" target="_blank" rel="noopener noreferrer" aria-label="YouTube"></a>
-    <a class="header-social__link header-social__link--tiktok" href="https://www.tiktok.com/@yukiosp01?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok"></a>
-  </div>
-
-  <button class="menu-toggle" id="menuToggle">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
-
+<nav class="nav" id="nav">
+  <a href="news.html">News</a>
+  <a href="live.html">Live</a>
+  <a href="profile.html">Profile</a>
+  <a href="biography.html">Biography</a>
+  <a href="songs/songs.html">Songs</a>
+  <a href="store.html">Store</a>
+  <a href="contact.html">Contact</a>
+  <a class="nav-fanclub" href="https://www.youtube.com/channel/UCdZMz61Y8oS4kfC9CP4esTA/join" target="_blank" rel="noopener noreferrer">FANCLUB</a>
+</nav>
+<div class="header-social" aria-label="SNS links">
+  <a class="header-social__link header-social__link--x" href="https://x.com/Youking74514090" target="_blank" rel="noopener noreferrer" aria-label="X"></a>
+  <a class="header-social__link header-social__link--youtube" href="https://www.youtube.com/@YUKIOFFICIALSTUDIOPRO01" target="_blank" rel="noopener noreferrer" aria-label="YouTube"></a>
+  <a class="header-social__link header-social__link--tiktok" href="https://www.tiktok.com/@yukiosp01?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok"></a>
+</div>
+<button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
 </header>
 <section class="page-hero">
-
   <div class="hero-light"></div>
-
-  <div class="hero__content">
-
-    <h1 class="page-title">
-      Profile
-    </h1>
-
-  </div>
-
+  <div class="hero__content"><h1 class="page-title">Profile</h1></div>
 </section>
 <main class="profile-page">
   <section class="profile-visual">
-  <img src="images/Profile.png" alt="YUKI">
-</section>
-
+    <img src="images/Profile.png" alt="YUKI">
+  </section>
   <section class="profile-biography">
-
-  <div class="profile-biography__inner">
-
-    <h2 class="profile-title">
-      YUKI / 佑樹
-    </h2>
-
-    <div class="profile-text">
-
-      <p>
-        1986年4月15日生まれ、愛知県名古屋市出身。
-        2005年より本格的に音楽活動を開始。
-        東京の芸能事務所に所属し、
-        ボイストレーニングを受けながら
-        オリジナル楽曲でのストリートライブを展開。
-      </p>
-
-      <p>
-        名古屋から東京へ通いながら経験を積み、
-        オムニバスCD「Future」への参加、
-        渋谷CLUB asiaでのリリースライブ出演など、
-        精力的なライブ活動を行う。
-      </p>
-
-      <p>
-        一時は自身の限界を感じ、
-        音楽活動を休止する期間を経験するも、
-        夢を諦めきれず、
-        2021年4月に配信シングル
-        「Freedom」で再始動。
-      </p>
-
-      <p>
-        以降はサブスクリプションを中心に
-        継続的なリリースを重ね、
-        ライブ出演、ラジオ番組へのレギュラー出演、
-        SNS発信などを通じて
-        リスナー層を拡大。
-      </p>
-
-      <p>
-        2023年2月には
-        念願の全国流通版CDをリリース。
-        「Be-Trip」、
-        そして台湾iTunesランキングでも
-        上位にランクインした「逆夢」を、
-        エレクトロニック・ダンスミュージックとして
-        再構築し発表。
-      </p>
-
-      <p>
-        「Be-Trip」は
-        タワーレコード渋谷店1階正面ブース展開にて完売、
-        オリコンウィークリーランキング15位を記録。
-        続く「逆夢」も店頭在庫完売を達成し、
-        高い評価を獲得した。
-      </p>
-
-      <p>
-        また、地元・名古屋CLUB QUATTROにて
-        凱旋ワンマンライブ
-        「Be-Free」を開催。
-        チケットはソールドアウトとなり、
-        地元でのライブ動員力と
-        ステージパフォーマンスを証明した。
-      </p>
-
-      <p>
-        配信・CD・ライブの各フィールドで
-        実績を積み重ねながら、
-        現在も次なる展開へ向けて
-        音楽活動を続けている。
-      </p>
-
+    <div class="profile-biography__inner">
+      <h2 class="profile-title">YUKI / 佑樹</h2>
+      <div class="profile-text">
+        <p>1986年4月15日生まれ、愛知県名古屋市出身。2005年より本格的に音楽活動を開始。東京の芸能事務所に所属し、ボイストレーニングを受けながらオリジナル楽曲でのストリートライブを展開。</p>
+        <p>名古屋から東京へ通いながら経験を積み、オムニバスCD「Future」への参加、渋谷CLUB asiaでのリリースライブ出演など、精力的なライブ活動を行う。</p>
+        <p>一時は自身の限界を感じ、音楽活動を休止する期間を経験するも、夢を諦めきれず、2021年4月に配信シングル「Freedom」で再始動。</p>
+        <p>以降はサブスクリプションを中心に継続的なリリースを重ね、ライブ出演、ラジオ番組へのレギュラー出演、SNS発信などを通じてリスナー層を拡大。</p>
+        <p>2023年2月には念願の全国流通版CDをリリース。「Be-Trip」、そして台湾iTunesランキングでも上位にランクインした「逆夢」を、エレクトロニック・ダンスミュージックとして再構築し発表。</p>
+        <p>「Be-Trip」はタワーレコード渋谷店1階正面ブース展開にて完売、オリコンウィークリーランキング15位を記録。続く「逆夢」も店頭在庫完売を達成し、高い評価を獲得した。</p>
+        <p>また、地元・名古屋CLUB QUATTROにて凱旋ワンマンライブ「Be-Free」を開催。チケットはソールドアウトとなり、地元でのライブ動員力とステージパフォーマンスを証明した。</p>
+        <p>配信・CD・ライブの各フィールドで実績を積み重ねながら、現在も次なる展開へ向けて音楽活動を続けている。</p>
+      </div>
+      <div class="profile-links">
+        <a href="https://musit.net/interview/yuki-ssw-2025" target="_blank" rel="noopener noreferrer" class="profile-link">Musit Interview</a>
+      </div>
     </div>
-
-    <div class="profile-links">
-
-      <a
-        href="https://musit.net/interview/yuki-ssw-2025"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="profile-link">
-
-        Musit Interview
-
-      </a>
-
+  </section>
+  <section class="discography">
+    <div class="discography__inner">
+      <div class="discography-block">
+        <p class="discography-label">NATIONAL RELEASE CD</p>
+        <ul class="discography-list">
+          <li>1st Single 「Be-Trip」 <span>2023/2/8</span></li>
+          <li>2nd Single 「逆夢」 <span>2023/7/5</span></li>
+        </ul>
+      </div>
+      <div class="discography-block">
+        <p class="discography-label">DIGITAL SINGLE</p>
+        <ul class="discography-list">
+          <li>01. Freedom <span>2021.4.15</span></li>
+          <li>02. Keep Only One Lady <span>2021.6.3</span></li>
+          <li>03. 暁 -AKATSUKI- <span>2021.7.21</span></li>
+          <li>04. YUKI OFFICIAL STUDIO PRO 01［Instrumental］ <span>2021.8.22</span></li>
+          <li>05. 逆夢 <span>2021.11.1</span></li>
+          <li>06. JENESIS <span>2022.1.31</span></li>
+          <li>07. BE-TRIP（Streaming Ver.） <span>2022.6.6</span></li>
+          <li>08. 春と秋風の彩りを <span>2022.9.11</span></li>
+          <li>09. 天照 -AMATERAS- <span>2023.6.17</span></li>
+          <li>10. NEXT INNOVATION! <span>2023.11.23</span></li>
+          <li>11. Breaking all the chains <span>2024.4.24</span></li>
+          <li>12. The Beast <span>2024.6.20</span></li>
+          <li>13. 輪廻の中で自由を求め続けた弱者 <span>2024.12.01</span></li>
+          <li>14. ウーノ <span>2025.11.24</span></li>
+        </ul>
+      </div>
     </div>
-
-  </div>
-
-</section>
-
-
-<section class="discography">
-
-  <div class="discography__inner">
-
-    <div class="discography-block">
-
-      <p class="discography-label">
-        NATIONAL RELEASE CD
-      </p>
-
-      <ul class="discography-list">
-
-        <li>
-          1st Single 「Be-Trip」 <span>2023/2/8</span>
-        </li>
-
-        <li>
-          2nd Single 「逆夢」 <span>2023/7/5</span>
-        </li>
-
-      </ul>
-
-    </div>
-
-    <div class="discography-block">
-
-      <p class="discography-label">
-        DIGITAL SINGLE
-      </p>
-
-      <ul class="discography-list">
-
-        <li>01. Freedom <span>2021.4.15</span></li>
-        <li>02. Keep Only One Lady <span>2021.6.3</span></li>
-        <li>03. 暁 -AKATSUKI- <span>2021.7.21</span></li>
-        <li>04. YUKI OFFICIAL STUDIO PRO 01［Instrumental］ <span>2021.8.22</span></li>
-        <li>05. 逆夢 <span>2021.11.1</span></li>
-        <li>06. JENESIS <span>2022.1.31</span></li>
-        <li>07. BE-TRIP（Streaming Ver.） <span>2022.6.6</span></li>
-        <li>08. 春と秋風の彩りを <span>2022.9.11</span></li>
-        <li>09. 天照 -AMATERAS- <span>2023.6.17</span></li>
-        <li>10. NEXT INNOVATION! <span>2023.11.23</span></li>
-        <li>11. Breaking all the chains <span>2024.4.24</span></li>
-        <li>12. The Beast <span>2024.6.20</span></li>
-        <li>13. 輪廻の中で自由を求め続けた弱者 <span>2024.12.01</span></li>
-        <li>14. ウーノ <span>2025.11.24</span></li>
-
-      </ul>
-
-    </div>
-
-  </div>
-
-</section>
-
+  </section>
 </main>
-
-   <footer class="footer"><p>&copy; 2026 YUKI / 佑樹（YUKI OFFCIAL STUDIO PRO 01）. All rights reserved.</p></footer>
+<footer class="footer"><p>&copy; 2026 YUKI / 佑樹（YUKI OFFCIAL STUDIO PRO 01）. All rights reserved.</p></footer>
 <script>
-// 🔥 ハンバーガーは外に出す
 const menuToggle = document.getElementById("menuToggle");
 const nav = document.getElementById("nav");
-
 if(menuToggle && nav){
   menuToggle.addEventListener("click", () => {
     nav.classList.toggle("active");
@@ -296,6 +166,5 @@ if(menuToggle && nav){
   });
 }
 </script>
-
 </body>
 </html>
