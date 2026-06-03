@@ -101,5 +101,19 @@ section { padding: 54px 18px; }
 .index-text-link { display:inline-block; margin-top:24px; color:var(--gold); font-family:var(--serif); font-size:1.35rem; font-style:italic; font-weight:700; }
 .social__links { display:flex; justify-content:center; flex-wrap:wrap; gap:12px; }
 .social-link { display:inline-grid; place-items:center; min-width:54px; height:54px; padding:0 16px; border:1px solid rgba(255,255,255,.16); border-radius:999px; background:rgba(255,255,255,.04); font-weight:700; }
+
+body:not(.store-page) .preview-player ~ .store-final::before {
+  content: none !important;
+  display: none !important;
+}
+body:not(.store-page) .preview-player ~ .store-final .button.main-cta[href="songs.html"] {
+  display: none !important;
+}
+body:not(.store-page) .store-final .button.main-cta + .button.main-cta,
+body:not(.store-page) .store-final .button.main-cta + .button.main-cta::before {
+  display: none !important;
+  content: none !important;
+}
+
 .footer { padding:34px 18px; text-align:center; color:rgba(247,241,232,.52); font-size:.82rem; }
 .reveal { opacity:1 !important; transform:none !important; }
