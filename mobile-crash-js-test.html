@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile JS Test | YUKI / 佑樹</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { background:#000; -webkit-text-size-adjust:100%; }
+    body { margin:0; background:#050505; color:#f7f1e8; font-family:system-ui,-apple-system,BlinkMacSystemFont,sans-serif; overflow-x:hidden; }
+    header { position:sticky; top:0; padding:18px; background:rgba(0,0,0,.92); border-bottom:1px solid rgba(255,255,255,.1); font-weight:700; }
+    main { padding:24px 18px 48px; }
+    .hero { min-height:50svh; display:grid; place-items:center; background:linear-gradient(135deg,#050505,#13060c,#1b2131); }
+    .hero-bg { display:none; }
+    .reveal { opacity:1; }
+    .nav { display:none; }
+    .nav.active { display:block; }
+    button { margin-top:12px; }
+    p { color:rgba(247,241,232,.72); line-height:1.7; }
+  </style>
+</head>
+<body>
+  <header>
+    YUKI / 佑樹 JS Test
+    <button class="menu-toggle" id="menuToggle" type="button">Menu</button>
+    <nav class="nav" id="nav"><a href="#">News</a> / <a href="#">Live</a></nav>
+  </header>
+  <main>
+    <section class="hero"><div class="hero-bg"></div><h1>JS Test</h1></section>
+    <section class="reveal"><p>本番indexに近いJSだけを実行するテストです。外部CSS・画像・動画はありません。</p></section>
+    <section class="reveal"><p>Reveal target 2</p></section>
+  </main>
+  <script>
+    if (window.matchMedia("(min-width: 769px)").matches) {
+      document.addEventListener("mousemove", e => {
+        document.body.style.setProperty("--x", e.clientX + "px");
+        document.body.style.setProperty("--y", e.clientY + "px");
+      });
+    }
+
+    const els = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        }
+      });
+    }, { threshold: 0.1 });
+
+    els.forEach(el => {
+      observer.observe(el);
+      if (el.getBoundingClientRect().top < window.innerHeight) {
+        el.classList.add("active");
+      }
+    });
+
+    if (window.matchMedia("(min-width: 769px)").matches) {
+      window.addEventListener("scroll", () => {
+        const heroBg = document.querySelector(".hero-bg");
+        if (!heroBg) return;
+        const scrolled = window.scrollY;
+        heroBg.style.transform = "scale(1.08) translateY(" + (scrolled * 0.15) + "px)";
+      }, { passive: true });
+    }
+
+    const menuToggle = document.getElementById("menuToggle");
+    const nav = document.getElementById("nav");
+    menuToggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+      menuToggle.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>

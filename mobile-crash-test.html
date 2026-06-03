@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Crash Test | YUKI / 佑樹</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { background: #000; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      min-height: 100svh;
+      background: linear-gradient(135deg, #050505 0%, #13060c 58%, #1b2131 100%);
+      color: #f7f1e8;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      overflow-x: hidden;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      padding: 18px;
+      background: rgba(0,0,0,.9);
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      font-weight: 700;
+    }
+    main {
+      padding: 56px 18px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(3rem, 15vw, 6rem);
+      line-height: 1;
+      letter-spacing: .04em;
+    }
+    p {
+      max-width: 680px;
+      margin: 24px auto 0;
+      color: rgba(247,241,232,.75);
+      line-height: 1.8;
+    }
+    .box {
+      margin: 36px auto 0;
+      max-width: 680px;
+      padding: 22px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      border-radius: 18px;
+    }
+  </style>
+</head>
+<body>
+  <header>YUKI / 佑樹 Official Site</header>
+  <main>
+    <h1>YUKI<br><span style="color:#d7b967">佑樹</span></h1>
+    <p>Mobile Safari crash isolation page. No external CSS, no images, no video, no animation.</p>
+    <div class="box">
+      <strong>Test</strong>
+      <p>このページでリロード連打して落ちなければ、本番ページ側の画像・動画・CSS・JSのどれかが原因です。</p>
+    </div>
+  </main>
+</body>
+</html>
