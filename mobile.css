@@ -16,9 +16,7 @@ body {
   margin: 0;
   min-width: 0;
   overflow-x: hidden;
-  background:
-    radial-gradient(circle at 80% 0%, rgba(34, 54, 62, 0.32), transparent 34%),
-    linear-gradient(180deg, #050505 0%, #090509 54%, #050505 100%);
+  background: #050505;
   color: var(--text);
   font-family: var(--serif);
   -webkit-font-smoothing: antialiased;
@@ -115,7 +113,7 @@ img, video, iframe, audio { max-width: 100%; }
   padding: 13px 0;
   color: rgba(247,241,232,0.88);
   font-family: var(--serif);
-  font-size: 1.18rem;
+  font-size: 1.08rem;
   font-weight: 700;
   letter-spacing: 0.07em;
   border-bottom: 1px solid rgba(255,255,255,0.07);
@@ -194,13 +192,13 @@ main { padding-top: 74px; }
 .results-bar {
   overflow: hidden;
   border-block: 1px solid rgba(215,185,103,0.16);
-  background: rgba(8,0,4,0.92);
+  background: #090005;
 }
 .results-track {
   display: flex;
   width: max-content;
   gap: 42px;
-  padding: 16px 0;
+  padding: 3px 0;
   animation: mobileTicker 32s linear infinite;
 }
 .results-track span {
@@ -241,7 +239,8 @@ section { padding: clamp(54px, 13vw, 86px) 18px; }
 .preview-player__inner,
 .video-card {
   border: 1px solid rgba(255,255,255,0.1);
-  background: rgba(255,255,255,0.035);
+  background: transparent;
+  box-shadow: none;
 }
 .achievement-item,
 .news-item { padding: 20px; }
@@ -376,9 +375,7 @@ section { padding: clamp(54px, 13vw, 86px) 18px; }
   display: grid;
   place-items: center;
   padding-top: 104px;
-  background:
-    radial-gradient(circle at 80% 0%, rgba(45,60,70,0.34), transparent 38%),
-    linear-gradient(135deg, #171816 0%, #13060c 58%, #1b2131 100%);
+  background: #050505;
 }
 .page-hero .hero__content { width: min(100% - 34px, 720px); }
 .page-title { margin: 0; }
@@ -403,7 +400,12 @@ section { padding: clamp(54px, 13vw, 86px) 18px; }
   font-weight: 700;
 }
 
-.profile-visual img { width: 100%; display: block; }
+.profile-visual,
+.profile-biography,
+.contact-page,
+.contact-section,
+.lyrics-section { background: transparent; box-shadow: none; }
+.profile-visual img { width: 100%; display: block; box-shadow: none; filter: none; }
 .profile-biography,
 .discography { width: min(100% - 34px, 820px); margin: 0 auto; }
 .profile-title { font-size: clamp(2.2rem, 11vw, 3.5rem); }
@@ -446,3 +448,10 @@ section { padding: clamp(54px, 13vw, 86px) 18px; }
   0% { transform: translate3d(0, 0, 0); }
   100% { transform: translate3d(-50%, 0, 0); }
 }
+
+.contact-section { width:min(100%,820px); margin:0 auto; }
+.contact-form { display:grid; gap:20px; width:100%; position:relative; z-index:2; }
+.contact-form * { position:relative; z-index:2; }
+.form-group { display:grid; gap:10px; }
+.form-group input, .form-group textarea, .form-group select { width:100%; padding:15px 16px; border:1px solid rgba(255,255,255,.14); border-radius:22px; background:#090509; color:var(--text); appearance:auto; pointer-events:auto; }
+.form-group textarea { min-height:160px; resize:vertical; }

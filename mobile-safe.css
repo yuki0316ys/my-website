@@ -14,9 +14,9 @@ html { background: #000; overflow-x: hidden; -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
   overflow-x: hidden;
-  background: linear-gradient(180deg, #050505 0%, #10060b 56%, #050505 100%);
+  background: #050505;
   color: var(--text);
-  font-family: var(--sans);
+  font-family: var(--serif);
   -webkit-font-smoothing: antialiased;
 }
 a { color: inherit; text-decoration: none; }
@@ -64,7 +64,7 @@ video, .featured-video, .page-glow, .hero-light { display: none; }
 .menu-toggle span { display:block; width:24px; height:2px; margin:3px 0; background: currentColor; border-radius:999px; }
 .nav { display:none; position:absolute; left:0; right:0; top:70px; padding:14px 22px 20px; background:#050505; border-bottom:1px solid rgba(255,255,255,.08); }
 .nav.active { display:flex; flex-direction:column; }
-.nav a { padding:12px 0; border-bottom:1px solid rgba(255,255,255,.08); font-weight:700; letter-spacing:.06em; }
+.nav a { padding:12px 0; border-bottom:1px solid rgba(255,255,255,.08); font-family:var(--serif); font-size:1.08rem; font-weight:700; letter-spacing:.07em; }
 .nav-fanclub { color: var(--gold); }
 .header-social { display:none; }
 
@@ -77,7 +77,7 @@ main { padding-top: 0; }
   place-items: center;
   padding: 56px 18px;
   text-align: center;
-  background: linear-gradient(135deg, #050505 0%, #15070e 56%, #1b2131 100%);
+  background: #050505;
   overflow: hidden;
 }
 .hero { position: relative; min-height: 72svh; background: #000; }
@@ -116,8 +116,8 @@ main { padding-top: 0; }
 .page-subtitle { margin: 18px 0 0; color: var(--muted); font-weight:700; letter-spacing:.12em; line-height:1.7; }
 .hero__meta { display: none; }
 
-.results-bar { padding: 7px 14px; border-block:1px solid rgba(215,185,103,.16); background:#0b0307; overflow:hidden; }
-.results-track { display:flex; width:max-content; gap:34px; animation: mobileTicker 34s linear infinite; }
+.results-bar { padding: 0; border-block:1px solid rgba(215,185,103,.16); background:#090005; overflow:hidden; }
+.results-track { display:flex; width:max-content; gap:34px; padding:3px 0; animation: mobileTicker 34s linear infinite; }
 .results-track span { flex:0 0 auto; white-space:nowrap; font-size:.86rem; color:var(--muted); font-weight:700; letter-spacing:.08em; }
 
 section { padding: 54px 18px; }
@@ -132,7 +132,7 @@ section { padding: 54px 18px; }
 .page-hero + main > .live-list,
 .page-hero + main > .biography-list { padding:36px 18px 48px; }
 .achievement-grid, .track-grid, .goods-grid, .disc-grid { display:grid; gap:28px; }
-.achievement-item, .news-item, .live-item, .biography-item, .video-card, .preview-player__inner { padding:18px 0; border-top:1px solid rgba(255,255,255,.1); background:transparent; }
+.achievement-item, .news-item, .live-item, .biography-item, .video-card, .preview-player__inner { padding:18px 0; border-top:1px solid rgba(255,255,255,.1); background:transparent; box-shadow:none; }
 .number, .news-date, .live-date, .biography-date { color:var(--gold); font-weight:700; letter-spacing:.1em; }
 .achievement-label, .news-title, .live-title, .biography-title { margin:8px 0 0; color:var(--muted); line-height:1.7; }
 .video-frame, .song-video-frame { aspect-ratio:16/9; background:#000; }
@@ -157,10 +157,12 @@ section { padding: 54px 18px; }
   padding:15px 16px;
   border:1px solid rgba(255,255,255,.14);
   border-radius:22px;
-  background:rgba(255,255,255,.04);
+  background:#090509;
   color:var(--text);
   appearance:auto;
   pointer-events:auto;
+  position:relative;
+  z-index:2;
 }
 .form-group textarea { min-height:160px; resize:vertical; }
 .preview-player__inner { border-radius: 22px; }
@@ -183,3 +185,7 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "Tunecoreã
 
 @keyframes mobileHeroFade { 0%, 10% { opacity: 0; } 18%, 48% { opacity: 1; } 58%, 100% { opacity: 0; } }
 @keyframes mobileTicker { 0% { transform: translate3d(0,0,0); } 100% { transform: translate3d(-50%,0,0); } }
+
+.profile-visual, .profile-biography, .contact-page, .contact-section, .lyrics-section { background: transparent; box-shadow: none; }
+.profile-visual img { box-shadow: none; filter: none; }
+.contact-form, .contact-form * { position: relative; z-index: 2; }
