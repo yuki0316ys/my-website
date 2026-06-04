@@ -119,7 +119,30 @@ img, video, iframe, audio { max-width: 100%; }
   border-bottom: 1px solid rgba(255,255,255,0.07);
 }
 .nav .nav-fanclub { color: var(--gold); }
-.header-social { display: none; }
+.header-social {
+  position: absolute;
+  right: 78px;
+  top: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header-social__link {
+  width: 34px;
+  height: 34px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 50%;
+  background: rgba(255,255,255,0.045);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 0;
+}
+.header-social__link::before { font-size: 13px; font-weight: 800; line-height: 1; }
+.header-social__link--x::before { content: "X"; }
+.header-social__link--youtube::before { content: "▶"; }
+.header-social__link--tiktok::before { content: "♪"; }
 
 main { padding-top: 74px; }
 .hero {
@@ -259,7 +282,7 @@ section { padding: clamp(54px, 13vw, 86px) 18px; }
   line-height: 1.7;
   letter-spacing: 0.04em;
 }
-.news-tag { display: none; }
+.news-tag, .live-tag, .biography-tag { display: none; }
 
 .video-card { overflow: hidden; }
 .video-frame,
@@ -285,7 +308,7 @@ section { padding: clamp(54px, 13vw, 86px) 18px; }
   border: 0;
   object-fit: cover;
 }
-.featured-video { display: none; }
+.featured-video { display: block; }
 
 .track-grid,
 .goods-grid,
