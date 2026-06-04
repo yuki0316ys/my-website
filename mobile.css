@@ -371,13 +371,16 @@ section { padding: clamp(54px, 13vw, 86px) 18px; }
 }
 
 .page-hero {
+  position: relative;
   min-height: 42svh;
   display: grid;
   place-items: center;
   padding-top: 104px;
   background: #050505;
+  overflow: hidden;
 }
 .page-hero .hero__content { width: min(100% - 34px, 720px); }
+.page-hero .hero-light { display: none; }
 .page-title { margin: 0; }
 
 .social__links {
@@ -403,12 +406,15 @@ section { padding: clamp(54px, 13vw, 86px) 18px; }
 .profile-page,
 .profile-visual,
 .profile-biography,
+.biography-page,
 .contact-page,
 .contact-section,
 .lyrics-section,
 .lyrics,
 .cinematic-lyrics { background: transparent; box-shadow: none; }
-.profile-visual img { width: 100%; display: block; box-shadow: none; filter: none; }
+.profile-visual img { width: 100%; display: block; box-shadow: none; filter: none; opacity: 1; mix-blend-mode: normal; }
+.biography-page .news-title { color: rgba(247,241,232,.94); }
+.biography-page .news-date { color: var(--gold-bright); }
 .profile-biography,
 .discography { width: min(100% - 34px, 820px); margin: 0 auto; }
 .profile-title { font-size: clamp(2.2rem, 11vw, 3.5rem); }

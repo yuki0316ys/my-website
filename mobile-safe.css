@@ -72,6 +72,7 @@ main { padding-top: 0; }
 .page-hero + main { min-height: auto; }
 .hero,
 .page-hero {
+  position: relative;
   min-height: 58svh;
   display: grid;
   place-items: center;
@@ -101,6 +102,7 @@ main { padding-top: 0; }
 .hero-bg::before { background-image: linear-gradient(180deg, rgba(0,0,0,.4), rgba(0,0,0,.66)), url("images/index%20ver2.jpg"); }
 .hero-bg::after { background-image: linear-gradient(180deg, rgba(0,0,0,.42), rgba(0,0,0,.7)), url("images/top.jpg"); animation-delay: 10s; }
 .hero__content { position: relative; z-index: 2; width: min(100%, 680px); }
+.page-hero .hero-light { display: none; }
 .hero h1,
 .page-title {
   margin: 0;
@@ -187,8 +189,10 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "Tunecoreã
 @keyframes mobileHeroFade { 0%, 10% { opacity: 0; } 18%, 48% { opacity: 1; } 58%, 100% { opacity: 0; } }
 @keyframes mobileTicker { 0% { transform: translate3d(0,0,0); } 100% { transform: translate3d(-50%,0,0); } }
 
-.profile-page, .profile-visual, .profile-biography, .contact-page, .contact-section, .lyrics-section, .lyrics, .cinematic-lyrics { background: transparent; box-shadow: none; }
-.profile-visual img { box-shadow: none; filter: none; }
+.profile-page, .profile-visual, .profile-biography, .biography-page, .contact-page, .contact-section, .lyrics-section, .lyrics, .cinematic-lyrics { background: transparent; box-shadow: none; }
+.profile-visual img { box-shadow: none; filter: none; opacity: 1; mix-blend-mode: normal; }
+.biography-page .news-title { color: rgba(247,241,232,.94); }
+.biography-page .news-date { color: var(--gold-bright); }
 .contact-form, .contact-form * { position: relative; z-index: 2; }
 
 .contact-page-body .page-glow, .contact-page-body .hero-light { display: none; }

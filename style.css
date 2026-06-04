@@ -460,14 +460,17 @@ section { padding: clamp(72px, 7vw, 128px) 24px; }
 .track-card[href*="uno"] .track-card__content::before { content: "2025.11.24"; }
 
 .page-hero {
+  position: relative;
   min-height: 44svh;
   display: grid;
   place-items: center;
   padding-top: calc(var(--header-h) + 80px);
   background: #050505;
+  overflow: hidden;
   text-align: center;
 }
 .page-hero .hero__content { width: min(100% - 44px, 980px); }
+.page-hero .hero-light { display: none; }
 .page-title { font-size: clamp(3.4rem, 6.7vw, 7.2rem); overflow-wrap: anywhere; }
 
 .lyrics-section,
@@ -508,6 +511,7 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "Tunecoreã
 .profile-page,
 .profile-visual,
 .profile-biography,
+.biography-page,
 .contact-page,
 .contact-section,
 .lyrics-section,
@@ -520,6 +524,12 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "Tunecoreã
   box-shadow: none;
   filter: none;
 }
+.biography-page .news-title {
+  color: rgba(247,241,232,.94);
+}
+.biography-page .news-date {
+  color: var(--gold-bright);
+}
 .contact-form,
 .contact-form * {
   position: relative;
@@ -527,7 +537,12 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "Tunecoreã
 }
 
 .profile-visual { width: min(100%, 1040px); margin: 0 auto; }
-.profile-visual img { width: 100%; height: auto; }
+.profile-visual img {
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  mix-blend-mode: normal;
+}
 .profile-biography__inner,
 .profile-card {
   width: min(100%, 980px);
