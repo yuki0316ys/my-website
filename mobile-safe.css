@@ -179,6 +179,38 @@ section { padding: 54px 18px; }
 .index-text-link, .button.main-cta { display:inline-block; margin-top:24px; color:var(--gold); font-family:var(--serif); font-size:1.35rem; font-style:italic; font-weight:700; transform:skew(-8deg); }
 
 .lyrics p, .profile-text p, .discography-list li { color: var(--muted); font-size: 1rem; line-height: 1.95; letter-spacing: .04em; }
+.profile-links {
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(215,185,103,.18);
+}
+.profile-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: min(100%, 320px);
+  min-height: 52px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  border: 1px solid rgba(215,185,103,.42);
+  border-radius: 999px;
+  background: rgba(215,185,103,.06);
+  color: var(--gold-bright);
+  font-family: var(--serif);
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+}
+.profile-link::after {
+  content: ">";
+  font-size: .95em;
+  line-height: 1;
+  transform: translateY(-1px);
+}
 .contact-section { width:min(100%,820px); margin:0 auto; }
 .contact-form { display:grid; gap:20px; width:100%; }
 .form-group { display:grid; gap:10px; }

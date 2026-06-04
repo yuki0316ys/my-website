@@ -449,6 +449,41 @@ section { padding: clamp(54px, 13vw, 86px) 18px; }
   letter-spacing: 0.04em;
 }
 
+.profile-links {
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(215,185,103,.18);
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: min(100%, 320px);
+  min-height: 52px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  border: 1px solid rgba(215,185,103,.42);
+  border-radius: 999px;
+  background: rgba(215,185,103,.06);
+  color: var(--gold);
+  font-family: var(--serif);
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+}
+
+.profile-link::after {
+  content: ">";
+  font-size: .95em;
+  line-height: 1;
+  transform: translateY(-1px);
+}
+
 .preview-player { padding-inline: 18px; }
 .preview-player__inner { padding: 28px 18px; border-radius: 22px; }
 .preview-player h2,
