@@ -400,11 +400,14 @@ section { padding: clamp(54px, 13vw, 86px) 18px; }
   font-weight: 700;
 }
 
+.profile-page,
 .profile-visual,
 .profile-biography,
 .contact-page,
 .contact-section,
-.lyrics-section { background: transparent; box-shadow: none; }
+.lyrics-section,
+.lyrics,
+.cinematic-lyrics { background: transparent; box-shadow: none; }
 .profile-visual img { width: 100%; display: block; box-shadow: none; filter: none; }
 .profile-biography,
 .discography { width: min(100% - 34px, 820px); margin: 0 auto; }
@@ -453,5 +456,9 @@ section { padding: clamp(54px, 13vw, 86px) 18px; }
 .contact-form { display:grid; gap:20px; width:100%; position:relative; z-index:2; }
 .contact-form * { position:relative; z-index:2; }
 .form-group { display:grid; gap:10px; }
-.form-group input, .form-group textarea, .form-group select { width:100%; padding:15px 16px; border:1px solid rgba(255,255,255,.14); border-radius:22px; background:#090509; color:var(--text); appearance:auto; pointer-events:auto; }
+.form-group input, .form-group textarea, .form-group select { width:100%; padding:15px 16px; border:1px solid rgba(255,255,255,.14); border-radius:22px; background:#090509; color:var(--text); appearance:auto; pointer-events:auto; user-select:text; }
 .form-group textarea { min-height:160px; resize:vertical; }
+
+.contact-page-body .page-glow, .contact-page-body .hero-light { display: none; }
+.contact-page-body .contact-hero, .contact-page-body .contact-section, .contact-page-body .contact-form { background: transparent; box-shadow: none; }
+.contact-page-body .form-group input, .contact-page-body .form-group textarea, .contact-page-body .form-group select { box-shadow: none; }

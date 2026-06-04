@@ -161,6 +161,7 @@ section { padding: 54px 18px; }
   color:var(--text);
   appearance:auto;
   pointer-events:auto;
+  user-select:text;
   position:relative;
   z-index:2;
 }
@@ -186,6 +187,10 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "Tunecoreã
 @keyframes mobileHeroFade { 0%, 10% { opacity: 0; } 18%, 48% { opacity: 1; } 58%, 100% { opacity: 0; } }
 @keyframes mobileTicker { 0% { transform: translate3d(0,0,0); } 100% { transform: translate3d(-50%,0,0); } }
 
-.profile-visual, .profile-biography, .contact-page, .contact-section, .lyrics-section { background: transparent; box-shadow: none; }
+.profile-page, .profile-visual, .profile-biography, .contact-page, .contact-section, .lyrics-section, .lyrics, .cinematic-lyrics { background: transparent; box-shadow: none; }
 .profile-visual img { box-shadow: none; filter: none; }
 .contact-form, .contact-form * { position: relative; z-index: 2; }
+
+.contact-page-body .page-glow, .contact-page-body .hero-light { display: none; }
+.contact-page-body .contact-hero, .contact-page-body .contact-section, .contact-page-body .contact-form { background: transparent; box-shadow: none; }
+.contact-page-body .form-group input, .contact-page-body .form-group textarea, .contact-page-body .form-group select { box-shadow: none; }

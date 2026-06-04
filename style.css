@@ -239,6 +239,7 @@ main { min-height: 100vh; }
 
 .results-bar {
   overflow: hidden;
+  padding: 0;
   border-block: 1px solid rgba(215,185,103,.17);
   background: #090005;
 }
@@ -344,7 +345,8 @@ section { padding: clamp(72px, 7vw, 128px) 24px; }
   margin: 0 auto;
   overflow: hidden;
   border: 1px solid rgba(255,255,255,.11);
-  background: rgba(255,255,255,.035);
+  background: transparent;
+  box-shadow: none;
 }
 .video-frame,
 .song-video-frame {
@@ -503,9 +505,14 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "Tunecoreã
 .store-final .button.main-cta::after { font-size: clamp(1.18rem, 1.55vw, 1.58rem); }
 
 
+.profile-page,
 .profile-visual,
+.profile-biography,
 .contact-page,
-.lyrics-section {
+.contact-section,
+.lyrics-section,
+.lyrics,
+.cinematic-lyrics {
   background: transparent;
   box-shadow: none;
 }
@@ -547,6 +554,23 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "Tunecoreã
 }
 .goods-price { margin: 8px 0 0; color: var(--gold); font-size: 1.1rem; }
 
+
+.contact-page-body .page-glow,
+.contact-page-body .hero-light {
+  display: none;
+}
+.contact-page-body .contact-hero,
+.contact-page-body .contact-section,
+.contact-page-body .contact-form {
+  background: transparent;
+  box-shadow: none;
+}
+.contact-page-body .form-group input,
+.contact-page-body .form-group textarea,
+.contact-page-body .form-group select {
+  box-shadow: none;
+}
+
 .contact-form { display: grid; gap: 22px; }
 .form-group { display: grid; gap: 10px; }
 .form-group label { color: rgba(247,241,232,.82); font-size: 1.05rem; letter-spacing: .05em; }
@@ -561,6 +585,7 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "Tunecoreã
   color: var(--text);
   appearance: auto;
   pointer-events: auto;
+  user-select: text;
   position: relative;
   z-index: 2;
 }
