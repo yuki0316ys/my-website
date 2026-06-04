@@ -198,3 +198,5 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "Tunecoreã
 .contact-page-body .page-glow, .contact-page-body .hero-light { display: none; }
 .contact-page-body .contact-hero, .contact-page-body .contact-section, .contact-page-body .contact-form { background: transparent; box-shadow: none; }
 .contact-page-body .form-group input, .contact-page-body .form-group textarea, .contact-page-body .form-group select { box-shadow: none; }
+
+.discography-block + .discography-block { margin-top: 34px; padding-top: 28px; border-top: 1px solid rgba(215,185,103,.18); }
