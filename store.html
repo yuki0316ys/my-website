@@ -23,6 +23,20 @@
     html.desktop-loading body { opacity: 0; }
     html.desktop-ready body { opacity: 1; transition: opacity .12s ease; }
   }
+
+  body.store-page .goods-card h3 {
+    font-size: clamp(1.02rem, 1.32vw, 1.42rem);
+    letter-spacing: .035em;
+    line-height: 1.35;
+  }
+
+  @media (max-width: 768px) {
+    body.store-page .goods-card h3 {
+      font-size: 1.12rem;
+      letter-spacing: .03em;
+      line-height: 1.42;
+    }
+  }
 </style>
 <script>
   if (window.matchMedia("(min-width: 769px)").matches) {
