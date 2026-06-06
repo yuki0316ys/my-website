@@ -1,4 +1,12 @@
 User-agent: *
 Allow: /
+Disallow: /mobile-crash-test.html
+Disallow: /mobile-crash-css-test.html
+Disallow: /mobile-crash-fonts-test.html
+Disallow: /mobile-crash-head-test.html
+Disallow: /mobile-crash-images-test.html
+Disallow: /mobile-crash-js-test.html
+Disallow: /mobile-crash-media-css-test.html
+Disallow: /mobile-crash-video-test.html
 
 Sitemap: https://yuki-music.jp/sitemap.xml
