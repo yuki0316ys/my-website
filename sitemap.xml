@@ -1,64 +1,213 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://yuki-music.jp/</loc>
     <lastmod>2026-06-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://yuki-music.jp/images/ogp.jpg</image:loc>
+      <image:title>YUKI / 佑樹 Official Siteのキービジュアル</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://yuki-music.jp/news.html</loc>
     <lastmod>2026-06-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://yuki-music.jp/images/news-ogp.jpg</image:loc>
+      <image:title>YUKI / 佑樹 Official Newsの共有画像</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://yuki-music.jp/live.html</loc>
     <lastmod>2026-06-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://yuki-music.jp/images/live-ogp.jpg</image:loc>
+      <image:title>YUKI / 佑樹 Official Live Informationの共有画像</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://yuki-music.jp/profile.html</loc>
     <lastmod>2026-06-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://yuki-music.jp/images/profile-ogp.jpg</image:loc>
+      <image:title>YUKI / 佑樹 Official Profileの共有画像</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://yuki-music.jp/biography.html</loc>
     <lastmod>2026-06-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://yuki-music.jp/images/biography-ogp.jpg</image:loc>
+      <image:title>YUKI / 佑樹 Official Biographyの共有画像</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://yuki-music.jp/songs/songs.html</loc>
     <lastmod>2026-06-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://yuki-music.jp/images/songs-ogp.jpg</image:loc>
+      <image:title>YUKI / 佑樹 Songsページの共有画像</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://yuki-music.jp/store.html</loc>
     <lastmod>2026-06-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://yuki-music.jp/images/store-ogp.jpg</image:loc>
+      <image:title>YUKI / 佑樹 Official Storeの共有画像</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://yuki-music.jp/contact.html</loc>
     <lastmod>2026-06-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://yuki-music.jp/images/contact-ogp.jpg</image:loc>
+      <image:title>YUKI / 佑樹 Contactページの共有画像</image:title>
+    </image:image>
   </url>
-  <url><loc>https://yuki-music.jp/songs/Sakayume.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://yuki-music.jp/songs/BE-TRIP.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yuki-music.jp/songs/Nextinnovation.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yuki-music.jp/songs/Freedom.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yuki-music.jp/songs/KeepOnlyOneLady.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yuki-music.jp/songs/harutoakikaze.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yuki-music.jp/songs/amaterasu.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yuki-music.jp/songs/JENESIS.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yuki-music.jp/songs/rinne.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yuki-music.jp/songs/akatsuki.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yuki-music.jp/songs/Breakingallthechains.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yuki-music.jp/songs/uno.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yuki-music.jp/songs/The%20Beast.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url>
+    <loc>https://yuki-music.jp/songs/Sakayume.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://yuki-music.jp/images/sakayume.jpg</image:loc>
+      <image:title>YUKI / 佑樹の楽曲 逆夢 ジャケット画像</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yuki-music.jp/songs/BE-TRIP.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://yuki-music.jp/images/be-trip.jpg</image:loc>
+      <image:title>YUKI / 佑樹の楽曲 BE-TRIP ジャケット画像</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yuki-music.jp/songs/Nextinnovation.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://yuki-music.jp/images/next.jpg</image:loc>
+      <image:title>YUKI / 佑樹の楽曲 NEXT INNOVATION! ジャケット画像</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yuki-music.jp/songs/Freedom.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://yuki-music.jp/images/freedom.jpg</image:loc>
+      <image:title>YUKI / 佑樹の楽曲 Freedom ジャケット画像</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yuki-music.jp/songs/KeepOnlyOneLady.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://yuki-music.jp/images/keep.jpg</image:loc>
+      <image:title>YUKI / 佑樹の楽曲 Keep Only One Lady ジャケット画像</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yuki-music.jp/songs/harutoakikaze.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://yuki-music.jp/images/haru.jpg</image:loc>
+      <image:title>YUKI / 佑樹の楽曲 春と秋風の彩りを ジャケット画像</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yuki-music.jp/songs/amaterasu.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://yuki-music.jp/images/amaterasu.jpg</image:loc>
+      <image:title>YUKI / 佑樹の楽曲 天照 -AMATERAS- ジャケット画像</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yuki-music.jp/songs/JENESIS.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://yuki-music.jp/images/jenesis.jpg</image:loc>
+      <image:title>YUKI / 佑樹の楽曲 JENESIS ジャケット画像</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yuki-music.jp/songs/rinne.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://yuki-music.jp/images/rinne.jpg</image:loc>
+      <image:title>YUKI / 佑樹の楽曲 輪廻の中で自由を求め続けた弱者 ジャケット画像</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yuki-music.jp/songs/akatsuki.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://yuki-music.jp/images/akatsuki.jpg</image:loc>
+      <image:title>YUKI / 佑樹の楽曲 暁 -AKATSUKI- ジャケット画像</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yuki-music.jp/songs/Breakingallthechains.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://yuki-music.jp/images/chains.jpg</image:loc>
+      <image:title>YUKI / 佑樹の楽曲 Breaking All The Chains ジャケット画像</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yuki-music.jp/songs/uno.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://yuki-music.jp/images/uno.jpg</image:loc>
+      <image:title>YUKI / 佑樹の楽曲 ウーノ ジャケット画像</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yuki-music.jp/songs/The%20Beast.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://yuki-music.jp/images/beast.jpg</image:loc>
+      <image:title>YUKI / 佑樹の楽曲 The Beast ジャケット画像</image:title>
+    </image:image>
+  </url>
 </urlset>
