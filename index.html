@@ -58,14 +58,44 @@
   </script>
   <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"MusicGroup",
-  "name":"YUKI / 佑樹",
-  "url":"https://yuki-music.jp/",
-  "genre":["Dark Pop", "Electronic", "Rock"],
-  "sameAs":[
-    "https://www.youtube.com/@yuki_midnight",
-    "https://x.com/Youking74514090"
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MusicGroup",
+      "@id": "https://yuki-music.jp/#artist",
+      "name": "YUKI / 佑樹",
+      "url": "https://yuki-music.jp/",
+      "genre": ["Dark Pop", "Electronic", "Rock"],
+      "sameAs": [
+        "https://www.youtube.com/@yuki_midnight",
+        "https://x.com/Youking74514090",
+        "https://www.tiktok.com/@yukiosp01"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://yuki-music.jp/#website",
+      "name": "YUKI / 佑樹 Official Site",
+      "alternateName": "YUKI / 佑樹",
+      "url": "https://yuki-music.jp/",
+      "inLanguage": "ja",
+      "publisher": {
+        "@id": "https://yuki-music.jp/#artist"
+      },
+      "sameAs": [
+        "https://www.youtube.com/@yuki_midnight",
+        "https://x.com/Youking74514090",
+        "https://www.tiktok.com/@yukiosp01"
+      ],
+      "hasPart": [
+        {"@type": "WebPage", "name": "News", "url": "https://yuki-music.jp/news.html"},
+        {"@type": "WebPage", "name": "Live", "url": "https://yuki-music.jp/live.html"},
+        {"@type": "WebPage", "name": "Profile", "url": "https://yuki-music.jp/profile.html"},
+        {"@type": "WebPage", "name": "Songs", "url": "https://yuki-music.jp/songs/songs.html"},
+        {"@type": "WebPage", "name": "Store", "url": "https://yuki-music.jp/store.html"},
+        {"@type": "WebPage", "name": "Contact", "url": "https://yuki-music.jp/contact.html"}
+      ]
+    }
   ]
 }
   </script>
