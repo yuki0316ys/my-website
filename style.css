@@ -246,11 +246,16 @@ main { min-height: 100vh; }
 .results-track {
   display: flex;
   width: max-content;
-  gap: 54px;
   padding: 3px 0;
   animation: ticker 40s linear infinite;
 }
-.results-track span {
+.results-group {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 54px;
+  padding-right: 54px;
+}
+.results-group span {
   flex: 0 0 auto;
   white-space: nowrap;
   color: rgba(247,241,232,.72);
@@ -721,8 +726,9 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "Tunecoreã
   .hero__meta { top: calc(var(--header-h) + 28px); }
   .hero__meta span { padding: 8px 16px; font-size: .72rem; }
   .results-bar { padding: 0; }
-  .results-track { width: max-content; flex-wrap: nowrap; justify-content: flex-start; gap: 34px; padding: 3px 0; animation: ticker 40s linear infinite; }
-  .results-track span { white-space: nowrap; font-size: .82rem; }
+  .results-track { width: max-content; flex-wrap: nowrap; justify-content: flex-start; padding: 3px 0; animation: ticker 40s linear infinite; }
+  .results-group { gap: 34px; padding-right: 34px; }
+  .results-group span { white-space: nowrap; font-size: .82rem; }
   section { padding: 54px 18px; }
   .achievement-item,
   .news-item,

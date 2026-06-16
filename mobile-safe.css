@@ -141,8 +141,9 @@ main { padding-top: 0; }
 .hero__meta { display: none; }
 
 .results-bar { padding: 0; border-block:1px solid rgba(215,185,103,.16); background:#090005; overflow:hidden; }
-.results-track { display:flex; width:max-content; gap:34px; padding:3px 0; animation: mobileTicker 34s linear infinite; }
-.results-track span { flex:0 0 auto; white-space:nowrap; font-family:"Inter", "Noto Sans JP", system-ui, -apple-system, BlinkMacSystemFont, sans-serif; font-size:.86rem; color:var(--muted); font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
+.results-track { display:flex; width:max-content; padding:3px 0; animation: mobileTicker 34s linear infinite; }
+.results-group { display:flex; flex:0 0 auto; gap:34px; padding-right:34px; }
+.results-group span { flex:0 0 auto; white-space:nowrap; font-family:"Inter", "Noto Sans JP", system-ui, -apple-system, BlinkMacSystemFont, sans-serif; font-size:.86rem; color:var(--muted); font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
 
 section { padding: 54px 18px; }
 .section-title, .index-section-title, .music h2, .social h2, .store-final h2 {
