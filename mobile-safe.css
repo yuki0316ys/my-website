@@ -137,12 +137,12 @@ main { padding-top: 0; }
 .jp-name, .nav-fanclub { color: var(--gold); }
 .slash { color: rgba(247,241,232,.45); }
 .hero-catch,
-.page-subtitle { margin: 18px 0 0; color: var(--muted); font-weight:700; letter-spacing:.12em; line-height:1.7; }
+.page-subtitle { margin: 18px 0 0; color: var(--muted); font-family:"Inter", "Noto Sans JP", system-ui, -apple-system, BlinkMacSystemFont, sans-serif; font-weight:700; letter-spacing:.13em; line-height:1.7; }
 .hero__meta { display: none; }
 
 .results-bar { padding: 0; border-block:1px solid rgba(215,185,103,.16); background:#090005; overflow:hidden; }
 .results-track { display:flex; width:max-content; gap:34px; padding:3px 0; animation: mobileTicker 34s linear infinite; }
-.results-track span { flex:0 0 auto; white-space:nowrap; font-size:.86rem; color:var(--muted); font-weight:700; letter-spacing:.08em; }
+.results-track span { flex:0 0 auto; white-space:nowrap; font-family:"Inter", "Noto Sans JP", system-ui, -apple-system, BlinkMacSystemFont, sans-serif; font-size:.86rem; color:var(--muted); font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
 
 section { padding: 54px 18px; }
 .section-title, .index-section-title, .music h2, .social h2, .store-final h2 {
