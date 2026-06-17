@@ -247,7 +247,7 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "Tunecoreã
 
 .social__links { display:flex; justify-content:center; flex-wrap:wrap; gap:12px; }
 .social-link { display:inline-grid; place-items:center; min-width:54px; height:54px; padding:0 16px; border:1px solid rgba(255,255,255,.16); border-radius:999px; background:rgba(255,255,255,.04); font-weight:700; }
-.footer { padding:34px 18px; text-align:center; color:rgba(247,241,232,.52); font-size:.82rem; }
+.footer { padding:34px 18px; text-align:center; color:rgba(247,241,232,.58); font-family:"Inter", "Noto Sans JP", system-ui, -apple-system, BlinkMacSystemFont, sans-serif; font-size:.82rem; font-weight:800; letter-spacing:.13em; line-height:1.7; }
 .reveal { opacity:1; transform:none; }
 
 @keyframes mobileHeroFade { 0%, 10% { opacity: 0; } 18%, 48% { opacity: 1; } 58%, 100% { opacity: 0; } }

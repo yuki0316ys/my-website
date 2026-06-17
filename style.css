@@ -664,7 +664,16 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "Tunecoreã
   font-family: var(--sans);
   font-weight: 800;
 }
-.footer { padding: 44px 24px; text-align: center; color: rgba(247,241,232,.52); font-size: .86rem; letter-spacing: .04em; }
+.footer {
+  padding: 44px 24px;
+  text-align: center;
+  color: rgba(247,241,232,.58);
+  font-family: var(--sans);
+  font-size: .86rem;
+  font-weight: 800;
+  letter-spacing: .13em;
+  line-height: 1.7;
+}
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity .8s ease, transform .8s ease; }
 .reveal.active { opacity: 1; transform: translateY(0); }
 
