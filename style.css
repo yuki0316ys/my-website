@@ -36,6 +36,7 @@ a { color: inherit; text-decoration: none; }
 img, video, iframe, audio { max-width: 100%; }
 img { display: block; }
 button, input, textarea, select { font: inherit; }
+.mobile-break { display: none; }
 
 .page-glow {
   position: fixed;
