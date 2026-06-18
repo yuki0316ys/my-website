@@ -297,8 +297,9 @@ body:not(.store-page) .preview-player ~ .store-final::before { content: none; di
 body:not(.store-page) .preview-player ~ .store-final .button.main-cta[href="songs.html"] { display: none; }
 body:not(.store-page) .store-final .button.main-cta + .button.main-cta,
 body:not(.store-page) .store-final .button.main-cta + .button.main-cta::before { display: none; content: none; }
-body:not(.store-page) .store-final .button.main-cta::after { content: "View Tunecore >"; font-size: 1.18rem; }
-.store-page .store-final .button.main-cta::after { content: "View Base >"; font-size: 1.18rem; }
+body:not(.store-page) .store-final .button.main-cta::after { content: "View Tunecore >"; }
+.store-page .store-final .button.main-cta::after { content: "View Base >"; }
+.store-final .button.main-cta::after { font-family:var(--serif); font-size:1.18rem; font-weight:700; letter-spacing:.12em; line-height:1; }
 .store-final .button.main-cta { font-size: 0; }
 
 .social__links { display:flex; justify-content:center; flex-wrap:wrap; gap:12px; }

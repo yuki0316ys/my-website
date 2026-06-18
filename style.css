@@ -651,7 +651,13 @@ body:not(.store-page) .store-final .button.main-cta + .button.main-cta::before {
 body:not(.store-page) .store-final .button.main-cta::after { content: "View Tunecore >"; }
 .store-page .store-final .button.main-cta::after { content: "View Base >"; }
 .store-final .button.main-cta { font-size: 0; }
-.store-final .button.main-cta::after { font-size: clamp(1.04rem, 1.28vw, 1.32rem); }
+.store-final .button.main-cta::after {
+  font-family: var(--serif-display);
+  font-size: clamp(1.04rem, 1.28vw, 1.32rem);
+  font-weight: 700;
+  letter-spacing: .12em;
+  line-height: 1;
+}
 
 
 .profile-page,
