@@ -411,13 +411,13 @@ section { padding: clamp(72px, 7vw, 128px) 24px; }
 .goods-category { display: none; }
 .track-card__image,
 .goods-card__image {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   background: rgba(255,255,255,.04);
 }
-.goods-card__image { aspect-ratio: 1 / 1; }
 .track-card__image img,
 .goods-card__image img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
