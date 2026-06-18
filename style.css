@@ -649,6 +649,40 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "Tunecoreã
   z-index: 2;
 }
 .form-group textarea { min-height: 180px; border-radius: 18px; resize: vertical; }
+.button.main-cta.contact-submit {
+  justify-self: center;
+  min-width: 240px;
+  min-height: 56px;
+  padding: 16px 34px;
+  border: 1px solid rgba(215,185,103,.64);
+  border-radius: 999px;
+  background:
+    linear-gradient(135deg, rgba(241,216,138,.18), rgba(215,185,103,.06)),
+    #070507;
+  color: var(--gold-bright);
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: .14em;
+  line-height: 1;
+  text-align: center;
+  transform: none;
+  box-shadow: 0 12px 30px rgba(0,0,0,.32), inset 0 1px 0 rgba(255,255,255,.08);
+  cursor: pointer;
+  transition: color .22s ease, background .22s ease, border-color .22s ease, box-shadow .22s ease, transform .22s ease;
+}
+.button.main-cta.contact-submit:hover,
+.button.main-cta.contact-submit:focus-visible {
+  border-color: rgba(241,216,138,.96);
+  background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+  color: #050505;
+  box-shadow: 0 18px 42px rgba(0,0,0,.42), 0 0 0 1px rgba(241,216,138,.24);
+  transform: translateY(-2px);
+}
+.button.main-cta.contact-submit:active {
+  transform: translateY(0);
+}
 
 .social__links { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; }
 .social-link {

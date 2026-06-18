@@ -235,6 +235,33 @@ body.store-page .store-category-description { margin-right:auto; margin-left:aut
   z-index:2;
 }
 .form-group textarea { min-height:160px; resize:vertical; }
+.button.main-cta.contact-submit {
+  justify-self:center;
+  width:min(100%,320px);
+  min-height:54px;
+  margin-top:28px;
+  padding:15px 24px;
+  border:1px solid rgba(215,185,103,.66);
+  border-radius:999px;
+  background:linear-gradient(135deg, rgba(241,216,138,.18), rgba(215,185,103,.06)), #070507;
+  color:var(--gold-bright);
+  font-family:"Inter", "Noto Sans JP", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size:1rem;
+  font-style:normal;
+  font-weight:800;
+  letter-spacing:.14em;
+  line-height:1;
+  text-align:center;
+  transform:none;
+  box-shadow:0 12px 28px rgba(0,0,0,.34), inset 0 1px 0 rgba(255,255,255,.08);
+  cursor:pointer;
+}
+.button.main-cta.contact-submit:active {
+  border-color:rgba(241,216,138,.94);
+  background:linear-gradient(135deg, var(--gold-bright), var(--gold));
+  color:#050505;
+  transform:translateY(1px);
+}
 .preview-player__inner { border-radius: 22px; }
 .preview-player h2 { margin: 0 0 24px; text-align: center; font-family: var(--serif); font-size: clamp(1.55rem, 7vw, 2.35rem); overflow-wrap: anywhere; }
 .preview-player audio { width: 100%; }
