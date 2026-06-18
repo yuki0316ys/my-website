@@ -166,6 +166,10 @@ section { padding: 54px 18px; }
 .video-frame, .song-video-frame { position: relative; aspect-ratio:16/9; background:#000; overflow: hidden; }
 .video-section .video-card { padding-top:0; border-top:0; }
 .video-frame { background: url("images/sakayume.jpg") center / cover no-repeat; }
+.video-section .video-frame .featured-video {
+  height: calc(100% + 4px);
+  transform: translateY(-2px);
+}
 .featured-video {
   display: block;
   width: 100%;
