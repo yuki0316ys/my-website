@@ -501,6 +501,7 @@ section { padding: clamp(72px, 7vw, 128px) 24px; }
 .music-footer,
 .video-cta,
 .store-final { text-align: center; }
+.music-footer.index-action-row { margin-top: 22px; }
 .index-text-link,
 .button.main-cta {
   display: inline-flex;
