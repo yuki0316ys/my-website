@@ -13,6 +13,7 @@
 html { background: #000; overflow-x: hidden; -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
+  padding-top: 70px;
   overflow-x: hidden;
   background: #050505;
   color: var(--text);
@@ -24,9 +25,10 @@ img, video, iframe, audio { max-width: 100%; height: auto; }
 .page-glow, .hero-light { display: none; }
 
 .header {
-  position: sticky;
+  position: fixed;
+  inset: 0 0 auto 0;
   top: 0;
-  z-index: 20;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -62,7 +64,7 @@ img, video, iframe, audio { max-width: 100%; height: auto; }
   color: var(--text);
 }
 .menu-toggle span { display:block; width:24px; height:2px; margin:3px 0; background: currentColor; border-radius:999px; }
-.nav { display:none; position:absolute; left:0; right:0; top:70px; padding:14px 22px 20px; background:rgba(5,5,5,.36); border-bottom:1px solid rgba(255,255,255,.08); backdrop-filter:blur(10px); }
+.nav { display:none; position:fixed; left:0; right:0; top:70px; z-index:999; padding:14px 22px 20px; background:rgba(5,5,5,.36); border-bottom:1px solid rgba(255,255,255,.08); backdrop-filter:blur(10px); }
 .nav.active { display:flex; flex-direction:column; }
 .nav a { padding:12px 0; border-bottom:1px solid rgba(255,255,255,.08); font-family:var(--serif); font-size:1.08rem; font-weight:700; letter-spacing:.07em; }
 .nav-fanclub { color: var(--gold); }
@@ -162,6 +164,7 @@ section { padding: 54px 18px; }
 .number, .news-date, .live-date, .biography-date { color:var(--gold); font-weight:700; letter-spacing:.1em; }
 .achievement-label, .news-title, .live-title, .biography-title { margin:8px 0 0; color:var(--muted); font-size:clamp(1rem,4.4vw,1.14rem); font-weight:600; line-height:1.72; }
 .video-frame, .song-video-frame { position: relative; aspect-ratio:16/9; background:#000; overflow: hidden; }
+.video-section .video-card { padding-top:0; border-top:0; }
 .video-frame { background: url("images/sakayume.jpg") center / cover no-repeat; }
 .featured-video {
   display: block;
