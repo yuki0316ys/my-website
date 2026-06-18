@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="mobile-safe.css?v=2026061810" media="(max-width: 768px), ((max-height: 768px) and (orientation: landscape) and (hover: none) and (pointer: coarse))">
+ <link rel="stylesheet" href="mobile-safe.css?v=2026061811" media="(max-width: 768px), ((max-height: 768px) and (orientation: landscape) and (hover: none) and (pointer: coarse))">
 <style>
   @media (min-width: 769px) {
     html.desktop-loading body { opacity: 0; }
@@ -37,7 +37,7 @@
 
     const desktopStylesheet = document.createElement("link");
     desktopStylesheet.rel = "stylesheet";
-    desktopStylesheet.href = "style.css?v=2026061806";
+    desktopStylesheet.href = "style.css?v=2026061807";
 
     desktopStylesheet.onload = () => {
       document.documentElement.classList.remove("desktop-loading");
@@ -161,54 +161,71 @@
 
 <div class="news-list">
 
-  <article class="news-item">
+  <article class="news-item news-item--interactive">
 
-    <div class="news-meta">
-      <span class="news-date">2026</span>
-    </div>
+    <button type="button" class="live-open" data-live-id="rehabilitation">
+      <span class="news-meta">
+        <span class="news-date">2026</span>
+      </span>
 
-    <h2 class="news-title">
-      Rehabilitation The Invitation Live
-    </h2>
-
-  </article>
-
-  <article class="news-item">
-
-    <div class="news-meta">
-      <span class="news-date">2024.9.23</span>
-    </div>
-
-    <h2 class="news-title">
-      N.Y ハーレム「ROOM 623」にてセッション参加
-    </h2>
+      <span class="news-title">
+        Rehabilitation The Invitation Live
+      </span>
+    </button>
 
   </article>
 
-  <article class="news-item">
+  <article class="news-item news-item--interactive">
 
-    <div class="news-meta">
-      <span class="news-date">2024.8.7</span>
-    </div>
+    <button type="button" class="live-open" data-live-id="room623">
+      <span class="news-meta">
+        <span class="news-date">2024.9.23</span>
+      </span>
 
-    <h2 class="news-title">
-      LINE CUBE SHIBUYA（渋谷公会堂）オープニングアクト出演
-    </h2>
-
-  </article>
-
-  <article class="news-item">
-
-    <div class="news-meta">
-      <span class="news-date">2023.11.13</span>
-    </div>
-
-    <h2 class="news-title">
-      名古屋クラブクアトロ Oneman Live BE-FREE
-    </h2>
+      <span class="news-title">
+        N.Y ハーレム「ROOM 623」にてセッション参加
+      </span>
+    </button>
 
   </article>
 
+  <article class="news-item news-item--interactive">
+
+    <button type="button" class="live-open" data-live-id="line-cube">
+      <span class="news-meta">
+        <span class="news-date">2024.8.7</span>
+      </span>
+
+      <span class="news-title">
+        LINE CUBE SHIBUYA（渋谷公会堂）オープニングアクト出演
+      </span>
+    </button>
+
+  </article>
+
+  <article class="news-item news-item--interactive">
+
+    <button type="button" class="live-open" data-live-id="be-free">
+      <span class="news-meta">
+        <span class="news-date">2023.11.13</span>
+      </span>
+
+      <span class="news-title">
+        名古屋クラブクアトロ Oneman Live BE-FREE
+      </span>
+    </button>
+
+  </article>
+
+</div>
+<div class="news-modal" id="liveModal" aria-hidden="true">
+  <button type="button" class="news-modal__backdrop" data-live-close aria-label="閉じる"></button>
+  <section class="news-modal__panel" role="dialog" aria-modal="true" aria-labelledby="liveModalTitle" tabindex="-1">
+    <button type="button" class="news-modal__close" data-live-close aria-label="閉じる">×</button>
+    <p class="news-modal__date" id="liveModalDate"></p>
+    <h2 class="news-modal__title" id="liveModalTitle"></h2>
+    <div class="news-modal__body" id="liveModalBody"></div>
+  </section>
 </div>
 <footer class="footer"><p>&copy; 2026 YUKI / 佑樹（YUKI OFFCIAL STUDIO PRO 01）. All rights reserved.</p></footer>
 </main>
@@ -234,6 +251,74 @@ if(menuToggle && nav){
     menuToggle.classList.toggle("active");
   });
 }
+</script>
+<script>
+const liveDetails = {
+  rehabilitation: {
+    date: "2026",
+    title: "Rehabilitation The Invitation Live",
+    body: "Rehabilitation The Invitation Liveの開催が決定しました。公演の詳細は決まり次第、公式サイトにてお知らせします。"
+  },
+  room623: {
+    date: "2024.9.23",
+    title: "N.Y ハーレム「ROOM 623」にてセッション参加",
+    body: "N.Y ハーレム「ROOM 623」にてセッションに参加しました。海外の空気を感じるステージでの経験を、今後の音楽活動へつなげていきます。"
+  },
+  "line-cube": {
+    date: "2024.8.7",
+    title: "LINE CUBE SHIBUYA（渋谷公会堂）オープニングアクト出演",
+    body: "LINE CUBE SHIBUYA（渋谷公会堂）にてオープニングアクトとして出演しました。大きなステージでYUKI / 佑樹の音楽を届けました。"
+  },
+  "be-free": {
+    date: "2023.11.13",
+    title: "名古屋クラブクアトロ Oneman Live BE-FREE",
+    body: "名古屋クラブクアトロにてOneman Live BE-FREEを開催しました。ソロアーティストとしての歩みを刻むワンマンライブとなりました。"
+  }
+};
+
+const liveModal = document.getElementById("liveModal");
+const liveModalPanel = liveModal ? liveModal.querySelector(".news-modal__panel") : null;
+const liveModalDate = document.getElementById("liveModalDate");
+const liveModalTitle = document.getElementById("liveModalTitle");
+const liveModalBody = document.getElementById("liveModalBody");
+let lastLiveTrigger = null;
+
+function openLiveModal(liveId, trigger) {
+  const detail = liveDetails[liveId];
+  if (!detail || !liveModal) return;
+
+  lastLiveTrigger = trigger;
+  liveModalDate.textContent = detail.date;
+  liveModalTitle.textContent = detail.title;
+  liveModalBody.textContent = detail.body;
+  liveModal.classList.add("active");
+  liveModal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("news-modal-open");
+  if (liveModalPanel) liveModalPanel.focus();
+}
+
+function closeLiveModal() {
+  if (!liveModal) return;
+
+  liveModal.classList.remove("active");
+  liveModal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("news-modal-open");
+  if (lastLiveTrigger) lastLiveTrigger.focus();
+}
+
+document.querySelectorAll(".live-open").forEach(button => {
+  button.addEventListener("click", () => openLiveModal(button.dataset.liveId, button));
+});
+
+document.querySelectorAll("[data-live-close]").forEach(button => {
+  button.addEventListener("click", closeLiveModal);
+});
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape" && liveModal && liveModal.classList.contains("active")) {
+    closeLiveModal();
+  }
+});
 </script>
 
 </body>
