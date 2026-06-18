@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="mobile-safe.css?v=2026061809" media="(max-width: 768px), ((max-height: 768px) and (orientation: landscape) and (hover: none) and (pointer: coarse))">
+  <link rel="stylesheet" href="mobile-safe.css?v=2026061810" media="(max-width: 768px), ((max-height: 768px) and (orientation: landscape) and (hover: none) and (pointer: coarse))">
   <style>
     @media (min-width: 769px) {
       html.desktop-loading body { opacity: 0; }
@@ -42,7 +42,7 @@
       document.documentElement.classList.add("desktop-loading");
       const desktopStylesheet = document.createElement("link");
       desktopStylesheet.rel = "stylesheet";
-      desktopStylesheet.href = "style.css?v=2026061805";
+      desktopStylesheet.href = "style.css?v=2026061806";
       desktopStylesheet.onload = () => {
         document.documentElement.classList.remove("desktop-loading");
         document.documentElement.classList.add("desktop-ready");
@@ -176,21 +176,29 @@
     <section class="achievement reveal">
       <h2 class="section-title">Topics</h2>
       <div class="achievement-grid">
-        <div class="achievement-item">
-          <div class="number">14th Single</div>
-          <div class="achievement-label">死ガフタリヲワカツマデ リリース決定！</div>
+        <div class="achievement-item achievement-item--interactive">
+          <button type="button" class="topic-open" data-topic-id="shigafutari">
+            <span class="number">14th Single</span>
+            <span class="achievement-label">死ガフタリヲワカツマデ リリース決定！</span>
+          </button>
         </div>
-        <div class="achievement-item">
-          <div class="number">Live</div>
-          <div class="achievement-label">Rehabilitation The Invitation 開催決定！</div>
+        <div class="achievement-item achievement-item--interactive">
+          <button type="button" class="topic-open" data-topic-id="live">
+            <span class="number">Live</span>
+            <span class="achievement-label">Rehabilitation The Invitation 開催決定！</span>
+          </button>
         </div>
-        <div class="achievement-item">
-          <div class="number">Digital Goods</div>
-          <div class="achievement-label">LINEスタンプ販売中!</div>
+        <div class="achievement-item achievement-item--interactive">
+          <button type="button" class="topic-open" data-topic-id="line-sticker">
+            <span class="number">Digital Goods</span>
+            <span class="achievement-label">LINEスタンプ販売中!</span>
+          </button>
         </div>
-        <div class="achievement-item">
-          <div class="number">GOODS</div>
-          <div class="achievement-label">The Apparel 一般販売開始!</div>
+        <div class="achievement-item achievement-item--interactive">
+          <button type="button" class="topic-open" data-topic-id="apparel">
+            <span class="number">GOODS</span>
+            <span class="achievement-label">The Apparel 一般販売開始!</span>
+          </button>
         </div>
       </div>
     </section>
@@ -257,6 +265,17 @@
 
   <footer class="footer"><p>&copy; 2026 YUKI / 佑樹（YUKI OFFCIAL STUDIO PRO 01）. All rights reserved.</p></footer>
 
+  <div class="news-modal" id="topicModal" aria-hidden="true">
+    <button type="button" class="news-modal__backdrop" data-topic-close aria-label="閉じる"></button>
+    <section class="news-modal__panel" role="dialog" aria-modal="true" aria-labelledby="topicModalTitle" tabindex="-1">
+      <button type="button" class="news-modal__close" data-topic-close aria-label="閉じる">×</button>
+      <p class="news-modal__date" id="topicModalCategory"></p>
+      <h2 class="news-modal__title" id="topicModalTitle"></h2>
+      <div class="news-modal__body" id="topicModalBody"></div>
+      <p class="news-modal__link-wrap" id="topicModalLinkWrap"></p>
+    </section>
+  </div>
+
   <script>
     if (window.matchMedia("(min-width: 769px) and (hover: hover) and (pointer: fine)").matches) {
       (function () {
@@ -319,6 +338,95 @@
         menuToggle.classList.toggle("active");
       });
     }
+
+    const topicDetails = {
+      shigafutari: {
+        category: "14th Single",
+        title: "死ガフタリヲワカツマデ リリース決定！",
+        body: "14th Single「死ガフタリヲワカツマデ」のリリースが決定しました。楽曲情報は順次公式サイトにてお知らせします。",
+        linkUrl: "songs/songs.html",
+        linkLabel: "Songsページへ"
+      },
+      live: {
+        category: "Live",
+        title: "Rehabilitation The Invitation 開催決定！",
+        body: "Rehabilitation The Invitationの開催が決定しました。公演情報や詳細はLiveページでご確認ください。",
+        linkUrl: "live.html",
+        linkLabel: "Liveページへ"
+      },
+      "line-sticker": {
+        category: "Digital Goods",
+        title: "LINEスタンプ販売中!",
+        body: "ゆっくんLINEスタンプを販売中です。日常のトークで使いやすいスタンプをぜひチェックしてください。",
+        linkUrl: "https://line.me/S/sticker/33985072",
+        linkLabel: "LINEスタンプを見る"
+      },
+      apparel: {
+        category: "GOODS",
+        title: "The Apparel 一般販売開始!",
+        body: "YUKI / 佑樹が手掛けるThe Apparelの一般販売を開始しました。商品ラインナップはStoreページでご確認ください。",
+        linkUrl: "store.html",
+        linkLabel: "Storeページへ"
+      }
+    };
+
+    const topicModal = document.getElementById("topicModal");
+    const topicModalPanel = topicModal ? topicModal.querySelector(".news-modal__panel") : null;
+    const topicModalCategory = document.getElementById("topicModalCategory");
+    const topicModalTitle = document.getElementById("topicModalTitle");
+    const topicModalBody = document.getElementById("topicModalBody");
+    const topicModalLinkWrap = document.getElementById("topicModalLinkWrap");
+    let lastTopicTrigger = null;
+
+    function openTopicModal(topicId, trigger) {
+      const detail = topicDetails[topicId];
+      if (!detail || !topicModal) return;
+
+      lastTopicTrigger = trigger;
+      topicModalCategory.textContent = detail.category;
+      topicModalTitle.textContent = detail.title;
+      topicModalBody.textContent = detail.body;
+      topicModalLinkWrap.textContent = "";
+
+      if (detail.linkUrl) {
+        const link = document.createElement("a");
+        link.href = detail.linkUrl;
+        if (detail.linkUrl.startsWith("http")) {
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+        }
+        link.textContent = detail.linkLabel;
+        topicModalLinkWrap.appendChild(link);
+      }
+
+      topicModal.classList.add("active");
+      topicModal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("news-modal-open");
+      if (topicModalPanel) topicModalPanel.focus();
+    }
+
+    function closeTopicModal() {
+      if (!topicModal) return;
+
+      topicModal.classList.remove("active");
+      topicModal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("news-modal-open");
+      if (lastTopicTrigger) lastTopicTrigger.focus();
+    }
+
+    document.querySelectorAll(".topic-open").forEach(button => {
+      button.addEventListener("click", () => openTopicModal(button.dataset.topicId, button));
+    });
+
+    document.querySelectorAll("[data-topic-close]").forEach(button => {
+      button.addEventListener("click", closeTopicModal);
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape" && topicModal && topicModal.classList.contains("active")) {
+        closeTopicModal();
+      }
+    });
   </script>
 </body>
 </html>

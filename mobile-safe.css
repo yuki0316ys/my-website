@@ -164,9 +164,9 @@ section { padding: 54px 18px; }
 .page-hero + main > .biography-list { padding:36px 18px 48px; }
 .achievement-grid, .track-grid, .goods-grid, .disc-grid { display:grid; gap:28px; }
 .achievement-item, .news-item, .live-item, .biography-item, .video-card, .preview-player__inner { padding:18px 0; border-top:1px solid rgba(255,255,255,.1); background:transparent; box-shadow:none; }
-.news-item--interactive { cursor:pointer; }
-.news-open { display:grid; gap:8px; width:100%; padding:0; border:0; background:transparent; color:inherit; font:inherit; text-align:left; cursor:pointer; }
-.news-open:focus-visible { outline:1px solid rgba(241,216,138,.75); outline-offset:6px; }
+.achievement-item--interactive, .news-item--interactive { cursor:pointer; }
+.topic-open, .news-open { display:grid; gap:8px; width:100%; padding:0; border:0; background:transparent; color:inherit; font:inherit; text-align:left; cursor:pointer; }
+.topic-open:focus-visible, .news-open:focus-visible { outline:1px solid rgba(241,216,138,.75); outline-offset:6px; }
 .news-tag, .live-tag, .biography-tag { display: none; }
 .number, .news-date, .live-date, .biography-date { color:var(--gold); font-weight:700; letter-spacing:.1em; }
 .achievement-label, .news-title, .live-title, .biography-title { margin:8px 0 0; color:var(--muted); font-size:clamp(1rem,4.4vw,1.14rem); font-weight:600; line-height:1.72; }
