@@ -176,6 +176,9 @@ section { padding: 54px 18px; }
 .track-card h3, .goods-card h3 { margin:12px 0 0; font-family:var(--serif); font-size:1.35rem; }
 .track-card[href*="BE-TRIP"] h3 { font-size:1.35rem; letter-spacing:.03em; }
 .upright-hyphen { display:inline-block; font-family:var(--sans); font-style:normal; transform:none; }
+body.store-page .store-category { text-align:center; }
+body.store-page .store-category-title { justify-content:center; }
+body.store-page .store-category-description { margin-right:auto; margin-left:auto; text-align:center; }
 .index-action-row, .music-footer, .video-cta, .store-final { text-align:center; }
 .index-text-link, .button.main-cta { display:inline-block; margin-top:24px; color:var(--gold); font-family:var(--serif); font-size:1.35rem; font-style:italic; font-weight:700; transform:skew(-8deg); }
 
