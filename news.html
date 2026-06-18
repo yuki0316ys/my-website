@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="mobile-safe.css?v=2026061808" media="(max-width: 768px), ((max-height: 768px) and (orientation: landscape) and (hover: none) and (pointer: coarse))">
+  <link rel="stylesheet" href="mobile-safe.css?v=2026061809" media="(max-width: 768px), ((max-height: 768px) and (orientation: landscape) and (hover: none) and (pointer: coarse))">
 <style>
   @media (min-width: 769px) {
     html.desktop-loading body { opacity: 0; }
@@ -37,7 +37,7 @@
 
     const desktopStylesheet = document.createElement("link");
     desktopStylesheet.rel = "stylesheet";
-    desktopStylesheet.href = "style.css?v=2026061804";
+    desktopStylesheet.href = "style.css?v=2026061805";
 
     desktopStylesheet.onload = () => {
       document.documentElement.classList.remove("desktop-loading");
@@ -155,42 +155,58 @@
 
 <div class="news-list">
 
-  <article class="news-item">
+  <article class="news-item news-item--interactive">
 
-    <div class="news-meta">
-      <span class="news-date">2026.6.20</span>
-    </div>
+    <button type="button" class="news-open" data-news-id="renewal">
+      <span class="news-meta">
+        <span class="news-date">2026.6.20</span>
+      </span>
 
-    <h2 class="news-title">
-      ホームページリニューアル！
-    </h2>
-
-  </article>
-
-  <article class="news-item">
-
-    <div class="news-meta">
-      <span class="news-date">2026.05.11</span>
-    </div>
-
-    <h2 class="news-title">
-      <a href="https://line.me/S/sticker/33985072" target="_blank" rel="noopener noreferrer">ゆっくんLINEスタンプ販売開始！</a>
-    </h2>
+      <span class="news-title">
+        ホームページリニューアル！
+      </span>
+    </button>
 
   </article>
 
-  <article class="news-item">
+  <article class="news-item news-item--interactive">
 
-    <div class="news-meta">
-      <span class="news-date">2026.04.15</span>
-    </div>
+    <button type="button" class="news-open" data-news-id="line-sticker">
+      <span class="news-meta">
+        <span class="news-date">2026.05.11</span>
+      </span>
 
-    <h2 class="news-title">
-      14th Single 死ガフタリヲワカツマデ リリース決定！
-    </h2>
+      <span class="news-title">
+        ゆっくんLINEスタンプ販売開始！
+      </span>
+    </button>
 
   </article>
 
+  <article class="news-item news-item--interactive">
+
+    <button type="button" class="news-open" data-news-id="shigafutari">
+      <span class="news-meta">
+        <span class="news-date">2026.04.15</span>
+      </span>
+
+      <span class="news-title">
+        14th Single 死ガフタリヲワカツマデ リリース決定！
+      </span>
+    </button>
+
+  </article>
+
+</div>
+<div class="news-modal" id="newsModal" aria-hidden="true">
+  <button type="button" class="news-modal__backdrop" data-news-close aria-label="閉じる"></button>
+  <section class="news-modal__panel" role="dialog" aria-modal="true" aria-labelledby="newsModalTitle" tabindex="-1">
+    <button type="button" class="news-modal__close" data-news-close aria-label="閉じる">×</button>
+    <p class="news-modal__date" id="newsModalDate"></p>
+    <h2 class="news-modal__title" id="newsModalTitle"></h2>
+    <div class="news-modal__body" id="newsModalBody"></div>
+    <p class="news-modal__link-wrap" id="newsModalLinkWrap"></p>
+  </section>
 </div>
 <footer class="footer"><p>&copy; 2026 YUKI / 佑樹（YUKI OFFCIAL STUDIO PRO 01）. All rights reserved.</p></footer>
 
@@ -218,6 +234,83 @@ if(menuToggle && nav){
     menuToggle.classList.toggle("active");
   });
 }
+</script>
+<script>
+const newsDetails = {
+  renewal: {
+    date: "2026.6.20",
+    title: "ホームページリニューアル！",
+    body: "YUKI / 佑樹 公式ホームページをリニューアルしました。最新ニュース、楽曲、ライブ、ストア情報をより見やすく確認できるように整えています。"
+  },
+  "line-sticker": {
+    date: "2026.05.11",
+    title: "ゆっくんLINEスタンプ販売開始！",
+    body: "ゆっくんLINEスタンプの販売を開始しました。日常のトークで使いやすいスタンプをぜひチェックしてください。",
+    linkUrl: "https://line.me/S/sticker/33985072",
+    linkLabel: "LINEスタンプを見る"
+  },
+  shigafutari: {
+    date: "2026.04.15",
+    title: "14th Single 死ガフタリヲワカツマデ リリース決定！",
+    body: "14th Single「死ガフタリヲワカツマデ」のリリースが決定しました。楽曲情報は順次公式サイトにてお知らせします。"
+  }
+};
+
+const newsModal = document.getElementById("newsModal");
+const newsModalPanel = newsModal ? newsModal.querySelector(".news-modal__panel") : null;
+const newsModalDate = document.getElementById("newsModalDate");
+const newsModalTitle = document.getElementById("newsModalTitle");
+const newsModalBody = document.getElementById("newsModalBody");
+const newsModalLinkWrap = document.getElementById("newsModalLinkWrap");
+let lastNewsTrigger = null;
+
+function openNewsModal(newsId, trigger) {
+  const detail = newsDetails[newsId];
+  if (!detail || !newsModal) return;
+
+  lastNewsTrigger = trigger;
+  newsModalDate.textContent = detail.date;
+  newsModalTitle.textContent = detail.title;
+  newsModalBody.textContent = detail.body;
+  newsModalLinkWrap.textContent = "";
+
+  if (detail.linkUrl) {
+    const link = document.createElement("a");
+    link.href = detail.linkUrl;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = detail.linkLabel;
+    newsModalLinkWrap.appendChild(link);
+  }
+
+  newsModal.classList.add("active");
+  newsModal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("news-modal-open");
+  if (newsModalPanel) newsModalPanel.focus();
+}
+
+function closeNewsModal() {
+  if (!newsModal) return;
+
+  newsModal.classList.remove("active");
+  newsModal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("news-modal-open");
+  if (lastNewsTrigger) lastNewsTrigger.focus();
+}
+
+document.querySelectorAll(".news-open").forEach(button => {
+  button.addEventListener("click", () => openNewsModal(button.dataset.newsId, button));
+});
+
+document.querySelectorAll("[data-news-close]").forEach(button => {
+  button.addEventListener("click", closeNewsModal);
+});
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape" && newsModal && newsModal.classList.contains("active")) {
+    closeNewsModal();
+  }
+});
 </script>
 
 </body>
