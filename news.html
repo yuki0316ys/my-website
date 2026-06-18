@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="mobile-safe.css?v=2026061813" media="(max-width: 768px), ((max-height: 768px) and (orientation: landscape) and (hover: none) and (pointer: coarse))">
+  <link rel="stylesheet" href="mobile-safe.css?v=2026061814" media="(max-width: 768px), ((max-height: 768px) and (orientation: landscape) and (hover: none) and (pointer: coarse))">
 <style>
   @media (min-width: 769px) {
     html.desktop-loading body { opacity: 0; }
@@ -37,7 +37,7 @@
 
     const desktopStylesheet = document.createElement("link");
     desktopStylesheet.rel = "stylesheet";
-    desktopStylesheet.href = "style.css?v=2026061809";
+    desktopStylesheet.href = "style.css?v=2026061810";
 
     desktopStylesheet.onload = () => {
       document.documentElement.classList.remove("desktop-loading");
@@ -264,6 +264,19 @@ const newsModalBody = document.getElementById("newsModalBody");
 const newsModalLinkWrap = document.getElementById("newsModalLinkWrap");
 let lastNewsTrigger = null;
 
+function fitModalTitle(titleElement) {
+  if (!titleElement) return;
+
+  titleElement.style.fontSize = "";
+  const minSize = window.matchMedia("(max-width: 768px), ((max-height: 768px) and (orientation: landscape) and (hover: none) and (pointer: coarse))").matches ? 6 : 9;
+  let size = parseFloat(window.getComputedStyle(titleElement).fontSize);
+
+  while (titleElement.scrollWidth > titleElement.clientWidth && size > minSize) {
+    size -= .5;
+    titleElement.style.fontSize = `${size}px`;
+  }
+}
+
 function openNewsModal(newsId, trigger) {
   const detail = newsDetails[newsId];
   if (!detail || !newsModal) return;
@@ -286,6 +299,7 @@ function openNewsModal(newsId, trigger) {
   newsModal.classList.add("active");
   newsModal.setAttribute("aria-hidden", "false");
   document.body.classList.add("news-modal-open");
+  requestAnimationFrame(() => fitModalTitle(newsModalTitle));
   if (newsModalPanel) newsModalPanel.focus();
 }
 
@@ -309,6 +323,12 @@ document.querySelectorAll("[data-news-close]").forEach(button => {
 document.addEventListener("keydown", event => {
   if (event.key === "Escape" && newsModal && newsModal.classList.contains("active")) {
     closeNewsModal();
+  }
+});
+
+window.addEventListener("resize", () => {
+  if (newsModal && newsModal.classList.contains("active")) {
+    fitModalTitle(newsModalTitle);
   }
 });
 </script>

@@ -443,7 +443,10 @@ section { padding: clamp(72px, 7vw, 128px) 24px; }
   font-size: clamp(1.42rem, 2.25vw, 2.18rem);
   letter-spacing: .025em;
   line-height: 1.48;
-  text-wrap: balance;
+  max-width: 100%;
+  overflow-wrap: normal;
+  text-wrap: nowrap;
+  white-space: nowrap;
 }
 .news-modal__body {
   margin-top: 26px;
