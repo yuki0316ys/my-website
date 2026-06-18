@@ -170,7 +170,6 @@ section { padding: 54px 18px; }
 .news-tag, .live-tag, .biography-tag { display: none; }
 .number, .news-date, .live-date, .biography-date { color:var(--gold); font-weight:700; letter-spacing:.1em; }
 .achievement-label, .news-title, .live-title, .biography-title { margin:8px 0 0; color:var(--muted); font-size:clamp(1rem,4.4vw,1.14rem); font-weight:600; line-height:1.72; }
-.topic-open .achievement-label, .news-open .news-title, .live-open .news-title { font-size:clamp(.96rem,4vw,1.06rem); letter-spacing:.025em; line-height:1.64; text-wrap:pretty; }
 .news-modal-open { overflow:hidden; }
 .news-modal { position:fixed; inset:0; z-index:2000; display:grid; place-items:center; padding:18px; pointer-events:none; opacity:0; transition:opacity .22s ease; }
 .news-modal.active { pointer-events:auto; opacity:1; }
@@ -178,7 +177,7 @@ section { padding: 54px 18px; }
 .news-modal__panel { position:relative; width:min(100%,640px); max-height:calc(100svh - 36px); overflow:auto; padding:30px 20px 24px; border:1px solid rgba(215,185,103,.34); background:linear-gradient(145deg, rgba(20,16,12,.98), rgba(5,5,5,.98)); box-shadow:0 24px 60px rgba(0,0,0,.5); }
 .news-modal__close { position:absolute; top:12px; right:12px; width:38px; height:38px; border:1px solid rgba(255,255,255,.18); border-radius:50%; background:rgba(255,255,255,.05); color:var(--text); font-family:var(--sans); font-size:1.15rem; line-height:1; cursor:pointer; }
 .news-modal__date { margin:0 0 12px; color:var(--gold); font-family:var(--serif); font-size:.96rem; font-weight:700; letter-spacing:.12em; }
-.news-modal__title { margin:0; color:rgba(247,241,232,.96); font-family:var(--serif); font-size:clamp(1.45rem,7vw,2.2rem); line-height:1.35; }
+.news-modal__title { margin:0; color:rgba(247,241,232,.96); font-family:var(--serif); font-size:clamp(1.22rem,5.7vw,1.78rem); letter-spacing:.025em; line-height:1.5; text-wrap:balance; }
 .news-modal__body { margin-top:22px; color:var(--muted); font-size:1rem; line-height:1.9; letter-spacing:.04em; }
 .news-modal__link-wrap { margin:26px 0 0; }
 .news-modal__link-wrap a { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:13px 22px; border:1px solid rgba(215,185,103,.55); border-radius:999px; color:var(--gold-bright); font-family:var(--sans); font-weight:800; letter-spacing:.08em; }
