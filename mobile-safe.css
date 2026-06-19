@@ -303,6 +303,15 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "View Tune
 .store-page .store-final .button.main-cta::after { content: "View Base >"; }
 .store-final .button.main-cta::after { font-family:var(--serif); font-size:1.18rem; font-weight:700; letter-spacing:.12em; line-height:1; }
 .store-final .button.main-cta { font-size: 0; }
+.fanclub-section { width:min(100%,820px); margin:0 auto; padding:44px 18px 70px; text-align:center; }
+.fanclub-kicker { margin:0 0 16px; color:var(--gold-bright); font-family:var(--sans); font-size:.76rem; font-weight:900; letter-spacing:.16em; }
+.fanclub-section h2 { margin:0; color:rgba(247,241,232,.96); font-family:var(--serif); font-size:clamp(1.9rem,9vw,3rem); line-height:1.2; }
+.fanclub-lead { margin:22px auto 0; color:var(--muted); font-size:1rem; line-height:1.95; letter-spacing:.04em; }
+.fanclub-points { display:grid; gap:14px; margin-top:32px; text-align:left; }
+.fanclub-points div { padding:20px 18px; border-top:1px solid rgba(215,185,103,.34); background:rgba(215,185,103,.035); }
+.fanclub-points span { color:var(--gold); font-family:var(--serif); font-weight:700; letter-spacing:.12em; }
+.fanclub-points p { margin:10px 0 0; color:var(--muted); line-height:1.78; letter-spacing:.04em; }
+.fanclub-cta { margin-top:34px; }
 
 .social__links { display:flex; justify-content:center; flex-wrap:wrap; gap:12px; }
 .social-link { display:inline-grid; place-items:center; min-width:54px; height:54px; padding:0 16px; border:1px solid rgba(255,255,255,.16); border-radius:999px; background:rgba(255,255,255,.04); font-weight:700; }

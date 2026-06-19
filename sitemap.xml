@@ -71,6 +71,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://yuki-music.jp/fanclub.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://yuki-music.jp/images/profile-ogp.jpg</image:loc>
+      <image:title>YUKI / 佑樹 Official Fanclubの共有画像</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://yuki-music.jp/contact.html</loc>
     <lastmod>2026-06-06</lastmod>
     <changefreq>monthly</changefreq>
