@@ -7,6 +7,7 @@
   --gold-bright: #f1d88a;
   --serif: "Cormorant Garamond", "Times New Roman", serif;
   --sans: system-ui, -apple-system, BlinkMacSystemFont, "Noto Sans JP", sans-serif;
+  --header-h: 70px;
 }
 
 * { box-sizing: border-box; }
@@ -102,11 +103,11 @@ main { padding-top: 0; }
 .hero,
 .page-hero {
   position: relative;
-  min-height: 58svh;
+  min-height: 42svh;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding: calc(var(--header-h) + 42px) 18px 58px;
+  padding: calc(var(--header-h) + 22px) 18px 44px;
   text-align: center;
   background: #050505;
   overflow: hidden;
