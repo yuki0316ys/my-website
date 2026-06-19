@@ -24,18 +24,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="mobile-safe.css?v=2026061921" media="(max-width: 768px), ((max-height: 768px) and (orientation: landscape) and (hover: none) and (pointer: coarse))">
+<link rel="stylesheet" href="mobile-safe.css?v=2026061922" media="(max-width: 768px), ((max-height: 768px) and (orientation: landscape) and (hover: none) and (pointer: coarse))">
 <style>
   @media (min-width: 769px) {
     html.desktop-loading body { opacity: 0; }
     html.desktop-ready body { opacity: 1; transition: opacity .12s ease; }
   }
-  .contact-hero { min-height: auto; padding: 150px 20px 82px; }
-  .contact-hero .hero__content { margin: 32px auto 0; }
   .contact-section { padding: 58px 24px 86px; }
   @media (max-width: 768px) {
-    .contact-hero { min-height: auto; padding: 116px 20px 66px; }
-    .contact-hero .hero__content { margin: 22px auto 0; padding: 0 16px; }
     .contact-section { padding: 42px 20px 70px; }
   }
 </style>
@@ -44,7 +40,7 @@
     document.documentElement.classList.add("desktop-loading");
     const desktopStylesheet = document.createElement("link");
     desktopStylesheet.rel = "stylesheet";
-    desktopStylesheet.href = "style.css?v=2026061921";
+    desktopStylesheet.href = "style.css?v=2026061922";
     desktopStylesheet.onload = () => {
       document.documentElement.classList.remove("desktop-loading");
       document.documentElement.classList.add("desktop-ready");

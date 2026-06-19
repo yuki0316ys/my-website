@@ -616,9 +616,10 @@ section { padding: clamp(72px, 7vw, 128px) 24px; }
 .page-hero {
   position: relative;
   min-height: 44svh;
-  display: grid;
-  place-items: center;
-  padding-top: calc(var(--header-h) + 80px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: calc(var(--header-h) + 112px) 22px 76px;
   background: #050505;
   overflow: hidden;
   text-align: center;
@@ -1018,7 +1019,7 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "View Tune
   .disc-grid,
   .related-grid { grid-template-columns: 1fr; gap: 34px; }
   .track-card__image { aspect-ratio: 1 / 1; }
-  .page-hero { min-height: 42svh; padding-top: 84px; }
+  .page-hero { min-height: 42svh; padding: 104px 18px 58px; }
   .page-title { font-size: clamp(2.8rem, 14vw, 5rem); }
   .lyrics p,
   .profile-text p,
