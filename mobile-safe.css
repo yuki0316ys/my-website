@@ -169,6 +169,7 @@ section { padding: 54px 18px; }
 .live-open:focus-visible, .topic-open:focus-visible, .news-open:focus-visible { outline:1px solid rgba(241,216,138,.75); outline-offset:6px; }
 .news-tag, .live-tag, .biography-tag { display: none; }
 .number, .news-date, .live-date, .biography-date { color:var(--gold); font-weight:700; letter-spacing:.1em; }
+.topic-open .number { display:inline-flex; width:fit-content; color:var(--gold-bright); text-shadow:0 0 10px rgba(215,185,103,.22); animation:topicLabelGlow 2.8s ease-in-out infinite; }
 .achievement-label, .news-title, .live-title, .biography-title { margin:8px 0 0; color:var(--muted); font-size:clamp(1rem,4.4vw,1.14rem); font-weight:600; line-height:1.72; }
 .news-modal-open { overflow:hidden; }
 .news-modal { position:fixed; inset:0; z-index:2000; display:grid; place-items:center; padding:18px; pointer-events:none; opacity:0; transition:opacity .22s ease; }
@@ -310,6 +311,7 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "View Tune
 
 @keyframes mobileHeroFade { 0%, 10% { opacity: 0; } 18%, 48% { opacity: 1; } 58%, 100% { opacity: 0; } }
 @keyframes mobileTicker { 0% { transform: translate3d(0,0,0); } 100% { transform: translate3d(-50%,0,0); } }
+@keyframes topicLabelGlow { 0%, 100% { opacity:.74; text-shadow:0 0 8px rgba(215,185,103,.18); } 50% { opacity:1; text-shadow:0 0 16px rgba(241,216,138,.44); } }
 
 .profile-page, .profile-visual, .profile-biography, .biography-page, .contact-page, .contact-section, .lyrics-section, .lyrics, .cinematic-lyrics { background: transparent; box-shadow: none; }
 .profile-visual img { box-shadow: none; filter: none; opacity: 1; mix-blend-mode: normal; }
