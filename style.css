@@ -675,7 +675,7 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "View Tune
   text-align: center;
 }
 .fanclub-lead {
-  width: min(100%, 720px);
+  width: min(100%, 920px);
   margin: 0 auto;
   color: rgba(247,241,232,.76);
   font-size: clamp(1.02rem, 1.18vw, 1.18rem);
