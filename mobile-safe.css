@@ -178,7 +178,8 @@ section { padding: 54px 18px; }
 .news-tag, .live-tag, .biography-tag { display: none; }
 .number, .news-date, .live-date, .biography-date { color:var(--gold); font-weight:700; letter-spacing:.1em; }
 .topic-open .number { display:inline-flex; width:fit-content; color:var(--gold-bright); text-shadow:0 0 10px rgba(215,185,103,.22); animation:topicLabelGlow 2.8s ease-in-out infinite; }
-.achievement-label, .news-title, .live-title, .biography-title { margin:8px 0 0; color:var(--muted); font-size:clamp(1rem,4.4vw,1.14rem); font-weight:600; line-height:1.72; }
+.achievement-label, .news-title, .live-title, .biography-title { margin:8px 0 0; color:var(--muted); font-size:clamp(.88rem,3.7vw,1.02rem); font-weight:600; line-height:1.62; letter-spacing:.02em; }
+.mobile-title-break { display:block; }
 .news-modal-open { overflow:hidden; }
 .news-modal { position:fixed; inset:0; z-index:2000; display:grid; place-items:center; padding:18px; pointer-events:none; opacity:0; transition:opacity .22s ease; }
 .news-modal.active { pointer-events:auto; opacity:1; }

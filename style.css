@@ -387,6 +387,7 @@ section { padding: clamp(72px, 7vw, 128px) 24px; }
 .news-tag,
 .live-tag,
 .biography-tag { display: none; }
+.mobile-title-break { display: none; }
 .news-modal-open { overflow: hidden; }
 .news-modal {
   position: fixed;
