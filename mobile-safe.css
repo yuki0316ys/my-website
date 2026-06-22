@@ -361,6 +361,28 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "View Tune
 .profile-visual img { box-shadow: none; filter: none; opacity: 1; mix-blend-mode: normal; }
 .biography-page .news-title { color: rgba(247,241,232,.94); }
 .biography-page .news-date { color: var(--gold-bright); }
+.biography-intro {
+  width: auto;
+  margin: 0 18px 6px;
+  padding: 22px 18px;
+  border: 1px solid rgba(215,185,103,.16);
+  background: rgba(255,255,255,.015);
+}
+.biography-intro__eyebrow {
+  margin: 0 0 10px;
+  color: var(--gold-bright);
+  font-family: var(--serif-display);
+  font-size: 1.28rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+.biography-intro p:last-child {
+  margin: 0;
+  color: var(--muted);
+  font-size: .98rem;
+  line-height: 1.9;
+  letter-spacing: .04em;
+}
 .contact-form, .contact-form * { position: relative; z-index: 2; }
 
 .contact-page-body .page-glow, .contact-page-body .hero-light { display: none; }
