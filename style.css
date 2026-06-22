@@ -791,10 +791,35 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "View Tune
   background: transparent;
 }
 .profile-title { margin: 0 0 24px; font-size: clamp(2.4rem, 5vw, 5rem); }
+.profile-lead {
+  margin: 0;
+  color: rgba(247,241,232,.84);
+  font-size: clamp(1.02rem, 1.2vw, 1.22rem);
+  line-height: 1.95;
+  letter-spacing: .045em;
+}
+.profile-lead + .profile-lead { margin-top: 14px; }
+.profile-text { margin-top: clamp(30px, 3.5vw, 48px); }
+.profile-story-block + .profile-story-block {
+  margin-top: clamp(30px, 3.4vw, 48px);
+  padding-top: clamp(26px, 3vw, 38px);
+  border-top: 1px solid rgba(215,185,103,.16);
+}
+.profile-story-block h3 {
+  margin: 0 0 16px;
+  color: var(--gold-bright);
+  font-family: var(--serif-display);
+  font-size: clamp(1.3rem, 1.7vw, 1.9rem);
+  font-weight: 700;
+  letter-spacing: .16em;
+}
 .profile-links {
   margin-top: clamp(32px, 4vw, 54px);
   padding-top: clamp(24px, 3vw, 34px);
   border-top: 1px solid rgba(215,185,103,.18);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 .profile-link {
   display: inline-flex;

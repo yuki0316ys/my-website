@@ -225,11 +225,29 @@ body.store-page .store-category-description { margin-right:auto; margin-left:aut
 .music-footer.index-action-row { margin-top:18px; }
 .index-text-link, .button.main-cta { display:inline-flex; align-items:center; justify-content:center; margin-top:24px; min-width:min(292px,100%); min-height:54px; padding:13px 26px; border:1px solid rgba(215,185,103,.68); border-radius:999px; background:rgba(215,185,103,.045); color:var(--gold-bright); font-family:var(--serif); font-size:1.18rem; font-weight:700; letter-spacing:.12em; line-height:1; box-shadow:inset 0 0 0 1px rgba(0,0,0,.28); }
 
-.lyrics p, .profile-text p, .discography-list li { color: var(--muted); font-size: 1rem; line-height: 1.95; letter-spacing: .04em; }
+.lyrics p, .profile-text p, .profile-lead, .discography-list li { color: var(--muted); font-size: 1rem; line-height: 1.95; letter-spacing: .04em; }
+.profile-lead { margin: 0; }
+.profile-lead + .profile-lead { margin-top: 14px; }
+.profile-text { margin-top: 30px; }
+.profile-story-block + .profile-story-block {
+  margin-top: 30px;
+  padding-top: 26px;
+  border-top: 1px solid rgba(215,185,103,.16);
+}
+.profile-story-block h3 {
+  margin: 0 0 14px;
+  color: var(--gold-bright);
+  font-family: var(--serif-display);
+  font-size: 1.32rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+}
 .profile-links {
   margin-top: 30px;
   padding-top: 24px;
   border-top: 1px solid rgba(215,185,103,.18);
+  display: grid;
+  gap: 14px;
 }
 .profile-link {
   display: flex;
