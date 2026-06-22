@@ -2,7 +2,7 @@
   "name": "佑樹",
   "short_name": "佑樹",
   "description": "YUKI / 佑樹 Official Site",
-  "start_url": "/index.html",
+  "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "background_color": "#000000",

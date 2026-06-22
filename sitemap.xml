@@ -2,12 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://yuki-music.jp/</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://yuki-music.jp/images/ogp.jpg</image:loc>
-      <image:title>YUKI / 佑樹 Official Siteのキービジュアル</image:title>
+      <image:loc>https://yuki-music.jp/images/top.jpg</image:loc>
+      <image:title>YUKI / 佑樹 Official Siteのトップビジュアル</image:title>
     </image:image>
   </url>
   <url>
