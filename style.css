@@ -996,11 +996,11 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "View Tune
 
 @keyframes heroFadeSecond {
   0%, 27% { opacity: 0; }
-  34%, 59% { opacity: 1; }
-  66%, 100% { opacity: 0; }
+  34%, 67% { opacity: 1; }
+  74%, 100% { opacity: 0; }
 }
 @keyframes heroFadeThird {
-  0%, 60% { opacity: 0; }
+  0%, 59% { opacity: 0; }
   67%, 92% { opacity: 1; }
   100% { opacity: 0; }
 }
