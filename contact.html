@@ -88,11 +88,11 @@
         <option value="other">その他</option>
       </select>
     </div>
-    <div class="form-group">
+    <div class="form-group" data-live-reserve-field hidden>
       <label for="contact-live-title">ライブ名</label>
       <input id="contact-live-title" type="text" name="live_title" placeholder="佑樹 Rehabilitation 2026 死ガフタリヲワカツマデ Release Event">
     </div>
-    <div class="form-group">
+    <div class="form-group" data-live-reserve-field hidden>
       <label for="contact-ticket-count">予約枚数</label>
       <input id="contact-ticket-count" type="number" name="ticket_count" min="1" inputmode="numeric" placeholder="1">
     </div>
@@ -117,27 +117,45 @@ if(menuToggle && nav){
   });
 }
 
-const contactParams = new URLSearchParams(window.location.search);
-if (contactParams.get("type") === "live-reserve") {
-  const contactType = document.getElementById("contact-type");
-  const liveTitle = document.getElementById("contact-live-title");
-  const ticketCount = document.getElementById("contact-ticket-count");
-  const message = document.getElementById("contact-message");
+const contactType = document.getElementById("contact-type");
+const liveTitle = document.getElementById("contact-live-title");
+const ticketCount = document.getElementById("contact-ticket-count");
+const message = document.getElementById("contact-message");
+const liveReserveFields = document.querySelectorAll("[data-live-reserve-field]");
+const liveReserveTitle = "佑樹 Rehabilitation 2026 死ガフタリヲワカツマデ Release Event";
+const liveReserveMessage = [
+  "「お願い事項」",
+  "・入場料金（ドリンク代込み）について：当日、ライブハウスの受付で現金にてお支払いをお願いします。",
+  "・目当てのアーティスト：",
+  "・当日、受付で名前（ニックネーム可）を確認させていただきますので、当日お伝えいただく名前をご記入ください。"
+].join("\n");
 
-  if (contactType) contactType.value = "live-reserve";
-  if (liveTitle && !liveTitle.value) {
-    liveTitle.value = "佑樹 Rehabilitation 2026 死ガフタリヲワカツマデ Release Event";
+function updateLiveReserveFields() {
+  const isLiveReserve = contactType && contactType.value === "live-reserve";
+  liveReserveFields.forEach((field) => {
+    field.hidden = !isLiveReserve;
+  });
+
+  if (isLiveReserve) {
+    if (liveTitle && !liveTitle.value) liveTitle.value = liveReserveTitle;
+    if (ticketCount && !ticketCount.value) ticketCount.value = "1";
+    if (message && (!message.value || message.value === "内容をご記入ください")) {
+      message.value = liveReserveMessage;
+    }
+    return;
   }
-  if (ticketCount && !ticketCount.value) ticketCount.value = "1";
-  if (message && !message.value) {
-    message.value = [
-      "「お願い事項」",
-      "・入場料金（ドリンク代込み）について：当日、ライブハウスの受付で現金にてお支払いをお願いします。",
-      "・目当てのアーティスト：",
-      "・当日、受付で名前（ニックネーム可）を確認させていただきますので、当日お伝えいただく名前をご記入ください。"
-    ].join("\n");
-  }
+
+  if (liveTitle && liveTitle.value === liveReserveTitle) liveTitle.value = "";
+  if (ticketCount && ticketCount.value === "1") ticketCount.value = "";
+  if (message && message.value === liveReserveMessage) message.value = "";
 }
+
+const contactParams = new URLSearchParams(window.location.search);
+if (contactParams.get("type") === "live-reserve" && contactType) {
+  contactType.value = "live-reserve";
+}
+if (contactType) contactType.addEventListener("change", updateLiveReserveFields);
+updateLiveReserveFields();
 </script>
 </body>
 </html>
