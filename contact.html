@@ -130,7 +130,12 @@ if (contactParams.get("type") === "live-reserve") {
   }
   if (ticketCount && !ticketCount.value) ticketCount.value = "1";
   if (message && !message.value) {
-    message.value = "11/1 下北沢LOFT ライブ予約希望";
+    message.value = [
+      "「お願い事項」",
+      "・入場料金（ドリンク代込み）について：当日、ライブハウスの受付で現金にてお支払いをお願いします。",
+      "・目当てのアーティスト：",
+      "・当日、受付で名前（ニックネーム可）を確認させていただきますので、当日お伝えいただく名前をご記入ください。"
+    ].join("\n");
   }
 }
 </script>
