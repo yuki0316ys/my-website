@@ -24,24 +24,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="mobile-safe.css?v=2026071901" media="(max-width: 768px), ((max-height: 768px) and (orientation: landscape) and (hover: none) and (pointer: coarse))">
-  <link rel="stylesheet" href="style.css?v=2026071901" media="(min-width: 769px) and (hover: hover) and (pointer: fine)">
-<style>
-  @media (max-width: 768px) {
-    .profile-biography {
-      padding: 24px 0 72px;
-      background: transparent;
-    }
-
-    .profile-biography::before {
-      opacity: 0;
-    }
-
-    .profile-biography__inner {
-      margin-top: 0;
-    }
-  }
-</style>
+<link rel="stylesheet" href="mobile-safe.css?v=2026071902" media="(max-width: 768px), ((max-height: 768px) and (orientation: landscape) and (hover: none) and (pointer: coarse))">
+  <link rel="stylesheet" href="style.css?v=2026071902" media="(min-width: 769px) and (hover: hover) and (pointer: fine)">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48.png">
 <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
@@ -78,7 +62,7 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://yuki-music.jp/"},{"@type":"ListItem","position":2,"name":"Profile","item":"https://yuki-music.jp/profile.html"}]}
   </script>
 </head>
-<body>
+<body class="profile-page-body">
 <div class="page-glow" aria-hidden="true"></div>
 <header class="header">
  <a class="brand-button" href="/">
@@ -104,7 +88,11 @@
 </header>
 <section class="page-hero">
   <div class="hero-light"></div>
-  <div class="hero__content"><h1 class="page-title">Profile</h1></div>
+  <div class="hero__content">
+    <p class="profile-hero-kicker">YUKI / 佑樹 ARTIST PROFILE</p>
+    <h1 class="page-title">Profile</h1>
+    <p class="profile-hero-copy">Cinematic pop singer-songwriter from Nagoya.</p>
+  </div>
 </section>
 <main class="profile-page">
   <section class="profile-visual">
