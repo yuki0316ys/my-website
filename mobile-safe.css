@@ -362,6 +362,172 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "View Tune
 .footer { padding:34px 18px; text-align:center; color:rgba(247,241,232,.58); font-family:"Inter", "Noto Sans JP", system-ui, -apple-system, BlinkMacSystemFont, sans-serif; font-size:.82rem; font-weight:800; letter-spacing:.13em; line-height:1.7; }
 .reveal { opacity:1; transform:none; }
 
+body.live-page-body {
+  --live-bg: #f4f5f1;
+  --live-paper: rgba(255, 255, 255, 0.78);
+  --live-ink: #152123;
+  --live-muted: rgba(21, 33, 35, 0.62);
+  --live-line: rgba(21, 33, 35, 0.13);
+  --live-teal: #007d78;
+  --live-teal-deep: #004845;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(0,125,120,.14), transparent 18rem),
+    linear-gradient(135deg, #f9f9f6 0%, #e6ebe8 54%, #f4f5f1 100%);
+  color: var(--live-ink);
+}
+
+body.live-page-body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(135deg, rgba(8,22,24,.035) 0 1px, transparent 1px 7px),
+    linear-gradient(90deg, rgba(0,125,120,.034), transparent 46%, rgba(21,33,35,.036));
+}
+
+body.live-page-body .header {
+  background: rgba(248,249,246,.82);
+  border-bottom: 1px solid rgba(21,33,35,.08);
+  box-shadow: 0 14px 42px rgba(21,33,35,.08);
+}
+body.live-page-body .brand-button,
+body.live-page-body .header-social__link,
+body.live-page-body .menu-toggle,
+body.live-page-body .nav a { color: var(--live-ink); }
+body.live-page-body .brand-button::after,
+body.live-page-body .nav-fanclub { color: var(--live-teal); }
+body.live-page-body .header-social__link,
+body.live-page-body .menu-toggle {
+  border-color: rgba(21,33,35,.14);
+  background: rgba(255,255,255,.58);
+}
+body.live-page-body .nav {
+  background: rgba(248,249,246,.76);
+  border-bottom-color: rgba(21,33,35,.1);
+  backdrop-filter: blur(14px);
+}
+body.live-page-body .nav a { border-bottom-color: rgba(21,33,35,.1); }
+
+body.live-page-body .page-hero {
+  min-height: 58svh;
+  align-items: center;
+  padding: calc(var(--header-h) + 48px) 18px 60px;
+  background:
+    linear-gradient(180deg, rgba(244,245,241,.08), rgba(244,245,241,.88) 75%, #f4f5f1 100%),
+    url("images/Profile.png") 48% center / cover no-repeat;
+  isolation: isolate;
+}
+body.live-page-body .page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(90deg, rgba(244,245,241,.8), rgba(244,245,241,.22) 50%, rgba(244,245,241,.94)),
+    radial-gradient(circle at 50% 34%, rgba(255,255,255,.36), transparent 18rem);
+}
+body.live-page-body .page-hero::after {
+  content: "REHAB";
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  z-index: 1;
+  transform: translateX(-50%);
+  color: rgba(0,72,69,.18);
+  font-family: var(--sans);
+  font-size: clamp(5.2rem, 27vw, 8rem);
+  font-weight: 900;
+  letter-spacing: -.08em;
+  line-height: .78;
+  white-space: nowrap;
+}
+body.live-page-body .page-title {
+  color: var(--live-ink);
+  font-family: var(--sans);
+  font-size: clamp(4rem, 18vw, 6.8rem);
+  font-weight: 900;
+  letter-spacing: -.055em;
+  text-transform: uppercase;
+  text-shadow: 0 14px 34px rgba(255,255,255,.68);
+}
+body.live-page-body .page-hero .hero__content { z-index: 2; }
+.live-hero-kicker,
+.live-hero-copy {
+  margin: 0;
+  color: var(--live-teal-deep);
+  font-family: var(--sans);
+  font-weight: 900;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+.live-hero-kicker { margin-bottom: 9px; font-size: .72rem; }
+.live-hero-copy { margin-top: 14px; color: var(--live-muted); font-size: .78rem; line-height: 1.7; }
+
+body.live-page-body .page-hero + main {
+  background: linear-gradient(180deg, #f4f5f1 0%, #fff 42%, #eef3f0 100%);
+}
+body.live-page-body .page-hero + main > .news-list { padding-top: 46px; }
+body.live-page-body .page-hero + main > .news-list::before {
+  content: "STAGE ARCHIVE";
+  display: block;
+  margin: 0 0 24px;
+  color: rgba(0,72,69,.34);
+  font-family: var(--sans);
+  font-size: clamp(2.45rem, 15vw, 4.4rem);
+  font-weight: 900;
+  letter-spacing: -.052em;
+  line-height: .9;
+}
+body.live-page-body .news-item {
+  padding: 22px 18px;
+  border: 1px solid var(--live-line);
+  background: linear-gradient(135deg, rgba(255,255,255,.86), rgba(244,247,246,.62));
+  box-shadow: 0 1px 0 rgba(255,255,255,.82) inset;
+}
+body.live-page-body .news-item + .news-item { margin-top: 8px; }
+body.live-page-body .news-date {
+  color: var(--live-teal);
+  font-family: var(--sans);
+  font-size: .84rem;
+  font-weight: 900;
+}
+body.live-page-body .news-title {
+  color: var(--live-ink);
+  font-size: clamp(1.04rem, 5vw, 1.36rem);
+  font-weight: 700;
+  line-height: 1.55;
+}
+body.live-page-body .live-open:focus-visible { outline-color: rgba(0,125,120,.72); }
+body.live-page-body .news-modal__backdrop {
+  background: rgba(238,243,240,.76);
+  backdrop-filter: blur(14px);
+}
+body.live-page-body .news-modal__panel {
+  border-color: rgba(0,125,120,.28);
+  background: linear-gradient(145deg, rgba(255,255,255,.98), rgba(237,243,240,.96));
+  color: var(--live-ink);
+  box-shadow: 0 24px 70px rgba(21,33,35,.2);
+}
+body.live-page-body .news-modal__close {
+  border-color: rgba(21,33,35,.18);
+  background: rgba(21,33,35,.05);
+  color: var(--live-ink);
+}
+body.live-page-body .news-modal__date { color: var(--live-teal); font-family: var(--sans); }
+body.live-page-body .news-modal__title { color: var(--live-ink); }
+body.live-page-body .news-modal__body { color: var(--live-muted); }
+body.live-page-body .news-modal__link-wrap a {
+  border-color: rgba(0,125,120,.52);
+  background: var(--live-teal);
+  color: #fff;
+}
+body.live-page-body .footer {
+  background: #101719;
+  color: rgba(244,245,241,.7);
+}
+
 @keyframes mobileHeroFadeSecond {
   0%, 27% { opacity: 0; }
   34%, 67% { opacity: 1; }
