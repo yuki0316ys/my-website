@@ -775,26 +775,21 @@ body.refresh-page-body .footer {
 body.home-page-body .hero {
   min-height: 74svh;
   isolation: isolate;
-  background: linear-gradient(180deg, rgba(244,245,241,.02), rgba(244,245,241,.34) 78%, #f4f5f1 100%);
+  background: #f4f5f1;
 }
 body.home-page-body .hero-bg {
   background-image:
     linear-gradient(90deg, rgba(244,245,241,.18), rgba(244,245,241,.05) 50%, rgba(244,245,241,.26)),
     linear-gradient(180deg, rgba(244,245,241,.02), rgba(244,245,241,.34) 84%),
     url("images/top.jpg");
-  background-position: 72% center;
+  background-size: cover;
+  background-position: center top;
   filter: saturate(.96) contrast(1.03);
 }
 body.home-page-body .hero-bg::before,
 body.home-page-body .hero-bg::after { content: none; display: none; }
-body.home-page-body .hero::after {
-  content: none;
-}
-body.home-page-body .hero::before {
-  background:
-    linear-gradient(90deg, rgba(244,245,241,.18), rgba(244,245,241,.05) 50%, rgba(244,245,241,.26)),
-    radial-gradient(circle at 50% 34%, rgba(255,255,255,.12), transparent 18rem);
-}
+body.home-page-body .hero::before,
+body.home-page-body .hero::after { content: none; display: none; }
 body.home-page-body .achievement,
 body.home-page-body .video-section,
 body.home-page-body .music {

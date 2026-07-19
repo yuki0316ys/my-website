@@ -941,10 +941,9 @@ body.refresh-page-body .footer {
 }
 
 body.home-page-body .hero {
-  min-height: 86svh;
+  min-height: 100svh;
   isolation: isolate;
-  background:
-    linear-gradient(180deg, rgba(244,245,241,0.02), rgba(244,245,241,0.28) 78%, #f4f5f1 100%);
+  background: #f4f5f1;
 }
 body.home-page-body .hero-bg {
   transform: none;
@@ -952,19 +951,14 @@ body.home-page-body .hero-bg {
     linear-gradient(90deg, rgba(244,245,241,0.16), rgba(244,245,241,0.05) 50%, rgba(244,245,241,0.24)),
     linear-gradient(180deg, rgba(244,245,241,0.02), rgba(244,245,241,0.34) 84%),
     url("images/top.jpg");
-  background-position: center 36%;
+  background-size: cover;
+  background-position: center top;
   filter: saturate(0.96) contrast(1.04);
 }
 body.home-page-body .hero-bg::before,
 body.home-page-body .hero-bg::after { content: none; display: none; }
-body.home-page-body .hero::after {
-  content: none;
-}
-body.home-page-body .hero::before {
-  background:
-    linear-gradient(90deg, rgba(244,245,241,0.18), rgba(244,245,241,0.04) 48%, rgba(244,245,241,0.22)),
-    radial-gradient(circle at 50% 34%, rgba(255,255,255,0.12), transparent 28rem);
-}
+body.home-page-body .hero::before,
+body.home-page-body .hero::after { content: none; display: none; }
 body.home-page-body .achievement,
 body.home-page-body .video-section,
 body.home-page-body .music {
