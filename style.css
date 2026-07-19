@@ -1055,6 +1055,11 @@ body.home-page-body .video-frame {
 body.home-page-body .music .track-grid {
   max-width: 1120px;
 }
+body.home-page-body .music .track-card h3 {
+  font-family: var(--sans);
+  font-weight: 800;
+  letter-spacing: .02em;
+}
 body.home-page-body .music-footer.index-action-row {
   margin-top: clamp(34px, 4vw, 56px);
 }
