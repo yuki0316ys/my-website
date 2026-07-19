@@ -464,9 +464,10 @@ section { padding: clamp(72px, 7vw, 128px) 24px; }
 .news-modal__body {
   margin-top: 26px;
   color: rgba(247,241,232,.78);
+  font-family: var(--sans);
   font-size: 1.04rem;
   line-height: 2;
-  letter-spacing: .04em;
+  letter-spacing: .025em;
 }
 .news-modal__link-wrap { margin: 30px 0 0; }
 .news-modal__link-wrap a {
@@ -1211,6 +1212,8 @@ body.refresh-page-body .discography-list li,
 body.refresh-page-body .store-final p,
 body.refresh-page-body .form-group label {
   color: var(--refresh-muted);
+  font-family: var(--sans);
+  letter-spacing: 0.025em;
 }
 body.refresh-page-body .fanclub-plan li::before {
   background: var(--refresh-teal);
@@ -1400,9 +1403,10 @@ body.refresh-page-body .biography-page {
 .profile-text p,
 .discography-list li {
   color: rgba(247,241,232,.82);
+  font-family: var(--sans);
   font-size: clamp(1.05rem, 1.28vw, 1.32rem);
   line-height: 2.05;
-  letter-spacing: .045em;
+  letter-spacing: .025em;
 }
 .lyrics-highlight { color: var(--gold); font-weight: 700; }
 .lyrics-sub { color: rgba(247,241,232,.66); }
@@ -1436,9 +1440,10 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "View Tune
   width: min(100%, 920px);
   margin: 0 auto;
   color: rgba(247,241,232,.76);
+  font-family: var(--sans);
   font-size: clamp(1.02rem, 1.18vw, 1.18rem);
   line-height: 2.05;
-  letter-spacing: .045em;
+  letter-spacing: .025em;
 }
 .fanclub-plans {
   display: grid;
@@ -1484,9 +1489,10 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "View Tune
   position: relative;
   padding-left: 18px;
   color: rgba(247,241,232,.76);
+  font-family: var(--sans);
   font-size: .98rem;
   line-height: 1.8;
-  letter-spacing: .04em;
+  letter-spacing: .025em;
 }
 .fanclub-plan li::before {
   content: "";
@@ -1541,9 +1547,10 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "View Tune
 .biography-intro p:last-child {
   margin: 0;
   color: rgba(247,241,232,.78);
+  font-family: var(--sans);
   font-size: clamp(1rem, 1.2vw, 1.18rem);
   line-height: 1.9;
-  letter-spacing: .045em;
+  letter-spacing: .025em;
 }
 .contact-form,
 .contact-form * {
@@ -1570,9 +1577,10 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "View Tune
 .profile-lead {
   margin: 0;
   color: rgba(247,241,232,.84);
+  font-family: var(--sans);
   font-size: clamp(1.02rem, 1.2vw, 1.22rem);
   line-height: 1.95;
-  letter-spacing: .045em;
+  letter-spacing: .025em;
 }
 .profile-lead + .profile-lead { margin-top: 14px; }
 .profile-text { margin-top: clamp(30px, 3.5vw, 48px); }
@@ -1643,9 +1651,10 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "View Tune
   max-width: 760px;
   margin: 22px auto 0;
   color: rgba(247,241,232,.72);
+  font-family: var(--sans);
   font-size: clamp(1.05rem, 1.5vw, 1.35rem);
   line-height: 1.85;
-  letter-spacing: .05em;
+  letter-spacing: .025em;
 }
 .goods-price { margin: 8px 0 0; color: var(--gold); font-size: 1.1rem; }
 
