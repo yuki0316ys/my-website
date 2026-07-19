@@ -41,18 +41,16 @@ img, video, iframe, audio { max-width: 100%; height: auto; }
 .brand-button {
   position: relative;
   display: block;
-  width: 158px;
-  height: 48px;
+  width: 118px;
+  height: 34px;
   color: var(--text);
-  font-family: var(--serif-display);
+  font-family: var(--sans);
   overflow: hidden;
 }
 .brand-button span,
 .brand-chara { display: none; }
-.brand-button::before,
-.brand-button::after { position: absolute; left: 2px; white-space: nowrap; }
-.brand-button::before { content: "YUKI / 佑樹"; top: 6px; font-size: 18.5px; font-weight: 700; letter-spacing: .025em; }
-.brand-button::after { content: "Official Site"; top: 33px; left: 10px; color: var(--gold); font-size: 9.6px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.brand-button::before { position: absolute; left: 0; top: 50%; transform: translateY(-50%); content: "YUKI / 佑樹"; white-space: nowrap; font-size: 17.5px; font-weight: 800; letter-spacing: -.02em; line-height: 1.05; }
+.brand-button::after { content: none; display: none; }
 .menu-toggle {
   width: 48px;
   height: 48px;
@@ -394,7 +392,6 @@ body.live-page-body .brand-button,
 body.live-page-body .header-social__link,
 body.live-page-body .menu-toggle,
 body.live-page-body .nav a { color: var(--live-ink); }
-body.live-page-body .brand-button::after,
 body.live-page-body .nav-fanclub { color: var(--live-teal); }
 body.live-page-body .header-social__link,
 body.live-page-body .menu-toggle {
@@ -557,7 +554,6 @@ body.profile-page-body .brand-button,
 body.profile-page-body .nav a,
 body.profile-page-body .header-social__link,
 body.profile-page-body .menu-toggle { color: var(--profile-ink); }
-body.profile-page-body .brand-button::after,
 body.profile-page-body .nav-fanclub { color: var(--profile-teal); }
 body.profile-page-body .header-social__link,
 body.profile-page-body .menu-toggle {
@@ -729,7 +725,6 @@ body.refresh-page-body .brand-button,
 body.refresh-page-body .nav a,
 body.refresh-page-body .header-social__link,
 body.refresh-page-body .menu-toggle { color: var(--refresh-ink); }
-body.refresh-page-body .brand-button::after,
 body.refresh-page-body .nav-fanclub { color: var(--refresh-teal); }
 body.refresh-page-body .menu-toggle {
   border-color: rgba(21,33,35,.14);

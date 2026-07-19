@@ -63,43 +63,36 @@ button, input, textarea, select { font: inherit; }
 }
 .brand-button {
   position: relative;
-  flex: 0 0 178px;
-  width: 178px;
-  height: 54px;
+  flex: 0 0 132px;
+  width: 132px;
+  height: 34px;
   display: block;
   color: var(--text);
-  font-family: var(--serif-display);
+  font-family: var(--sans);
   overflow: hidden;
 }
 .brand-button span,
 .brand-chara { display: none; }
-.brand-button::before,
-.brand-button::after {
+.brand-button::before {
   position: absolute;
-  left: 2px;
+  left: 0;
   display: block;
   white-space: nowrap;
   pointer-events: none;
 }
 .brand-button::before {
   content: "YUKI / 佑樹";
-  top: 5px;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: .035em;
-  text-shadow: 0 0 18px rgba(0,0,0,.34);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -.02em;
+  text-shadow: none;
 }
 .brand-button::after {
-  content: "Official Site";
-  top: 34px;
-  left: 13px;
-  color: rgba(215,185,103,.86);
-  font-size: 11.2px;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: .14em;
-  text-transform: uppercase;
+  content: none;
+  display: none;
 }
 .nav {
   margin-left: auto;
@@ -525,7 +518,6 @@ body.live-page-body .brand-button,
 body.live-page-body .nav a,
 body.live-page-body .header-social__link,
 body.live-page-body .menu-toggle { color: var(--live-ink); }
-body.live-page-body .brand-button::after,
 body.live-page-body .nav .nav-fanclub { color: var(--live-teal); }
 body.live-page-body .header-social__link {
   border-color: rgba(21, 33, 35, 0.16);
@@ -726,7 +718,6 @@ body.profile-page-body .brand-button,
 body.profile-page-body .nav a,
 body.profile-page-body .header-social__link,
 body.profile-page-body .menu-toggle { color: var(--profile-ink); }
-body.profile-page-body .brand-button::after,
 body.profile-page-body .nav .nav-fanclub { color: var(--profile-teal); }
 body.profile-page-body .header-social__link {
   border-color: rgba(21, 33, 35, 0.16);
@@ -920,7 +911,6 @@ body.refresh-page-body .brand-button,
 body.refresh-page-body .nav a,
 body.refresh-page-body .header-social__link,
 body.refresh-page-body .menu-toggle { color: var(--refresh-ink); }
-body.refresh-page-body .brand-button::after,
 body.refresh-page-body .nav .nav-fanclub { color: var(--refresh-teal); }
 body.refresh-page-body .header-social__link {
   border-color: rgba(21, 33, 35, 0.16);
@@ -1920,9 +1910,8 @@ body.profile-page-body .profile-link,
     padding: 14px 18px;
     background: rgba(7,8,8,.96);
   }
-  .brand-button { flex-basis: 158px; width: 158px; height: 48px; }
-  .brand-button::before { top: 6px; font-size: 18.5px; }
-  .brand-button::after { top: 33px; left: 10px; font-size: 9.6px; letter-spacing: .1em; }
+  .brand-button { flex-basis: 118px; width: 118px; height: 34px; }
+  .brand-button::before { font-size: 17.5px; }
   .menu-toggle {
     width: 48px;
     height: 48px;
