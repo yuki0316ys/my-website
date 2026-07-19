@@ -966,7 +966,7 @@ body.songs-page-body .page-hero::after,
 body.song-detail-page-body .page-hero::after { content: "SONGS"; }
 body.store-page-body .page-hero::after { content: "STORE"; }
 body.contact-page-body .page-hero::after { content: "CONTACT"; }
-body.fanclub-page-body .page-hero::after { content: "FANCLUB"; }
+body.fanclub-page-body .page-hero::after { content: "MEMBER SHIP"; }
 
 body.refresh-page-body .page-title {
   color: var(--refresh-ink);
