@@ -1019,6 +1019,126 @@ body.refresh-page-body .biography-page {
   box-shadow: none;
 }
 
+/* Mobile typography polish */
+body.refresh-page-body,
+body.live-page-body,
+body.profile-page-body {
+  font-family: var(--sans);
+}
+body.refresh-page-body .nav a,
+body.live-page-body .nav a,
+body.profile-page-body .nav a {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+body.refresh-page-body .page-title,
+body.live-page-body .page-title,
+body.profile-page-body .page-title {
+  font-family: var(--sans);
+  font-size: clamp(3rem, 13vw, 5.2rem);
+  font-weight: 900;
+  line-height: .96;
+  letter-spacing: -.045em;
+}
+body.refresh-page-body .section-title,
+body.refresh-page-body .index-section-title,
+body.refresh-page-body .music h2,
+body.refresh-page-body .social h2,
+body.refresh-page-body .store-final h2,
+body.refresh-page-body .lyrics-title,
+body.live-page-body .section-title,
+body.profile-page-body .profile-title {
+  font-family: var(--sans);
+  font-size: clamp(2.2rem, 11vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1.04;
+  letter-spacing: -.04em;
+}
+body.refresh-page-body .number,
+body.refresh-page-body .news-date,
+body.refresh-page-body .live-date,
+body.refresh-page-body .biography-date,
+body.live-page-body .news-date,
+body.profile-page-body .discography-list span {
+  font-family: var(--sans);
+  font-size: .82rem;
+  font-weight: 900;
+  letter-spacing: .13em;
+}
+body.refresh-page-body .achievement-label,
+body.refresh-page-body .news-title,
+body.refresh-page-body .live-title,
+body.refresh-page-body .biography-title,
+body.live-page-body .news-title,
+body.profile-page-body .profile-story-block h3,
+body.profile-page-body .discography-label {
+  font-family: var(--sans);
+  font-size: clamp(.98rem, 4.2vw, 1.18rem);
+  font-weight: 700;
+  line-height: 1.58;
+  letter-spacing: .012em;
+}
+body.refresh-page-body .news-modal__title,
+body.live-page-body .news-modal__title {
+  font-family: var(--sans);
+  font-size: clamp(1.18rem, 5.2vw, 1.58rem);
+  font-weight: 900;
+  line-height: 1.38;
+  letter-spacing: -.012em;
+}
+body.refresh-page-body .news-modal__body,
+body.live-page-body .news-modal__body,
+body.refresh-page-body .store-category-description,
+body.refresh-page-body .fanclub-lead,
+body.refresh-page-body .fanclub-plan li,
+body.refresh-page-body .biography-intro p:last-child,
+body.refresh-page-body .lyrics p,
+body.refresh-page-body .discography-list li,
+body.refresh-page-body .store-final p,
+body.refresh-page-body .form-group label,
+body.profile-page-body .profile-lead,
+body.profile-page-body .profile-text p,
+body.profile-page-body .discography-list li {
+  font-family: var(--sans);
+  font-size: .98rem;
+  font-weight: 400;
+  line-height: 1.86;
+  letter-spacing: .016em;
+}
+body.refresh-page-body .track-card h3,
+body.refresh-page-body .goods-card h3,
+body.refresh-page-body .preview-player h2,
+body.refresh-page-body .fanclub-plan h2,
+body.home-page-body .music .track-card h3 {
+  font-size: clamp(1.18rem, 5.4vw, 1.52rem);
+  font-weight: 800;
+  line-height: 1.28;
+  letter-spacing: .012em;
+}
+body.refresh-page-body .track-card__content::before,
+body.refresh-page-body .track-card__type,
+body.refresh-page-body .goods-category,
+body.refresh-page-body .goods-price,
+body.refresh-page-body .fanclub-plan__label,
+body.refresh-page-body .biography-intro__eyebrow {
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+body.refresh-page-body .news-modal__link-wrap a,
+body.refresh-page-body .button.main-cta,
+body.refresh-page-body .index-text-link,
+body.profile-page-body .profile-link,
+.store-final .button.main-cta::after {
+  font-family: var(--sans);
+  font-size: .96rem;
+  font-weight: 800;
+  letter-spacing: .075em;
+}
+
 @keyframes mobileHeroFadeSecond {
   0%, 27% { opacity: 0; }
   34%, 67% { opacity: 1; }
