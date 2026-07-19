@@ -68,6 +68,7 @@ button, input, textarea, select { font: inherit; }
   height: 54px;
   display: block;
   color: var(--text);
+  font-family: var(--serif-display);
   overflow: hidden;
 }
 .brand-button span,
@@ -108,10 +109,10 @@ button, input, textarea, select { font: inherit; }
 }
 .nav a {
   color: rgba(247,241,232,.78);
-  font-family: var(--serif-display);
+  font-family: var(--sans);
   font-size: clamp(1rem, .92vw, 1.08rem);
-  font-weight: 700;
-  letter-spacing: .07em;
+  font-weight: 800;
+  letter-spacing: .08em;
   transition: color .2s ease;
 }
 .nav a:hover,
