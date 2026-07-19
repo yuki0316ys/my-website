@@ -941,7 +941,7 @@ body.refresh-page-body .footer {
 }
 
 body.home-page-body .hero {
-  min-height: 100svh;
+  min-height: calc(100vw * 3235 / 3896);
   isolation: isolate;
   background: #f4f5f1;
 }
@@ -951,8 +951,9 @@ body.home-page-body .hero-bg {
     linear-gradient(90deg, rgba(244,245,241,0.16), rgba(244,245,241,0.05) 50%, rgba(244,245,241,0.24)),
     linear-gradient(180deg, rgba(244,245,241,0.02), rgba(244,245,241,0.34) 84%),
     url("images/top.jpg");
-  background-size: cover;
+  background-size: 100% auto;
   background-position: center top;
+  background-repeat: no-repeat;
   filter: saturate(0.96) contrast(1.04);
 }
 body.home-page-body .hero-bg::before,
