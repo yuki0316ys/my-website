@@ -941,7 +941,7 @@ body.refresh-page-body .footer {
 }
 
 body.home-page-body .hero {
-  min-height: calc(100vw * 3235 / 3896);
+  min-height: calc((100vw * 3235 / 3896) + clamp(72px, 8vw, 150px));
   isolation: isolate;
   background: #f4f5f1;
 }
@@ -958,8 +958,16 @@ body.home-page-body .hero-bg {
 }
 body.home-page-body .hero-bg::before,
 body.home-page-body .hero-bg::after { content: none; display: none; }
-body.home-page-body .hero::before,
-body.home-page-body .hero::after { content: none; display: none; }
+body.home-page-body .hero::before { content: none; display: none; }
+body.home-page-body .hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 1;
+  height: clamp(140px, 18vw, 340px);
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(244,245,241,0), rgba(244,245,241,0.72) 54%, #f4f5f1 100%);
+}
 body.home-page-body .achievement,
 body.home-page-body .video-section,
 body.home-page-body .music {
