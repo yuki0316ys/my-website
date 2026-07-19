@@ -1342,9 +1342,10 @@ body.refresh-page-body .biography-page {
 .disc-card h3 {
   margin: 0;
   color: rgba(247,241,232,.96);
+  font-family: var(--sans);
   font-size: clamp(1.18rem, 1.75vw, 2rem);
-  font-weight: 700;
-  letter-spacing: .045em;
+  font-weight: 800;
+  letter-spacing: .02em;
   line-height: 1.25;
 }
 .upright-hyphen {
@@ -1476,7 +1477,10 @@ body:not(.store-page) .store-final .button.main-cta::after { content: "View Tune
 .fanclub-plan h2 {
   margin: 0;
   color: rgba(247,241,232,.96);
+  font-family: var(--sans);
   font-size: clamp(1.55rem, 2.1vw, 2.25rem);
+  font-weight: 800;
+  letter-spacing: .02em;
   line-height: 1.22;
 }
 .fanclub-plan ul {
