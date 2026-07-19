@@ -381,9 +381,10 @@ section { padding: clamp(72px, 7vw, 128px) 24px; }
 .biography-title {
   margin: 0;
   color: rgba(247,241,232,.84);
+  font-family: var(--sans);
   font-size: clamp(1.02rem, 1.18vw, 1.22rem);
-  font-weight: 600;
-  letter-spacing: .04em;
+  font-weight: 700;
+  letter-spacing: .02em;
   line-height: 1.7;
 }
 .news-tag,
@@ -643,11 +644,11 @@ body.live-page-body .news-date {
 }
 body.live-page-body .news-title {
   color: var(--live-ink);
-  font-family: var(--serif-display);
+  font-family: var(--sans);
   font-size: clamp(1.24rem, 1.58vw, 1.68rem);
   font-weight: 700;
   line-height: 1.54;
-  letter-spacing: 0.035em;
+  letter-spacing: 0.02em;
 }
 body.live-page-body .live-open:focus-visible {
   outline-color: rgba(0, 125, 120, 0.72);
@@ -1111,7 +1112,7 @@ body.refresh-page-body .news-title,
 body.refresh-page-body .live-title,
 body.refresh-page-body .biography-title {
   color: var(--refresh-ink);
-  font-family: var(--serif-display);
+  font-family: var(--sans);
   font-weight: 700;
 }
 body.refresh-page-body .topic-open .number {
