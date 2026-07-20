@@ -622,10 +622,10 @@ body.profile-page-body .profile-biography {
 }
 body.profile-page-body .profile-biography__inner {
   padding: 28px 20px 34px;
-  border: 1px solid var(--profile-line);
-  background: linear-gradient(145deg, rgba(255,255,255,.92), rgba(238,243,240,.66));
+  border: 0;
+  background: transparent;
   color: var(--profile-ink);
-  box-shadow: 0 18px 48px rgba(18,33,36,.12);
+  box-shadow: none;
 }
 body.profile-page-body .profile-title {
   color: var(--profile-ink);
@@ -981,6 +981,12 @@ body.refresh-page-body .lyrics {
   background: transparent;
   box-shadow: none;
 }
+body.refresh-page-body .contact-section,
+body.refresh-page-body .contact-form {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
 
 /* Mobile typography polish */
 body.refresh-page-body,
@@ -1134,7 +1140,7 @@ body.profile-page-body .profile-link,
 .contact-form, .contact-form * { position: relative; z-index: 2; }
 
 .contact-page-body .page-glow, .contact-page-body .hero-light { display: none; }
-.contact-page-body .contact-hero, .contact-page-body .contact-section, .contact-page-body .contact-form { background: transparent; box-shadow: none; }
+.contact-page-body .contact-hero, .contact-page-body .contact-section, .contact-page-body .contact-form { border: 0; background: transparent; box-shadow: none; }
 .contact-page-body .form-group input, .contact-page-body .form-group textarea, .contact-page-body .form-group select { box-shadow: none; }
 
 .discography-block + .discography-block { margin-top: 34px; padding-top: 28px; border-top: 1px solid rgba(215,185,103,.18); }

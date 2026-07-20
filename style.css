@@ -775,11 +775,10 @@ body.profile-page-body .profile-biography {
   padding: clamp(58px, 6.2vw, 96px) 22px clamp(70px, 7vw, 112px);
 }
 body.profile-page-body .profile-biography__inner {
-  border-color: var(--profile-line);
-  background:
-    linear-gradient(145deg, rgba(255,255,255,0.9), rgba(238,243,240,0.64));
+  border: 0;
+  background: transparent;
   color: var(--profile-ink);
-  box-shadow: 0 1px 0 rgba(255,255,255,0.82) inset, var(--profile-shadow);
+  box-shadow: none;
 }
 body.profile-page-body .profile-title {
   color: var(--profile-ink);
@@ -1185,6 +1184,12 @@ body.refresh-page-body .biography-page {
   box-shadow: none;
 }
 body.refresh-page-body .lyrics {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+body.refresh-page-body .contact-section,
+body.refresh-page-body .contact-form {
   border: 0;
   background: transparent;
   box-shadow: none;
@@ -1622,6 +1627,7 @@ body:not(.store-page) .store-final .button.main-cta + .button.main-cta::before {
 .contact-page-body .contact-hero,
 .contact-page-body .contact-section,
 .contact-page-body .contact-form {
+  border: 0;
   background: transparent;
   box-shadow: none;
 }
