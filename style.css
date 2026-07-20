@@ -1184,6 +1184,11 @@ body.refresh-page-body .biography-page {
   background: transparent;
   box-shadow: none;
 }
+body.refresh-page-body .lyrics {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
 
 .video-card,
 .preview-player__inner {
@@ -1466,6 +1471,7 @@ body:not(.store-page) .store-final .button.main-cta + .button.main-cta::before {
 .lyrics-section,
 .lyrics,
 .cinematic-lyrics {
+  border: 0;
   background: transparent;
   box-shadow: none;
 }

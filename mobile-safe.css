@@ -976,6 +976,11 @@ body.refresh-page-body .biography-page {
   background: transparent;
   box-shadow: none;
 }
+body.refresh-page-body .lyrics {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
 
 /* Mobile typography polish */
 body.refresh-page-body,
@@ -1099,7 +1104,7 @@ body.profile-page-body .profile-link,
 
 @keyframes topicLabelGlow { 0%, 100% { opacity:.74; text-shadow:0 0 8px rgba(215,185,103,.18); } 50% { opacity:1; text-shadow:0 0 16px rgba(241,216,138,.44); } }
 
-.profile-page, .profile-visual, .profile-biography, .biography-page, .contact-page, .contact-section, .lyrics-section, .lyrics, .cinematic-lyrics { background: transparent; box-shadow: none; }
+.profile-page, .profile-visual, .profile-biography, .biography-page, .contact-page, .contact-section, .lyrics-section, .lyrics, .cinematic-lyrics { border: 0; background: transparent; box-shadow: none; }
 .profile-visual img { box-shadow: none; filter: none; opacity: 1; mix-blend-mode: normal; }
 .biography-page .news-title { color: rgba(247,241,232,.94); }
 .biography-page .news-date { color: var(--gold-bright); }
