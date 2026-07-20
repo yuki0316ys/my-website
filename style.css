@@ -819,9 +819,9 @@ body.profile-page-body .discography {
   background: transparent;
 }
 body.profile-page-body .discography__inner {
-  border-color: var(--profile-line);
-  background: rgba(255,255,255,0.54);
-  box-shadow: 0 1px 0 rgba(255,255,255,0.74) inset;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
 }
 body.profile-page-body .discography-list li {
   border-bottom-color: rgba(21, 33, 35, 0.12);

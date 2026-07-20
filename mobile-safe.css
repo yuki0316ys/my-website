@@ -658,8 +658,9 @@ body.profile-page-body .profile-link {
   font-family: var(--sans);
 }
 body.profile-page-body .discography__inner {
-  border-color: var(--profile-line);
-  background: rgba(255,255,255,.58);
+  border: 0;
+  background: transparent;
+  box-shadow: none;
 }
 body.profile-page-body .discography-list li { border-bottom-color: rgba(21,33,35,.12); }
 body.profile-page-body .discography-list span { color: var(--profile-teal-deep); }
