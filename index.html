@@ -240,13 +240,6 @@
         document.body.style.setProperty("--y", e.clientY + "px");
       });
 
-      window.addEventListener("scroll", () => {
-        const heroBg = document.querySelector(".hero-bg");
-        if (!heroBg) return;
-
-        const scrolled = window.scrollY;
-        heroBg.style.transform = "scale(1.08) translateY(" + (scrolled * 0.15) + "px)";
-      }, { passive: true });
     } else {
       (function () {
         const video = document.querySelector(".featured-video");
