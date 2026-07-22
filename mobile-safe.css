@@ -692,8 +692,7 @@ body.refresh-page-body::before {
     radial-gradient(circle at 12% 12%, rgba(0,125,120,.1), transparent 16rem);
 }
 body.refresh-page-body .page-glow,
-body.refresh-page-body .hero-light,
-body.refresh-page-body .featured-video { display: none; }
+body.refresh-page-body .hero-light { display: none; }
 body.refresh-page-body .header {
   background: rgba(248,249,246,.84);
   border-bottom-color: rgba(21,33,35,.08);
@@ -763,6 +762,14 @@ body.refresh-page-body .page-title {
   text-transform: uppercase;
   text-shadow: 0 14px 34px rgba(255,255,255,.68);
 }
+body.fanclub-page-body.refresh-page-body .page-title {
+  font-size: clamp(2.25rem, 10.5vw, 4.4rem);
+  letter-spacing: -.035em;
+}
+body.fanclub-page-body.refresh-page-body .page-hero::after {
+  font-size: clamp(2.5rem, 13vw, 4.9rem);
+  letter-spacing: -.055em;
+}
 body.refresh-page-body .page-hero .hero__content { z-index: 2; }
 body.refresh-page-body main,
 body.refresh-page-body .page-hero + main {
@@ -774,7 +781,7 @@ body.refresh-page-body .footer {
 }
 
 body.home-page-body .hero {
-  min-height: calc((100vw * 3235 / 3896) + clamp(46px, 13vw, 92px));
+  min-height: calc((112vw * 3235 / 3896) + clamp(46px, 13vw, 92px));
   isolation: isolate;
   background: #f4f5f1;
 }
@@ -783,7 +790,7 @@ body.home-page-body .hero-bg {
     linear-gradient(90deg, rgba(244,245,241,.18), rgba(244,245,241,.05) 50%, rgba(244,245,241,.26)),
     linear-gradient(180deg, rgba(244,245,241,.02), rgba(244,245,241,.34) 84%),
     url("images/top.jpg");
-  background-size: 100% auto;
+  background-size: 112% auto;
   background-position: center top;
   background-repeat: no-repeat;
   filter: saturate(.96) contrast(1.03);
