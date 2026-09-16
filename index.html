@@ -33,6 +33,7 @@
   <link rel="stylesheet" href="mobile-safe.css?v=2026072201" media="(max-width: 768px), ((max-height: 768px) and (orientation: landscape) and (hover: none) and (pointer: coarse))">
   <link rel="stylesheet" href="style.css?v=2026072201" media="(min-width: 769px) and (hover: hover) and (pointer: fine)">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="stylesheet" href="home-experience.css?v=2026091601">
   <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48.png">
   <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -117,10 +118,21 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero" aria-labelledby="artist-name">
       <div class="hero-bg"></div>
       <div class="hero-light"></div>
+      <div class="artist-intro">
+        <p class="artist-kicker">SINGER / SONGWRITER</p>
+        <h1 id="artist-name">YUKI <span>佑樹</span></h1>
+        <p class="artist-copy">働く日々の中で、<br>消えなかった言葉を歌に。</p>
+        <div class="artist-links">
+          <a href="songs/songs.html">楽曲を聴く <span aria-hidden="true">↗</span></a>
+          <a href="live.html">ライブ情報 <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
     </section>
+
+    <a class="home-live-strip" href="live.html"><span>LIVE / 2026.11.01</span><strong>Rehabilitation 2026</strong><span>詳細・予約 <span aria-hidden="true">↗</span></span></a>
 
     <section class="achievement reveal">
       <h2 class="section-title">Topics</h2>
@@ -162,6 +174,8 @@
           <video class="featured-video" muted loop playsinline webkit-playsinline preload="metadata" poster="images/sakayume.jpg" data-video-src="video/hero.mp4" aria-label="逆夢 featured video"><source src="video/hero.mp4" type="video/mp4"></video>
         </div>
       </div>
+
+      <a class="home-song-link" href="songs/Sakayume.html">「逆夢」を聴く <span aria-hidden="true">↗</span></a>
 
     </section>
 
