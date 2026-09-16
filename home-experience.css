@@ -11,9 +11,10 @@ body.home-page-body .hero {
   background: #141718;
 }
 body.home-page-body .hero-bg {
-  background-image: linear-gradient(90deg, rgba(0,0,0,.65), transparent 72%), url("images/top.jpg");
-  background-size: cover;
-  background-position: center 22%;
+  background-image: linear-gradient(90deg, rgba(0,0,0,.65), transparent 72%), linear-gradient(180deg, rgba(20,23,24,0), #141718 92%), url("images/top.jpg");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
   filter: none;
 }
 body.home-page-body .hero::after { content: none; }
@@ -72,7 +73,11 @@ body.home-page-body .reveal { opacity: 1; transform: none; }
 @keyframes home-photo { from { transform: scale(1.025); } to { transform: scale(1); } }
 @media (max-width: 768px) {
   body.home-page-body .hero { height: 78svh; min-height: 460px; padding: 90px 24px 32px; }
-  body.home-page-body .hero-bg { background-position: 56% top; background-image: linear-gradient(0deg, rgba(0,0,0,.8), transparent 72%), url("images/top.jpg"); }
+  body.home-page-body .hero-bg {
+    background-image: linear-gradient(0deg, rgba(0,0,0,.8), transparent 72%), linear-gradient(180deg, rgba(20,23,24,0), #141718 88%), url("images/top.jpg");
+    background-size: 112% auto;
+    background-position: center top;
+  }
   body.home-page-body .hero h1 { font-size: 56px; }
   body.home-page-body .hero h1 span { font-size: 22px; }
   .artist-copy { font-size: 16px; margin: 16px 0; }
