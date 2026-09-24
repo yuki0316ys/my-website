@@ -33,7 +33,7 @@
   <link rel="stylesheet" href="mobile-safe.css?v=2026072201" media="(max-width: 768px), ((max-height: 768px) and (orientation: landscape) and (hover: none) and (pointer: coarse))">
   <link rel="stylesheet" href="style.css?v=2026072201" media="(min-width: 769px) and (hover: hover) and (pointer: fine)">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
-  <link rel="stylesheet" href="home-experience.css?v=2026091701">
+  <link rel="stylesheet" href="home-experience.css?v=2026092401">
   <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48.png">
   <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -185,39 +185,43 @@
         <h2 class="section-title index-section-title">Pickup</h2>
       </div>
 
-      <div class="track-grid">
-        <a class="track-card" href="songs/Sakayume.html">
-          <span class="track-card__index">01</span>
-          <div class="track-card__image">
-            <img src="images/sakayume.jpg" alt="YUKI / 佑樹の楽曲 逆夢 ジャケット画像">
-          </div>
-          <div class="track-card__content">
-            <p class="track-card__type">01 TRACK</p>
-            <h3>逆夢</h3>
-          </div>
-        </a>
+      <div class="pickup-marquee">
+        <div class="pickup-marquee__track">
+          <div class="pickup-marquee__group">
+            <a class="track-card" href="songs/Sakayume.html">
+              <span class="track-card__index">01</span>
+              <div class="track-card__image">
+                <img src="images/sakayume.jpg" alt="YUKI / 佑樹の楽曲 逆夢 ジャケット画像">
+              </div>
+              <div class="track-card__content">
+                <p class="track-card__type">01 TRACK</p>
+                <h3>逆夢</h3>
+              </div>
+            </a>
 
-        <a class="track-card" href="songs/BE-TRIP.html">
-          <span class="track-card__index">02</span>
-          <div class="track-card__image">
-            <img src="images/be-trip.jpg" alt="YUKI / 佑樹の楽曲 BE-TRIP ジャケット画像">
-          </div>
-          <div class="track-card__content">
-            <p class="track-card__type">02 TRACK</p>
-            <h3>BE<span class="upright-hyphen">-</span>TRIP</h3>
-          </div>
-        </a>
+            <a class="track-card" href="songs/BE-TRIP.html">
+              <span class="track-card__index">02</span>
+              <div class="track-card__image">
+                <img src="images/be-trip.jpg" alt="YUKI / 佑樹の楽曲 BE-TRIP ジャケット画像">
+              </div>
+              <div class="track-card__content">
+                <p class="track-card__type">02 TRACK</p>
+                <h3>BE<span class="upright-hyphen">-</span>TRIP</h3>
+              </div>
+            </a>
 
-        <a class="track-card" href="songs/Nextinnovation.html">
-          <span class="track-card__index">03</span>
-          <div class="track-card__image">
-            <img src="images/next.jpg" alt="YUKI / 佑樹の楽曲 NEXT INNOVATION! ジャケット画像">
+            <a class="track-card" href="songs/Nextinnovation.html">
+              <span class="track-card__index">03</span>
+              <div class="track-card__image">
+                <img src="images/next.jpg" alt="YUKI / 佑樹の楽曲 NEXT INNOVATION! ジャケット画像">
+              </div>
+              <div class="track-card__content">
+                <p class="track-card__type">03 TRACK</p>
+                <h3>Next innovation!</h3>
+              </div>
+            </a>
           </div>
-          <div class="track-card__content">
-            <p class="track-card__type">03 TRACK</p>
-            <h3>Next innovation!</h3>
-          </div>
-        </a>
+        </div>
       </div>
 
       <div class="music-footer index-action-row">
@@ -241,6 +245,16 @@
   </div>
 
   <script>
+    const pickupTrack = document.querySelector(".pickup-marquee__track");
+    const pickupGroup = pickupTrack?.querySelector(".pickup-marquee__group");
+    if (pickupTrack && pickupGroup) {
+      const duplicateGroup = pickupGroup.cloneNode(true);
+      duplicateGroup.setAttribute("aria-hidden", "true");
+      duplicateGroup.inert = true;
+      duplicateGroup.querySelectorAll("a").forEach(link => link.tabIndex = -1);
+      pickupTrack.appendChild(duplicateGroup);
+    }
+
     if (window.matchMedia("(min-width: 769px) and (hover: hover) and (pointer: fine)").matches) {
       (function () {
         const slides = Array.from(document.querySelectorAll(".video-slide"));

@@ -56,6 +56,31 @@ body.home-page-body .track-card { border-radius: 4px; }
 body.home-page-body .track-card__image { overflow: hidden; }
 body.home-page-body .track-card__image img { transition: transform .6s ease; }
 body.home-page-body .track-card:hover .track-card__image img { transform: scale(1.035); }
+.pickup-marquee {
+  width: 100%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+}
+.pickup-marquee__track {
+  display: flex;
+  width: max-content;
+  animation: pickup-marquee-scroll 42s linear infinite;
+}
+.pickup-marquee__group {
+  display: flex;
+  flex: 0 0 auto;
+  gap: clamp(28px, 3vw, 48px);
+  width: max-content;
+  padding-right: clamp(28px, 3vw, 48px);
+}
+body.home-page-body .pickup-marquee .track-card {
+  flex: 0 0 clamp(230px, 26vw, 340px);
+  width: clamp(230px, 26vw, 340px);
+}
+.pickup-marquee:hover .pickup-marquee__track,
+.pickup-marquee:focus-within .pickup-marquee__track { animation-play-state: paused; }
+@keyframes pickup-marquee-scroll { to { transform: translateX(-50%); } }
 body.home-page-body a:focus-visible, body.home-page-body button:focus-visible { outline: 3px solid #b65138; outline-offset: 5px; }
 /* Visible by default, including when scripting is unavailable. */
 body.home-page-body .reveal { opacity: 1; transform: none; }
@@ -84,6 +109,8 @@ body.home-page-body .reveal { opacity: 1; transform: none; }
   .artist-kicker { margin-bottom: 10px; }
   .home-live-strip { padding: 20px 24px; }
   .home-live-strip strong { width: 100%; order: 1; }
+  body.home-page-body .pickup-marquee .track-card { flex-basis: min(72vw, 310px); width: min(72vw, 310px); }
+  .pickup-marquee__track { animation-duration: 36s; }
 }
 @media (max-height: 550px) and (orientation: landscape) {
   body.home-page-body .hero { height: auto; min-height: 360px; padding-top: 90px; }
@@ -91,4 +118,7 @@ body.home-page-body .reveal { opacity: 1; transform: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   body.home-page-body *, body.home-page-body *::before, body.home-page-body *::after { animation: none; transition: none; scroll-behavior: auto; }
+  .pickup-marquee { overflow-x: auto; mask-image: none; -webkit-mask-image: none; }
+  .pickup-marquee__track { width: auto; transform: none; }
+  .pickup-marquee__group[aria-hidden="true"] { display: none; }
 }
