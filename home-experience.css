@@ -19,7 +19,7 @@ body.home-page-body .hero-bg {
 }
 body.home-page-body .hero::after { content: none; }
 .artist-intro { position: relative; z-index: 2; color: #fff; max-width: 560px; }
-.artist-kicker { margin: 0 0 16px; font-family: "Yomogi", sans-serif; font-size: 15px; letter-spacing: 0; }
+.artist-kicker { margin: 0 0 16px; font-family: "A-OTF Ryumin Pr6N", "Ryumin", "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif; font-size: 15px; letter-spacing: 0; }
 body.home-page-body .hero h1 {
   display: block;
   margin: 0;
@@ -32,7 +32,7 @@ body.home-page-body .hero h1 {
   text-shadow: none;
 }
 body.home-page-body .hero h1 span { font-size: 34px; font-weight: 400; }
-.artist-copy { margin: 22px 0 28px; font-family: "Yomogi", sans-serif; font-size: 23px; line-height: 1.9; letter-spacing: 0; }
+.artist-copy { margin: 22px 0 28px; font-family: "A-OTF Ryumin Pr6N", "Ryumin", "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif; font-size: 23px; line-height: 1.9; letter-spacing: 0; }
 .home-song-link span { transition: transform .25s ease; }
 .home-song-link:hover span { transform: translate(3px,-3px); }
 .home-live-strip { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px 24px; padding: 24px 6%; background: #005d55; color: #fff; text-decoration: none; }
