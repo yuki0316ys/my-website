@@ -177,7 +177,8 @@
 
       <div class="video-card">
         <div class="video-frame">
-          <video class="featured-video" muted loop playsinline webkit-playsinline preload="metadata" poster="images/sakayume.jpg" data-video-src="video/hero.mp4" aria-label="逆夢 featured video"><source src="video/hero.mp4" type="video/mp4"></video>
+          <video class="featured-video video-slide" muted loop playsinline webkit-playsinline preload="metadata" poster="images/sakayume.jpg" data-video-src="video/hero.mp4" aria-label="逆夢 featured video" style="display:block; opacity:1; transition:opacity .8s ease; z-index:1;"><source src="video/hero.mp4" type="video/mp4"></video>
+          <video class="featured-video video-slide" muted loop playsinline webkit-playsinline preload="metadata" poster="images/beast.jpg" aria-label="THE BEAST music animation video" style="display:block; opacity:0; transition:opacity .8s ease; z-index:0;"><source src="images/MV.MOV" type="video/quicktime"></video>
         </div>
       </div>
 
@@ -248,10 +249,27 @@
   <script>
     if (window.matchMedia("(min-width: 769px) and (hover: hover) and (pointer: fine)").matches) {
       (function () {
-        const video = document.querySelector(".featured-video");
-        if (!video) return;
-        video.setAttribute("autoplay", "");
-        video.play().catch(() => {});
+        const slides = Array.from(document.querySelectorAll(".video-slide"));
+        if (!slides.length) return;
+
+        let activeIndex = 0;
+        const showSlide = nextIndex => {
+          slides.forEach((slide, index) => {
+            const isActive = index === nextIndex;
+            slide.style.opacity = isActive ? "1" : "0";
+            slide.style.zIndex = isActive ? "1" : "0";
+            if (isActive) {
+              slide.play().catch(() => {});
+            } else {
+              slide.pause();
+            }
+          });
+          activeIndex = nextIndex;
+        };
+
+        slides.forEach(video => video.setAttribute("autoplay", ""));
+        showSlide(activeIndex);
+        window.setInterval(() => showSlide((activeIndex + 1) % slides.length), 15000);
       })();
 
       document.addEventListener("mousemove", e => {
@@ -261,13 +279,28 @@
 
     } else {
       (function () {
-        const video = document.querySelector(".featured-video");
-        if (!video) return;
-        video.muted = true;
-        video.playsInline = true;
-        video.setAttribute("autoplay", "");
-        video.setAttribute("preload", "metadata");
-        video.play().catch(() => {});
+        const slides = Array.from(document.querySelectorAll(".video-slide"));
+        if (!slides.length) return;
+
+        let activeIndex = 0;
+        const showSlide = nextIndex => {
+          slides.forEach((slide, index) => {
+            const isActive = index === nextIndex;
+            slide.muted = true;
+            slide.playsInline = true;
+            slide.style.opacity = isActive ? "1" : "0";
+            slide.style.zIndex = isActive ? "1" : "0";
+            if (isActive) {
+              slide.play().catch(() => {});
+            } else {
+              slide.pause();
+            }
+          });
+          activeIndex = nextIndex;
+        };
+
+        showSlide(activeIndex);
+        window.setInterval(() => showSlide((activeIndex + 1) % slides.length), 15000);
       })();
     }
 
