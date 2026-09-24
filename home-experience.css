@@ -19,19 +19,20 @@ body.home-page-body .hero-bg {
 }
 body.home-page-body .hero::after { content: none; }
 .artist-intro { position: relative; z-index: 2; color: #fff; max-width: 560px; }
-.artist-kicker { margin: 0 0 16px; font-size: 12px; letter-spacing: 0; }
+.artist-kicker { margin: 0 0 16px; font-family: "Zen Kurenaido", sans-serif; font-size: 15px; letter-spacing: 0; }
 body.home-page-body .hero h1 {
   display: block;
   margin: 0;
   color: #fff;
-  font-family: var(--sans, sans-serif);
-  font-size: 88px;
+  font-family: "Zen Kurenaido", sans-serif;
+  font-size: 90px;
+  font-weight: 400;
   line-height: 1.05;
   letter-spacing: 0;
   text-shadow: none;
 }
-body.home-page-body .hero h1 span { font-size: 28px; font-weight: 500; }
-.artist-copy { margin: 22px 0 28px; font-size: 19px; line-height: 1.9; letter-spacing: 0; }
+body.home-page-body .hero h1 span { font-size: 34px; font-weight: 400; }
+.artist-copy { margin: 22px 0 28px; font-family: "Zen Kurenaido", sans-serif; font-size: 23px; line-height: 1.9; letter-spacing: 0; }
 .artist-links { display: flex; flex-wrap: wrap; gap: 24px; }
 .artist-links a { display: inline-flex; gap: 24px; padding: 10px 0; color: #fff; border-bottom: 1px solid #b6c8c4; font-size: 14px; text-decoration: none; }
 .artist-links a span, .home-song-link span { transition: transform .25s ease; }
