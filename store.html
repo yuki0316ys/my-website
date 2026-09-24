@@ -3,27 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="YUKI / 佑樹のストア情報。グッズ、デジタルコンテンツ、関連アイテムを掲載。">
+<meta name="description" content="YUKI / 佑樹の公式ストア情報。×APPAREL×のウェア、グッズ、デジタルコンテンツなど関連アイテムを掲載。">
 <title>Store | YUKI / 佑樹 Official Goods</title>
 <meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
 <meta property="og:title" content="Store | YUKI / 佑樹">
-<meta property="og:description" content="YUKI / 佑樹のストア情報。グッズ、デジタルコンテンツ、関連アイテムを掲載。">
+<meta property="og:description" content="YUKI / 佑樹の公式ストア情報。×APPAREL×のウェア、グッズ、デジタルコンテンツなど関連アイテムを掲載。">
 <meta property="og:url" content="https://yuki-music.jp/store.html">
 <meta property="og:image" content="https://yuki-music.jp/images/store-ogp.jpg">
+  <meta property="og:image:alt" content="YUKI / 佑樹 Official Storeの共有画像">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:description" content="YUKI / 佑樹のストア情報。グッズ、デジタルコンテンツ、関連アイテムを掲載。">
+<meta name="twitter:site" content="@Youking74514090">
+<meta name="twitter:creator" content="@Youking74514090">
+<meta name="twitter:title" content="Store | YUKI / 佑樹">
+<meta name="twitter:description" content="YUKI / 佑樹の公式ストア情報。×APPAREL×のウェア、グッズ、デジタルコンテンツなど関連アイテムを掲載。">
+<meta name="twitter:image" content="https://yuki-music.jp/images/store-ogp.jpg">
+  <meta name="twitter:image:alt" content="YUKI / 佑樹 Official Storeの共有画像">
 <meta property="og:site_name" content="YUKI / 佑樹 Official Site">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="mobile-safe.css?v=2026060409" media="(max-width: 768px)">
+<link rel="stylesheet" href="mobile-safe.css?v=2026072201" media="(max-width: 768px), ((max-height: 768px) and (orientation: landscape) and (hover: none) and (pointer: coarse))">
+  <link rel="stylesheet" href="style.css?v=2026072201" media="(min-width: 769px) and (hover: hover) and (pointer: fine)">
 <style>
-  @media (min-width: 769px) {
-    html.desktop-loading body { opacity: 0; }
-    html.desktop-ready body { opacity: 1; transition: opacity .12s ease; }
-  }
-
   body.store-page .goods-card h3 {
     font-size: clamp(1.02rem, 1.32vw, 1.42rem);
     letter-spacing: .035em;
@@ -38,30 +41,12 @@
     }
   }
 </style>
-<script>
-  if (window.matchMedia("(min-width: 769px)").matches) {
-    document.documentElement.classList.add("desktop-loading");
-    const desktopStylesheet = document.createElement("link");
-    desktopStylesheet.rel = "stylesheet";
-    desktopStylesheet.href = "style.css?v=2026060409";
-    desktopStylesheet.onload = () => {
-      document.documentElement.classList.remove("desktop-loading");
-      document.documentElement.classList.add("desktop-ready");
-    };
-    desktopStylesheet.onerror = () => {
-      document.documentElement.classList.remove("desktop-loading");
-      document.documentElement.classList.add("desktop-ready");
-    };
-    document.head.appendChild(desktopStylesheet);
-    setTimeout(() => {
-      document.documentElement.classList.remove("desktop-loading");
-      document.documentElement.classList.add("desktop-ready");
-    }, 1200);
-  }
-</script>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#000000">
+<meta name="application-name" content="佑樹">
+<meta name="apple-mobile-web-app-title" content="佑樹">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48.png">
 <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 <link rel="canonical" href="https://yuki-music.jp/store.html">
@@ -80,60 +65,63 @@
     "@type":"OfferCatalog",
     "name":"YUKI / 佑樹 Official Goods",
     "itemListElement":[
-      {"@type":"Offer","price":"5980","priceCurrency":"JPY","availability":"https://schema.org/InStock","url":"https://yuki-music.jp/store.html","itemOffered":{"@type":"Product","name":"クルーネックスウェット","brand":{"@type":"Brand","name":"YUKI / 佑樹"}}},
-      {"@type":"Offer","price":"8980","priceCurrency":"JPY","availability":"https://schema.org/InStock","url":"https://yuki-music.jp/store.html","itemOffered":{"@type":"Product","name":"ジップアップパーカー","brand":{"@type":"Brand","name":"YUKI / 佑樹"}}},
-      {"@type":"Offer","price":"4980","priceCurrency":"JPY","availability":"https://schema.org/InStock","url":"https://yuki-music.jp/store.html","itemOffered":{"@type":"Product","name":"折りたたみ傘","brand":{"@type":"Brand","name":"YUKI / 佑樹"}}},
-      {"@type":"Offer","price":"4980","priceCurrency":"JPY","availability":"https://schema.org/InStock","url":"https://yuki-music.jp/store.html","itemOffered":{"@type":"Product","name":"ナップサック","brand":{"@type":"Brand","name":"YUKI / 佑樹"}}},
-      {"@type":"Offer","price":"3980","priceCurrency":"JPY","availability":"https://schema.org/InStock","url":"https://yuki-music.jp/store.html","itemOffered":{"@type":"Product","name":"サンダル","brand":{"@type":"Brand","name":"YUKI / 佑樹"}}},
-      {"@type":"Offer","price":"15800","priceCurrency":"JPY","availability":"https://schema.org/InStock","url":"https://yuki-music.jp/store.html","itemOffered":{"@type":"Product","name":"スタジアムジャケット","brand":{"@type":"Brand","name":"YUKI / 佑樹"}}},
-      {"@type":"Offer","price":"5980","priceCurrency":"JPY","availability":"https://schema.org/InStock","url":"https://yuki-music.jp/store.html","itemOffered":{"@type":"Product","name":"ライトスウェットパンツ","brand":{"@type":"Brand","name":"YUKI / 佑樹"}}},
-      {"@type":"Offer","price":"3980","priceCurrency":"JPY","availability":"https://schema.org/InStock","url":"https://yuki-music.jp/store.html","itemOffered":{"@type":"Product","name":"ウッドヘアブラシ","brand":{"@type":"Brand","name":"YUKI / 佑樹"}}},
-      {"@type":"Offer","price":"3980","priceCurrency":"JPY","availability":"https://schema.org/InStock","url":"https://yuki-music.jp/store.html","itemOffered":{"@type":"Product","name":"フォンタブ","brand":{"@type":"Brand","name":"YUKI / 佑樹"}}},
-      {"@type":"Offer","price":"3980","priceCurrency":"JPY","availability":"https://schema.org/InStock","url":"https://yuki-music.jp/store.html","itemOffered":{"@type":"Product","name":"フェイスタオル","brand":{"@type":"Brand","name":"YUKI / 佑樹"}}},
-      {"@type":"Offer","price":"3980","priceCurrency":"JPY","availability":"https://schema.org/InStock","url":"https://yuki-music.jp/store.html","itemOffered":{"@type":"Product","name":"ハンドミラー","brand":{"@type":"Brand","name":"YUKI / 佑樹"}}},
-      {"@type":"Offer","price":"4980","priceCurrency":"JPY","availability":"https://schema.org/InStock","url":"https://yuki-music.jp/store.html","itemOffered":{"@type":"Product","name":"クリアタンブラー","brand":{"@type":"Brand","name":"YUKI / 佑樹"}}},
-      {"@type":"Offer","price":"4980","priceCurrency":"JPY","availability":"https://schema.org/InStock","url":"https://yuki-music.jp/store.html","itemOffered":{"@type":"Product","name":"サーモボトル","brand":{"@type":"Brand","name":"YUKI / 佑樹"}}},
-      {"@type":"Offer","price":"4980","priceCurrency":"JPY","availability":"https://schema.org/InStock","url":"https://yuki-music.jp/store.html","itemOffered":{"@type":"Product","name":"Tシャツ","brand":{"@type":"Brand","name":"YUKI / 佑樹"}}}
+      {"@type":"Product","name":"クルーネックスウェット","image":"https://yuki-music.jp/images/store-crewneck-sweat.png","brand":{"@type":"Brand","name":"YUKI / 佑樹"},"offers":{"@type":"Offer","price":"5980","priceCurrency":"JPY","availability":"https://schema.org/InStock","url":"https://yuki-music.jp/store.html"}},
+      {"@type":"Product","name":"ジップアップパーカー","image":"https://yuki-music.jp/images/store-food.jpg","brand":{"@type":"Brand","name":"YUKI / 佑樹"},"offers":{"@type":"Offer","price":"8980","priceCurrency":"JPY","availability":"https://schema.org/InStock","url":"https://yuki-music.jp/store.html"}},
+      {"@type":"Product","name":"折りたたみ傘","image":"https://yuki-music.jp/images/store-umbrella.png","brand":{"@type":"Brand","name":"YUKI / 佑樹"},"offers":{"@type":"Offer","price":"4980","priceCurrency":"JPY","availability":"https://schema.org/InStock","url":"https://yuki-music.jp/store.html"}},
+      {"@type":"Product","name":"ナップサック","image":"https://yuki-music.jp/images/store-bag.jpg","brand":{"@type":"Brand","name":"YUKI / 佑樹"},"offers":{"@type":"Offer","price":"4980","priceCurrency":"JPY","availability":"https://schema.org/InStock","url":"https://yuki-music.jp/store.html"}},
+      {"@type":"Product","name":"サンダル","image":"https://yuki-music.jp/images/store-sandals.png","brand":{"@type":"Brand","name":"YUKI / 佑樹"},"offers":{"@type":"Offer","price":"3980","priceCurrency":"JPY","availability":"https://schema.org/InStock","url":"https://yuki-music.jp/store.html"}},
+      {"@type":"Product","name":"スタジアムジャケット","image":"https://yuki-music.jp/images/store-stadium-jacket.png","brand":{"@type":"Brand","name":"YUKI / 佑樹"},"offers":{"@type":"Offer","price":"15800","priceCurrency":"JPY","availability":"https://schema.org/InStock","url":"https://yuki-music.jp/store.html"}},
+      {"@type":"Product","name":"ライトスウェットパンツ","image":"https://yuki-music.jp/images/store-sweat.jpg","brand":{"@type":"Brand","name":"YUKI / 佑樹"},"offers":{"@type":"Offer","price":"5980","priceCurrency":"JPY","availability":"https://schema.org/InStock","url":"https://yuki-music.jp/store.html"}},
+      {"@type":"Product","name":"ウッドヘアブラシ","image":"https://yuki-music.jp/images/store-wood-hairbrush.png","brand":{"@type":"Brand","name":"YUKI / 佑樹"},"offers":{"@type":"Offer","price":"3980","priceCurrency":"JPY","availability":"https://schema.org/InStock","url":"https://yuki-music.jp/store.html"}},
+      {"@type":"Product","name":"フォンタブ","image":"https://yuki-music.jp/images/store-phone-tab.png","brand":{"@type":"Brand","name":"YUKI / 佑樹"},"offers":{"@type":"Offer","price":"3980","priceCurrency":"JPY","availability":"https://schema.org/InStock","url":"https://yuki-music.jp/store.html"}},
+      {"@type":"Product","name":"フェイスタオル","image":"https://yuki-music.jp/images/store-towel.jpg","brand":{"@type":"Brand","name":"YUKI / 佑樹"},"offers":{"@type":"Offer","price":"3980","priceCurrency":"JPY","availability":"https://schema.org/InStock","url":"https://yuki-music.jp/store.html"}},
+      {"@type":"Product","name":"ハンドミラー","image":"https://yuki-music.jp/images/store-Miller.jpg","brand":{"@type":"Brand","name":"YUKI / 佑樹"},"offers":{"@type":"Offer","price":"3980","priceCurrency":"JPY","availability":"https://schema.org/InStock","url":"https://yuki-music.jp/store.html"}},
+      {"@type":"Product","name":"クリアタンブラー","image":"https://yuki-music.jp/images/store-clear-tumbler.png","brand":{"@type":"Brand","name":"YUKI / 佑樹"},"offers":{"@type":"Offer","price":"4980","priceCurrency":"JPY","availability":"https://schema.org/InStock","url":"https://yuki-music.jp/store.html"}},
+      {"@type":"Product","name":"サーモボトル","image":"https://yuki-music.jp/images/store-thermo-bottle.png","brand":{"@type":"Brand","name":"YUKI / 佑樹"},"offers":{"@type":"Offer","price":"4980","priceCurrency":"JPY","availability":"https://schema.org/InStock","url":"https://yuki-music.jp/store.html"}},
+      {"@type":"Product","name":"Tシャツ","image":"https://yuki-music.jp/images/store-shirt.jpg","brand":{"@type":"Brand","name":"YUKI / 佑樹"},"offers":{"@type":"Offer","price":"4980","priceCurrency":"JPY","availability":"https://schema.org/InStock","url":"https://yuki-music.jp/store.html"}}
     ]
   }
 }
 </script>
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://yuki-music.jp/"},{"@type":"ListItem","position":2,"name":"Store","item":"https://yuki-music.jp/store.html"}]}
+  </script>
 </head>
-<body class="store-page">
+<body class="store-page store-page-body refresh-page-body">
 <div class="page-glow" aria-hidden="true"></div>
 <header class="header">
-<a class="brand-button" href="index.html"><span>HOME</span><img src="images/chara.png" alt="YUKI character" class="brand-chara"></a>
+<a class="brand-button" href="/"><span>HOME</span><img src="images/chara.png" alt="YUKI character" class="brand-chara"></a>
 <nav class="nav" id="nav">
-  <a href="news.html">News</a><a href="live.html">Live</a><a href="profile.html">Profile</a><a href="biography.html">Biography</a><a href="songs/songs.html">Songs</a><a href="store.html">Store</a><a href="contact.html">Contact</a><a class="nav-fanclub" href="https://www.youtube.com/channel/UCdZMz61Y8oS4kfC9CP4esTA/join" data-mobile-href="https://www.youtube.com/channel/UCdZMz61Y8oS4kfC9CP4esTA/join?app=desktop" onclick="if (window.matchMedia && window.matchMedia('(max-width: 768px)').matches) { this.href = this.dataset.mobileHref; }" target="_blank" rel="noopener noreferrer">FANCLUB</a>
+  <a href="news.html">News</a><a href="live.html">Live</a><a href="profile.html">Profile</a><a href="biography.html">Biography</a><a href="songs/songs.html">Songs</a><a href="store.html">Store</a><a href="contact.html">Contact</a><a class="nav-fanclub" href="fanclub.html">Membership</a>
 </nav>
-<div class="header-social" aria-label="SNS links"><a class="header-social__link header-social__link--x" href="https://x.com/Youking74514090" target="_blank" rel="noopener noreferrer" aria-label="X"></a><a class="header-social__link header-social__link--youtube" href="https://www.youtube.com/@yuki_midnight" target="_blank" rel="noopener noreferrer" aria-label="YouTube"></a><a class="header-social__link header-social__link--tiktok" href="https://www.tiktok.com/@yukiosp01?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok"></a></div>
+<div class="header-social" aria-label="SNS links"><a class="header-social__link header-social__link--x" href="https://x.com/Youking74514090" target="_blank" rel="noopener noreferrer" aria-label="X"></a><a class="header-social__link header-social__link--youtube" href="https://www.youtube.com/@yuki_midnight" target="_blank" rel="noopener noreferrer" aria-label="YouTube"></a></div>
 <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
 </header>
 <section class="page-hero"><div class="hero-light"></div><div class="hero__content"><h1 class="page-title">Store</h1></div></section>
 <main>
 <section class="store-category">
   <h2 class="store-category-title"><img src="images/apparel.png" alt="Apparel" class="store-category-image"></h2>
-  <p class="store-category-description">主張しすぎない。<br>でも、ちゃんと好きでいられる。<br>YUKI / 佑樹が手掛ける、×APPAREL×のミニマルウェア。</p>
+  <p class="store-category-description">主張しすぎない。<br>でも、ちゃんと好きでいられる。<br>YUKI / 佑樹が手掛ける、<br class="mobile-break">×APPAREL×のミニマルウェア。</p>
 </section>
 <section class="store-grid">
   <div class="goods-grid">
-    <a class="goods-card" href="#"><div class="goods-card__image"><img src="images/store-crewneck-sweat.jpg" alt="クルーネックスウェット" onerror="this.onerror=null;this.src='images/store-coming-soon.svg';"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>クルーネックスウェット</h3><p class="goods-price">¥5,980</p></div></a>
-    <a class="goods-card" href="#"><div class="goods-card__image"><img src="images/store-food.jpg" alt="ジップアップパーカー"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>ジップアップパーカー</h3><p class="goods-price">¥8,980</p></div></a>
-    <a class="goods-card" href="#"><div class="goods-card__image"><img src="images/store-umbrella.jpg" alt="折りたたみ傘" onerror="this.onerror=null;this.src='images/store-coming-soon.svg';"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>折りたたみ傘</h3><p class="goods-price">¥4,980</p></div></a>
-    <a class="goods-card" href="#"><div class="goods-card__image"><img src="images/store-bag.jpg" alt="ナップサック"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>ナップサック</h3><p class="goods-price">¥4,980</p></div></a>
-    <a class="goods-card" href="#"><div class="goods-card__image"><img src="images/store-sandals.jpg" alt="サンダル" onerror="this.onerror=null;this.src='images/store-coming-soon.svg';"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>サンダル</h3><p class="goods-price">¥3,980</p></div></a>
-    <a class="goods-card" href="#"><div class="goods-card__image"><img src="images/store-stadium-jacket.jpg" alt="スタジアムジャケット" onerror="this.onerror=null;this.src='images/store-coming-soon.svg';"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>スタジアムジャケット</h3><p class="goods-price">¥15,800</p></div></a>
-    <a class="goods-card" href="#"><div class="goods-card__image"><img src="images/store-sweat.jpg" alt="ライトスウェットパンツ"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>ライトスウェットパンツ</h3><p class="goods-price">¥5,980</p></div></a>
-    <a class="goods-card" href="#"><div class="goods-card__image"><img src="images/store-wood-hairbrush.jpg" alt="ウッドヘアブラシ" onerror="this.onerror=null;this.src='images/store-coming-soon.svg';"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>ウッドヘアブラシ</h3><p class="goods-price">¥3,980</p></div></a>
-    <a class="goods-card" href="#"><div class="goods-card__image"><img src="images/store-phone-tab.jpg" alt="フォンタブ" onerror="this.onerror=null;this.src='images/store-coming-soon.svg';"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>フォンタブ</h3><p class="goods-price">¥3,980</p></div></a>
-    <a class="goods-card" href="#"><div class="goods-card__image"><img src="images/store-towel.jpg" alt="フェイスタオル"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>フェイスタオル</h3><p class="goods-price">¥3,980</p></div></a>
-    <a class="goods-card" href="#"><div class="goods-card__image"><img src="images/store-Miller.jpg" alt="ハンドミラー"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>ハンドミラー</h3><p class="goods-price">¥3,980</p></div></a>
-    <a class="goods-card" href="#"><div class="goods-card__image"><img src="images/store-clear-tumbler.jpg" alt="クリアタンブラー" onerror="this.onerror=null;this.src='images/store-coming-soon.svg';"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>クリアタンブラー</h3><p class="goods-price">¥4,980</p></div></a>
-    <a class="goods-card" href="#"><div class="goods-card__image"><img src="images/store-thermo-bottle.jpg" alt="サーモボトル" onerror="this.onerror=null;this.src='images/store-coming-soon.svg';"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>サーモボトル</h3><p class="goods-price">¥4,980</p></div></a>
-    <a class="goods-card" href="#"><div class="goods-card__image"><img src="images/store-shirt.jpg" alt="Tシャツ"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>Tシャツ</h3><p class="goods-price">¥4,980</p></div></a>
+    <div class="goods-card"><div class="goods-card__image"><img src="images/store-crewneck-sweat.png" alt="クルーネックスウェット" onerror="this.onerror=null;this.src='images/store-coming-soon.svg';"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>クルーネックスウェット</h3><p class="goods-price">¥5,980</p></div></div>
+    <div class="goods-card"><div class="goods-card__image"><img src="images/store-food.jpg" alt="ジップアップパーカー"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>ジップアップパーカー</h3><p class="goods-price">¥8,980</p></div></div>
+    <div class="goods-card"><div class="goods-card__image"><img src="images/store-umbrella.png" alt="折りたたみ傘" onerror="this.onerror=null;this.src='images/store-coming-soon.svg';"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>折りたたみ傘</h3><p class="goods-price">¥4,980</p></div></div>
+    <div class="goods-card"><div class="goods-card__image"><img src="images/store-bag.jpg" alt="ナップサック"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>ナップサック</h3><p class="goods-price">¥4,980</p></div></div>
+    <div class="goods-card"><div class="goods-card__image"><img src="images/store-sandals.png" alt="サンダル" onerror="this.onerror=null;this.src='images/store-coming-soon.svg';"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>サンダル</h3><p class="goods-price">¥3,980</p></div></div>
+    <div class="goods-card"><div class="goods-card__image"><img src="images/store-stadium-jacket.png" alt="スタジアムジャケット" onerror="this.onerror=null;this.src='images/store-coming-soon.svg';"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>スタジアムジャケット</h3><p class="goods-price">¥15,800</p></div></div>
+    <div class="goods-card"><div class="goods-card__image"><img src="images/store-sweat.jpg" alt="ライトスウェットパンツ"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>ライトスウェットパンツ</h3><p class="goods-price">¥5,980</p></div></div>
+    <div class="goods-card"><div class="goods-card__image"><img src="images/store-wood-hairbrush.png" alt="ウッドヘアブラシ" onerror="this.onerror=null;this.src='images/store-coming-soon.svg';"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>ウッドヘアブラシ</h3><p class="goods-price">¥3,980</p></div></div>
+    <div class="goods-card"><div class="goods-card__image"><img src="images/store-phone-tab.png" alt="フォンタブ" onerror="this.onerror=null;this.src='images/store-coming-soon.svg';"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>フォンタブ</h3><p class="goods-price">¥3,980</p></div></div>
+    <div class="goods-card"><div class="goods-card__image"><img src="images/store-towel.jpg" alt="フェイスタオル"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>フェイスタオル</h3><p class="goods-price">¥3,980</p></div></div>
+    <div class="goods-card"><div class="goods-card__image"><img src="images/store-Miller.jpg" alt="ハンドミラー"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>ハンドミラー</h3><p class="goods-price">¥3,980</p></div></div>
+    <div class="goods-card"><div class="goods-card__image"><img src="images/store-clear-tumbler.png" alt="クリアタンブラー" onerror="this.onerror=null;this.src='images/store-coming-soon.svg';"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>クリアタンブラー</h3><p class="goods-price">¥4,980</p></div></div>
+    <div class="goods-card"><div class="goods-card__image"><img src="images/store-thermo-bottle.png" alt="サーモボトル" onerror="this.onerror=null;this.src='images/store-coming-soon.svg';"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>サーモボトル</h3><p class="goods-price">¥4,980</p></div></div>
+    <div class="goods-card"><div class="goods-card__image"><img src="images/store-shirt.jpg" alt="Tシャツ"></div><div class="goods-card__content"><p class="goods-category">LIMITED ITEM</p><h3>Tシャツ</h3><p class="goods-price">¥4,980</p></div></div>
   </div>
 </section>
-<section class="store-final"><h2>Next Action</h2><p>全商品はBASEにて販売中。</p><a href="https://yukiosp01.base.shop/" target="_blank" class="button main-cta">Baseへ進む</a></section>
+<section class="store-final"><h2>Next Action</h2><p>全商品はBASEにて販売中。</p><a href="https://yukiosp01.base.shop/" target="_blank" class="button main-cta" rel="noopener noreferrer">BASEでグッズを見る</a></section>
 <footer class="footer"><p>&copy; 2026 YUKI / 佑樹（YUKI OFFCIAL STUDIO PRO 01）. All rights reserved.</p></footer>
 </main>
 <script>

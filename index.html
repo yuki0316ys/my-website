@@ -4,73 +4,92 @@
   <meta charset="UTF-8">
   <meta name="google-site-verification" content="Bgqkazpeh1ImfTqJV1R0kLI8wfIL2ANQZxzcK6QdA8k" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="YUKI / 佑樹の公式サイト。シネマティックポップを軸に、逆夢、BE-TRIP、ライブ情報、プロフィール、楽曲、グッズ、SNSを掲載。">
+  <meta name="description" content="YUKI / 佑樹の公式サイト。シネマティックポップを軸に、逆夢、BE-TRIP、ライブ情報、プロフィール、楽曲、グッズ、SNSをまとめて掲載。">
   <title>YUKI / 佑樹｜シネマティックポップアーティスト｜公式サイト</title>
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
   <meta property="og:title" content="YUKI / 佑樹 Official Site">
-  <meta property="og:description" content="YUKI / 佑樹の公式サイト。シネマティックポップを軸に、逆夢、BE-TRIP、ライブ情報、プロフィール、楽曲、グッズ、SNSを掲載。">
+  <meta property="og:description" content="YUKI / 佑樹の公式サイト。シネマティックポップを軸に、逆夢、BE-TRIP、ライブ情報、プロフィール、楽曲、グッズ、SNSをまとめて掲載。">
   <meta property="og:url" content="https://yuki-music.jp/">
-  <meta property="og:image" content="https://yuki-music.jp/images/ogp.jpg">
+  <meta property="og:image" content="https://yuki-music.jp/images/top.jpg">
+  <meta property="og:image:alt" content="YUKI / 佑樹 Official Siteのトップビジュアル">
   <meta property="og:site_name" content="YUKI / 佑樹 Official Site">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@Youking74514090">
+  <meta name="twitter:creator" content="@Youking74514090">
   <meta name="twitter:title" content="YUKI / 佑樹 Official Site">
-  <meta name="twitter:description" content="YUKI / 佑樹の公式サイト。シネマティックポップを軸に、逆夢、BE-TRIP、ライブ情報、プロフィール、楽曲、グッズ、SNSを掲載。">
-  <meta name="theme-color" content="#000000">
+  <meta name="twitter:description" content="YUKI / 佑樹の公式サイト。シネマティックポップを軸に、逆夢、BE-TRIP、ライブ情報、プロフィール、楽曲、グッズ、SNSをまとめて掲載。">
+<meta name="twitter:image" content="https://yuki-music.jp/images/top.jpg">
+  <meta name="twitter:image:alt" content="YUKI / 佑樹 Official Siteのトップビジュアル">
+  <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#000000">
+<meta name="application-name" content="佑樹">
+<meta name="apple-mobile-web-app-title" content="佑樹">
   <link rel="canonical" href="https://yuki-music.jp/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="mobile-safe.css?v=2026060409" media="(max-width: 768px)">
-  <style>
-    @media (min-width: 769px) {
-      html.desktop-loading body { opacity: 0; }
-      html.desktop-ready body { opacity: 1; transition: opacity .12s ease; }
-    }
-  </style>
+  <link rel="stylesheet" href="mobile-safe.css?v=2026072201" media="(max-width: 768px), ((max-height: 768px) and (orientation: landscape) and (hover: none) and (pointer: coarse))">
+  <link rel="stylesheet" href="style.css?v=2026072201" media="(min-width: 769px) and (hover: hover) and (pointer: fine)">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="stylesheet" href="home-experience.css?v=2026091701">
+  <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48.png">
   <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-  <script>
-    if (window.matchMedia("(min-width: 769px)").matches) {
-      document.documentElement.classList.add("desktop-loading");
-      const desktopStylesheet = document.createElement("link");
-      desktopStylesheet.rel = "stylesheet";
-      desktopStylesheet.href = "style.css?v=2026060409";
-      desktopStylesheet.onload = () => {
-        document.documentElement.classList.remove("desktop-loading");
-        document.documentElement.classList.add("desktop-ready");
-      };
-      desktopStylesheet.onerror = () => {
-        document.documentElement.classList.remove("desktop-loading");
-        document.documentElement.classList.add("desktop-ready");
-      };
-      document.head.appendChild(desktopStylesheet);
-      setTimeout(() => {
-        document.documentElement.classList.remove("desktop-loading");
-        document.documentElement.classList.add("desktop-ready");
-      }, 1200);
-    }
-  </script>
   <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"MusicGroup",
-  "name":"YUKI / 佑樹",
-  "url":"https://yuki-music.jp/",
-  "genre":["Dark Pop", "Electronic", "Rock"],
-  "sameAs":[
-    "https://www.youtube.com/@yuki_midnight",
-    "https://x.com/Youking74514090"
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MusicGroup",
+      "@id": "https://yuki-music.jp/#artist",
+      "name": "YUKI / 佑樹",
+      "url": "https://yuki-music.jp/",
+      "image": "https://yuki-music.jp/images/top.jpg",
+      "logo": "https://yuki-music.jp/images/icon-512.png",
+      "genre": ["Dark Pop", "Electronic", "Rock"],
+      "sameAs": [
+        "https://www.youtube.com/@yuki_midnight",
+        "https://x.com/Youking74514090",
+        "https://www.tiktok.com/@yukiosp01"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://yuki-music.jp/#website",
+      "name": "YUKI / 佑樹 Official Site",
+      "alternateName": "YUKI / 佑樹",
+      "url": "https://yuki-music.jp/",
+      "image": "https://yuki-music.jp/images/top.jpg",
+      "inLanguage": "ja",
+      "publisher": {
+        "@id": "https://yuki-music.jp/#artist"
+      },
+      "sameAs": [
+        "https://www.youtube.com/@yuki_midnight",
+        "https://x.com/Youking74514090",
+        "https://www.tiktok.com/@yukiosp01"
+      ],
+      "hasPart": [
+        {"@type": "WebPage", "name": "News", "url": "https://yuki-music.jp/news.html"},
+        {"@type": "WebPage", "name": "Live", "url": "https://yuki-music.jp/live.html"},
+        {"@type": "WebPage", "name": "Profile", "url": "https://yuki-music.jp/profile.html"},
+        {"@type": "WebPage", "name": "Songs", "url": "https://yuki-music.jp/songs/songs.html"},
+        {"@type": "WebPage", "name": "Store", "url": "https://yuki-music.jp/store.html"},
+        {"@type": "WebPage", "name": "Contact", "url": "https://yuki-music.jp/contact.html"}
+      ]
+    }
   ]
 }
   </script>
 </head>
 
-<body>
+<body class="home-page-body refresh-page-body">
   <div class="page-glow" aria-hidden="true"></div>
 
   <header class="header">
-    <a class="brand-button" href="index.html">
+    <a class="brand-button" href="/">
       <span>HOME</span>
       <img src="images/chara.png" alt="YUKI character" class="brand-chara">
     </a>
@@ -83,13 +102,12 @@
       <a href="songs/songs.html">Songs</a>
       <a href="store.html">Store</a>
       <a href="contact.html">Contact</a>
-      <a class="nav-fanclub" href="https://www.youtube.com/channel/UCdZMz61Y8oS4kfC9CP4esTA/join" data-mobile-href="https://www.youtube.com/channel/UCdZMz61Y8oS4kfC9CP4esTA/join?app=desktop" onclick="if (window.matchMedia && window.matchMedia('(max-width: 768px)').matches) { this.href = this.dataset.mobileHref; }" target="_blank" rel="noopener noreferrer">FANCLUB</a>
+      <a class="nav-fanclub" href="fanclub.html">Membership</a>
     </nav>
 
     <div class="header-social" aria-label="SNS links">
       <a class="header-social__link header-social__link--x" href="https://x.com/Youking74514090" target="_blank" rel="noopener noreferrer" aria-label="X"></a>
       <a class="header-social__link header-social__link--youtube" href="https://www.youtube.com/@yuki_midnight" target="_blank" rel="noopener noreferrer" aria-label="YouTube"></a>
-      <a class="header-social__link header-social__link--tiktok" href="https://www.tiktok.com/@yukiosp01?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok"></a>
     </div>
 
     <button class="menu-toggle" id="menuToggle" aria-label="Menu" type="button">
@@ -100,70 +118,71 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero" aria-labelledby="artist-name">
       <div class="hero-bg"></div>
       <div class="hero-light"></div>
-      <div class="hero__content">
-        <h1>
-          <span class="en-name">YUKI</span>
-          <span class="slash">/</span>
-          <span class="jp-name">佑樹</span>
-        </h1>
-        <p class="hero-catch">13 TRACKS • TOP 10 IN JAPAN</p>
+      <div class="artist-intro">
+        <p class="artist-kicker">SINGER / SONGWRITER</p>
+        <h1 id="artist-name">YUKI <span>佑樹</span></h1>
+        <p class="artist-copy">働く日々の中で、<br>消えなかった言葉を歌に。</p>
+        <div class="artist-links">
+          <a href="songs/songs.html">楽曲を聴く <span aria-hidden="true">↗</span></a>
+          <a href="live.html">ライブ情報 <span aria-hidden="true">↗</span></a>
+        </div>
       </div>
     </section>
 
-    <section class="results-bar">
-      <div class="results-track">
-        <span>BE-TRIP オリコンチャート 15位ランクイン</span>
-        <span>BE-TRIP、逆夢のインディーズCDがTOWER RECORDS渋谷店SOLD OUT</span>
-        <span>逆夢が台湾 iTunes 3位ランクイン</span>
-        <span>THE BEAST iTunes 1位ランクイン</span>
-        <span>佑樹ワンマンライブ名古屋クラブクアトロSOLD OUT</span>
-        <span>YOUTUBE チャンネル登録者数10万人達成</span>
-        <span>LINE CUBE SHIBUYA（渋谷公会堂）へオープニングアクトとして出演</span>
-        <span>BE-TRIP オリコンチャート 15位ランクイン</span>
-        <span>BE-TRIP、逆夢のインディーズCDがTOWER RECORDS渋谷店SOLD OUT</span>
-        <span>逆夢が台湾 iTunes 3位ランクイン</span>
-        <span>THE BEAST iTunes 1位ランクイン</span>
-        <span>佑樹ワンマンライブ名古屋クラブクアトロSOLD OUT</span>
-        <span>YOUTUBE チャンネル登録者数10万人達成</span>
-        <span>LINE CUBE SHIBUYA（渋谷公会堂）へオープニングアクトとして出演</span>
-      </div>
-    </section>
+    <a class="home-live-strip" href="live.html"><span>LIVE / 2026.11.01</span><strong>Rehabilitation 2026</strong><span>詳細・予約 <span aria-hidden="true">↗</span></span></a>
 
     <section class="achievement reveal">
       <h2 class="section-title">Topics</h2>
       <div class="achievement-grid">
-        <div class="achievement-item">
-          <div class="number">14th Single</div>
-          <div class="achievement-label">死ガフタリヲワカツマデ / 高飛車な日々にさよならを　リリース決定！</div>
+        <div class="achievement-item achievement-item--interactive">
+          <button type="button" class="topic-open" data-topic-id="the-beast-video">
+            <span class="number">VIDEO</span>
+            <span class="achievement-label">THE BEAST ミュージックアニメーションビデオ公開！</span>
+          </button>
         </div>
-        <div class="achievement-item">
-          <div class="number">Live</div>
-          <div class="achievement-label">Rehabilitation The Invitation 開催決定！</div>
+        <div class="achievement-item achievement-item--interactive">
+          <button type="button" class="topic-open" data-topic-id="shigafutari">
+            <span class="number">RELEASE</span>
+            <span class="achievement-label">死ガフタリヲワカツマデ リリース決定！</span>
+          </button>
         </div>
-        <div class="achievement-item">
-          <div class="number">Digital Goods</div>
-          <div class="achievement-label">LINEスタンプ販売中!</div>
+        <div class="achievement-item achievement-item--interactive">
+          <button type="button" class="topic-open" data-topic-id="live">
+            <span class="number">LIVE</span>
+            <span class="achievement-label">佑樹 Rehabilitation 2026 死ガフタリヲワカツマデ Release Event 2026.11.1 開催決定！</span>
+          </button>
         </div>
-        <div class="achievement-item">
-          <div class="number">GOODS</div>
-          <div class="achievement-label">The Apparel 一般販売開始!</div>
+        <div class="achievement-item achievement-item--interactive">
+          <button type="button" class="topic-open" data-topic-id="line-sticker">
+            <span class="number">NFT</span>
+            <span class="achievement-label">LINEスタンプ販売中!</span>
+          </button>
+        </div>
+        <div class="achievement-item achievement-item--interactive">
+          <button type="button" class="topic-open" data-topic-id="apparel">
+            <span class="number">OFFICIAL GOODS</span>
+            <span class="achievement-label">The Apparel 一般販売開始!</span>
+          </button>
         </div>
       </div>
     </section>
 
     <section class="video-section reveal" id="video">
       <div class="section-heading index-section-heading">
-        <h2 class="section-title index-section-title">View Sakayume</h2>
+        <h2 class="section-title index-section-title">逆夢 / Sakayume</h2>
       </div>
 
       <div class="video-card">
         <div class="video-frame">
-          <video class="featured-video" muted loop playsinline webkit-playsinline preload="metadata" poster="images/sakayume.jpg" data-video-src="video/hero.mp4" aria-label="逆夢 featured video"><source src="video/hero.mp4" type="video/mp4"></video>
+          <video class="featured-video video-slide" muted loop playsinline webkit-playsinline preload="metadata" poster="images/sakayume.jpg" data-video-src="video/hero.mp4" aria-label="逆夢 featured video" style="display:block; opacity:1; transition:opacity .8s ease; z-index:1;"><source src="video/hero.mp4" type="video/mp4"></video>
+          <video class="featured-video video-slide" muted loop playsinline webkit-playsinline preload="metadata" poster="images/beast.jpg" aria-label="THE BEAST music animation video" style="display:block; opacity:0; transition:opacity .8s ease; z-index:0;"><source src="images/MV.MOV" type="video/quicktime"></video>
         </div>
       </div>
+
+      <a class="home-song-link" href="songs/Sakayume.html">「逆夢」を聴く <span aria-hidden="true">↗</span></a>
 
     </section>
 
@@ -176,7 +195,7 @@
         <a class="track-card" href="songs/Sakayume.html">
           <span class="track-card__index">01</span>
           <div class="track-card__image">
-            <img src="images/sakayume.jpg" alt="逆夢">
+            <img src="images/sakayume.jpg" alt="YUKI / 佑樹の楽曲 逆夢 ジャケット画像">
           </div>
           <div class="track-card__content">
             <p class="track-card__type">01 TRACK</p>
@@ -187,7 +206,7 @@
         <a class="track-card" href="songs/BE-TRIP.html">
           <span class="track-card__index">02</span>
           <div class="track-card__image">
-            <img src="images/be-trip.jpg" alt="BE-TRIP">
+            <img src="images/be-trip.jpg" alt="YUKI / 佑樹の楽曲 BE-TRIP ジャケット画像">
           </div>
           <div class="track-card__content">
             <p class="track-card__type">02 TRACK</p>
@@ -198,7 +217,7 @@
         <a class="track-card" href="songs/Nextinnovation.html">
           <span class="track-card__index">03</span>
           <div class="track-card__image">
-            <img src="images/next.jpg" alt="NextInnovation">
+            <img src="images/next.jpg" alt="YUKI / 佑樹の楽曲 NEXT INNOVATION! ジャケット画像">
           </div>
           <div class="track-card__content">
             <p class="track-card__type">03 TRACK</p>
@@ -216,13 +235,41 @@
 
   <footer class="footer"><p>&copy; 2026 YUKI / 佑樹（YUKI OFFCIAL STUDIO PRO 01）. All rights reserved.</p></footer>
 
+  <div class="news-modal" id="topicModal" aria-hidden="true">
+    <button type="button" class="news-modal__backdrop" data-topic-close aria-label="閉じる"></button>
+    <section class="news-modal__panel" role="dialog" aria-modal="true" aria-labelledby="topicModalTitle" tabindex="-1">
+      <button type="button" class="news-modal__close" data-topic-close aria-label="閉じる">×</button>
+      <p class="news-modal__date" id="topicModalCategory"></p>
+      <h2 class="news-modal__title" id="topicModalTitle"></h2>
+      <div class="news-modal__body" id="topicModalBody"></div>
+      <p class="news-modal__link-wrap" id="topicModalLinkWrap"></p>
+    </section>
+  </div>
+
   <script>
-    if (window.matchMedia("(min-width: 769px)").matches) {
+    if (window.matchMedia("(min-width: 769px) and (hover: hover) and (pointer: fine)").matches) {
       (function () {
-        const video = document.querySelector(".featured-video");
-        if (!video) return;
-        video.setAttribute("autoplay", "");
-        video.play().catch(() => {});
+        const slides = Array.from(document.querySelectorAll(".video-slide"));
+        if (!slides.length) return;
+
+        let activeIndex = 0;
+        const showSlide = nextIndex => {
+          slides.forEach((slide, index) => {
+            const isActive = index === nextIndex;
+            slide.style.opacity = isActive ? "1" : "0";
+            slide.style.zIndex = isActive ? "1" : "0";
+            if (isActive) {
+              slide.play().catch(() => {});
+            } else {
+              slide.pause();
+            }
+          });
+          activeIndex = nextIndex;
+        };
+
+        slides.forEach(video => video.setAttribute("autoplay", ""));
+        showSlide(activeIndex);
+        window.setInterval(() => showSlide((activeIndex + 1) % slides.length), 15000);
       })();
 
       document.addEventListener("mousemove", e => {
@@ -230,22 +277,30 @@
         document.body.style.setProperty("--y", e.clientY + "px");
       });
 
-      window.addEventListener("scroll", () => {
-        const heroBg = document.querySelector(".hero-bg");
-        if (!heroBg) return;
-
-        const scrolled = window.scrollY;
-        heroBg.style.transform = "scale(1.08) translateY(" + (scrolled * 0.15) + "px)";
-      }, { passive: true });
     } else {
       (function () {
-        const video = document.querySelector(".featured-video");
-        if (!video) return;
-        video.muted = true;
-        video.playsInline = true;
-        video.setAttribute("autoplay", "");
-        video.setAttribute("preload", "metadata");
-        video.play().catch(() => {});
+        const slides = Array.from(document.querySelectorAll(".video-slide"));
+        if (!slides.length) return;
+
+        let activeIndex = 0;
+        const showSlide = nextIndex => {
+          slides.forEach((slide, index) => {
+            const isActive = index === nextIndex;
+            slide.muted = true;
+            slide.playsInline = true;
+            slide.style.opacity = isActive ? "1" : "0";
+            slide.style.zIndex = isActive ? "1" : "0";
+            if (isActive) {
+              slide.play().catch(() => {});
+            } else {
+              slide.pause();
+            }
+          });
+          activeIndex = nextIndex;
+        };
+
+        showSlide(activeIndex);
+        window.setInterval(() => showSlide((activeIndex + 1) % slides.length), 15000);
       })();
     }
 
@@ -278,6 +333,122 @@
         menuToggle.classList.toggle("active");
       });
     }
+
+    const topicDetails = {
+      "the-beast-video": {
+        category: "VIDEO",
+        title: "THE BEAST ミュージックアニメーションビデオ公開！",
+        body: "楽曲「THE BEAST」のミュージックアニメーションビデオを公開しました。ぜひご覧ください。",
+        linkUrl: "https://youtu.be/xBvSjOOJYDE?si=f_hyH7YRAMIJIw1z",
+        linkLabel: "YouTubeで見る"
+      },
+      shigafutari: {
+        category: "RELEASE",
+        title: "死ガフタリヲワカツマデ リリース決定！",
+        body: "14th Single「死ガフタリヲワカツマデ」のリリースが決定しました。楽曲情報は順次公式サイトにてお知らせします。",
+        linkUrl: "songs/songs.html",
+        linkLabel: "Songsページへ"
+      },
+      live: {
+        category: "LIVE",
+        title: "佑樹 Rehabilitation 2026 死ガフタリヲワカツマデ Release Event 2026.11.1 開催決定！",
+        body: "佑樹のライブ「Rehabilitation 2026 死ガフタリヲワカツマデ Release Event」が、2026年11月1日に開催決定しました。公演情報や詳細はLiveページでご確認ください。",
+        linkUrl: "live.html",
+        linkLabel: "Liveページへ"
+      },
+      "line-sticker": {
+        category: "NFT",
+        title: "LINEスタンプ販売中!",
+        body: "ゆっくんLINEスタンプを販売中です。日常のトークで使いやすいスタンプをぜひチェックしてください。",
+        linkUrl: "https://line.me/S/sticker/33985072",
+        linkLabel: "LINEスタンプを見る"
+      },
+      apparel: {
+        category: "OFFICIAL GOODS",
+        title: "The Apparel 一般販売開始!",
+        body: "YUKI / 佑樹が手掛けるThe Apparelの一般販売を開始しました。商品ラインナップはStoreページでご確認ください。",
+        linkUrl: "store.html",
+        linkLabel: "Storeページへ"
+      }
+    };
+
+    const topicModal = document.getElementById("topicModal");
+    const topicModalPanel = topicModal ? topicModal.querySelector(".news-modal__panel") : null;
+    const topicModalCategory = document.getElementById("topicModalCategory");
+    const topicModalTitle = document.getElementById("topicModalTitle");
+    const topicModalBody = document.getElementById("topicModalBody");
+    const topicModalLinkWrap = document.getElementById("topicModalLinkWrap");
+    let lastTopicTrigger = null;
+
+    function fitModalTitle(titleElement) {
+      if (!titleElement) return;
+
+      titleElement.style.fontSize = "";
+      const minSize = window.matchMedia("(max-width: 768px), ((max-height: 768px) and (orientation: landscape) and (hover: none) and (pointer: coarse))").matches ? 6 : 9;
+      let size = parseFloat(window.getComputedStyle(titleElement).fontSize);
+
+      while (titleElement.scrollWidth > titleElement.clientWidth && size > minSize) {
+        size -= .5;
+        titleElement.style.fontSize = `${size}px`;
+      }
+    }
+
+    function openTopicModal(topicId, trigger) {
+      const detail = topicDetails[topicId];
+      if (!detail || !topicModal) return;
+
+      lastTopicTrigger = trigger;
+      topicModalCategory.textContent = detail.category;
+      topicModalTitle.textContent = detail.title;
+      topicModalBody.textContent = detail.body;
+      topicModalLinkWrap.textContent = "";
+
+      if (detail.linkUrl) {
+        const link = document.createElement("a");
+        link.href = detail.linkUrl;
+        if (detail.linkUrl.startsWith("http")) {
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+        }
+        link.textContent = detail.linkLabel;
+        topicModalLinkWrap.appendChild(link);
+      }
+
+      topicModal.classList.add("active");
+      topicModal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("news-modal-open");
+      requestAnimationFrame(() => fitModalTitle(topicModalTitle));
+      if (topicModalPanel) topicModalPanel.focus();
+    }
+
+    function closeTopicModal() {
+      if (!topicModal) return;
+
+      topicModal.classList.remove("active");
+      topicModal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("news-modal-open");
+      if (lastTopicTrigger) lastTopicTrigger.focus();
+    }
+
+    document.querySelectorAll(".topic-open").forEach(button => {
+      button.addEventListener("click", () => openTopicModal(button.dataset.topicId, button));
+    });
+
+    document.querySelectorAll("[data-topic-close]").forEach(button => {
+      button.addEventListener("click", closeTopicModal);
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape" && topicModal && topicModal.classList.contains("active")) {
+        closeTopicModal();
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (topicModal && topicModal.classList.contains("active")) {
+        fitModalTitle(topicModalTitle);
+      }
+    });
   </script>
 </body>
 </html>
