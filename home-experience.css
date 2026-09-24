@@ -65,7 +65,7 @@ body.home-page-body .track-card:hover .track-card__image img { transform: scale(
 .pickup-marquee__track {
   display: flex;
   width: max-content;
-  animation: pickup-marquee-scroll 42s linear infinite;
+  animation: pickup-marquee-scroll 180s linear infinite;
 }
 .pickup-marquee__group {
   display: flex;
@@ -110,7 +110,7 @@ body.home-page-body .reveal { opacity: 1; transform: none; }
   .home-live-strip { padding: 20px 24px; }
   .home-live-strip strong { width: 100%; order: 1; }
   body.home-page-body .pickup-marquee .track-card { flex-basis: min(72vw, 310px); width: min(72vw, 310px); }
-  .pickup-marquee__track { animation-duration: 36s; }
+  .pickup-marquee__track { animation-duration: 156s; }
 }
 @media (max-height: 550px) and (orientation: landscape) {
   body.home-page-body .hero { height: auto; min-height: 360px; padding-top: 90px; }
