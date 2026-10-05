@@ -134,6 +134,18 @@
       <h2 class="section-title">Topics</h2>
       <div class="achievement-grid">
         <div class="achievement-item achievement-item--interactive">
+          <button type="button" class="topic-open" data-topic-id="rinne-video">
+            <span class="number">VIDEO</span>
+            <span class="achievement-label">輪廻の中で自由を求め続けた弱者 ミュージックアニメーションビデオ公開！</span>
+          </button>
+        </div>
+        <div class="achievement-item achievement-item--interactive">
+          <button type="button" class="topic-open" data-topic-id="freedom-video">
+            <span class="number">VIDEO</span>
+            <span class="achievement-label">Freedom ミュージックアニメーションビデオ公開！</span>
+          </button>
+        </div>
+        <div class="achievement-item achievement-item--interactive">
           <button type="button" class="topic-open" data-topic-id="creator-collective">
             <span class="number">EVENT</span>
             <span class="achievement-label">YouTube Creator Collectiveに参加！</span>
@@ -155,18 +167,6 @@
           <button type="button" class="topic-open" data-topic-id="live">
             <span class="number">LIVE</span>
             <span class="achievement-label">佑樹 Rehabilitation 2026 死ガフタリヲワカツマデ Release Event 2026.11.1 開催決定！</span>
-          </button>
-        </div>
-        <div class="achievement-item achievement-item--interactive">
-          <button type="button" class="topic-open" data-topic-id="line-sticker">
-            <span class="number">NFT</span>
-            <span class="achievement-label">LINEスタンプ販売中!</span>
-          </button>
-        </div>
-        <div class="achievement-item achievement-item--interactive">
-          <button type="button" class="topic-open" data-topic-id="apparel">
-            <span class="number">OFFICIAL GOODS</span>
-            <span class="achievement-label">The Apparel 一般販売開始!</span>
           </button>
         </div>
       </div>
@@ -455,6 +455,20 @@
     }
 
     const topicDetails = {
+      "freedom-video": {
+        category: "VIDEO",
+        title: "Freedom ミュージックアニメーションビデオ公開！",
+        body: "楽曲「Freedom」のミュージックアニメーションビデオを公開しました。ぜひご覧ください。",
+        linkUrl: "https://youtu.be/kPmKTcZbqzI",
+        linkLabel: "YouTubeで見る"
+      },
+      "rinne-video": {
+        category: "VIDEO",
+        title: "輪廻の中で自由を求め続けた弱者 ミュージックアニメーションビデオ公開！",
+        body: "楽曲「輪廻の中で自由を求め続けた弱者」のミュージックアニメーションビデオを公開しました。ぜひご覧ください。",
+        linkUrl: "https://youtu.be/53znxvnfrpw",
+        linkLabel: "YouTubeで見る"
+      },
       "creator-collective": {
         category: "EVENT",
         title: "YouTube Creator Collectiveに参加！",
@@ -481,20 +495,6 @@
         linkUrl: "live.html",
         linkLabel: "Liveページへ"
       },
-      "line-sticker": {
-        category: "NFT",
-        title: "LINEスタンプ販売中!",
-        body: "ゆっくんLINEスタンプを販売中です。日常のトークで使いやすいスタンプをぜひチェックしてください。",
-        linkUrl: "https://line.me/S/sticker/33985072",
-        linkLabel: "LINEスタンプを見る"
-      },
-      apparel: {
-        category: "OFFICIAL GOODS",
-        title: "The Apparel 一般販売開始!",
-        body: "YUKI / 佑樹が手掛けるThe Apparelの一般販売を開始しました。商品ラインナップはStoreページでご確認ください。",
-        linkUrl: "store.html",
-        linkLabel: "Storeページへ"
-      }
     };
 
     const topicModal = document.getElementById("topicModal");
