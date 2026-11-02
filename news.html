@@ -128,6 +128,34 @@
 
   <article class="news-item news-item--interactive">
 
+    <button type="button" class="news-open" data-news-id="shigafutari-release">
+      <span class="news-meta">
+        <span class="news-date">2026.11.02</span>
+      </span>
+
+      <span class="news-title">
+        14th Single「死ガフタリヲワカツマデ」11月初旬配信予定！
+      </span>
+    </button>
+
+  </article>
+
+  <article class="news-item news-item--interactive">
+
+    <button type="button" class="news-open" data-news-id="lightning-magic-release">
+      <span class="news-meta">
+        <span class="news-date">2026.11.02</span>
+      </span>
+
+      <span class="news-title">
+        15th Single「ライトニング・マジック」11月初旬配信予定！
+      </span>
+    </button>
+
+  </article>
+
+  <article class="news-item news-item--interactive">
+
     <button type="button" class="news-open" data-news-id="rinne-video">
       <span class="news-meta">
         <span class="news-date">2026.10.05</span>
@@ -224,20 +252,6 @@
 
   </article>
 
-  <article class="news-item news-item--interactive">
-
-    <button type="button" class="news-open" data-news-id="shigafutari">
-      <span class="news-meta">
-        <span class="news-date">2026.04.15</span>
-      </span>
-
-      <span class="news-title">
-        14th Single<br class="mobile-title-break">死ガフタリヲワカツマデ リリース決定！
-      </span>
-    </button>
-
-  </article>
-
 </div>
 <div class="news-modal" id="newsModal" aria-hidden="true">
   <button type="button" class="news-modal__backdrop" data-news-close aria-label="閉じる"></button>
@@ -278,6 +292,16 @@ if(menuToggle && nav){
 </script>
 <script>
 const newsDetails = {
+  "shigafutari-release": {
+    date: "2026.11.02",
+    title: "14th Single「死ガフタリヲワカツマデ」11月初旬配信予定！",
+    body: "14th Single「死ガフタリヲワカツマデ」は、11月初旬配信予定です。配信開始をお楽しみに。"
+  },
+  "lightning-magic-release": {
+    date: "2026.11.02",
+    title: "15th Single「ライトニング・マジック」11月初旬配信予定！",
+    body: "15th Single「ライトニング・マジック」は、11月初旬配信予定です。配信開始をお楽しみに。"
+  },
   "rinne-video": {
     date: "2026.10.05",
     title: "輪廻の中で自由を求め続けた弱者 ミュージックアニメーションビデオ公開！",
@@ -321,11 +345,6 @@ const newsDetails = {
     linkUrl: "https://line.me/S/sticker/33985072",
     linkLabel: "LINEスタンプを見る"
   },
-  shigafutari: {
-    date: "2026.04.15",
-    title: "14th Single 死ガフタリヲワカツマデ リリース決定！",
-    body: "14th Single「死ガフタリヲワカツマデ」のリリースが決定しました。楽曲情報は順次公式サイトにてお知らせします。"
-  }
 };
 
 const newsModal = document.getElementById("newsModal");
