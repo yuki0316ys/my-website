@@ -200,6 +200,7 @@ section { padding: 54px 18px; }
 .track-card__index, .track-card__type, .goods-category { display:none; }
 .track-card__release-date { margin:0 0 6px; color:var(--gold); font-size:.82rem; font-weight:700; letter-spacing:.1em; }
 body.refresh-page-body .track-card__release-date { color:var(--refresh-teal); font-family:var(--sans); font-size:.78rem; font-weight:900; letter-spacing:.12em; }
+body.songs-page-body.refresh-page-body .track-card h3 { min-width:0; max-width:100%; overflow-wrap:anywhere; word-break:normal; line-break:strict; font-family:"Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif; font-size:1.1rem; font-weight:500; line-height:1.55; letter-spacing:0; }
 .track-card h3, .goods-card h3 { margin:12px 0 0; font-family:var(--sans); font-size:1.35rem; font-weight:800; letter-spacing:.02em; }
 .track-card[href*="BE-TRIP"] h3 { font-size:1.35rem; letter-spacing:.03em; }
 .upright-hyphen { display:inline-block; font-family:var(--sans); font-style:normal; transform:none; }

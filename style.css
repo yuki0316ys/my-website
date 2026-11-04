@@ -1345,6 +1345,19 @@ body.refresh-page-body .track-card__release-date {
 .track-card[href*="rinne"] .track-card__content::before { content: "2024.12.01"; }
 .track-card[href*="uno"] .track-card__content::before { content: "2025.11.24"; }
 
+body.songs-page-body.refresh-page-body .track-card h3 {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  line-break: strict;
+  font-family: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.55;
+  letter-spacing: 0;
+}
+
 .page-hero {
   position: relative;
   min-height: 44svh;
