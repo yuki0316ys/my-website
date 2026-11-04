@@ -1317,6 +1317,20 @@ body.refresh-page-body .contact-form {
   font-weight: 700;
   letter-spacing: .1em;
 }
+.track-card__release-date {
+  margin: 0 0 7px;
+  color: rgba(215,185,103,.86);
+  font-size: .86rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+body.refresh-page-body .track-card__release-date {
+  color: var(--refresh-teal);
+  font-family: var(--sans);
+  font-size: clamp(.78rem, .86vw, .9rem);
+  font-weight: 900;
+  letter-spacing: .13em;
+}
 .track-card[href*="Sakayume"] .track-card__content::before { content: "2021.11.01"; }
 .track-card[href*="BE-TRIP"] .track-card__content::before { content: "2022.06.06"; }
 .track-card[href*="Nextinnovation"] .track-card__content::before { content: "2023.11.23"; }
