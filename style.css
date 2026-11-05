@@ -928,6 +928,23 @@ body.refresh-page-body .page-title {
   text-transform: uppercase;
   text-shadow: 0 16px 42px rgba(255,255,255,0.72);
 }
+body.song-detail-page-body.refresh-page-body .page-title {
+  max-width: min(100%, 1100px);
+  margin: 0 auto;
+  color: var(--refresh-ink);
+  font-family: "Noto Serif JP", "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+  font-size: 3.25rem;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: none;
+  text-shadow: none;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  line-break: strict;
+  white-space: normal;
+}
 body.refresh-page-body .page-hero .hero__content { z-index: 2; }
 body.refresh-page-body .page-hero + main,
 body.refresh-page-body main {

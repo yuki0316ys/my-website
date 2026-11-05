@@ -765,6 +765,7 @@ body.refresh-page-body .page-title {
   text-transform: uppercase;
   text-shadow: 0 14px 34px rgba(255,255,255,.68);
 }
+body.song-detail-page-body.refresh-page-body .page-title { max-width:min(100%, 1100px); margin:0 auto; color:var(--refresh-ink); font-family:"Noto Serif JP", "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif; font-size:2rem; font-weight:500; line-height:1.5; letter-spacing:0; text-align:center; text-transform:none; text-shadow:none; overflow-wrap:anywhere; word-break:normal; line-break:strict; white-space:normal; }
 body.fanclub-page-body.refresh-page-body .page-title {
   font-size: clamp(2.25rem, 10.5vw, 4.4rem);
   letter-spacing: -.035em;
