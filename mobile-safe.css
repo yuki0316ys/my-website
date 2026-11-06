@@ -1,4 +1,4 @@
-/* YUKI / 佑樹 mobile stylesheet - no important flags */
+/* 佑樹 mobile stylesheet - no important flags */
 :root {
   --bg: #050505;
   --text: #f7f1e8;
@@ -954,6 +954,26 @@ body.refresh-page-body .biography-intro__eyebrow {
 body.refresh-page-body .track-card__image,
 body.refresh-page-body .goods-card__image {
   background: rgba(21,33,35,.06);
+}
+body.store-page-body .goods-card__image {
+  position: relative;
+}
+body.store-page-body .goods-card__status {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  padding: 9px 14px;
+  transform: translate(-50%, -50%);
+  border-radius: 3px;
+  background: rgba(18, 30, 31, .88);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: .9rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0;
+  pointer-events: none;
 }
 body.refresh-page-body .store-category-description,
 body.refresh-page-body .fanclub-lead,

@@ -50,7 +50,7 @@ img, video, iframe, audio { max-width: 100%; }
 .brand-button span,
 .brand-chara { display: none; }
 .brand-button::before {
-  content: "YUKI / 佑樹";
+  content: "佑樹";
   position: absolute;
   left: 0;
   top: 4px;
