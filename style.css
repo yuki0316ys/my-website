@@ -81,13 +81,13 @@ button, input, textarea, select { font: inherit; }
   pointer-events: none;
 }
 .brand-button::before {
-  content: "YUKI / 佑樹";
+  content: "佑樹";
   top: 50%;
   transform: translateY(-50%);
   font-size: 20px;
   font-weight: 800;
   line-height: 1.05;
-  letter-spacing: -.02em;
+  letter-spacing: 0;
   text-shadow: none;
 }
 .brand-button::after {
